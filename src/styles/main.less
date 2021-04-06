@@ -1,0 +1,28 @@
+@import (inline) './fonts.css';
+
+@import './baseline.less';
+
+.thick-text {
+  font-family: 'Zurich', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+main {
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+
+  -webkit-user-select: none;
+  user-select: none;
+
+  > *:first-child {
+    width: 800px;
+    height: 600px;
+  }
+}

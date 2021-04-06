@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'Zurich';
+  src: url('/font/Zurich Bold Extended.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'ZurichTV';
+  src: url('/font/Zurich Bold Condensed.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/font/Helvetica65Medium.woff') format('woff');
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'ZurichBT';
+  src: url('/font/ZurichBT-Bold.woff2') format('woff2'), url('/font/ZurichBT-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: fallback;
+}

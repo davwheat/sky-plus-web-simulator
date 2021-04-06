@@ -1,11 +1,12 @@
 import React from 'react'
 import MainMenu from '../components/epg/pages/MainMenu'
+import InnerLayout from '../layouts/InnerLayout'
 
 const IndexPage: React.FC = () => {
   return (
-    <div>
+    <InnerLayout>
       <MainMenu />
-    </div>
+    </InnerLayout>
   )
 }
 

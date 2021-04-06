@@ -1,7 +1,7 @@
-import bg2005to2007 from '../audio/epg-bgmusic/2005-2007.mp3'
-import bg2008 from '../audio/epg-bgmusic/2008.mp3'
-import bg2009to2011 from '../audio/epg-bgmusic/2009-2011.mp3'
-import bg2012 from '../audio/epg-bgmusic/2012.mp3'
+import bg2005to2007 from '../assets/audio/epg-bgmusic/2005-2007.mp3'
+import bg2008 from '../assets/audio/epg-bgmusic/2008.mp3'
+import bg2009to2011 from '../assets/audio/epg-bgmusic/2009-2011.mp3'
+import bg2012 from '../assets/audio/epg-bgmusic/2012.mp3'
 
 export const audio = {
   '2005-2007': bg2005to2007,

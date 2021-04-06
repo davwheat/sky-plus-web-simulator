@@ -1,5 +1,7 @@
 # Sky EPG background music
 
+These files are **not** licensed under MIT. They are the copyright of their respective owners.
+
 ## `2005-2007.mp3`
 
 The background music used for the Sky EPG between 2005 and 2007.

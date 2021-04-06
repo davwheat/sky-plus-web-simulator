@@ -24,17 +24,17 @@ const useStyles = makeStyles({
     gap: 4,
 
     // Show the first list item as selected if no items have focus
-    '&:not(:focus-within)': {
-      '& li:first-child': {
-        background: COLORS.mainHover,
-        color: COLORS.mainTextHover,
+    // '&:not(:focus-within)': {
+    //   '& li:first-child': {
+    //     background: COLORS.mainHover,
+    //     color: COLORS.mainTextHover,
 
-        '&::before': {
-          background: COLORS.accentHover,
-          color: COLORS.accentTextHover,
-        },
-      },
-    },
+    //     '&::before': {
+    //       background: COLORS.accentHover,
+    //       color: COLORS.accentTextHover,
+    //     },
+    //   },
+    // },
   },
 })
 

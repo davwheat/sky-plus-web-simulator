@@ -134,7 +134,14 @@ const Menu: React.FC<ListProps> = ({ onBack, listItems }) => {
   console.log(page, lastPage)
 
   return (
-    <ol data-more={page < lastPage} data-less={page > 0} onKeyDown={HandleMenuNav} ref={listRef} className={clsx('thick-text', classes.root)}>
+    <ol
+      // Use string values for the styles to work nicely
+      data-more={String(page < lastPage)}
+      data-less={String(page > 0)}
+      onKeyDown={HandleMenuNav}
+      ref={listRef}
+      className={clsx('thick-text', classes.root)}
+    >
       {itemsOnPage.map(item => (
         <MenuItem key={item.text} {...item} />
       ))}

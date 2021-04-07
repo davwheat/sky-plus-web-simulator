@@ -3,6 +3,8 @@ import clsx from 'clsx'
 import { makeStyles } from '@material-ui/core'
 import Colors from '../../data/colors'
 
+import MenuMoreArrowSvg from '../../assets/icons/list-arrow.svg'
+
 /**
  * Excludes the "More..." item
  */
@@ -18,16 +20,28 @@ const useStyles = makeStyles({
     gap: 4,
     position: 'relative',
 
-    '&[data-more]::after': {
+    '&[data-more="true"]::after, &[data-less="true"]::before': {
       content: '""',
       display: 'block',
       position: 'absolute',
-      height: 32,
+      height: 24,
       width: 32,
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
-      backgroundSize: 'cover',
-      backgroundImage: `url(../../assets/icons/list-arrow.svg)`,
+      backgroundSize: 'contain',
+      backgroundImage: `url(${MenuMoreArrowSvg})`,
+      right: 0,
+      transformOrigin: 'center',
+    },
+
+    '&[data-more="true"]::after': {
+      bottom: 0,
+      transform: 'translateY(100%)',
+    },
+
+    '&[data-less="true"]::before': {
+      top: 0,
+      transform: 'translateY(-100%) rotate(0.5turn)',
     },
   },
 })
@@ -116,6 +130,8 @@ const Menu: React.FC<ListProps> = ({ onBack, listItems }) => {
 
   console.log(listItems)
   console.log(itemsOnPage)
+
+  console.log(page, lastPage)
 
   return (
     <ol data-more={page < lastPage} data-less={page > 0} onKeyDown={HandleMenuNav} ref={listRef} className={clsx('thick-text', classes.root)}>

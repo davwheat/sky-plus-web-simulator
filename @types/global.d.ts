@@ -27,4 +27,12 @@ declare global {
   }
 }
 
+// declare module '*.*' {
+//   /**
+//    * URL to file
+//    */
+//   const value: string
+//   export default value
+// }
+
 export const _ = ''

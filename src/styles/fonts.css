@@ -25,6 +25,22 @@
 @font-face {
   font-family: 'ZurichBT';
   src: url('/font/ZurichBT-Bold.woff2') format('woff2'), url('/font/ZurichBT-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'ZurichBT';
+  src: url('/font/Zurich Black BT.woff2') format('woff2'), url('/font/Zurich Black BT.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'SkyLogo';
+  src: url('/font/SKYfontThick.woff2') format('woff2'), url('/font/SKYfontThick.woff') format('woff');
   font-weight: bold;
   font-style: normal;
   font-display: fallback;

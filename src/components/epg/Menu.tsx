@@ -1,40 +1,34 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import clsx from 'clsx'
 import { makeStyles } from '@material-ui/core'
+import Colors from '../../data/colors'
 
-const COLORS = {
-  main: '#0025c9',
-  mainText: '#fff',
-  mainHover: '#fcda25',
-  mainTextHover: '#0000b3',
-
-  accent: '#001a8f',
-  accentText: '#7e7eff',
-  accentHover: '#fec200',
-  accentTextHover: '#0000b3',
-}
+/**
+ * Excludes the "More..." item
+ */
+const ITEMS_PER_PAGE = 9
 
 const useStyles = makeStyles({
   root: {
-    width: 520,
+    width: 560,
     margin: 'auto',
     padding: 0,
     display: 'flex',
     flexDirection: 'column',
     gap: 4,
+    position: 'relative',
 
-    // Show the first list item as selected if no items have focus
-    // '&:not(:focus-within)': {
-    //   '& li:first-child': {
-    //     background: COLORS.mainHover,
-    //     color: COLORS.mainTextHover,
-
-    //     '&::before': {
-    //       background: COLORS.accentHover,
-    //       color: COLORS.accentTextHover,
-    //     },
-    //   },
-    // },
+    '&[data-more]::after': {
+      content: '""',
+      display: 'block',
+      position: 'absolute',
+      height: 32,
+      width: 32,
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover',
+      backgroundImage: `url(../../assets/icons/list-arrow.svg)`,
+    },
   },
 })
 
@@ -45,15 +39,14 @@ export interface ListItem {
 
 interface ListProps {
   listItems: ListItem[]
+  onBack?: (e: SkyControlPressedEvent) => void
 }
 
-const Menu: React.FC<ListProps> = ({ listItems }) => {
+const Menu: React.FC<ListProps> = ({ onBack, listItems }) => {
   const classes = useStyles()
   const listRef = useRef<HTMLOListElement>(null)
 
   function HandleMenuNav(e: React.KeyboardEvent<HTMLOListElement>) {
-    // debugger
-
     if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return
 
     const li = e.target as HTMLLIElement
@@ -84,18 +77,52 @@ const Menu: React.FC<ListProps> = ({ listItems }) => {
     }
   }
 
+  /**
+   * 0-based
+   */
+  const [page, setPage] = useState(0)
+
   useEffect(() => {
     if (listRef.current) {
       const firstLi = listRef.current.firstElementChild as HTMLLIElement
-      firstLi.focus()
+      firstLi && firstLi.focus()
     }
-  })
+
+    function goToFirstPage(e: SkyControlPressedEvent) {
+      e.stopImmediatePropagation()
+
+      if (page > 0 && e.detail.control === 'backUp') {
+        setPage(0)
+      } else if (page === 0 && onBack) {
+        onBack(e)
+      }
+    }
+
+    if (window.__setControlVisibility) window.__setControlVisibility('backUp', !!(onBack || page > 0))
+
+    document.addEventListener('skyControlPressed', goToFirstPage as EventListener)
+
+    return () => {
+      document.removeEventListener('skyControlPressed', goToFirstPage as EventListener)
+    }
+  }, [page, listRef])
+
+  /**
+   * 0-based
+   */
+  const lastPage = listItems.length > ITEMS_PER_PAGE + 1 ? Math.floor(listItems.length / ITEMS_PER_PAGE) : 0
+
+  const itemsOnPage = listItems.slice(page * ITEMS_PER_PAGE, (page + 1) * ITEMS_PER_PAGE)
+
+  console.log(listItems)
+  console.log(itemsOnPage)
 
   return (
-    <ol onKeyDown={HandleMenuNav} ref={listRef} className={clsx('thick-text', classes.root)}>
-      {listItems.map(item => (
+    <ol data-more={page < lastPage} data-less={page > 0} onKeyDown={HandleMenuNav} ref={listRef} className={clsx('thick-text', classes.root)}>
+      {itemsOnPage.map(item => (
         <MenuItem key={item.text} {...item} />
       ))}
+      {lastPage !== page && <MenuItem text="More..." onClick={() => setPage(p => p + 1)} />}
     </ol>
   )
 }
@@ -103,13 +130,13 @@ const Menu: React.FC<ListProps> = ({ listItems }) => {
 const useItemStyles = makeStyles({
   root: {
     cursor: 'pointer',
-    paddingLeft: 4,
+    paddingLeft: 6,
     height: 32,
     fontSize: 26,
     display: 'flex',
     alignItems: 'center',
-    background: COLORS.main,
-    color: COLORS.mainText,
+    background: Colors.main,
+    color: Colors.mainText,
     textTransform: 'uppercase',
     counterIncrement: 'menu',
 
@@ -122,28 +149,34 @@ const useItemStyles = makeStyles({
       lineHeight: '32px',
       marginRight: 12,
 
-      background: COLORS.accent,
-      color: COLORS.accentText,
+      background: Colors.accent,
+      color: Colors.accentText,
 
       content: 'counter(menu)',
       display: 'inline-block',
     },
 
     '&:hover, &:focus-visible': {
-      background: COLORS.mainHover,
-      color: COLORS.mainTextHover,
+      background: Colors.mainHover,
+      color: Colors.mainTextHover,
 
       '&::before': {
-        background: COLORS.accentHover,
-        color: COLORS.accentTextHover,
+        background: Colors.accentHover,
+        color: Colors.accentTextHover,
       },
+    },
+
+    '&:nth-child(10)::before': {
+      content: '"0"',
     },
   },
 })
 
-type ListItemProps = {} & ListItem
+type ListItemProps = {
+  customNumber?: number
+} & ListItem
 
-const MenuItem: React.FC<ListItemProps> = ({ text, onClick }) => {
+const MenuItem: React.FC<ListItemProps> = ({ customNumber, text, onClick }) => {
   const classes = useItemStyles()
 
   function triggerClickOnEnter(e: React.KeyboardEvent<HTMLLIElement>) {
@@ -154,7 +187,7 @@ const MenuItem: React.FC<ListItemProps> = ({ text, onClick }) => {
   }
 
   return (
-    <li onKeyDown={triggerClickOnEnter} onClick={onClick} tabIndex={0} className={classes.root}>
+    <li data-number={customNumber} onKeyDown={triggerClickOnEnter} onClick={onClick} tabIndex={0} className={classes.root}>
       {text}
     </li>
   )

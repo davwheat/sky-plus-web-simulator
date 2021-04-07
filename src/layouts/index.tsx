@@ -4,6 +4,7 @@ import { SnackbarProvider, useSnackbar } from 'notistack'
 import { Button, IconButton, makeStyles } from '@material-ui/core'
 import Settings from '../components/Settings'
 import SettingsIcon from 'mdi-react/SettingsIcon'
+import ControlsBar from '../components/ControlsBar'
 
 interface Props {
   children?: React.ReactNode
@@ -14,7 +15,10 @@ const PageWrapper: React.FC<Props> = ({ children }) => {
     <SnackbarProvider maxSnack={3}>
       <AudioWrapper />
       <SettingsArea />
-      <main>{children}</main>
+      <main>
+        {children}
+        <ControlsBar />
+      </main>
     </SnackbarProvider>
   )
 }

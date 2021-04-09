@@ -45,3 +45,11 @@
   font-style: normal;
   font-display: fallback;
 }
+
+@font-face {
+  font-family: 'SkyLogo';
+  src: url('/font/SkyScreenRegular.woff2') format('woff2'), url('/font/SkyScreenRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import clsx from 'clsx'
 import { makeStyles } from '@material-ui/core'
-import Colors from '../../data/colors'
+import Colors from '../../data/Colors'
 
 import MenuMoreArrowSvg from '../../assets/icons/list-arrow.svg'
 

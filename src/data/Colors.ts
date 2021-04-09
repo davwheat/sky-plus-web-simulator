@@ -2,6 +2,7 @@ export default {
   text: '#000',
 
   main: '#0025c9',
+  mainLight: '#022ad9',
   mainText: '#fff',
   get mainHover() {
     return this.yellowMain
@@ -16,6 +17,7 @@ export default {
   accentTextHover: '#0000b3',
 
   yellowMain: '#fcda25',
+  yellowText: '#ffeb00',
   yellowDark: '#fec200',
 
   get arrow() {

@@ -19,6 +19,16 @@ const PageWrapper: React.FC<Props> = ({ children }) => {
         <SettingsArea />
         <main>
           {/* These are reversed with CSS. ControlsBar needs to come first to fix issues with `window.__setControlVisibility` not being defined. */}
+          <footer>
+            Created by{' '}
+            <a target="_blank" href="https://github.com/davwheat">
+              David Wheatley
+            </a>{' '}
+            •{' '}
+            <a target="_blank" href="https://github.com/davwheat/sky-digibox-web-simulator">
+              View the source code on GitHub
+            </a>
+          </footer>
           <ControlsBar />
           {children}
         </main>

@@ -33,27 +33,21 @@ with open(in_file, "r") as file:
 
             # Set name
             names = re.findall(r'tvg-name="(.*?)"', line)
-
-            print(names)
-
             if len(names) > 0:
                 channel["name"] = names[0]
 
             # Set logo
             logos = re.findall(r'tvg-logo="(.*?)"', line)
-
             if len(names) > 0:
                 channel["logo"] = logos[0]
 
             # Set languages
             languages = re.findall(r'tvg-language="(.*?)"', line)
-
             if len(languages) > 0:
                 channel["languages"] = languages[0].split(";")
 
             # Set countries
             countries = re.findall(r'tvg-country="(.*?)"', line)
-
             if len(languages) > 0:
                 channel["streamsTo"] = countries[0].split(";")
 
@@ -61,12 +55,9 @@ with open(in_file, "r") as file:
             # Extra VLC options
 
             # Set user agent
-            userAgents = re.findall(r"http-user-agent=.+", line)
-
+            userAgents = re.findall(r"http-user-agent=(.+)", line)
             if len(names) > 0:
-                userAgent = userAgents[0]
-                
-                channel["userAgent"] = userAgent[len('http-user-agent=') : ]
+                channel["userAgent"] = userAgents[0]
 
 
         if line.startswith("http"):

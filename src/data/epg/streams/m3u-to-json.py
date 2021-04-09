@@ -32,40 +32,30 @@ with open(in_file, "r") as file:
             # Channel info line
 
             # Set name
-            names = re.findall(r"tvg-name=\".+?[^\\]\"", line)
+            names = re.findall(r'tvg-name="(.*?)"', line)
+
+            print(names)
 
             if len(names) > 0:
-                name = names[0]
-                # Remove `tvg-name` and quotes from name
-                channel["name"] = name[len('tvg-name="') : -1]
+                channel["name"] = names[0]
 
             # Set logo
-            logos = re.findall(r"tvg-logo=\".+?[^\\]\"", line)
+            logos = re.findall(r'tvg-logo="(.*?)"', line)
 
             if len(names) > 0:
-                logo = logos[0]
-                # Remove `tvg-name` and quotes from name
-                channel["logo"] = logo[len('tvg-logo="') : -1]
+                channel["logo"] = logos[0]
 
             # Set languages
-            languages = re.findall(r"tvg-language=\".+?[^\\]\"", line)
+            languages = re.findall(r'tvg-language="(.*?)"', line)
 
             if len(languages) > 0:
-                lang = languages[0]
-                # Remove `tvg-language` and quotes from name
-                langSemiDelimited = lang[len('tvg-language="') : -1]
-
-                channel["languages"] = langSemiDelimited.split(";")
+                channel["languages"] = languages[0].split(";")
 
             # Set countries
-            countries = re.findall(r"tvg-country=\".+?[^\\]\"", line)
+            countries = re.findall(r'tvg-country="(.*?)"', line)
 
             if len(languages) > 0:
-                country = countries[0]
-                # Remove `tvg-language` and quotes from name
-                countrySemiDelimited = country[len('tvg-country="') : -1]
-
-                channel["streamsTo"] = countrySemiDelimited.split(";")
+                channel["streamsTo"] = countries[0].split(";")
 
         if line.startswith("#EXTVLCOPT"):
             # Extra VLC options

@@ -27,4 +27,6 @@ export default {
   get controlBg() {
     return this.yellowMain
   },
+
+  headerTabSelected: '#2a66e2'
 }

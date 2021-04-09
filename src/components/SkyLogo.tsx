@@ -16,7 +16,7 @@ const useStyles = makeStyles({
     alignItems: 'center',
   },
   underText: {
-    marginTop: 6,
+    marginTop: 2,
     fontFamily: 'SkyLogo',
     fontSize: 32,
     color: 'white',
@@ -29,7 +29,15 @@ const SkyLogo: React.FC<Props> = ({ className, text }) => {
 
   return (
     <div className={clsx(classes.root, className)}>
-      <StaticImage src="../assets/images/sky-logo-transparent.png" alt="Sky" height={50} placeholder="blurred" />
+      <StaticImage
+        src="../assets/images/sky-logo-transparent.png"
+        alt="Sky"
+        // Squash vertically a little to make it more realistic
+        width={83}
+        height={45}
+        placeholder="none"
+        transformOptions={{ fit: 'fill' }}
+      />
       {text && <span className={classes.underText}>{text}</span>}
     </div>
   )

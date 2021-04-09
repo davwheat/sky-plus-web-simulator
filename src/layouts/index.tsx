@@ -5,6 +5,7 @@ import { Button, IconButton, makeStyles } from '@material-ui/core'
 import Settings from '../components/Settings'
 import SettingsIcon from 'mdi-react/SettingsIcon'
 import ControlsBar from '../components/ControlsBar'
+import { RecoilRoot } from 'recoil'
 
 interface Props {
   children?: React.ReactNode
@@ -12,15 +13,17 @@ interface Props {
 
 const PageWrapper: React.FC<Props> = ({ children }) => {
   return (
-    <SnackbarProvider maxSnack={3}>
-      <AudioWrapper />
-      <SettingsArea />
-      <main>
-        {/* These are reversed with CSS. ControlsBar needs to come first to fix issues with `window.__setControlVisibility` not being defined. */}
-        <ControlsBar />
-        {children}
-      </main>
-    </SnackbarProvider>
+    <RecoilRoot>
+      <SnackbarProvider maxSnack={3}>
+        <AudioWrapper />
+        <SettingsArea />
+        <main>
+          {/* These are reversed with CSS. ControlsBar needs to come first to fix issues with `window.__setControlVisibility` not being defined. */}
+          <ControlsBar />
+          {children}
+        </main>
+      </SnackbarProvider>
+    </RecoilRoot>
   )
 }
 

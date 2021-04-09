@@ -4,6 +4,7 @@ import Header from '../Header/Header'
 import Menu from '../Menu'
 
 import EpgBackgroundImage from '../../../assets/images/guide-bg.sized.png'
+import { MainMenuTab } from '../../../pages'
 
 const MainMenuItems = [
   {
@@ -80,7 +81,7 @@ const useStyles = makeStyles({
   },
 })
 
-const MainMenu: React.FC = () => {
+const MainMenu: React.FC<Props> = () => {
   const classes = useStyles()
 
   return (

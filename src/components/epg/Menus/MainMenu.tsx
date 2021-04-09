@@ -1,6 +1,9 @@
+import { makeStyles } from '@material-ui/core'
 import React from 'react'
 import Header from '../Header/Header'
 import Menu from '../Menu'
+
+import EpgBackgroundImage from '../../../assets/images/guide-bg.sized.png'
 
 const MainMenuItems = [
   {
@@ -71,9 +74,17 @@ const MainMenuItems = [
   },
 ]
 
+const useStyles = makeStyles({
+  root: {
+    background: `url(${EpgBackgroundImage})`,
+  },
+})
+
 const MainMenu: React.FC = () => {
+  const classes = useStyles()
+
   return (
-    <div>
+    <div className={classes.root}>
       <Header logoText="guide" />
       <Menu listItems={MainMenuItems} />
     </div>

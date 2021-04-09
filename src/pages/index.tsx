@@ -1,5 +1,5 @@
 import React from 'react'
-import MainMenu from '../components/epg/pages/MainMenu'
+import MainMenu from '../components/epg/Menus/MainMenu'
 import InnerLayout from '../layouts/InnerLayout'
 
 const IndexPage: React.FC = () => {

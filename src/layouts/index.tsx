@@ -16,8 +16,9 @@ const PageWrapper: React.FC<Props> = ({ children }) => {
       <AudioWrapper />
       <SettingsArea />
       <main>
-        {children}
+        {/* These are reversed with CSS. ControlsBar needs to come first to fix issues with `window.__setControlVisibility` not being defined. */}
         <ControlsBar />
+        {children}
       </main>
     </SnackbarProvider>
   )

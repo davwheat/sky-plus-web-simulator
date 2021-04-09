@@ -214,7 +214,7 @@ export default async function (channelSid: string, date?: string) {
   if (!realDate) {
     const now = new Date()
 
-    realDate = `${now.getUTCFullYear()}${padLeft(now.getUTCMonth() + 1)}${padLeft(now.getUTCDate())}`
+    realDate = `${now.getUTCFullYear()}${pad(now.getUTCMonth() + 1)}${pad(now.getUTCDate())}`
   }
 
   const jsonData = await (await fetch(`${EPG_API_URL}/${realDate}/${channelSid}`)).json()
@@ -222,6 +222,6 @@ export default async function (channelSid: string, date?: string) {
   return jsonData
 }
 
-function padLeft(num: number): string {
-  return num < 10 ? `0${num}` : `${num}`
+function pad(num: number): string {
+  return String(num).padStart(2, '0')
 }

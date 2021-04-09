@@ -1,1361 +1,906 @@
 [
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://rakuten-actionmovies-1-gb.samsung.wurl.com/manifest/playlist.m3u8", 
-    "name": "Action Movies", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://rakuten-actionmovies-1-gb.samsung.wurl.com/manifest/playlist.m3u8",
+    "name": "Action Movies",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/uMcwx2p.jpg"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://stream.ecable.tv/afrobeats/tracks-v1a1/mono.m3u8", 
-    "name": "Afrobeats 247", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://stream.ecable.tv/afrobeats/tracks-v1a1/mono.m3u8",
+    "name": "Afrobeats 247",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/HL7fwzt.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "http://109.123.126.14:1935/live/livestream1.sdp/chunklist.m3u8", 
-    "name": "Ahlulbayt TV", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "http://109.123.126.14:1935/live/livestream1.sdp/chunklist.m3u8",
+    "name": "Ahlulbayt TV",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/qLqHPhK.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://cdnamd-hls-globecast.akamaized.net/live/ramdisk/akaal_tv/hls1_smart_akaal/akaal_tv.m3u8", 
-    "name": "Akaal Channel", 
-    "languages": [
-      "Punjabi", 
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://cdnamd-hls-globecast.akamaized.net/live/ramdisk/akaal_tv/hls1_smart_akaal/akaal_tv.m3u8",
+    "name": "Akaal Channel",
+    "languages": ["Punjabi", "English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/62IpVDn.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "ARAB"
-    ], 
-    "streamUrl": "https://alaraby.cdn.octivid.com/alaraby/smil:alaraby.stream.smil/playlist.m3u8", 
-    "name": "Alaraby TV", 
-    "languages": [
-      "Arabic"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["ARAB"],
+    "streamUrl": "https://alaraby.cdn.octivid.com/alaraby/smil:alaraby.stream.smil/playlist.m3u8",
+    "name": "Alaraby TV",
+    "languages": ["Arabic"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/LNI1HNi.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "ARAB"
-    ], 
-    "streamUrl": "https://mn-nl.mncdn.com/alhiwar_live/smil:alhiwar.smil/playlist.m3u8", 
-    "name": "Alhiwar TV", 
-    "languages": [
-      "Arabic"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["ARAB"],
+    "streamUrl": "https://mn-nl.mncdn.com/alhiwar_live/smil:alhiwar.smil/playlist.m3u8",
+    "name": "Alhiwar TV",
+    "languages": ["Arabic"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/ooiJwD5.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://endemol-alldrama-1-gb.samsung.wurl.com/manifest/playlist.m3u8", 
-    "name": "All Drama", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://endemol-alldrama-1-gb.samsung.wurl.com/manifest/playlist.m3u8",
+    "name": "All Drama",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/E1prxi9.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "ARAB"
-    ], 
-    "streamUrl": "https://vs-hls-ww.live.cf.md.bbci.co.uk/pool_902/live/nonuk/bbc_arabic_tv/bbc_arabic_tv.isml/index.m3u8", 
-    "name": "BBC Arabic", 
-    "languages": [
-      "Arabic"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["ARAB"],
+    "streamUrl": "https://vs-hls-ww.live.cf.md.bbci.co.uk/pool_902/live/nonuk/bbc_arabic_tv/bbc_arabic_tv.isml/index.m3u8",
+    "name": "BBC Arabic",
+    "languages": ["Arabic"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/oFGPG9Y.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "http://51.52.156.22:8888/http/004", 
-    "name": "BBC News", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "http://51.52.156.22:8888/http/004",
+    "name": "BBC News",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/eNPIQ9f.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "http://51.52.156.22:8888/http/001", 
-    "name": "BBC One Scotland", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "http://51.52.156.22:8888/http/001",
+    "name": "BBC One Scotland",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": ""
-  }, 
+  },
   {
-    "streamsTo": [
-      "IR"
-    ], 
-    "streamUrl": "https://vs-hls-ww.live.cf.md.bbci.co.uk/pool_902/live/nonuk/bbc_persian_tv/bbc_persian_tv.isml/index.m3u8", 
-    "name": "BBC Persian", 
-    "languages": [
-      "Persian"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["IR"],
+    "streamUrl": "https://vs-hls-ww.live.cf.md.bbci.co.uk/pool_902/live/nonuk/bbc_persian_tv/bbc_persian_tv.isml/index.m3u8",
+    "name": "BBC Persian",
+    "languages": ["Persian"],
+    "userAgent": null,
     "logo": "https://upload.wikimedia.org/wikipedia/en/4/44/BBC_News_Persian_Logo.jpg"
-  }, 
+  },
   {
-    "streamsTo": [
-      "INT"
-    ], 
-    "streamUrl": "http://103.199.161.254/Content/bbcworld/Live/Channel(BBCworld)/index.m3u8", 
-    "name": "BBC World News UK", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["INT"],
+    "streamUrl": "http://103.199.161.254/Content/bbcworld/Live/Channel(BBCworld)/index.m3u8",
+    "name": "BBC World News UK",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/Nx0BRdV.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "INT"
-    ], 
-    "streamUrl": "http://ott-cdn.ucom.am/s24/index.m3u8", 
-    "name": "BBC World News UK", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", 
+    "streamsTo": ["INT"],
+    "streamUrl": "http://ott-cdn.ucom.am/s24/index.m3u8",
+    "name": "BBC World News UK",
+    "languages": ["English"],
+    "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148",
     "logo": "https://i.imgur.com/Nx0BRdV.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://beanostudios-beanotv-1-gb.samsung.wurl.com/manifest/playlist.m3u8", 
-    "name": "Beano TV", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://beanostudios-beanotv-1-gb.samsung.wurl.com/manifest/playlist.m3u8",
+    "name": "Beano TV",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/XvBi1Ou.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://alchimie-big-names-2-gb.samsung.wurl.com/manifest/playlist.m3u8", 
-    "name": "Big Names", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://alchimie-big-names-2-gb.samsung.wurl.com/manifest/playlist.m3u8",
+    "name": "Big Names",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/OVPfhsc.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://a.jsrdn.com/broadcast/22693_4rGhgrBU/-0800/hi/c.m3u8", 
-    "name": "Brit Asia TV", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://a.jsrdn.com/broadcast/22693_4rGhgrBU/-0800/hi/c.m3u8",
+    "name": "Brit Asia TV",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": ""
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "http://51.52.156.22:8888/http/003", 
-    "name": "CBeebies UK", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "http://51.52.156.22:8888/http/003",
+    "name": "CBeebies UK",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/1/16/CBeebies.svg/640px-CBeebies.svg.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK", 
-      "IE", 
-      "BD"
-    ], 
-    "streamUrl": "https://a.jsrdn.com/r-373576a3/publish/22679_24MrQma9TX/index.m3u8", 
-    "name": "Channel S", 
-    "languages": [
-      "Bengali"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK", "IE", "BD"],
+    "streamUrl": "https://a.jsrdn.com/r-373576a3/publish/22679_24MrQma9TX/index.m3u8",
+    "name": "Channel S",
+    "languages": ["Bengali"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/TjVJT22.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://clubbingtv-samsunguk.amagi.tv/playlist.m3u8", 
-    "name": "Clubbing TV", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://clubbingtv-samsunguk.amagi.tv/playlist.m3u8",
+    "name": "Clubbing TV",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/aqMhht6.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://uksono1-samsunguk.amagi.tv/playlist.m3u8", 
-    "name": "Comedy Channel", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://uksono1-samsunguk.amagi.tv/playlist.m3u8",
+    "name": "Comedy Channel",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/WyHp7Wa.jpg"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://rakuten-comedymovies-1-gb.samsung.wurl.com/manifest/playlist.m3u8", 
-    "name": "Comedy Movies", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://rakuten-comedymovies-1-gb.samsung.wurl.com/manifest/playlist.m3u8",
+    "name": "Comedy Movies",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/eQKFgpa.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://cdnamd-hls-globecast.akamaized.net/live/ramdisk/cruise_tv/hls_video/index.m3u8", 
-    "name": "Cruise1st TV", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://cdnamd-hls-globecast.akamaized.net/live/ramdisk/cruise_tv/hls_video/index.m3u8",
+    "name": "Cruise1st TV",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/q50kqOG.jpg"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://discoverfilm-discoverfilm-1-gb.samsung.wurl.com/manifest/playlist.m3u8", 
-    "name": "Discover.Film", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://discoverfilm-discoverfilm-1-gb.samsung.wurl.com/manifest/playlist.m3u8",
+    "name": "Discover.Film",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/yjIYUim.jpg"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://endemol-restore-2-gb.samsung.wurl.com/manifest/playlist.m3u8", 
-    "name": "Diy Daily", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://endemol-restore-2-gb.samsung.wurl.com/manifest/playlist.m3u8",
+    "name": "Diy Daily",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/v63GFhe.jpg"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://rakuten-tvshows-1-gb.samsung.wurl.com/manifest/playlist.m3u8", 
-    "name": "Drama", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://rakuten-tvshows-1-gb.samsung.wurl.com/manifest/playlist.m3u8",
+    "name": "Drama",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/dWNxCqp.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://dust-gb.samsung.wurl.com/manifest/playlist.m3u8", 
-    "name": "Dust", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://dust-gb.samsung.wurl.com/manifest/playlist.m3u8",
+    "name": "Dust",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/pXXUmuW.jpg"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://dust-samsung-uk-ca.samsung.wurl.com/manifest/playlist.m3u8", 
-    "name": "Dust", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://dust-samsung-uk-ca.samsung.wurl.com/manifest/playlist.m3u8",
+    "name": "Dust",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/6LBIDFo.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://edgesport-samsunguk.amagi.tv/playlist.m3u8", 
-    "name": "Edge Sport", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://edgesport-samsunguk.amagi.tv/playlist.m3u8",
+    "name": "Edge Sport",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/6h10JDk.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://ap02.iqplay.tv:8082/iqb8002/3m9n/playlist.m3u8", 
-    "name": "Eman Channel", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://ap02.iqplay.tv:8082/iqb8002/3m9n/playlist.m3u8",
+    "name": "Eman Channel",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/NWljgKa.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "http://ott-cdn.ucom.am/s37/index.m3u8", 
-    "name": "English Club TV", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148", 
+    "streamsTo": ["UK"],
+    "streamUrl": "http://ott-cdn.ucom.am/s37/index.m3u8",
+    "name": "English Club TV",
+    "languages": ["English"],
+    "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148",
     "logo": "http://ocdn.eu/images/program-tv/NTU7MDA_/e7114237dc0731c7dd660c32d6822432.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://rakuten-euronews-1-gb.samsung.wurl.com/manifest/playlist.m3u8", 
-    "name": "Euronews", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://rakuten-euronews-1-gb.samsung.wurl.com/manifest/playlist.m3u8",
+    "name": "Euronews",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/sBPVCYy.jpg"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://failarmy-international-gb.samsung.wurl.com/manifest/playlist.m3u8", 
-    "name": "Failarmy", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://failarmy-international-gb.samsung.wurl.com/manifest/playlist.m3u8",
+    "name": "Failarmy",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/RIXSg4L.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://rakuten-family-1-gb.samsung.wurl.com/manifest/playlist.m3u8", 
-    "name": "Family Movies", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://rakuten-family-1-gb.samsung.wurl.com/manifest/playlist.m3u8",
+    "name": "Family Movies",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/hboiinD.jpg"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "http://51.52.156.22:8888/http/008", 
-    "name": "Film 4 UK", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "http://51.52.156.22:8888/http/008",
+    "name": "Film 4 UK",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": ""
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://spi-filmstream-1-gb.samsung.wurl.com/manifest/playlist.m3u8", 
-    "name": "Filmstream", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://spi-filmstream-1-gb.samsung.wurl.com/manifest/playlist.m3u8",
+    "name": "Filmstream",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/aoaV9ek.jpg"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://filmzie-filmzie-1-gb.samsung.wurl.com/manifest/playlist.m3u8", 
-    "name": "Filmzie", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://filmzie-filmzie-1-gb.samsung.wurl.com/manifest/playlist.m3u8",
+    "name": "Filmzie",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/jUWffic.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://elevensports-samsunguk-ca.samsung.wurl.com/manifest/playlist.m3u8", 
-    "name": "FTF", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://elevensports-samsunguk-ca.samsung.wurl.com/manifest/playlist.m3u8",
+    "name": "FTF",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/IRWahfD.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://elevensports-uk.samsung.wurl.com/manifest/playlist.m3u8", 
-    "name": "FTF For the fans", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://elevensports-uk.samsung.wurl.com/manifest/playlist.m3u8",
+    "name": "FTF For the fans",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/Db8nWyW.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "http://57d6b85685bb8.streamlock.net:1935/abrgemporiaukgfx/livestream_360p/index.m3u8", 
-    "name": "Gems TV", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "http://57d6b85685bb8.streamlock.net:1935/abrgemporiaukgfx/livestream_360p/index.m3u8",
+    "name": "Gems TV",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/9fJlCNW.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://brandusa-gousa-1-gb.samsung.wurl.com/manifest/playlist.m3u8", 
-    "name": "Go USA", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://brandusa-gousa-1-gb.samsung.wurl.com/manifest/playlist.m3u8",
+    "name": "Go USA",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/KhdR4wa.jpg"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://zypelive-lh.akamaihd.net/i/default_1@745545/master.m3u8", 
-    "name": "God TV UK", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://zypelive-lh.akamaihd.net/i/default_1@745545/master.m3u8",
+    "name": "God TV UK",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": ""
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://gustotv-samsung-gb.samsung.wurl.com/manifest/playlist.m3u8", 
-    "name": "GUSTO TV (UK)", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://gustotv-samsung-gb.samsung.wurl.com/manifest/playlist.m3u8",
+    "name": "GUSTO TV (UK)",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/vanl2NZ.jpg"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://halaldn.cdn.mangomolo.com/halavd/smil:halavd.stream.smil/chunklist.m3u8", 
-    "name": "Hala London", 
-    "languages": [
-      "Arabic"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://halaldn.cdn.mangomolo.com/halavd/smil:halavd.stream.smil/chunklist.m3u8",
+    "name": "Hala London",
+    "languages": ["Arabic"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/BVJWUpc.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://hncfree-samsung-uk.amagi.tv/playlist.m3u8", 
-    "name": "Horse and Country", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://hncfree-samsung-uk.amagi.tv/playlist.m3u8",
+    "name": "Horse and Country",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/FNFFhEq.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://alchimie-humanity-2-gb.samsung.wurl.com/manifest/playlist.m3u8", 
-    "name": "Humanity", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://alchimie-humanity-2-gb.samsung.wurl.com/manifest/playlist.m3u8",
+    "name": "Humanity",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/XZSCpl2.jpg"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://insighttv-samsung-uk.amagi.tv/playlist.m3u8", 
-    "name": "Insight", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://insighttv-samsung-uk.amagi.tv/playlist.m3u8",
+    "name": "Insight",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/ewkmZM1.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://inwild-samsung-uk.amagi.tv/playlist.m3u8", 
-    "name": "Inwild", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://inwild-samsung-uk.amagi.tv/playlist.m3u8",
+    "name": "Inwild",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/8SgbMqY.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://inwonder-samsung-uk.amagi.tv/playlist.m3u8", 
-    "name": "Inwonder", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://inwonder-samsung-uk.amagi.tv/playlist.m3u8",
+    "name": "Inwonder",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/5VUGeTE.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://sportportal1.akamaized.net/hls/live/702646/itvlive/ITV1PORTAL2/master.m3u8", 
-    "name": "ITV", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://sportportal1.akamaized.net/hls/live/702646/itvlive/ITV1PORTAL2/master.m3u8",
+    "name": "ITV",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": ""
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "http://51.52.156.22:8888/http/005", 
-    "name": "ITV2", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "http://51.52.156.22:8888/http/005",
+    "name": "ITV2",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": ""
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "http://51.52.156.22:8888/http/006", 
-    "name": "ITV3", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "http://51.52.156.22:8888/http/006",
+    "name": "ITV3",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": ""
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "http://51.52.156.22:8888/http/007", 
-    "name": "ITV4", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "http://51.52.156.22:8888/http/007",
+    "name": "ITV4",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": ""
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://live.kanshitv.co.uk/mobile/kanshitvkey.m3u8", 
-    "name": "Kanshi TV", 
-    "languages": [
-      "Hindi"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://live.kanshitv.co.uk/mobile/kanshitvkey.m3u8",
+    "name": "Kanshi TV",
+    "languages": ["Hindi"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/jxf9gQd.jpg"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "http://csm-e.tm.yospace.com/csm/extlive/boxplus01,kerrang-desktop.m3u8?yo.up=http://boxtv-origin-elb.cds1.yospace.com/uploads/kerrang/", 
-    "name": "Kerrang", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "http://csm-e.tm.yospace.com/csm/extlive/boxplus01,kerrang-desktop.m3u8?yo.up=http://boxtv-origin-elb.cds1.yospace.com/uploads/kerrang/",
+    "name": "Kerrang",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/Nn2VfkP.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://studio71-samsung-uk.amagi.tv/playlist.m3u8", 
-    "name": "Kid Gamer TV", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://studio71-samsung-uk.amagi.tv/playlist.m3u8",
+    "name": "Kid Gamer TV",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/dSPmDU7.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "http://csm-e.tm.yospace.com/csm/extlive/boxplus01,kiss-inapp.m3u8?yo.up=http%3a//boxtv-origin-elb.cds1.yospace.com/uploads/kiss/", 
-    "name": "Kiss", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "http://csm-e.tm.yospace.com/csm/extlive/boxplus01,kiss-inapp.m3u8?yo.up=http%3a//boxtv-origin-elb.cds1.yospace.com/uploads/kiss/",
+    "name": "Kiss",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/AqVdlpz.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "http://w10.streamgb.com:1935/kool/kool/playlist.m3u8", 
-    "name": "Kool London Radio", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "http://w10.streamgb.com:1935/kool/kool/playlist.m3u8",
+    "name": "Kool London Radio",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "http://undergroundbass.co.uk/image/koollondon.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://alchimie-luxe-2-gb.samsung.wurl.com/manifest/playlist.m3u8", 
-    "name": "Luxe TV", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://alchimie-luxe-2-gb.samsung.wurl.com/manifest/playlist.m3u8",
+    "name": "Luxe TV",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/8tWhfap.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "http://csm-e.tm.yospace.com/csm/extlive/boxplus01,magic-desktop.m3u8?yo.up=http://boxtv-origin-elb.cds1.yospace.com/uploads/magic/", 
-    "name": "Magic", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "http://csm-e.tm.yospace.com/csm/extlive/boxplus01,magic-desktop.m3u8?yo.up=http://boxtv-origin-elb.cds1.yospace.com/uploads/magic/",
+    "name": "Magic",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/HXfKkwj.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://d2rwmwucnr0d10.cloudfront.net/live.m3u8", 
-    "name": "Manoto TV", 
-    "languages": [
-      "Persian"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://d2rwmwucnr0d10.cloudfront.net/live.m3u8",
+    "name": "Manoto TV",
+    "languages": ["Persian"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/dNB92lj.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://endemol-mastersoffood-1-gb.samsung.wurl.com/manifest/playlist.m3u8", 
-    "name": "Masters of Food", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://endemol-mastersoffood-1-gb.samsung.wurl.com/manifest/playlist.m3u8",
+    "name": "Masters of Food",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/WJbjD6m.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://mavtv-mavtvglobal-1-gb.samsung.wurl.com/manifest/playlist.m3u8", 
-    "name": "Mav TV", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://mavtv-mavtvglobal-1-gb.samsung.wurl.com/manifest/playlist.m3u8",
+    "name": "Mav TV",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/a2MgGmF.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://alchimie-mmatv-1-gb.samsung.wurl.com/manifest/playlist.m3u8", 
-    "name": "MMA TV", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://alchimie-mmatv-1-gb.samsung.wurl.com/manifest/playlist.m3u8",
+    "name": "MMA TV",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/MYoNHMg.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://alchimie-movies-central-2-gb.samsung.wurl.com/manifest/playlist.m3u8", 
-    "name": "Movies Central", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://alchimie-movies-central-2-gb.samsung.wurl.com/manifest/playlist.m3u8",
+    "name": "Movies Central",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/dwOoEmE.jpg"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://cflive-emea.live-delivery.ooyala.com/out/u/3vkkbgnvsm2r5/101593/1lanVtaDE6sCK6v0vDomDayqoKeSal6G/cn/8fb839e3a82045bd99a92ecd9df257e5.m3u8", 
-    "name": "MTA 1", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://cflive-emea.live-delivery.ooyala.com/out/u/3vkkbgnvsm2r5/101593/1lanVtaDE6sCK6v0vDomDayqoKeSal6G/cn/8fb839e3a82045bd99a92ecd9df257e5.m3u8",
+    "name": "MTA 1",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/b3nn216.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://ooyalahd2-f.akamaihd.net/i/mtaeng_delivery@345736/master.m3u8", 
-    "name": "MTA 1 English", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://ooyalahd2-f.akamaihd.net/i/mtaeng_delivery@345736/master.m3u8",
+    "name": "MTA 1 English",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/b3nn216.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://ooyalahd2-f.akamaihd.net/i/mtaorigin_delivery@353498/master.m3u8", 
-    "name": "MTA 1 Original", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://ooyalahd2-f.akamaihd.net/i/mtaorigin_delivery@353498/master.m3u8",
+    "name": "MTA 1 Original",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/b3nn216.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://ooyalahd2-f.akamaihd.net/i/mtaurdu_delivery@350117/master.m3u8", 
-    "name": "MTA 1 Urdu", 
-    "languages": [
-      "Urdu"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://ooyalahd2-f.akamaihd.net/i/mtaurdu_delivery@350117/master.m3u8",
+    "name": "MTA 1 Urdu",
+    "languages": ["Urdu"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/b3nn216.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://ooyalahd2-f.akamaihd.net/i/mtach7audio_delivery@65519/master.m3u8", 
-    "name": "MTA 2", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://ooyalahd2-f.akamaihd.net/i/mtach7audio_delivery@65519/master.m3u8",
+    "name": "MTA 2",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/V6uUz9l.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://ooyalahd2-f.akamaihd.net/i/mtageraudio_delivery@308889/master.m3u8", 
-    "name": "MTA 2 Urdu", 
-    "languages": [
-      "Urdu"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://ooyalahd2-f.akamaihd.net/i/mtageraudio_delivery@308889/master.m3u8",
+    "name": "MTA 2 Urdu",
+    "languages": ["Urdu"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/V6uUz9l.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://ooyalahd2-f.akamaihd.net/i/mtach7_delivery@348438/master.m3u8", 
-    "name": "MTA 3", 
-    "languages": [
-      "Arabic"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://ooyalahd2-f.akamaihd.net/i/mtach7_delivery@348438/master.m3u8",
+    "name": "MTA 3",
+    "languages": ["Arabic"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/C5nT9yi.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://ooyalahd2-f.akamaihd.net/i/mtaengaudio_delivery@138280/master.m3u8", 
-    "name": "MTA Africa", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://ooyalahd2-f.akamaihd.net/i/mtaengaudio_delivery@138280/master.m3u8",
+    "name": "MTA Africa",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/xT3X6L9.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://jukin-peopleareawesome-2-gb.samsung.wurl.com/manifest/playlist.m3u8", 
-    "name": "People are Awesome", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://jukin-peopleareawesome-2-gb.samsung.wurl.com/manifest/playlist.m3u8",
+    "name": "People are Awesome",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/msHBlDz.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://vod365-planet-knowledge-1-gb.samsung.wurl.com/manifest/playlist.m3u8", 
-    "name": "Planet Knowledge", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://vod365-planet-knowledge-1-gb.samsung.wurl.com/manifest/playlist.m3u8",
+    "name": "Planet Knowledge",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/U8GADbT.jpg"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://playerstv-samsunguk.amagi.tv/playlist.m3u8", 
-    "name": "Players TV", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://playerstv-samsunguk.amagi.tv/playlist.m3u8",
+    "name": "Players TV",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/31L4TjP.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://pocketwatch-gb.samsung.wurl.com/manifest/playlist.m3u8", 
-    "name": "Pocket watch", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://pocketwatch-gb.samsung.wurl.com/manifest/playlist.m3u8",
+    "name": "Pocket watch",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/CiQdnud.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://stingray-qelloconcerts-1-gb.samsung.wurl.com/manifest/playlist.m3u8", 
-    "name": "Qello Concerts by Stingray", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://stingray-qelloconcerts-1-gb.samsung.wurl.com/manifest/playlist.m3u8",
+    "name": "Qello Concerts by Stingray",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/IVUgJPY.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://qwestclassic-samsung-uk.amagi.tv/playlist.m3u8", 
-    "name": "QUEST TV Classical", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://qwestclassic-samsung-uk.amagi.tv/playlist.m3u8",
+    "name": "QUEST TV Classical",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/B69BHnx.jpg"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://qwestjazz-samsung-uk.amagi.tv/playlist.m3u8", 
-    "name": "QUEST TV Jazz and Beyond", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://qwestjazz-samsung-uk.amagi.tv/playlist.m3u8",
+    "name": "QUEST TV Jazz and Beyond",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/bhSrOea.jpg"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://qwestmix-samsung-uk.amagi.tv/playlist.m3u8", 
-    "name": "QUEST TV MIX", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://qwestmix-samsung-uk.amagi.tv/playlist.m3u8",
+    "name": "QUEST TV MIX",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/B69BHnx.jpg"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://d1txbbj1u9asam.cloudfront.net/live/qvcuk_main_clean/bitrate1.isml/3/prog_index.m3u8", 
-    "name": "QVC UK", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://d1txbbj1u9asam.cloudfront.net/live/qvcuk_main_clean/bitrate1.isml/3/prog_index.m3u8",
+    "name": "QVC UK",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/m1xhwRa.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://realstories-samsung-uk.amagi.tv/playlist.m3u8", 
-    "name": "Real Stories", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://realstories-samsung-uk.amagi.tv/playlist.m3u8",
+    "name": "Real Stories",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/TVfuBfJ.jpg"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://endemol-reeltruth-2-gb.samsung.wurl.com/manifest/playlist.m3u8", 
-    "name": "Reel Truth", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://endemol-reeltruth-2-gb.samsung.wurl.com/manifest/playlist.m3u8",
+    "name": "Reel Truth",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/gqUOI93.jpg"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://api.new.livestream.com/accounts/6986636/events/5362122/live.m3u8", 
-    "name": "Sangat Television", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://api.new.livestream.com/accounts/6986636/events/5362122/live.m3u8",
+    "name": "Sangat Television",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/KcPEkHh.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "http://tv.sheffieldlive.org/hls/main.m3u8", 
-    "name": "Sheffield Live TV", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "http://tv.sheffieldlive.org/hls/main.m3u8",
+    "name": "Sheffield Live TV",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/eUqnYU1.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "http://skydvn-sn-mobile-prod.skydvn.com/skynews/1404/latest.m3u8", 
-    "name": "Sky News", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "http://skydvn-sn-mobile-prod.skydvn.com/skynews/1404/latest.m3u8",
+    "name": "Sky News",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/WvNd8yg.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "http://skynews-sn-cdhls.ak-cdn.skydvn.com/cdhlsskynews/1404/latest.m3u8", 
-    "name": "Sky News", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "http://skynews-sn-cdhls.ak-cdn.skydvn.com/cdhlsskynews/1404/latest.m3u8",
+    "name": "Sky News",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/WvNd8yg.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://skynews2-plutolive-vo.akamaized.net/cdhlsskynewsamericas/1013/latest.m3u8?serverSideAds=true", 
-    "name": "Sky News", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://skynews2-plutolive-vo.akamaized.net/cdhlsskynewsamericas/1013/latest.m3u8?serverSideAds=true",
+    "name": "Sky News",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/WvNd8yg.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "ARAB"
-    ], 
-    "streamUrl": "https://stream.skynewsarabia.com/hls/sna.m3u8", 
-    "name": "Sky News Arabia", 
-    "languages": [
-      "Arabic"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["ARAB"],
+    "streamUrl": "https://stream.skynewsarabia.com/hls/sna.m3u8",
+    "name": "Sky News Arabia",
+    "languages": ["Arabic"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/kF7TvcH.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "AU"
-    ], 
-    "streamUrl": "https://skynewsau-live.akamaized.net/hls/live/2002689/skynewsau-extra1/master.m3u8", 
-    "name": "Sky News Extra 1", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["AU"],
+    "streamUrl": "https://skynewsau-live.akamaized.net/hls/live/2002689/skynewsau-extra1/master.m3u8",
+    "name": "Sky News Extra 1",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/Wl0iGsD.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "AU"
-    ], 
-    "streamUrl": "https://skynewsau-live.akamaized.net/hls/live/2002690/skynewsau-extra2/master.m3u8", 
-    "name": "Sky News Extra 2", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["AU"],
+    "streamUrl": "https://skynewsau-live.akamaized.net/hls/live/2002690/skynewsau-extra2/master.m3u8",
+    "name": "Sky News Extra 2",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/Wl0iGsD.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "AU"
-    ], 
-    "streamUrl": "https://skynewsau-live.akamaized.net/hls/live/2002691/skynewsau-extra3/master.m3u8", 
-    "name": "Sky News Extra 3", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["AU"],
+    "streamUrl": "https://skynewsau-live.akamaized.net/hls/live/2002691/skynewsau-extra3/master.m3u8",
+    "name": "Sky News Extra 3",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/Wl0iGsD.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://sofytv-samsunguk.amagi.tv/playlist.m3u8", 
-    "name": "Sofy TV", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://sofytv-samsunguk.amagi.tv/playlist.m3u8",
+    "name": "Sofy TV",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/Srxa6cR.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://sparktv-samsunguk.amagi.tv/playlist.m3u8", 
-    "name": "Spark Tv", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://sparktv-samsunguk.amagi.tv/playlist.m3u8",
+    "name": "Spark Tv",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/vTGknv3.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://vod365-sports-channel-network-1-gb.samsung.wurl.com/manifest/playlist.m3u8", 
-    "name": "Sports Channel Network", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://vod365-sports-channel-network-1-gb.samsung.wurl.com/manifest/playlist.m3u8",
+    "name": "Sports Channel Network",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/trfRIem.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://rakuten-spotlight-1-gb.samsung.wurl.com/manifest/playlist.m3u8", 
-    "name": "Spotlight", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://rakuten-spotlight-1-gb.samsung.wurl.com/manifest/playlist.m3u8",
+    "name": "Spotlight",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/vbb3bjW.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://securecontributions.sechls01.visionip.tv/live/securecontributions-securecontributions-spotlighttv-hsslive-25f-SD/chunklist.m3u8", 
-    "name": "Spotlight TV", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://securecontributions.sechls01.visionip.tv/live/securecontributions-securecontributions-spotlighttv-hsslive-25f-SD/chunklist.m3u8",
+    "name": "Spotlight TV",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/axXipp8.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://stingray-karaoke-1-gb.samsung.wurl.com/manifest/playlist.m3u8", 
-    "name": "Stingray Karaoke", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://stingray-karaoke-1-gb.samsung.wurl.com/manifest/playlist.m3u8",
+    "name": "Stingray Karaoke",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/XkBOu3Q.jpg"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://kedoo-supertoonstv-1-gb.samsung.wurl.com/manifest/playlist.m3u8", 
-    "name": "Supertoons TV", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://kedoo-supertoonstv-1-gb.samsung.wurl.com/manifest/playlist.m3u8",
+    "name": "Supertoons TV",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/35BpWJh.jpg"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://tastemade-gb.samsung.wurl.com/manifest/playlist.m3u8", 
-    "name": "Tastemade", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://tastemade-gb.samsung.wurl.com/manifest/playlist.m3u8",
+    "name": "Tastemade",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/dwMUVhs.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://dhx-teletubbies-1-gb.samsung.wurl.com/manifest/playlist.m3u8", 
-    "name": "Teletubbies", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://dhx-teletubbies-1-gb.samsung.wurl.com/manifest/playlist.m3u8",
+    "name": "Teletubbies",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/FlCXGip.jpg"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://tennischannel-int-samsunguk.amagi.tv/playlist.m3u8", 
-    "name": "Tennis Channel (UK)", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://tennischannel-int-samsunguk.amagi.tv/playlist.m3u8",
+    "name": "Tennis Channel (UK)",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/WEM9B83.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "http://csm-e.tm.yospace.com/csm/extlive/boxplus01,thebox-desktop.m3u8?yo.up=http://boxtv-origin-elb.cds1.yospace.com/uploads/thebox/", 
-    "name": "The Box UK", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "http://csm-e.tm.yospace.com/csm/extlive/boxplus01,thebox-desktop.m3u8?yo.up=http://boxtv-origin-elb.cds1.yospace.com/uploads/thebox/",
+    "name": "The Box UK",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": ""
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://tennischannel-intl-samsung-uk.amagi.tv/playlist.m3u8", 
-    "name": "The Tennis Channel", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://tennischannel-intl-samsung-uk.amagi.tv/playlist.m3u8",
+    "name": "The Tennis Channel",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/n3C7ytq.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://timeline-samsung-uk.amagi.tv/playlist.m3u8", 
-    "name": "Time Line", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://timeline-samsung-uk.amagi.tv/playlist.m3u8",
+    "name": "Time Line",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/AzZhwWR.jpg"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://toongoggles-toongoggles-3-gb.samsung.wurl.com/manifest/playlist.m3u8", 
-    "name": "Toongoggles", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://toongoggles-toongoggles-3-gb.samsung.wurl.com/manifest/playlist.m3u8",
+    "name": "Toongoggles",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/8PEf3Vn.jpg"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://travelxp-travelxp-1-gb.samsung.wurl.com/manifest/playlist.m3u8", 
-    "name": "Travel XP", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://travelxp-travelxp-1-gb.samsung.wurl.com/manifest/playlist.m3u8",
+    "name": "Travel XP",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/6V48LwT.jpg"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://barcroft-truly-1-gb.samsung.wurl.com/manifest/playlist.m3u8", 
-    "name": "Truly", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://barcroft-truly-1-gb.samsung.wurl.com/manifest/playlist.m3u8",
+    "name": "Truly",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/MWkm3no.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://alchimie-unbeaten-1-gb.samsung.wurl.com/manifest/playlist.m3u8", 
-    "name": "Unbeaten", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://alchimie-unbeaten-1-gb.samsung.wurl.com/manifest/playlist.m3u8",
+    "name": "Unbeaten",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/hMojkpf.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://alchimie-unearth-2-gb.samsung.wurl.com/manifest/playlist.m3u8", 
-    "name": "Unearth", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://alchimie-unearth-2-gb.samsung.wurl.com/manifest/playlist.m3u8",
+    "name": "Unearth",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/bMqTNs1.jpg"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://abr.de1se01.v2beat.live/playlist.m3u8", 
-    "name": "V2BEAT", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://abr.de1se01.v2beat.live/playlist.m3u8",
+    "name": "V2BEAT",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://graph.facebook.com/vtwobeat/picture?width=320&height=320"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://de1se01.v2beat.live/playlist.m3u8", 
-    "name": "V2BEAT", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://de1se01.v2beat.live/playlist.m3u8",
+    "name": "V2BEAT",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/Ll6GlqY.png"
-  }, 
+  },
   {
-    "streamsTo": [
-      "UK"
-    ], 
-    "streamUrl": "https://wonder-samsung-uk.amagi.tv/playlist.m3u8", 
-    "name": "Wonder", 
-    "languages": [
-      "English"
-    ], 
-    "userAgent": null, 
+    "streamsTo": ["UK"],
+    "streamUrl": "https://wonder-samsung-uk.amagi.tv/playlist.m3u8",
+    "name": "Wonder",
+    "languages": ["English"],
+    "userAgent": null,
     "logo": "https://i.imgur.com/450pJvs.png"
   }
 ]

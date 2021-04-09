@@ -28,5 +28,5 @@ export default {
     return this.yellowMain
   },
 
-  headerTabSelected: '#2a66e2'
+  headerTabSelected: '#2a66e2',
 }

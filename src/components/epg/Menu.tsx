@@ -112,7 +112,7 @@ const Menu: React.FC<ListProps> = ({ onBack, listItems }) => {
       }
     }
 
-    if (window.__setControlVisibility) window.__setControlVisibility('backUp', !!(onBack || page > 0))
+    window.__setControlVisibility('backUp', !!(onBack || page > 0))
 
     document.addEventListener('skyControlPressed', goToFirstPage as EventListener)
 

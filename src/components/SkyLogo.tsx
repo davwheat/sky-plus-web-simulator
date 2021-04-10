@@ -28,7 +28,7 @@ const SkyLogo: React.FC<Props> = ({ className, text }) => {
   const classes = useStyles()
 
   return (
-    <div className={clsx(classes.root, className)}>
+    <div role="presentation" aria-label={`Sky ${text}`} className={clsx(classes.root, className)}>
       <StaticImage
         src="../assets/images/sky-logo-transparent.png"
         alt="Sky"

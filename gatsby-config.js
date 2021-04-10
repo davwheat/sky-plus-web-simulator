@@ -1,4 +1,15 @@
-const prodPlugins = process.env.NODE_ENV === 'production' ? [`gatsby-plugin-preact`] : []
+const prodPlugins =
+  process.env.NODE_ENV === 'production'
+    ? [
+        `gatsby-plugin-preact`,
+        {
+          resolve: 'gatsby-plugin-remove-console',
+          options: {
+            exclude: ['error', 'warn'], // <- will be removed all console calls except these
+          },
+        },
+      ]
+    : []
 
 module.exports = {
   siteMetadata: {

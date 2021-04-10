@@ -11,7 +11,19 @@ interface Props {
   children?: React.ReactNode
 }
 
+const useLayoutStyles = makeStyles({
+  footer: {
+    fontFamily: 'SkyLogo',
+    fontSize: 18,
+    color: Colors.main,
+    WebkitUserSelect: 'text',
+    userSelect: 'text',
+  },
+})
+
 const PageWrapper: React.FC<Props> = ({ children }) => {
+  const classes = useLayoutStyles()
+
   return (
     <RecoilRoot>
       <SnackbarProvider maxSnack={3}>
@@ -19,16 +31,7 @@ const PageWrapper: React.FC<Props> = ({ children }) => {
         <SettingsArea />
         <main>
           {/* These are reversed with CSS. ControlsBar needs to come first to fix issues with `window.__setControlVisibility` not being defined. */}
-          <footer>
-            Created by{' '}
-            <a target="_blank" href="https://github.com/davwheat">
-              David Wheatley
-            </a>{' '}
-            •{' '}
-            <a target="_blank" href="https://github.com/davwheat/sky-digibox-web-simulator">
-              View the source code on GitHub
-            </a>
-          </footer>
+          <Footer className={classes.footer} />
           <ControlsBar />
           {children}
         </main>

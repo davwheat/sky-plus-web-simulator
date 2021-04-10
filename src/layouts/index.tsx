@@ -22,8 +22,8 @@ const useLayoutStyles = makeStyles({
     fontFamily: 'SkyLogo',
     fontSize: 18,
     color: Colors.main,
-    WebkitUserSelect: 'text',
     userSelect: 'text',
+    marginTop: 8,
   },
 })
 
@@ -36,7 +36,6 @@ const PageWrapper: React.FC<Props> = ({ children }) => {
         <AudioWrapper />
         <SettingsArea />
         <main>
-          {/* These are reversed with CSS. ControlsBar needs to come first to fix issues with `window.__setControlVisibility` not being defined. */}
           <Footer className={classes.footer} />
           <ControlsBar />
           {children}

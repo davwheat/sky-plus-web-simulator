@@ -4,6 +4,9 @@ import { makeStyles } from '@material-ui/core'
 import Colors from '../../data/Colors'
 
 import MenuMoreArrowSvg from '../../assets/icons/list-arrow.svg'
+import { controlsState } from '../../atoms'
+import { useSetRecoilState } from 'recoil'
+import controlsShownStateSetter from '../../helpers/controlsShownStateSetter'
 
 /**
  * Excludes the "More..." item
@@ -59,6 +62,7 @@ interface ListProps {
 const Menu: React.FC<ListProps> = ({ onBack, listItems }) => {
   const classes = useStyles()
   const listRef = useRef<HTMLOListElement>(null)
+  const setControlsState = useSetRecoilState(controlsState)
 
   function HandleMenuNav(e: React.KeyboardEvent<HTMLOListElement>) {
     if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return
@@ -95,6 +99,7 @@ const Menu: React.FC<ListProps> = ({ onBack, listItems }) => {
    * 0-based
    */
   const [page, setPage] = useState(0)
+  setControlsState(controlsShownStateSetter('backUp', !!(onBack || page > 0)))
 
   useEffect(() => {
     if (listRef.current) {
@@ -111,8 +116,6 @@ const Menu: React.FC<ListProps> = ({ onBack, listItems }) => {
         onBack(e)
       }
     }
-
-    window.__setControlVisibility('backUp', !!(onBack || page > 0))
 
     document.addEventListener('skyControlPressed', goToFirstPage as EventListener)
 

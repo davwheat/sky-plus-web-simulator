@@ -5,6 +5,10 @@ import ErrorCodes, { ErrorText } from '../data/ErrorCodes'
 import ControlText from './ControlText'
 import Colors from '../data/Colors'
 
+import { useSetRecoilState } from 'recoil'
+import { controlsState } from '../atoms'
+import controlsShownStateSetter from '../helpers/controlsShownStateSetter'
+
 const useStyles = makeStyles({
   messageBox: {
     width: '80%',
@@ -95,11 +99,14 @@ const ErrorMessage: React.FC<ErrorMessageProps> = ({
   onBackUp = () => {},
 }) => {
   const classes = useStyles()
+  const setControlsState = useSetRecoilState(controlsState)
+
+  if (backUpPrompt) {
+    setControlsState(controlsShownStateSetter('backUp', true))
+  }
 
   useEffect(() => {
     if (backUpPrompt) {
-      window.__setControlVisibility('backUp', true)
-
       function backUpEventListener(e: SkyControlPressedEvent) {
         e.stopImmediatePropagation()
 
@@ -112,7 +119,7 @@ const ErrorMessage: React.FC<ErrorMessageProps> = ({
 
       return () => {
         document.removeEventListener('skyControlPressed', backUpEventListener as EventListener)
-        window.__setControlVisibility('backUp', false)
+        setControlsState(controlsShownStateSetter('backUp', false))
       }
     }
   })

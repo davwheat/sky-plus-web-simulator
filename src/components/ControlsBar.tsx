@@ -1,6 +1,11 @@
+import React from 'react'
+
 import { makeStyles } from '@material-ui/core'
-import React, { useEffect, useReducer, useState } from 'react'
 import ControlText from './ControlText'
+
+import { useRecoilValue } from 'recoil'
+import { controlsState } from '../atoms'
+import type { Control } from '../atoms/controlsState'
 
 const useStyles = makeStyles({
   root: {
@@ -18,46 +23,8 @@ const useStyles = makeStyles({
 })
 
 const ControlsBar = () => {
-  const [shownControls, setShownControls] = useState<typeof window.__shownControls>({
-    backUp: false,
-    select: false,
-
-    red: false,
-    green: false,
-    yellow: false,
-    blue: false,
-  })
-
-  const [, forceUpdate] = useReducer(x => x + 1, 0)
-
+  const shownControls = useRecoilValue(controlsState)
   const classes = useStyles()
-
-  useEffect(() => {
-    function setControlVisibility(control: Control, visible?: boolean): void {
-      setShownControls(controls => {
-        console.log(controls)
-
-        if (Object.keys(controls).includes(control)) {
-          controls[control] = typeof visible !== 'boolean' ? !controls[control] : visible
-        } else {
-          console.error('Invalid control', control)
-        }
-
-        console.log(controls)
-        return controls
-      })
-
-      forceUpdate()
-    }
-
-    window.__shownControls = shownControls
-    window.__setControlVisibility = setControlVisibility
-
-    return () => {
-      window.__shownControls = undefined
-      window.__setControlVisibility = undefined
-    }
-  })
 
   function triggerKeyPress(control: Control) {
     document.dispatchEvent(

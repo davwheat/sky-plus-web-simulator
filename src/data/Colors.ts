@@ -29,4 +29,4 @@ export default {
   },
 
   headerTabSelected: '#2a66e2',
-}
+} as const

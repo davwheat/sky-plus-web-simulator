@@ -9,6 +9,11 @@ const useStyles = makeStyles({
     overflowY: 'hidden',
     overflowX: 'auto',
     marginTop: 16,
+    userSelect: 'none',
+
+    '& > *': {
+      cursor: 'pointer',
+    },
   },
 })
 

@@ -19,6 +19,8 @@ module.exports = {
     siteUrl: `https://sky-epg.davwheat.dev`,
   },
   plugins: [
+    'gatsby-plugin-typescript',
+    'gatsby-plugin-typescript-checker',
     'gatsby-plugin-sitemap',
     `gatsby-plugin-layout`,
     `gatsby-plugin-less`,

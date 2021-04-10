@@ -31,9 +31,10 @@
     "gatsby-plugin-preact": "^5.2.0",
     "gatsby-plugin-react-head": "https://github.com/davwheat/gatsby-plugin-react-head",
     "gatsby-plugin-react-svg": "^3.0.1",
-    "gatsby-plugin-remove-console": "^0.0.2",
     "gatsby-plugin-sharp": "^3.2.1",
     "gatsby-plugin-sitemap": "^3.2.0",
+    "gatsby-plugin-typescript": "^3.2.0",
+    "gatsby-plugin-typescript-checker": "^1.1.1",
     "gatsby-source-filesystem": "^3.2.0",
     "gatsby-transformer-sharp": "^3.2.0",
     "mdi-react": "^7.5.0",
@@ -46,6 +47,8 @@
     "recoil": "^0.2.0"
   },
   "devDependencies": {
-    "cross-env": "^7.0.3"
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "cross-env": "^7.0.3",
+    "gatsby-plugin-remove-console": "^0.0.2"
   }
 }

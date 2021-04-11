@@ -13946,7 +13946,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.0.5":
+"prettier@npm:^2.0.5, prettier@npm:^2.2.1":
   version: 2.2.1
   resolution: "prettier@npm:2.2.1"
   bin:
@@ -15508,6 +15508,7 @@ resolve@^2.0.0-next.3:
     notistack: ^1.0.5
     preact: ^10.5.13
     preact-render-to-string: ^5.1.19
+    prettier: ^2.2.1
     prettier-plugin-organize-imports: ^1.1.1
     react: ^17.0.2
     react-dom: ^17.0.2

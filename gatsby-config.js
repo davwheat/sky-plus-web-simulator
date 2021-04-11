@@ -12,6 +12,12 @@ const prodPlugins =
     : []
 
 module.exports = {
+  flags: {
+    PRESERVE_WEBPACK_CACHE: true,
+    FAST_DEV: true,
+    PRESERVE_FILE_DOWNLOAD_CACHE: true,
+    DEV_SSR: false,
+  },
   siteMetadata: {
     title: 'Sky Digibox Simulator',
     description: 'A web simulation of the old Sky Digibox electronic programme guide (EPG).',

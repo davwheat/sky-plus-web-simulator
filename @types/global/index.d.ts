@@ -1,5 +1,4 @@
-import type React from 'react'
-import type { Control } from '../src/atoms/controlsState'
+import type { Control } from '../../src/atoms/controlsState'
 
 declare global {
   export type SkyControlPressedEvent = CustomEvent<{ control: Control }>
@@ -10,13 +9,5 @@ declare global {
     __bgAudio: HTMLAudioElement
   }
 }
-
-// declare module '*.*' {
-//   /**
-//    * URL to file
-//    */
-//   const value: string
-//   export default value
-// }
 
 export const _ = ''

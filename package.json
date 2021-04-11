@@ -49,6 +49,7 @@
   "devDependencies": {
     "babel-plugin-transform-remove-console": "^6.9.4",
     "cross-env": "^7.0.3",
-    "gatsby-plugin-remove-console": "^0.0.2"
+    "gatsby-plugin-remove-console": "^0.0.2",
+    "typescript": "^4.2.4"
   }
 }

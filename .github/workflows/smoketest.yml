@@ -105,6 +105,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-modules-${{ github.sha }}-
 
+      - name: Install project dependencies from cache
+        run: yarn add --cached
+
       - name: Verify formatting
         run: yarn format:check
 
@@ -132,6 +135,9 @@ jobs:
           key: ${{ runner.os }}-node-modules-${{ github.sha }}-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-node-modules-${{ github.sha }}-
+
+      - name: Install project dependencies from cache
+        run: yarn add --cached
 
       - name: Build site
         run: yarn build:ci

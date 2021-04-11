@@ -18,10 +18,12 @@ const useStyles = makeStyles({
   root: {
     display: 'flex',
     padding: '24px 32px',
-    gap: 36,
+    gap: 32,
     marginBottom: 20,
   },
-  logo: {},
+  logo: {
+    marginTop: 6,
+  },
 })
 
 /**
@@ -42,10 +44,10 @@ const useTabStyles = makeStyles({
   root: {
     listStyle: 'none',
     display: 'flex',
-    gap: 16,
+    gap: 12,
   },
   icon: {
-    height: 80,
+    height: 77,
     color: 'white',
   },
   selectedIcon: {
@@ -59,16 +61,16 @@ const HeaderTabs: React.FC = () => {
 
   return (
     <ul className={classes.root}>
-      <li>
+      <li key="tv-guide">
         <TVGuideIcon className={clsx(classes.icon, selectedTab === 'GUIDE' && classes.selectedIcon)} />
       </li>
-      <li>
+      <li key="box-office">
         <BoxOfficeIcon style={{ paddingTop: 3 }} className={clsx(classes.icon, selectedTab === 'BOX OFFICE' && classes.selectedIcon)} />
       </li>
-      <li>
+      <li key="services">
         <ServicesIcon className={clsx(classes.icon, selectedTab === 'SERVICES' && classes.selectedIcon)} />
       </li>
-      <li>
+      <li key="interactive">
         <InteractiveIcon style={{ paddingTop: 3 }} className={clsx(classes.icon, selectedTab === 'INTERACTIVE' && classes.selectedIcon)} />
       </li>
     </ul>

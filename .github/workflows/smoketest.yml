@@ -37,11 +37,11 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - name: Install dependencies on cache miss
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
         if: steps.yarn-cache.outputs.cache-hit != 'true'
 
       - name: Install project dependencies from cache
-        run: yarn --prefer-offline --frozen-lockfile
+        run: yarn --prefer-offline --immutable
         if: steps.yarn-cache.outputs.cache-hit == 'true'
 
       - name: Cache node_modules for other runs

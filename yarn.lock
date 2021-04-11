@@ -13936,6 +13936,16 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"prettier-plugin-organize-imports@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "prettier-plugin-organize-imports@npm:1.1.1"
+  peerDependencies:
+    prettier: ">=1.10"
+    typescript: ">=2.8.2"
+  checksum: a915e943a93de0a6a6d091bf36f296a6eec5807abd50e6218f55d955c24bf75eaf0bbf708692cff45196b1f889c7a190509ce370b0c611deab2159a741ed912e
+  languageName: node
+  linkType: hard
+
 "prettier@npm:^2.0.5":
   version: 2.2.1
   resolution: "prettier@npm:2.2.1"
@@ -15498,6 +15508,7 @@ resolve@^2.0.0-next.3:
     notistack: ^1.0.5
     preact: ^10.5.13
     preact-render-to-string: ^5.1.19
+    prettier-plugin-organize-imports: ^1.1.1
     react: ^17.0.2
     react-dom: ^17.0.2
     react-head: ^3.4.0

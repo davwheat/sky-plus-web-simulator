@@ -1,17 +1,20 @@
+import type { WindowLocation } from '@reach/router'
+import type { PageProps } from 'gatsby'
 import React from 'react'
 import { useResetRecoilState, useSetRecoilState } from 'recoil'
+import { mainMenuState } from '../atoms/mainMenuState'
 import MainMenu from '../components/epg/Menus/MainMenu'
 import InnerLayout from '../layouts/InnerLayout'
 
-import { mainMenuState } from '../atoms/mainMenuState'
-
 export type MainMenuTab = 'GUIDE' | 'BOX OFFICE' | 'SERVICES' | 'INTERACTIVE'
 
-const IndexPage: React.FC = ({ location }) => {
+type ThisPageProps = PageProps<object, object, WindowLocation<{ selectedTab: MainMenuTab }>['state']>
+
+const IndexPage: React.FC<ThisPageProps> = ({ location }) => {
   const setMainMenuState = useSetRecoilState(mainMenuState)
   const resetMainMenuState = useResetRecoilState(mainMenuState)
 
-  if (location.state && location.state.selectedTab) setMainMenuState(s => ({ ...s, selectedTab: location.state.selectedTab as MainMenuTab }))
+  if (location.state && location.state.selectedTab) setMainMenuState(s => ({ ...s, selectedTab: location.state.selectedTab }))
   else resetMainMenuState()
 
   return (

@@ -1,13 +1,12 @@
-import React, { useEffect } from 'react'
-import clsx from 'clsx'
 import { makeStyles } from '@material-ui/core'
-import ErrorCodes, { ErrorText } from '../data/ErrorCodes'
-import ControlText from './ControlText'
-import Colors from '../data/Colors'
-
+import clsx from 'clsx'
+import React, { useEffect } from 'react'
 import { useSetRecoilState } from 'recoil'
 import { controlsState } from '../atoms'
+import Colors from '../data/Colors'
+import ErrorCodes, { ErrorText } from '../data/ErrorCodes'
 import controlsShownStateSetter from '../helpers/controlsShownStateSetter'
+import ControlText from './ControlText'
 
 const useStyles = makeStyles({
   messageBox: {

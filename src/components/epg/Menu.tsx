@@ -1,11 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react'
-import clsx from 'clsx'
 import { makeStyles } from '@material-ui/core'
-import Colors from '../../data/Colors'
-
+import clsx from 'clsx'
+import React, { useEffect, useRef, useState } from 'react'
+import { useSetRecoilState } from 'recoil'
 import MenuMoreArrowSvg from '../../assets/icons/list-arrow.svg'
 import { controlsState } from '../../atoms'
-import { useSetRecoilState } from 'recoil'
+import Colors from '../../data/Colors'
 import controlsShownStateSetter from '../../helpers/controlsShownStateSetter'
 
 /**

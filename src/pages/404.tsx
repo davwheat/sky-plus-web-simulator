@@ -1,7 +1,7 @@
+import { navigate } from 'gatsby'
 import React from 'react'
 import FullScreenError from '../components/FullScreenError'
 import InnerLayout from '../layouts/InnerLayout'
-import { navigate } from 'gatsby'
 
 const Error404: React.FC = () => {
   return (

@@ -1,11 +1,9 @@
-import React from 'react'
-
 import { makeStyles } from '@material-ui/core'
-import ControlText from './ControlText'
-
+import React from 'react'
 import { useRecoilValue } from 'recoil'
 import { controlsState } from '../atoms'
 import type { Control } from '../atoms/controlsState'
+import ControlText from './ControlText'
 
 const useStyles = makeStyles({
   root: {

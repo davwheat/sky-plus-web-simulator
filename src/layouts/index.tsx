@@ -1,17 +1,13 @@
-import React, { useEffect, useState } from 'react'
-
 import { Button, IconButton, makeStyles } from '@material-ui/core'
 import SettingsIcon from 'mdi-react/SettingsIcon'
-
-import Settings from '../components/Settings'
+import { SnackbarProvider, useSnackbar } from 'notistack'
+import React, { useEffect, useState } from 'react'
+import { RecoilRoot } from 'recoil'
 import ControlsBar from '../components/ControlsBar'
 import Footer from '../components/Footer'
-
+import Settings from '../components/Settings'
 import chooseMusic from '../data/chooseMusic'
 import Colors from '../data/Colors'
-
-import { RecoilRoot } from 'recoil'
-import { SnackbarProvider, useSnackbar } from 'notistack'
 
 interface Props {
   children?: React.ReactNode

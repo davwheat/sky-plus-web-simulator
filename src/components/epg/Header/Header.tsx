@@ -1,16 +1,14 @@
 import { makeStyles } from '@material-ui/core'
-import React from 'react'
-import SkyLogo from '../../SkyLogo'
-
-import TVGuideIcon from '../../../assets/icons/epg-header/tv-guide.inline.svg'
-import BoxOfficeIcon from '../../../assets/icons/epg-header/box-office.inline.svg'
-import ServicesIcon from '../../../assets/icons/epg-header/services.inline.svg'
-import InteractiveIcon from '../../../assets/icons/epg-header/interactive.inline.svg'
-
-import Colors from '../../../data/Colors'
-import { useRecoilValue } from 'recoil'
-import { mainMenuState } from '../../../atoms/mainMenuState'
 import clsx from 'clsx'
+import React from 'react'
+import { useRecoilValue } from 'recoil'
+import BoxOfficeIcon from '../../../assets/icons/epg-header/box-office.inline.svg'
+import InteractiveIcon from '../../../assets/icons/epg-header/interactive.inline.svg'
+import ServicesIcon from '../../../assets/icons/epg-header/services.inline.svg'
+import TVGuideIcon from '../../../assets/icons/epg-header/tv-guide.inline.svg'
+import { mainMenuState } from '../../../atoms/mainMenuState'
+import Colors from '../../../data/Colors'
+import SkyLogo from '../../SkyLogo'
 
 interface Props {
   logoText?: string

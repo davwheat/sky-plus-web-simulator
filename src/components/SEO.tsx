@@ -1,7 +1,6 @@
+import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
-
-import { Title, Meta } from 'react-head'
-import { useStaticQuery, graphql } from 'gatsby'
+import { Meta, Title } from 'react-head'
 
 type MetaEntry = {
   name: string

@@ -1,3 +1,6 @@
+import type React from 'react'
+import type { Control } from '../src/atoms/controlsState'
+
 declare global {
   export type SkyControlPressedEvent = CustomEvent<{ control: Control }>
 

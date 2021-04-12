@@ -1,6 +1,6 @@
-# Sky Digibox Simulator
+# Sky+ Web Simulator
 
-A recreation of the old Sky Box EPG on the web.
+A recreation of the old Sky+ Box EPG on the web.
 
 Created with React statically rendered using Gatsby.js.
 

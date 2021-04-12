@@ -15478,9 +15478,9 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"sky-digibox-simulator@workspace:.":
+"sky-plus-epg-simulator@workspace:.":
   version: 0.0.0-use.local
-  resolution: "sky-digibox-simulator@workspace:."
+  resolution: "sky-plus-epg-simulator@workspace:."
   dependencies:
     "@material-ui/core": ^4.11.3
     "@material-ui/styles": ^4.11.3

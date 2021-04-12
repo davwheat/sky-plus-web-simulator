@@ -2,7 +2,7 @@ const Colors = {
   text: '#000',
 
   main: '#0025c9',
-  mainLight: '#022ad9',
+  mainLight: '#003399',
   mainText: '#fff',
   get mainHover() {
     return this.yellowMain

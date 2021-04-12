@@ -1,4 +1,4 @@
-export default {
+const Colors = {
   text: '#000',
 
   main: '#0025c9',
@@ -29,4 +29,13 @@ export default {
   },
 
   headerTabSelected: '#2a66e2',
-} as const
+
+  coloredButtons: {
+    red: '#c20106',
+    green: '#67d66d',
+    yellow: '#fecf5b',
+    blue: '#0025c9',
+  },
+}
+
+export default Colors

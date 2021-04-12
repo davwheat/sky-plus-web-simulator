@@ -81,7 +81,7 @@ const useStyles = makeStyles({
   },
 })
 
-const DirectGov = () => {
+const DirectGov: React.FC = () => {
   const classes = useStyles()
 
   const setControlsVisible = useSetRecoilState(controlsState)

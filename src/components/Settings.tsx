@@ -21,7 +21,7 @@ const useStyles = makeStyles({
   },
 })
 
-const Settings = () => {
+const Settings: React.FC = () => {
   const classes = useStyles()
 
   function onBgMusicChange(e: React.ChangeEvent<HTMLSelectElement>) {

@@ -44,7 +44,7 @@ const useStyles = makeStyles({
   },
 })
 
-const ControlsBar = () => {
+const ControlsBar: React.FC = () => {
   const shownControls = useRecoilValue(controlsState)
   const classes = useStyles()
 

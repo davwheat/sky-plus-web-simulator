@@ -29,7 +29,7 @@ function chooseRandomLoadTime(fast: boolean = false): number {
 /**
  * Handles showing the interactive menu and 'Searching for listings' message.
  */
-const InteractiveMenu = () => {
+const InteractiveMenu: React.FC = () => {
   const globalBoxStateValue = useRecoilValue(globalBoxState)
 
   /**

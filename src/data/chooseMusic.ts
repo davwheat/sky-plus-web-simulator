@@ -12,7 +12,7 @@ const AudioFiles = {
   'Sky Games 2013': games2013,
 } as const
 
-export const MusicKeys = Object.keys(AudioFiles)
+export const MusicKeys = Object.keys(AudioFiles).sort((a, b) => ('' + a).localeCompare(b))
 
 function RandomItemFromArray<T extends any[]>(myArray: T): ArrayElement<T> {
   return myArray[Math.floor(Math.random() * myArray.length)]

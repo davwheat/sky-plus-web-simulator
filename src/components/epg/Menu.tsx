@@ -48,9 +48,15 @@ export interface ListItem {
   onClick?: React.MouseEventHandler<HTMLLIElement>
 }
 
-interface ListProps {
+export interface MenuProps {
   listItems: ListItem[]
   onBack?: (e: SkyControlPressedEvent) => void
+  /**
+   * Whether to disable forced uppercase menu items.
+   *
+   * Notably used for Sky Interactive listings.
+   */
+  noForcedUpperCase?: boolean
 }
 
 function SplitMenuIntoPages(items: ListItem[]): ListItem[][] {
@@ -84,7 +90,7 @@ function SplitMenuIntoPages(items: ListItem[]): ListItem[][] {
  *
  * If changing the `listItems` prop, remember to also pass a `key` prop to ensure the page gets reset.
  */
-const Menu: React.FC<ListProps> = ({ onBack, listItems }) => {
+const Menu: React.FC<MenuProps> = ({ onBack, listItems, noForcedUpperCase = false }) => {
   const classes = useStyles()
   const listRef = useRef<HTMLOListElement>(null)
   // Ensures that the Back Up button state is correctly set when the first page is loaded.
@@ -168,7 +174,7 @@ const Menu: React.FC<ListProps> = ({ onBack, listItems }) => {
       className={clsx('thick-text', classes.root)}
     >
       {thisPage.map(item => (
-        <MenuItem key={item.text} {...item} />
+        <MenuItem noForcedUpperCase={noForcedUpperCase} key={item.text} {...item} />
       ))}
       {pages.length - 1 !== pageIndex && <MenuItem text="More..." onClick={() => setPageIndex(p => p + 1)} />}
     </ol>
@@ -176,6 +182,9 @@ const Menu: React.FC<ListProps> = ({ onBack, listItems }) => {
 }
 
 const useItemStyles = makeStyles({
+  uppercase: {
+    textTransform: 'uppercase',
+  },
   root: {
     cursor: 'pointer',
     paddingLeft: 6,
@@ -185,7 +194,6 @@ const useItemStyles = makeStyles({
     alignItems: 'center',
     background: Colors.main,
     color: Colors.mainText,
-    textTransform: 'uppercase',
     counterIncrement: 'menu',
     letterSpacing: -0.15,
 
@@ -223,9 +231,10 @@ const useItemStyles = makeStyles({
 
 type ListItemProps = {
   customNumber?: number
+  noForcedUpperCase?: boolean
 } & ListItem
 
-const MenuItem: React.FC<ListItemProps> = ({ customNumber, text, onClick }) => {
+const MenuItem: React.FC<ListItemProps> = ({ customNumber, text, onClick, noForcedUpperCase = false }) => {
   const classes = useItemStyles()
 
   function triggerClickOnEnter(e: React.KeyboardEvent<HTMLLIElement>) {
@@ -236,7 +245,13 @@ const MenuItem: React.FC<ListItemProps> = ({ customNumber, text, onClick }) => {
   }
 
   return (
-    <li data-number={customNumber} onKeyDown={triggerClickOnEnter} onClick={onClick} tabIndex={0} className={classes.root}>
+    <li
+      data-number={customNumber}
+      onKeyDown={triggerClickOnEnter}
+      onClick={onClick}
+      tabIndex={0}
+      className={clsx(classes.root, !noForcedUpperCase && classes.uppercase)}
+    >
       {text}
     </li>
   )

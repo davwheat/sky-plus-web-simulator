@@ -1,0 +1,27 @@
+import type { WindowLocation } from '@reach/router'
+import { navigate, PageProps } from 'gatsby'
+import React from 'react'
+import FullScreenError from '../../components/FullScreenError'
+import InnerLayout from '../../layouts/InnerLayout'
+
+type Props = PageProps<object, object, WindowLocation<{ serviceName?: string }>['state']>
+
+const ServiceUnavailablePage: React.FC<Props> = ({ location }) => {
+  const serviceName = location?.state?.serviceName || 'This interactive service'
+
+  return (
+    <InnerLayout>
+      <FullScreenError
+        errorCode={null}
+        backUpPrompt
+        backUpPromptTextAction="cancel"
+        onBackUp={() => navigate('/', { state: { selectedTab: 'INTERACTIVE' } })}
+      >
+        <br />
+        {serviceName} is not available.
+      </FullScreenError>
+    </InnerLayout>
+  )
+}
+
+export default ServiceUnavailablePage

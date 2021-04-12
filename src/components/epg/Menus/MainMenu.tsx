@@ -5,10 +5,10 @@ import EpgBackgroundImage from '../../../assets/images/guide-bg.sized.png'
 import { controlsState, mainMenuState } from '../../../atoms'
 import controlsShownStateSetter from '../../../helpers/controlsShownStateSetter'
 import type { MainMenuTab } from '../../../pages'
-import ErrorMessage from '../../ErrorMessage'
 import ColorButtonsFooter from '../Footer/ColorButtonsFooter'
 import Header from '../Header/Header'
 import Menu from '../Menu'
+import InteractiveMenu from './InteractiveMenu'
 import * as MenuColorButtons from './menuColourButtons'
 import * as MenuItems from './menuItems'
 
@@ -113,11 +113,7 @@ const MainMenu: React.FC = () => {
     <div className={classes.root}>
       <Header logoText="guide" />
       {mainMenuStateValue.selectedTab !== 'INTERACTIVE' && <Menu listItems={menuItems} key={mainMenuStateValue.selectedTab} />}
-      {mainMenuStateValue.selectedTab === 'INTERACTIVE' && (
-        <div className={classes.centeredErrorMessage}>
-          <ErrorMessage wider horizontallyCentered />
-        </div>
-      )}
+      {mainMenuStateValue.selectedTab === 'INTERACTIVE' && <InteractiveMenu />}
       {colorButtonText && <ColorButtonsFooter buttonPressHandler={buttonPressHandler} buttonsText={colorButtonText} />}
     </div>
   )

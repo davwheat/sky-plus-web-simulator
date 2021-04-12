@@ -1,3 +1,4 @@
+import { navigate } from 'gatsby'
 import { ListItem } from '../Menu'
 
 export const tvGuideListItems: ListItem[] = [
@@ -146,38 +147,68 @@ export const servicesListItems: ListItem[] = [
 export const interactiveListItems: ListItem[] = [
   {
     text: 'Sky Active',
-    onClick: () => {},
+    onClick: () => {
+      navigate('/interactive/service-unavailable', { state: { serviceName: 'Sky Active' } })
+    },
   },
   {
     text: 'QVC',
-    onClick: () => {},
+    onClick: () => {
+      navigate('/interactive/service-unavailable', { state: { serviceName: 'QVC' } })
+    },
   },
   {
     text: 'PlayJam Games',
-    onClick: () => {},
+    onClick: () => {
+      navigate('/interactive/service-unavailable', { state: { serviceName: 'PlayJam Games' } })
+    },
   },
   {
     text: 'Teletext Holidays',
-    onClick: () => {},
+    onClick: () => {
+      navigate('/interactive/service-unavailable', { state: { serviceName: 'Teletext Holidays' } })
+    },
   },
   {
     text: 'Sky Customer Service',
-    onClick: () => {},
+    onClick: () => {
+      navigate('/interactive/service-unavailable', { state: { serviceName: 'Sky Customer Service' } })
+    },
   },
   {
     text: 'Sky Games',
-    onClick: () => {},
+    onClick: () => {
+      navigate('/interactive/service-unavailable', { state: { serviceName: 'Sky Games' } })
+    },
   },
   {
     text: 'Ladbrokes Betting & Games',
-    onClick: () => {},
+    onClick: () => {
+      navigate('/interactive/service-unavailable', { state: { serviceName: 'Ladbrokes Betting & Games' } })
+    },
   },
   {
     text: 'Directgov',
-    onClick: () => {},
+    onClick: () => {
+      navigate('/interactive/directgov')
+    },
   },
   {
     text: 'Sky Bet, Vegas & Sky Poker',
-    onClick: () => {},
+    onClick: () => {
+      navigate('/interactive/service-unavailable', { state: { serviceName: 'Sky Bet, Vegas & Sky Poker' } })
+    },
+  },
+  {
+    text: 'GoPlayTV Games',
+    onClick: () => {
+      navigate('/interactive/service-unavailable', { state: { serviceName: 'GoPlayTV Games' } })
+    },
+  },
+  {
+    text: 'YO–YO"',
+    onClick: () => {
+      navigate('/interactive/service-unavailable', { state: { serviceName: 'YO–YO"' } })
+    },
   },
 ]

@@ -11,3 +11,5 @@ public
 !.yarn/sdks
 !.yarn/versions
 .pnp.*
+
+reference images/

@@ -27,7 +27,7 @@ const useStyles = makeStyles({
 })
 
 /**
- * Main EPG Header
+ * Main EPG Header, containing the Sky logo, with custom text below, and the EPG tabs (TV Guide, Box Office, Services and Interactive).
  */
 const Header: React.FC<Props> = ({ logoText }) => {
   const classes = useStyles()

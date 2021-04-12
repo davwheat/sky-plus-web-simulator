@@ -14,7 +14,7 @@ const IndexPage: React.FC<ThisPageProps> = ({ location }) => {
   const setMainMenuState = useSetRecoilState(mainMenuState)
   const resetMainMenuState = useResetRecoilState(mainMenuState)
 
-  if (location.state && location.state.selectedTab) setMainMenuState(s => ({ ...s, selectedTab: location.state.selectedTab }))
+  if (location?.state?.selectedTab) setMainMenuState(s => ({ ...s, selectedTab: location.state.selectedTab }))
   else resetMainMenuState()
 
   return (

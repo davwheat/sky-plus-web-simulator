@@ -9,14 +9,14 @@ const Colors = {
   },
   mainTextHover: '#0000b3',
 
-  accent: '#001a8f',
+  accent: '#051571',
   accentText: '#8787ff',
   get accentHover() {
     return this.yellowDark
   },
   accentTextHover: '#0000b3',
 
-  yellowMain: '#fcda25',
+  yellowMain: '#fcda15',
   yellowText: '#ffeb00',
   yellowDark: '#fec200',
 

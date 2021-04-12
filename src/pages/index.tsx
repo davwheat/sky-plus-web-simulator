@@ -11,11 +11,9 @@ export type MainMenuTab = 'GUIDE' | 'BOX OFFICE' | 'SERVICES' | 'INTERACTIVE'
 type ThisPageProps = PageProps<object, object, WindowLocation<{ selectedTab: MainMenuTab }>['state']>
 
 const IndexPage: React.FC<ThisPageProps> = ({ location }) => {
-  const setMainMenuState = useSetRecoilState(mainMenuState)
   const resetMainMenuState = useResetRecoilState(mainMenuState)
 
-  if (location?.state?.selectedTab) setMainMenuState(s => ({ ...s, selectedTab: location.state.selectedTab }))
-  else resetMainMenuState()
+  resetMainMenuState()
 
   return (
     <InnerLayout>

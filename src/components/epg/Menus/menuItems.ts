@@ -142,3 +142,42 @@ export const servicesListItems: ListItem[] = [
     onClick: () => {},
   },
 ]
+
+export const interactiveListItems: ListItem[] = [
+  {
+    text: 'Sky Active',
+    onClick: () => {},
+  },
+  {
+    text: 'QVC',
+    onClick: () => {},
+  },
+  {
+    text: 'PlayJam Games',
+    onClick: () => {},
+  },
+  {
+    text: 'Teletext Holidays',
+    onClick: () => {},
+  },
+  {
+    text: 'Sky Customer Service',
+    onClick: () => {},
+  },
+  {
+    text: 'Sky Games',
+    onClick: () => {},
+  },
+  {
+    text: 'Ladbrokes Betting & Games',
+    onClick: () => {},
+  },
+  {
+    text: 'Directgov',
+    onClick: () => {},
+  },
+  {
+    text: 'Sky Bet, Vegas & Sky Poker',
+    onClick: () => {},
+  },
+]

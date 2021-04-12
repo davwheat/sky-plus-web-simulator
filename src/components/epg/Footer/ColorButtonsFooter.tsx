@@ -25,7 +25,7 @@ const useStyles = makeStyles({
 })
 
 interface Props {
-  buttonPressHandler: (SkyColorButton) => void
+  buttonPressHandler: (colorButton: SkyColorButton) => void
   buttonsText: Record<SkyColorButton, string>
 }
 
@@ -48,7 +48,7 @@ const ColorButtonsFooter: React.FC<Props> = ({ buttonPressHandler, buttonsText }
     if (['red', 'green', 'yellow', 'blue'].includes(e.detail.control)) {
       // One of the coloured buttons was pressed
       e.stopImmediatePropagation()
-      buttonPressHandler(e.detail.control)
+      buttonPressHandler(e.detail.control as SkyColorButton)
     }
   }
 

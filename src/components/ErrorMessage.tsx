@@ -14,6 +14,12 @@ const useStyles = makeStyles({
     overflow: 'hidden',
     maxHeight: '80%',
   },
+  messageBoxWider: {
+    width: '92%',
+  },
+  messageBoxHorizCenter: {
+    margin: 'auto',
+  },
   messageBoxHeader: {
     background: Colors.yellowMain,
     color: Colors.main,
@@ -80,6 +86,16 @@ export interface ErrorMessageProps {
    */
   backUpPromptTextAction?: string
   onBackUp?: () => void
+  /**
+   * Use the wider variant of error message. This is used when the error message is shown within the EPG itself.
+   */
+  wider?: boolean
+  /**
+   * Horizontally center the message box within the parent container.
+   *
+   * (Applies `margin: auto`.)
+   */
+  horizontallyCentered?: boolean
 }
 
 /**
@@ -96,6 +112,8 @@ const ErrorMessage: React.FC<ErrorMessageProps> = ({
   backUpPrompt = false,
   backUpPromptTextAction = 'return',
   onBackUp = () => {},
+  wider = false,
+  horizontallyCentered = false,
 }) => {
   const classes = useStyles()
   const setControlsState = useSetRecoilState(controlsState)
@@ -107,9 +125,8 @@ const ErrorMessage: React.FC<ErrorMessageProps> = ({
   useEffect(() => {
     if (backUpPrompt) {
       function backUpEventListener(e: SkyControlPressedEvent) {
-        e.stopImmediatePropagation()
-
         if (e.detail.control === 'backUp') {
+          e.stopImmediatePropagation()
           onBackUp()
         }
       }
@@ -124,7 +141,10 @@ const ErrorMessage: React.FC<ErrorMessageProps> = ({
   })
 
   return (
-    <section role="alert" className={classes.messageBox}>
+    <section
+      role="alert"
+      className={clsx(classes.messageBox, wider && classes.messageBoxWider, horizontallyCentered && classes.messageBoxHorizCenter)}
+    >
       <header className={clsx('thick-text', classes.messageBoxHeader)}>
         {title}
         <span className={classes.messageBoxErrorCode}>{String(errorCode).padStart(2, '0')}</span>

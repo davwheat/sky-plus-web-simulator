@@ -1,17 +1,5 @@
 import { atom } from 'recoil'
 
-export interface ControlVisibility {
-  backUp: boolean
-  select: boolean
-
-  red: boolean
-  green: boolean
-  yellow: boolean
-  blue: boolean
-}
-
-export type Control = keyof ControlVisibility
-
 export const controlsState = atom({
   key: 'epg_controlsState',
   default: {
@@ -22,5 +10,10 @@ export const controlsState = atom({
     green: false,
     yellow: false,
     blue: false,
+
+    upArrow: false,
+    downArrow: false,
+    leftArrow: false,
+    rightArrow: false,
   } as ControlVisibility,
 })

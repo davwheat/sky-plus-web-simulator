@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core'
 import clsx from 'clsx'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { useSetRecoilState } from 'recoil'
 import MenuMoreArrowSvg from '../../assets/icons/list-arrow.svg'
 import { controlsState } from '../../atoms'
@@ -58,10 +58,56 @@ interface ListProps {
   onBack?: (e: SkyControlPressedEvent) => void
 }
 
+function SplitMenuIntoPages(items: ListItem[]): ListItem[][] {
+  // One page! Easy exit!
+  if (items.length <= 10) return [items]
+
+  let itemsRemaining = [...items]
+  let pages = []
+
+  while (itemsRemaining.length > 0) {
+    let page
+
+    // If remaining items fit on one page, put them all on that page
+    if (itemsRemaining.length <= 10) {
+      page = itemsRemaining
+      itemsRemaining = []
+    }
+    // Otherwise, take next 9 and add 'More...' to bottom
+    else page = itemsRemaining.splice(0, 9)
+
+    pages.push(page)
+  }
+
+  return pages
+}
+
+/**
+ * Display an Sky-esque, auto-paginated, auto-numbered, keyboard-accessible, fully managed menu!
+ *
+ * Provide with a list of menu items, containing text and onClick handlers, and this component will handle the rest.
+ *
+ * If changing the `listItems` prop, remember to also pass a `key` prop to ensure the page gets reset.
+ */
 const Menu: React.FC<ListProps> = ({ onBack, listItems }) => {
   const classes = useStyles()
   const listRef = useRef<HTMLOListElement>(null)
+  // Ensures that the Back Up button state is correctly set when the first page is loaded.
+  const lastPageIndex = useRef(-1)
+
   const setControlsState = useSetRecoilState(controlsState)
+  const [pageIndex, setPageIndex] = useState(0)
+
+  if (lastPageIndex.current !== pageIndex) {
+    lastPageIndex.current = pageIndex
+    setControlsState(controlsShownStateSetter('backUp', !!(onBack || pageIndex > 0)))
+  }
+
+  // Get list of pages. Memoised for speeeeeed!
+  const pages = useMemo(() => SplitMenuIntoPages(listItems), [listItems, SplitMenuIntoPages])
+  const thisPage = pages[pageIndex]
+
+  console.log(pageIndex, thisPage)
 
   function HandleMenuNav(e: React.KeyboardEvent<HTMLOListElement>) {
     if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return
@@ -94,12 +140,6 @@ const Menu: React.FC<ListProps> = ({ onBack, listItems }) => {
     }
   }
 
-  /**
-   * 0-based
-   */
-  const [page, setPage] = useState(0)
-  setControlsState(controlsShownStateSetter('backUp', !!(onBack || page > 0)))
-
   useEffect(() => {
     if (listRef.current) {
       const firstLi = listRef.current.firstElementChild as HTMLLIElement
@@ -107,11 +147,11 @@ const Menu: React.FC<ListProps> = ({ onBack, listItems }) => {
     }
 
     function goToFirstPage(e: SkyControlPressedEvent) {
-      e.stopImmediatePropagation()
-
-      if (page > 0 && e.detail.control === 'backUp') {
-        setPage(0)
-      } else if (page === 0 && onBack) {
+      if (pageIndex > 0 && e.detail.control === 'backUp') {
+        e.stopImmediatePropagation()
+        setPageIndex(0)
+      } else if (pageIndex === 0 && onBack) {
+        e.stopImmediatePropagation()
         onBack(e)
       }
     }
@@ -121,33 +161,21 @@ const Menu: React.FC<ListProps> = ({ onBack, listItems }) => {
     return () => {
       document.removeEventListener('skyControlPressed', goToFirstPage as EventListener)
     }
-  }, [page, listRef])
-
-  /**
-   * 0-based
-   */
-  const lastPage = listItems.length > ITEMS_PER_PAGE + 1 ? Math.floor(listItems.length / ITEMS_PER_PAGE) : 0
-
-  const itemsOnPage = listItems.slice(page * ITEMS_PER_PAGE, (page + 1) * ITEMS_PER_PAGE)
-
-  console.log(listItems)
-  console.log(itemsOnPage)
-
-  console.log(page, lastPage)
+  }, [pageIndex, listRef])
 
   return (
     <ol
       // Use string values for the styles to work nicely
-      data-more={String(page < lastPage)}
-      data-less={String(page > 0)}
+      data-more={String(pageIndex < pages.length - 1)}
+      data-less={String(pageIndex > 0)}
       onKeyDown={HandleMenuNav}
       ref={listRef}
       className={clsx('thick-text', classes.root)}
     >
-      {itemsOnPage.map(item => (
+      {thisPage.map(item => (
         <MenuItem key={item.text} {...item} />
       ))}
-      {lastPage !== page && <MenuItem text="More..." onClick={() => setPage(p => p + 1)} />}
+      {pages.length - 1 !== pageIndex && <MenuItem text="More..." onClick={() => setPageIndex(p => p + 1)} />}
     </ol>
   )
 }

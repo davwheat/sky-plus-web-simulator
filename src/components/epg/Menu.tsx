@@ -14,7 +14,7 @@ const ITEMS_PER_PAGE = 9
 
 const useStyles = makeStyles({
   root: {
-    width: 560,
+    width: 585,
     margin: 'auto',
     padding: 0,
     display: 'flex',
@@ -192,15 +192,16 @@ const useItemStyles = makeStyles({
     color: Colors.mainText,
     textTransform: 'uppercase',
     counterIncrement: 'menu',
+    letterSpacing: -0.15,
 
     outline: 'none',
 
     '&::before': {
-      width: 80,
+      width: 72,
       alignSelf: 'stretch',
       textAlign: 'center',
       lineHeight: '32px',
-      marginRight: 12,
+      marginRight: 8,
 
       background: Colors.accent,
       color: Colors.accentText,

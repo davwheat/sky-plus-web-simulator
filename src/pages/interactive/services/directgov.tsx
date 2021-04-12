@@ -1,11 +1,11 @@
 import { makeStyles } from '@material-ui/core'
+import { navigate } from 'gatsby'
 import React, { useEffect } from 'react'
 import { useSetRecoilState } from 'recoil'
-import DirectGovLogo from '../../assets/images/interactive/directgov/logo.inline.svg'
-import { controlsState } from '../../atoms'
-import controlsShownStateSetter from '../../helpers/controlsShownStateSetter'
-import InnerLayout from '../../layouts/InnerLayout'
-import{navigate}from"gatsby"
+import { controlsState } from '../../../atoms'
+import controlsShownStateSetter from '../../../helpers/controlsShownStateSetter'
+import InnerLayout from '../../../layouts/InnerLayout'
+import DirectGovLogo from '../../../assets/images/interactive/directgov/logo.inline.svg'
 
 const useStyles = makeStyles({
   root: {
@@ -91,7 +91,7 @@ const DirectGov = () => {
     const control = e.detail.control
 
     if (['backUp'].includes(control)) {
-      navigate("/", {state:{selectedTab: 'INTERACTIVE'}})
+      navigate('/', { state: { selectedTab: 'INTERACTIVE' } })
     }
   }
 

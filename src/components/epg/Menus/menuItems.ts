@@ -190,7 +190,13 @@ export const interactiveListItems: ListItem[] = [
   {
     text: 'Directgov',
     onClick: () => {
-      navigate('/interactive/directgov')
+      navigate('/interactive/coming-next', {
+        state: {
+          serviceName: 'Directgov',
+          serviceDescription: 'Public services all in one place',
+          nextUrl: '/interactive/services/directgov',
+        },
+      })
     },
   },
   {

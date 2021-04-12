@@ -6,5 +6,6 @@
   "endOfLine": "lf",
   "arrowParens": "avoid",
   "semi": false,
-  "pluginSearchDirs": ["./node_modules"]
+  "pluginSearchDirs": ["./node_modules"],
+  "plugins": ["prettier-plugin-organize-imports"]
 }

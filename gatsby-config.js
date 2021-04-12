@@ -19,8 +19,8 @@ module.exports = {
     // DEV_SSR: false,
   },
   siteMetadata: {
-    title: 'Sky Digibox Simulator',
-    description: 'A web simulation of the old Sky Digibox electronic programme guide (EPG).',
+    title: 'Sky+ EPG Simulator',
+    description: 'A web simulation of the old Sky+ electronic programme guide (EPG).',
     author: `@davwheat`,
     siteUrl: `https://sky-epg.davwheat.dev`,
   },

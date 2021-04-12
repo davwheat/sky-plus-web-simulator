@@ -78,11 +78,11 @@ const MainMenu: React.FC = () => {
 
   const currentTabIndex = TABS.indexOf(mainMenuStateValue.selectedTab)
 
-  // Show arrow buttons
-  setControlsState(controlsShownStateSetter(['leftArrow', 'rightArrow'], true))
-
   // Switch EPG tabs
   useEffect(() => {
+    // Show arrow buttons
+    setControlsState(controlsShownStateSetter(['leftArrow', 'rightArrow'], true))
+
     function watchForLRArrowPress(e: SkyControlPressedEvent) {
       const control = e.detail.control
 
@@ -106,6 +106,7 @@ const MainMenu: React.FC = () => {
 
     return () => {
       removeEventListener('skyControlPressed', watchForLRArrowPress)
+      setControlsState(controlsShownStateSetter(['leftArrow', 'rightArrow'], false))
     }
   }, [setMainMenuState, currentTabIndex])
 

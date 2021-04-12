@@ -8,7 +8,7 @@
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "outDir": "./dist", // not actually used
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
   },
-  "exclude": ["node_modules", "build", "scripts", "acceptance-tests", "webpack", "jest", "src/setupTests.ts"]
+  "exclude": ["node_modules", "build", "scripts", "acceptance-tests", "webpack", "jest", "src/setupTests.ts", ".cache", "public"]
 }

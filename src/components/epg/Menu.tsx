@@ -7,11 +7,6 @@ import { controlsState } from '../../atoms'
 import Colors from '../../data/Colors'
 import controlsShownStateSetter from '../../helpers/controlsShownStateSetter'
 
-/**
- * Excludes the "More..." item
- */
-const ITEMS_PER_PAGE = 9
-
 const useStyles = makeStyles({
   root: {
     width: 585,

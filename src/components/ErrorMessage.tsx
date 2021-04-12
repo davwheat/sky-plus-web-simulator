@@ -147,7 +147,9 @@ const ErrorMessage: React.FC<ErrorMessageProps> = ({
     >
       <header className={clsx('thick-text', classes.messageBoxHeader)}>
         {title}
-        <span className={classes.messageBoxErrorCode}>{errorCode !== null && typeof errorCode !== "undefined" && String(errorCode).padStart(2, '0')}</span>
+        <span className={classes.messageBoxErrorCode}>
+          {errorCode !== null && typeof errorCode !== 'undefined' && String(errorCode).padStart(2, '0')}
+        </span>
       </header>
       <article className={classes.messageBoxContent}>
         {children}

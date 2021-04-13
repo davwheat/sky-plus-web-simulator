@@ -1,3 +1,5 @@
+/* Zurich */
+
 @font-face {
   font-family: 'Zurich';
   src: url('../fonts/Zurich/Zurich Bold Extended.woff2') format('woff2'), url('../fonts/Zurich/Zurich Bold Extended.woff') format('woff');
@@ -15,6 +17,8 @@
   font-display: fallback;
   font-stretch: condensed;
 }
+
+/* Zurich BT */
 
 @font-face {
   font-family: 'ZurichBT';
@@ -34,13 +38,25 @@
   font-display: fallback;
 }
 
+/* Sky Logo */
+
 @font-face {
   font-family: 'SkyLogo';
   src: url('../fonts/Sky/SkyLogo-Thick.woff2') format('woff2'), url('../fonts/Sky/SkyLogo-Thick.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'SkyLogo';
+  src: url('../fonts/Sky/SkyLogo-Thin.woff2') format('woff2'), url('../fonts/Sky/SkyLogo-Thin.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: fallback;
 }
+
+/* Sky Screen */
 
 @font-face {
   font-family: 'SkyScreen';
@@ -49,6 +65,8 @@
   font-style: normal;
   font-display: fallback;
 }
+
+/* Sky Info Text */
 
 @font-face {
   font-family: 'SkyInfoText';

@@ -21,6 +21,8 @@ const HTML: React.FC<Props> = props => {
         {props.headComponents}
 
         <link rel="preload" as="image" href={EpgBackgroundImage} />
+
+        <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "c8cca799c00748039d7a9cd8c3ae5b7b"}' />
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}

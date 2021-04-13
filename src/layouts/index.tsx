@@ -14,6 +14,32 @@ interface Props {
 }
 
 const useLayoutStyles = makeStyles({
+  main: {
+    display: 'flex',
+    flexDirection: 'column',
+    position: 'fixed',
+    top: 0,
+    right: 0,
+    bottom: 0,
+    left: 0,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  epg: {
+    display: 'flex',
+    userSelect: 'none',
+    width: 800,
+    minWidth: 800,
+    height: 600,
+    minHeight: 600,
+    position: 'relative',
+
+    '& > *': {
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover',
+      flexGrow: 1,
+    },
+  },
   footer: {
     fontFamily: 'SkyLogo',
     fontSize: 18,
@@ -31,10 +57,10 @@ const PageWrapper: React.FC<Props> = ({ children }) => {
       <SnackbarProvider maxSnack={3}>
         <AudioWrapper />
         <SettingsArea />
-        <main>
-          <Footer className={classes.footer} />
+        <main className={classes.main}>
+          <div className={classes.epg}>{children}</div>
           <ControlsBar />
-          {children}
+          <Footer className={classes.footer} />
         </main>
       </SnackbarProvider>
     </RecoilRoot>

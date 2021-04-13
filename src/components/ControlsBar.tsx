@@ -22,25 +22,27 @@ const useStyles = makeStyles({
     flexWrap: 'nowrap',
     overflowY: 'hidden',
     overflowX: 'auto',
-    marginTop: 16,
     userSelect: 'none',
     height: 96,
     width: '100%',
     alignItems: 'flex-end',
     justifyContent: 'center',
-    gap: 8,
+    gap: 12,
+    marginTop: -56,
 
     '& > *': {
       cursor: 'pointer',
     },
   },
-
   arrowIcon: {
     height: 16,
     transformOrigin: 'center',
   },
   rightArrow: {
     transform: 'rotate(180deg)',
+  },
+  noRightMargin: {
+    marginRight: 0,
   },
 })
 
@@ -86,16 +88,16 @@ const ControlsBar: React.FC = () => {
 
       {/* Coloured buttons */}
       <ControlItem tooltip="Red button" controlName="red">
-        <ColorButton buttonColor="red" />
+        <ColorButton className={classes.noRightMargin} buttonColor="red" />
       </ControlItem>
       <ControlItem tooltip="Green button" controlName="green">
-        <ColorButton buttonColor="green" />
+        <ColorButton className={classes.noRightMargin} buttonColor="green" />
       </ControlItem>
       <ControlItem tooltip="Yellow button" controlName="yellow">
-        <ColorButton buttonColor="yellow" />
+        <ColorButton className={classes.noRightMargin} buttonColor="yellow" />
       </ControlItem>
       <ControlItem tooltip="Blue button" controlName="blue">
-        <ColorButton buttonColor="blue" />
+        <ColorButton className={classes.noRightMargin} buttonColor="blue" />
       </ControlItem>
 
       {/* Arrow buttons */}

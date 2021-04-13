@@ -7,7 +7,7 @@ out_file = "./uk-m3u-streams.json"
 
 channel_list = []
 
-with open(in_file, "r") as file:
+with open(in_file, mode="r", encoding="utf-8") as file:
     lines = file.readlines()
 
     # Remove file meta line (#EXTM3U)
@@ -69,6 +69,6 @@ with open(in_file, "r") as file:
             # Reset values
             channel = copy.deepcopy(blank_channel)
 
-with open(out_file, "w") as file:
+with open(out_file, mode="w", encoding="utf-8") as file:
     # Dump channel list to JSON file
     json.dump(channel_list, file, indent=2)

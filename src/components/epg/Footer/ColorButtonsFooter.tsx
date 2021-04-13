@@ -41,9 +41,6 @@ const ColorButtonsFooter: React.FC<Props> = ({ buttonPressHandler, buttonsText }
   buttonsText['yellow'] ? controlsToEnable.push('yellow') : controlsToDisable.push('yellow')
   buttonsText['blue'] ? controlsToEnable.push('blue') : controlsToDisable.push('blue')
 
-  setControlsState(controlsShownStateSetter(controlsToEnable, true))
-  setControlsState(controlsShownStateSetter(controlsToDisable, false))
-
   function buttonPressEventListener(e: SkyControlPressedEvent) {
     if (['red', 'green', 'yellow', 'blue'].includes(e.detail.control)) {
       // One of the coloured buttons was pressed
@@ -54,6 +51,9 @@ const ColorButtonsFooter: React.FC<Props> = ({ buttonPressHandler, buttonsText }
 
   // Detect when the coloured buttons are pressed
   useEffect(() => {
+    setControlsState(controlsShownStateSetter(controlsToEnable, true))
+    setControlsState(controlsShownStateSetter(controlsToDisable, false))
+
     document.addEventListener('skyControlPressed', buttonPressEventListener as EventListener)
 
     return () => {

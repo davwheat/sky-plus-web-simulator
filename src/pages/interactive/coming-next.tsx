@@ -3,6 +3,7 @@ import type { WindowLocation } from '@reach/router'
 import { navigate, PageProps } from 'gatsby'
 import React, { useEffect } from 'react'
 import Colors from '../../data/Colors'
+import { randomNumber } from '../../helpers/randomNumber'
 import InnerLayout from '../../layouts/InnerLayout'
 
 type Props = PageProps<
@@ -59,7 +60,7 @@ const ComingNext: React.FC<Props> = ({ location }) => {
   useEffect(() => {
     const timeoutKey = setTimeout(() => {
       navigate(nextUrl)
-    }, 8000)
+    }, randomNumber(6000, 10000))
 
     return () => {
       clearTimeout(timeoutKey)

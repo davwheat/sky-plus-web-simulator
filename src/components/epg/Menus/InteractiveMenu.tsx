@@ -2,6 +2,7 @@ import { makeStyles } from '@material-ui/core'
 import React, { useEffect, useState } from 'react'
 import { useRecoilValue } from 'recoil'
 import { globalBoxState } from '../../../atoms/globalBoxState'
+import { randomNumber } from '../../../helpers/randomNumber'
 import ErrorMessage from '../../ErrorMessage'
 import Menu from '../Menu'
 import { interactiveListItems } from './menuItems'
@@ -15,16 +16,6 @@ const useStyles = makeStyles({
     width: '100%',
   },
 })
-
-/**
- * Returns a random number to be used for loading Interactive listings.
- */
-function chooseRandomLoadTime(fast: boolean = false): number {
-  const min = fast ? 1 : 2,
-    max = fast ? 3 : 10
-
-  return Math.ceil(Math.random() * (max - min)) + min
-}
 
 /**
  * Handles showing the interactive menu and 'Searching for listings' message.
@@ -44,7 +35,7 @@ const InteractiveMenu: React.FC = () => {
     if (!hasLoaded) {
       const timeoutKey = setTimeout(() => {
         setHasLoaded(true)
-      }, chooseRandomLoadTime(!isNewBoot) * 1000)
+      }, randomNumber(2000, isNewBoot ? 10000 : 6000))
 
       return () => {
         clearTimeout(timeoutKey)

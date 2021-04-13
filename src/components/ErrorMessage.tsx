@@ -28,6 +28,11 @@ const useStyles = makeStyles({
     fontSize: 24,
     textAlign: 'center',
     position: 'relative',
+
+    fontFamily: 'Zurich',
+    fontStretch: 'expanded',
+    fontWeight: 700,
+    letterSpacing: 0.4,
   },
   messageBoxErrorCode: {
     position: 'absolute',
@@ -40,6 +45,7 @@ const useStyles = makeStyles({
     padding: 4,
     paddingBottom: 0,
     fontFamily: 'ZurichBT',
+    fontWeight: 400,
     background: Colors.mainLight,
     color: Colors.mainText,
     fontSize: 25,
@@ -145,7 +151,7 @@ const ErrorMessage: React.FC<ErrorMessageProps> = ({
       role="alert"
       className={clsx(classes.messageBox, wider && classes.messageBoxWider, horizontallyCentered && classes.messageBoxHorizCenter)}
     >
-      <header className={clsx('thick-text', classes.messageBoxHeader)}>
+      <header className={classes.messageBoxHeader}>
         {title}
         <span className={classes.messageBoxErrorCode}>
           {errorCode !== null && typeof errorCode !== 'undefined' && String(errorCode).padStart(2, '0')}

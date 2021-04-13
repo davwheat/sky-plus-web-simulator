@@ -38,15 +38,14 @@ const useStyles = makeStyles({
   },
   header: {
     fontFamily: 'ZurichBT',
-    fontWeight: 400,
   },
   title: {
     fontFamily: 'Zurich',
-    fontWeight: 700,
+    fontStretch: 'expanded',
   },
   description: {
-    fontFamily: 'ZurichTV',
-    fontWeight: 400,
+    fontFamily: 'Zurich',
+    fontStretch: 'condensed',
   },
 })
 

@@ -41,7 +41,7 @@ const useLayoutStyles = makeStyles({
     },
   },
   footer: {
-    fontFamily: 'SkyLogo',
+    fontFamily: 'SkyScreen',
     fontSize: 18,
     color: Colors.main,
     userSelect: 'text',

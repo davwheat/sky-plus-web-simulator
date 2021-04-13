@@ -17,6 +17,11 @@ const useStyles = makeStyles({
     gap: 4,
     position: 'relative',
 
+    fontFamily: 'Zurich',
+    fontStretch: 'expanded',
+    fontWeight: 700,
+    letterSpacing: 0.4,
+
     '&[data-more="true"]::after, &[data-less="true"]::before': {
       content: '""',
       display: 'block',
@@ -171,7 +176,7 @@ const Menu: React.FC<MenuProps> = ({ onBack, listItems, noForcedUpperCase = fals
       data-less={String(pageIndex > 0)}
       onKeyDown={HandleMenuNav}
       ref={listRef}
-      className={clsx('thick-text', classes.root)}
+      className={classes.root}
     >
       {thisPage.map(item => (
         <MenuItem noForcedUpperCase={noForcedUpperCase} key={item.text} {...item} />

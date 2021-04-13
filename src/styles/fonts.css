@@ -1,54 +1,58 @@
 @font-face {
   font-family: 'Zurich';
-  src: url('/font/Zurich Bold Extended.woff') format('woff');
-  font-weight: normal;
+  src: url('../fonts/Zurich/Zurich Bold Extended.woff2') format('woff2'), url('../fonts/Zurich/Zurich Bold Extended.woff') format('woff');
+  font-weight: bold;
   font-style: normal;
   font-display: fallback;
+  font-stretch: expanded;
 }
 
 @font-face {
-  font-family: 'ZurichTV';
-  src: url('/font/Zurich Bold Condensed.woff') format('woff');
-  font-weight: normal;
+  font-family: 'Zurich';
+  src: url('../fonts/Zurich/Zurich Bold Condensed.woff2') format('woff2'), url('../fonts/Zurich/Zurich Bold Condensed.woff') format('woff');
+  font-weight: bold;
   font-style: normal;
   font-display: fallback;
+  font-stretch: condensed;
 }
 
 @font-face {
-  font-family: 'Helvetica';
-  font-style: normal;
+  font-family: 'ZurichBT';
+  src: url('../fonts/Zurich/ZurichBT-Bold.woff2') format('woff2'), url('../fonts/Zurich/ZurichBT-Bold.woff') format('woff');
   font-weight: normal;
-  src: url('/font/Helvetica65Medium.woff') format('woff');
+  font-style: normal;
+  font-stretch: normal;
   font-display: fallback;
 }
 
 @font-face {
   font-family: 'ZurichBT';
-  src: url('/font/ZurichBT-Bold.woff2') format('woff2'), url('/font/ZurichBT-Bold.woff') format('woff');
+  src: url('../fonts/Zurich/ZurichBT-Black.woff2') format('woff2'), url('../fonts/Zurich/ZurichBT-Black.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'SkyLogo';
+  src: url('../fonts/Sky/SkyLogo-Thick.woff2') format('woff2'), url('../fonts/Sky/SkyLogo-Thick.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: fallback;
 }
 
 @font-face {
-  font-family: 'ZurichBT';
-  src: url('/font/Zurich Black BT.woff2') format('woff2'), url('/font/Zurich Black BT.woff') format('woff');
-  font-weight: bold;
+  font-family: 'SkyScreen';
+  src: url('../fonts/Sky/SkyScreen-Regular.woff2') format('woff2'), url('../fonts/Sky/SkyScreen-Regular.woff') format('woff');
+  font-weight: normal;
   font-style: normal;
   font-display: fallback;
 }
 
 @font-face {
-  font-family: 'SkyLogo';
-  src: url('/font/SKYfontThick.woff2') format('woff2'), url('/font/SKYfontThick.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-  font-display: fallback;
-}
-
-@font-face {
-  font-family: 'SkyLogo';
-  src: url('/font/SkyScreenRegular.woff2') format('woff2'), url('/font/SkyScreenRegular.woff') format('woff');
+  font-family: 'SkyInfoText';
+  src: url('../fonts/Sky/SkyInfoText-Regular.woff2') format('woff2'), url('../fonts/Sky/SkyInfoText-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: fallback;

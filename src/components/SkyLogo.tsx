@@ -17,7 +17,7 @@ const useStyles = makeStyles({
   },
   underText: {
     marginTop: 2,
-    fontFamily: 'SkyLogo',
+    fontFamily: 'SkyInfoText',
     fontSize: 32,
     color: 'white',
     letterSpacing: 0.5,

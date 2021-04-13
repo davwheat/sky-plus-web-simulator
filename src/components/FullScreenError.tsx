@@ -36,7 +36,7 @@ const useStyles = makeStyles({
   messageBoxContent: {
     padding: 4,
     paddingBottom: 0,
-    fontFamily: 'ZurichBT',
+    fontFamily: 'SkyInfoText',
     background: Colors.mainLight,
     color: Colors.mainText,
     fontSize: 25,

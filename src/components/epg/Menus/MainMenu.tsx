@@ -6,7 +6,7 @@ import { controlsState, mainMenuState } from '../../../atoms'
 import controlsShownStateSetter from '../../../helpers/controlsShownStateSetter'
 import type { MainMenuTab } from '../../../pages'
 import ColorButtonsFooter from '../Footer/ColorButtonsFooter'
-import Header from '../Header/Header'
+import Header, { HeaderTabs } from '../Header/Header'
 import Menu from '../Menu'
 import InteractiveMenu from './InteractiveMenu'
 import * as MenuColorButtons from './menuColourButtons'
@@ -112,7 +112,9 @@ const MainMenu: React.FC = () => {
 
   return (
     <div className={classes.root}>
-      <Header logoText="guide" />
+      <Header logoText="guide">
+        <HeaderTabs />
+      </Header>
       {mainMenuStateValue.selectedTab !== 'INTERACTIVE' && <Menu listItems={menuItems} key={mainMenuStateValue.selectedTab} />}
       {mainMenuStateValue.selectedTab === 'INTERACTIVE' && <InteractiveMenu />}
       {colorButtonText && <ColorButtonsFooter buttonPressHandler={buttonPressHandler} buttonsText={colorButtonText} />}

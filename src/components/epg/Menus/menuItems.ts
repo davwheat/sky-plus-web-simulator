@@ -4,7 +4,9 @@ import { ListItem } from '../Menu'
 export const tvGuideListItems: ListItem[] = [
   {
     text: 'All Channels',
-    onClick: () => {},
+    onClick: () => {
+      navigate('/epg/channel-list?start=101')
+    },
   },
   {
     text: 'Entertainment',

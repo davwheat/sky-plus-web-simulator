@@ -16,7 +16,7 @@ const useStyles = makeStyles({
     fontSize: 24,
     letterSpacing: 0.2,
     color: Colors.accent,
-    bottom: 52,
+    bottom: 48,
     left: 56,
     right: 28,
   },

@@ -17,9 +17,11 @@ interface Props {
 const useStyles = makeStyles({
   root: {
     display: 'flex',
-    padding: '24px 32px',
     gap: 32,
-    marginBottom: 20,
+    width: '85%',
+    margin: 'auto',
+    marginTop: 32,
+    marginBottom: 16,
   },
   logo: {
     marginTop: 6,
@@ -27,15 +29,15 @@ const useStyles = makeStyles({
 })
 
 /**
- * Main EPG Header, containing the Sky logo, with custom text below, and the EPG tabs (TV Guide, Box Office, Services and Interactive).
+ * Main EPG Header, containing the Sky logo, with custom text below. Children are displayed after the logo.
  */
-const Header: React.FC<Props> = ({ logoText }) => {
+const Header: React.FC<Props> = ({ logoText, children }) => {
   const classes = useStyles()
 
   return (
     <header className={classes.root}>
       <SkyLogo text={logoText} className={classes.logo} />
-      <HeaderTabs />
+      {children}
     </header>
   )
 }
@@ -55,7 +57,7 @@ const useTabStyles = makeStyles({
   },
 })
 
-const HeaderTabs: React.FC = () => {
+export const HeaderTabs: React.FC = () => {
   const classes = useTabStyles()
   const { selectedTab } = useRecoilValue(mainMenuState)
 

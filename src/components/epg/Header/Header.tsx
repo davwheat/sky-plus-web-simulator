@@ -17,7 +17,7 @@ interface Props {
 const useStyles = makeStyles({
   root: {
     display: 'flex',
-    gap: 32,
+    gap: 24,
     width: '85%',
     margin: 'auto',
     marginTop: 32,

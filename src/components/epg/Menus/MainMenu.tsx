@@ -18,6 +18,9 @@ const useStyles = makeStyles({
   root: {
     background: `url(${EpgBackgroundImage})`,
   },
+  content: {
+    marginTop: 38,
+  },
   centeredErrorMessage: {
     position: 'absolute',
     left: '50%',
@@ -115,8 +118,10 @@ const MainMenu: React.FC = () => {
       <Header logoText="guide">
         <HeaderTabs />
       </Header>
-      {mainMenuStateValue.selectedTab !== 'INTERACTIVE' && <Menu listItems={menuItems} key={mainMenuStateValue.selectedTab} />}
-      {mainMenuStateValue.selectedTab === 'INTERACTIVE' && <InteractiveMenu />}
+      <div className={classes.content}>
+        {mainMenuStateValue.selectedTab !== 'INTERACTIVE' && <Menu listItems={menuItems} key={mainMenuStateValue.selectedTab} />}
+        {mainMenuStateValue.selectedTab === 'INTERACTIVE' && <InteractiveMenu />}
+      </div>
       {colorButtonText && <ColorButtonsFooter buttonPressHandler={buttonPressHandler} buttonsText={colorButtonText} />}
     </div>
   )

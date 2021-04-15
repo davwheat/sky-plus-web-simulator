@@ -1,7 +1,7 @@
+import Colors from '@data/Colors'
 import { makeStyles } from '@material-ui/core'
 import clsx from 'clsx'
 import React from 'react'
-import Colors from '../data/Colors'
 
 const BUTTON_SIZE = '0.8em'
 

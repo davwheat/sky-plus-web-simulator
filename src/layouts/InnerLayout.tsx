@@ -1,5 +1,5 @@
+import SEO from '@components/SEO'
 import React from 'react'
-import SEO from '../components/SEO'
 
 interface Props {
   title?: string

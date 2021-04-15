@@ -1,6 +1,6 @@
+import { getScheduleStartTime } from '@helpers/timeFormatting'
 import dayjs from 'dayjs'
 import { atom } from 'recoil'
-import { getScheduleStartTime } from '../helpers/timeFormattings'
 
 export const scheduleTimeState = atom({
   key: 'epgScheduleTime',

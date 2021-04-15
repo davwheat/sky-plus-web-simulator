@@ -1,8 +1,8 @@
+import { scheduleTimeState, timeState } from '@atoms'
+import { getScheduleStartTime } from '@helpers/timeFormatting'
 import dayjs from 'dayjs'
 import React, { useEffect } from 'react'
 import { useRecoilValue, useSetRecoilState } from 'recoil'
-import { scheduleTimeState, timeState } from '../atoms/timeState'
-import { getScheduleStartTime } from '../helpers/timeFormattings'
 
 interface Props {
   children?: React.ReactNode

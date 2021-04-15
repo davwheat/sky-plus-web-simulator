@@ -1,11 +1,11 @@
+import InfoIcon from '@assets/icons/info.inline.svg'
+import { scheduleTimeState } from '@atoms'
+import { Programme } from '@data/getEpg'
 import { makeStyles } from '@material-ui/core'
 import clsx from 'clsx'
 import dayjs from 'dayjs'
 import React from 'react'
 import { useRecoilValue } from 'recoil'
-import InfoIcon from '../../../assets/icons/info.inline.svg'
-import { scheduleTimeState } from '../../../atoms/timeState'
-import { Programme } from '../../../data/getEpg'
 
 interface Props {
   programmes: Programme[]

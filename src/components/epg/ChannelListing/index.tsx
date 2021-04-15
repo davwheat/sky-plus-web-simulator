@@ -1,6 +1,6 @@
+import EpgBackgroundImage from '@assets/images/guide-bg.sized.png'
 import { makeStyles } from '@material-ui/core'
 import React from 'react'
-import EpgBackgroundImage from '../../../assets/images/guide-bg.sized.png'
 import { Header } from '../Header'
 import ProgrammeListingHeaderContent from './header'
 import Channels from './listings'

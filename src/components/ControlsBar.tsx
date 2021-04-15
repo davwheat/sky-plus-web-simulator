@@ -1,9 +1,9 @@
+import LeftRightArrowIcon from '@assets/icons/remote/lr-arrow-button.inline.svg'
+import { controlsState } from '@atoms'
 import { makeStyles } from '@material-ui/core'
 import clsx from 'clsx'
 import React from 'react'
 import { useRecoilValue } from 'recoil'
-import LeftRightArrowIcon from '../assets/icons/remote/lr-arrow-button.inline.svg'
-import { controlsState } from '../atoms'
 import ColorButton from './ColorButton'
 import ControlText from './ControlText'
 

@@ -1,7 +1,7 @@
+import SharingImageUrl from '@assets/images/sharing-image.jpg'
 import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
 import { Meta, Title } from 'react-head'
-import SharingImageUrl from '../assets/images/sharing-image.jpg'
 
 type MetaEntry = {
   name: string

@@ -8,7 +8,17 @@
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "outDir": "./dist", // not actually used
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "baseUrl": "./",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@data/*": ["src/data/*"],
+      "@atoms/*": ["src/atoms/*"],
+      "@atoms": ["src/atoms/index.ts"],
+      "@helpers/*": ["src/helpers/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@layouts/*": ["src/layouts/*"]
+    }
   },
   "exclude": ["node_modules", "build", "scripts", "acceptance-tests", "webpack", "jest", "src/setupTests.ts", ".cache", "public"]
 }

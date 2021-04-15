@@ -1,9 +1,9 @@
+import { globalBoxState } from '@atoms/globalBoxState'
+import ErrorMessage from '@components/ErrorMessage'
+import { randomNumber } from '@helpers/randomNumber'
 import { makeStyles } from '@material-ui/core'
 import React, { useEffect, useState } from 'react'
 import { useRecoilValue } from 'recoil'
-import { globalBoxState } from '../../../atoms/globalBoxState'
-import { randomNumber } from '../../../helpers/randomNumber'
-import ErrorMessage from '../../ErrorMessage'
 import Menu from '../Menu'
 import { interactiveListItems } from './menuItems'
 

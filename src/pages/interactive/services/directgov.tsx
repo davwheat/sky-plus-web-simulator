@@ -1,11 +1,11 @@
+import DirectGovLogo from '@assets/images/interactive/directgov/logo.inline.svg'
+import { controlsState } from '@atoms'
+import controlsShownStateSetter from '@helpers/controlsShownStateSetter'
+import InnerLayout from '@layouts/InnerLayout'
 import { makeStyles } from '@material-ui/core'
 import { navigate } from 'gatsby'
 import React, { useEffect } from 'react'
 import { useSetRecoilState } from 'recoil'
-import DirectGovLogo from '../../../assets/images/interactive/directgov/logo.inline.svg'
-import { controlsState } from '../../../atoms'
-import controlsShownStateSetter from '../../../helpers/controlsShownStateSetter'
-import InnerLayout from '../../../layouts/InnerLayout'
 
 const useStyles = makeStyles({
   root: {

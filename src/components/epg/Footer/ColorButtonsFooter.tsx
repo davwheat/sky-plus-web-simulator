@@ -1,10 +1,10 @@
+import { controlsState } from '@atoms'
+import ColorButton from '@components/ColorButton'
+import Colors from '@data/Colors'
+import controlsShownStateSetter from '@helpers/controlsShownStateSetter'
 import { makeStyles } from '@material-ui/core'
 import React, { useEffect } from 'react'
 import { useSetRecoilState } from 'recoil'
-import { controlsState } from '../../../atoms'
-import Colors from '../../../data/Colors'
-import controlsShownStateSetter from '../../../helpers/controlsShownStateSetter'
-import ColorButton from '../../ColorButton'
 
 const useStyles = makeStyles({
   root: {

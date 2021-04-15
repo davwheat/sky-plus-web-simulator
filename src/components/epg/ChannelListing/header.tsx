@@ -1,8 +1,8 @@
+import { timeState } from '@atoms'
+import Colors from '@data/Colors'
 import { makeStyles } from '@material-ui/core'
 import React from 'react'
 import { useRecoilValue } from 'recoil'
-import { timeState } from '../../../atoms/timeState'
-import Colors from '../../../data/Colors'
 
 const useHeaderStyles = makeStyles({
   root: {

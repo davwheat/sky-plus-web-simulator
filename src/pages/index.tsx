@@ -1,12 +1,10 @@
+import { mainMenuState } from '@atoms'
+import MainMenu from '@components/epg/Menus/MainMenu'
+import InnerLayout from '@layouts/InnerLayout'
 import type { WindowLocation } from '@reach/router'
 import { navigate, PageProps } from 'gatsby'
 import React from 'react'
 import { useSetRecoilState } from 'recoil'
-import { mainMenuState } from '../atoms/mainMenuState'
-import MainMenu from '../components/epg/Menus/MainMenu'
-import InnerLayout from '../layouts/InnerLayout'
-
-export type MainMenuTab = 'GUIDE' | 'BOX OFFICE' | 'SERVICES' | 'INTERACTIVE'
 
 type ThisPageProps = PageProps<object, object, WindowLocation<{ selectedTab: MainMenuTab }>['state']>
 

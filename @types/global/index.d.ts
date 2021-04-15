@@ -1,4 +1,6 @@
 declare global {
+  export type MainMenuTab = 'GUIDE' | 'BOX OFFICE' | 'SERVICES' | 'INTERACTIVE'
+
   export type SkyControlPressedEvent = CustomEvent<{ control: SkyControl }>
 
   export type ArrayElement<ArrayType extends readonly unknown[]> = ArrayType extends readonly (infer ElementType)[] ? ElementType : never

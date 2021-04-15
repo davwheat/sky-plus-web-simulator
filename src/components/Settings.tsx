@@ -1,6 +1,6 @@
+import chooseMusic, { MusicKeys } from '@data/chooseMusic'
 import { makeStyles } from '@material-ui/core'
 import React from 'react'
-import chooseMusic, { MusicKeys } from '../data/chooseMusic'
 
 const useStyles = makeStyles({
   root: {

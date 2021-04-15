@@ -1,13 +1,13 @@
+import { scheduleTimeState } from '@atoms'
+import Colors from '@data/Colors'
+import { Channel } from '@data/epg/AllChannels'
+import getProgrammeListingForSID, { EPGChannelListing, Programme } from '@data/getEpg'
 import { makeStyles } from '@material-ui/core'
 import clsx from 'clsx'
 import dayjs from 'dayjs'
 import dayJsIsBetween from 'dayjs/plugin/isBetween'
 import React, { useEffect, useMemo, useState } from 'react'
 import { useRecoilValue } from 'recoil'
-import { scheduleTimeState } from '../../../atoms/timeState'
-import Colors from '../../../data/Colors'
-import { Channel } from '../../../data/epg/AllChannels'
-import getProgrammeListingForSID, { EPGChannelListing, Programme } from '../../../data/getEpg'
 import Programmes from './programmes'
 
 dayjs.extend(dayJsIsBetween)

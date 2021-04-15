@@ -1,9 +1,9 @@
+import { scheduleTimeState } from '@atoms'
+import Colors from '@data/Colors'
+import { formatTimingHeader } from '@helpers/timeFormatting'
 import { makeStyles } from '@material-ui/core'
 import React from 'react'
 import { useRecoilValue } from 'recoil'
-import { scheduleTimeState } from '../../../atoms/timeState'
-import Colors from '../../../data/Colors'
-import { formatTimingHeader } from '../../../helpers/timeFormattings'
 
 const useStyles = makeStyles({
   timingHeader: {

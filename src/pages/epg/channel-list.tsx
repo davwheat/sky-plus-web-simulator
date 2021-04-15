@@ -1,11 +1,11 @@
+import { controlsState } from '@atoms'
+import ChannelListing from '@components/epg/ChannelListing/index'
+import controlsShownStateSetter from '@helpers/controlsShownStateSetter'
+import InnerLayout from '@layouts/InnerLayout'
 import type { WindowLocation } from '@reach/router'
 import { navigate, PageProps } from 'gatsby'
 import React, { useEffect } from 'react'
 import { useSetRecoilState } from 'recoil'
-import { controlsState } from '../../atoms'
-import ChannelListing from '../../components/epg/ChannelListing/index'
-import controlsShownStateSetter from '../../helpers/controlsShownStateSetter'
-import InnerLayout from '../../layouts/InnerLayout'
 
 type Props = PageProps<object, object, WindowLocation<{ startFromChannelNumber?: string }>['state']>
 

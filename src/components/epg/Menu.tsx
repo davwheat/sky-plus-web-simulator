@@ -1,11 +1,11 @@
+import MenuMoreArrowSvg from '@assets/icons/list-arrow.svg'
+import { controlsState } from '@atoms'
+import Colors from '@data/Colors'
+import controlsShownStateSetter from '@helpers/controlsShownStateSetter'
 import { makeStyles } from '@material-ui/core'
 import clsx from 'clsx'
 import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { useSetRecoilState } from 'recoil'
-import MenuMoreArrowSvg from '../../assets/icons/list-arrow.svg'
-import { controlsState } from '../../atoms'
-import Colors from '../../data/Colors'
-import controlsShownStateSetter from '../../helpers/controlsShownStateSetter'
 
 const useStyles = makeStyles({
   root: {

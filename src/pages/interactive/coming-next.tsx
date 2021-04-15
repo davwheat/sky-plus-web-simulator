@@ -1,10 +1,10 @@
+import Colors from '@data/Colors'
+import { randomNumber } from '@helpers/randomNumber'
+import InnerLayout from '@layouts/InnerLayout'
 import { makeStyles } from '@material-ui/core'
 import type { WindowLocation } from '@reach/router'
 import { navigate, PageProps } from 'gatsby'
 import React, { useEffect } from 'react'
-import Colors from '../../data/Colors'
-import { randomNumber } from '../../helpers/randomNumber'
-import InnerLayout from '../../layouts/InnerLayout'
 
 type Props = PageProps<
   object,

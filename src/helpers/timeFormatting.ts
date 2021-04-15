@@ -4,6 +4,9 @@ export function formatTimingHeader(dayjsObj: dayjs.Dayjs) {
   return dayjsObj.format('h:mma')
 }
 
+/**
+ * Round time down to last 30 minutes.
+ */
 export function getScheduleStartTime() {
   const currentTime = dayjs()
 

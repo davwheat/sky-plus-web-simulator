@@ -1,6 +1,6 @@
+import { getChannelNumberFromNumberPlusN, getNChannelsFromNumber } from '@data/epg/AllChannels'
 import { makeStyles } from '@material-ui/core'
 import React, { useState } from 'react'
-import { getChannelNumberFromNumberPlusN, getNChannelsFromNumber } from '../../../data/epg/AllChannels'
 import ColorButtonsFooter from '../Footer/ColorButtonsFooter'
 import EpgChannel from './epgChannel'
 import TimingHeaders from './timingHeaders'

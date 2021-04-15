@@ -1,6 +1,7 @@
 import { makeStyles } from '@material-ui/core'
-import dayjs from 'dayjs'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
+import { useRecoilValue } from 'recoil'
+import { timeState } from '../../../atoms/timeState'
 import Colors from '../../../data/Colors'
 
 const useHeaderStyles = makeStyles({
@@ -25,23 +26,11 @@ const useHeaderStyles = makeStyles({
   },
 })
 
-function getEpgTime() {
-  return dayjs().format('h:mma ddd D MMM')
-}
-
 const ProgrammeListingHeaderContent: React.FC = () => {
-  const [timeText, setTimeText] = useState(getEpgTime())
+  const { time } = useRecoilValue(timeState)
+  const timeText = time.format('h:mma ddd D MMM')
+
   const classes = useHeaderStyles()
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setTimeText(getEpgTime())
-    }, 2000)
-
-    return () => {
-      clearInterval(interval)
-    }
-  })
 
   return (
     <div className={classes.root}>

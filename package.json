@@ -50,6 +50,7 @@
     "recoil": "^0.2.0"
   },
   "devDependencies": {
+    "@types/webpack-env": "^1.16.0",
     "babel-plugin-transform-remove-console": "^6.9.4",
     "cross-env": "^7.0.3",
     "gatsby-plugin-remove-console": "^0.0.2",

@@ -2821,6 +2821,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/webpack-env@npm:^1.16.0":
+  version: 1.16.0
+  resolution: "@types/webpack-env@npm:1.16.0"
+  checksum: eaf62fb65ba18737174a520a444bb7407e5a6f32581690c5a7a687e6f86e9d4ce336fd9e79989aafa19e5f390046ad54b9100cd3d70a43dcf0ab0161d30cd5bd
+  languageName: node
+  linkType: hard
+
 "@types/websocket@npm:1.0.2":
   version: 1.0.2
   resolution: "@types/websocket@npm:1.0.2"
@@ -15626,6 +15633,7 @@ resolve@^2.0.0-next.3:
   dependencies:
     "@material-ui/core": ^4.11.3
     "@material-ui/styles": ^4.11.3
+    "@types/webpack-env": ^1.16.0
     babel-plugin-transform-remove-console: ^6.9.4
     clsx: ^1.1.1
     cross-env: ^7.0.3

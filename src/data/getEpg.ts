@@ -1,3 +1,5 @@
+import dayjs from 'dayjs'
+
 export interface EPGChannelListing {
   /**
    * YYYYMMDD
@@ -208,11 +210,12 @@ export default async function getProgrammeListingForSID(
   channelSid: string,
   { date, abortController }: Partial<{ date: string; abortController: AbortController }> = {},
 ): Promise<EPGChannelListing> {
+  let realDate: string
 
-  if (!realDate) {
-    const now = new Date()
-
-    realDate = `${now.getUTCFullYear()}${pad(now.getUTCMonth() + 1)}${pad(now.getUTCDate())}`
+  if (!date) {
+    realDate = dayjs().format('YYYYMMDD')
+  } else {
+    realDate = dayjs(date).format('YYYYMMDD')
   }
 
   const jsonData = await (await fetch(`${EPG_API_URL}/${realDate}/${channelSid}`, { signal: abortController.signal })).json()

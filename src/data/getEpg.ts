@@ -185,7 +185,7 @@ export interface Programme {
   marketingMessage?: string
   /**
    * Channel genre that this programme's channel is in.
-   * 
+   *
    * Original: `cgid`
    */
   channelGenreId: number

@@ -1,8 +1,8 @@
 import { makeStyles } from '@material-ui/core'
 import React, { useState } from 'react'
-import Colors from '../../../data/Colors'
 import { getChannelNumberFromNumberPlusN, getNChannelsFromNumber } from '../../../data/epg/AllChannels'
 import ColorButtonsFooter from '../Footer/ColorButtonsFooter'
+import EpgChannel from './epgChannel'
 import TimingHeaders from './timingHeaders'
 
 interface Props {
@@ -27,34 +27,6 @@ const useStyles = makeStyles({
     fontStretch: 'condensed',
     fontSize: 24,
   },
-  channelNumber: {
-    width: '3ch',
-    marginRight: 4,
-  },
-  channelName: {
-    whiteSpace: 'nowrap',
-    overflow: 'hidden',
-    textOverflow: '".."',
-    color: '#fff',
-    background: Colors.main,
-    padding: '4px 8px',
-    lineHeight: 1,
-  },
-
-  programme: {
-    '&': {
-      // Fallback value for Chrome
-      textOverflow: 'ellipsis',
-    },
-    whiteSpace: 'nowrap',
-    overflow: 'hidden',
-    textOverflow: '".."',
-    color: '#fff',
-    background: Colors.main,
-    padding: '4px 8px',
-    lineHeight: 1,
-    gridColumnEnd: `var(--duration)`,
-  },
 })
 
 const Channels: React.FC<Props> = ({ firstChannel }) => {
@@ -64,7 +36,19 @@ const Channels: React.FC<Props> = ({ firstChannel }) => {
   const channelsOnPage = getNChannelsFromNumber(startingChannel, CHANNELS_PER_PAGE)
 
   function changePage(change: 1 | -1) {
-    setStartingChannel(first => getChannelNumberFromNumberPlusN(first, change * CHANNELS_PER_PAGE))
+    let newStartingChannel = 0
+
+    setStartingChannel(first => {
+      const newStart = getChannelNumberFromNumberPlusN(first, change * CHANNELS_PER_PAGE)
+
+      if (window.history.replaceState) {
+        const newURL = new URL(window.location.href)
+        newURL.search = '?start=' + newStart
+        window.history.replaceState({ path: newURL.href }, '', newURL.href)
+      }
+
+      return newStart
+    })
   }
 
   return (
@@ -72,28 +56,7 @@ const Channels: React.FC<Props> = ({ firstChannel }) => {
       <section className={classes.root}>
         <TimingHeaders />
 
-        {channelsOnPage &&
-          channelsOnPage.map(channel => (
-            <React.Fragment key={channel.sid}>
-              <span className={classes.channelName}>
-                <span className={classes.channelNumber}>{channel.channelNumber}</span>
-                {channel.name}
-              </span>
-
-              {/* Spacer */}
-              <span />
-
-              <span style={{ ['--duration' as any]: 'span 30' }} className={classes.programme}>
-                Programme A
-              </span>
-              <span style={{ ['--duration' as any]: 'span 45' }} className={classes.programme}>
-                Programme B
-              </span>
-              <span style={{ ['--duration' as any]: 'span 15' }} className={classes.programme}>
-                Programme C
-              </span>
-            </React.Fragment>
-          ))}
+        {channelsOnPage && channelsOnPage.map(channel => <EpgChannel key={channel.sid} channel={channel} />)}
       </section>
       <ColorButtonsFooter
         buttonPressHandler={btn => {

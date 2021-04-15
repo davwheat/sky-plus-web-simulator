@@ -6,6 +6,7 @@ import { RecoilRoot } from 'recoil'
 import ControlsBar from '../components/ControlsBar'
 import Footer from '../components/Footer'
 import Settings from '../components/Settings'
+import StateManager from '../components/StateManager'
 import chooseMusic from '../data/chooseMusic'
 import Colors from '../data/Colors'
 
@@ -55,6 +56,7 @@ const PageWrapper: React.FC<Props> = ({ children }) => {
   return (
     <RecoilRoot>
       <SnackbarProvider maxSnack={3}>
+        <StateManager />
         <AudioWrapper />
         <SettingsArea />
         <main className={classes.main}>

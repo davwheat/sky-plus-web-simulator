@@ -181,6 +181,12 @@ export interface Programme {
    * Original: `marketingmessage`
    */
   marketingMessage?: string
+  /**
+   * Channel genre that this programme's channel is in.
+   * 
+   * Original: `cgid`
+   */
+  channelGenreId: number
 }
 
 const EPG_API_URL = 'http://awk.epgsky.com/hawk/linear/schedule'

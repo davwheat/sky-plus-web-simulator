@@ -40,7 +40,7 @@ interface Programme {
    *
    * Original: `programmeuuid`
    */
-  programmeUuid: string
+  programmeUuid: string | undefined
   /**
    * Programme season number.
    *
@@ -48,7 +48,7 @@ interface Programme {
    *
    * Original: `seasonnumber`
    */
-  seasonNumber: number
+  seasonNumber: number | undefined
   /**
    * Programme episode number.
    *
@@ -56,19 +56,19 @@ interface Programme {
    *
    * Original: `episodenumber`
    */
-  episodeNumber: number
+  episodeNumber: number | undefined
   /**
    * Unique ID for this programme's season.
    *
    * Original: `seasonuuid`
    */
-  seasonUuid: string
+  seasonUuid: string | undefined
   /**
    * Unique ID for this programme's series. (All seasons and eps.)
    *
    * Original: `seriesuuid`
    */
-  seriesUuid: string
+  seriesUuid: string | undefined
   /**
    * Whether the programme has children
    *

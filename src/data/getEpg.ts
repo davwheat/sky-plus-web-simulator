@@ -204,8 +204,10 @@ const EPG_API_URL = 'http://awk.epgsky.com/hawk/linear/schedule'
  * @param channelSid Channel SID
  * @param date Date (YYYYMMDD)
  */
-export default async function (channelSid: string, date?: string) {
-  let realDate = date
+export default async function getProgrammeListingForSID(
+  channelSid: string,
+  { date, abortController }: Partial<{ date: string; abortController: AbortController }> = {},
+): Promise<EPGChannelListing> {
 
   if (!realDate) {
     const now = new Date()
@@ -213,7 +215,7 @@ export default async function (channelSid: string, date?: string) {
     realDate = `${now.getUTCFullYear()}${pad(now.getUTCMonth() + 1)}${pad(now.getUTCDate())}`
   }
 
-  const jsonData = await (await fetch(`${EPG_API_URL}/${realDate}/${channelSid}`)).json()
+  const jsonData = await (await fetch(`${EPG_API_URL}/${realDate}/${channelSid}`, { signal: abortController.signal })).json()
 
   return jsonData
 }

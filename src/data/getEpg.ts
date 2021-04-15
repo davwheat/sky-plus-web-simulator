@@ -191,7 +191,7 @@ export interface Programme {
   channelGenreId: number
 }
 
-const EPG_API_URL = 'http://awk.epgsky.com/hawk/linear/schedule'
+const EPG_API_URL = 'https://awk.epgsky.com/hawk/linear/schedule'
 
 /**
  * Gets EPG schedule for a specified channel and date.

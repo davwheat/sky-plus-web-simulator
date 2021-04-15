@@ -1,26 +1,16 @@
-interface EPGChannelListing {
+export interface EPGChannelListing {
   /**
    * YYYYMMDD
    */
   date: string
-  schedule: ChannelSchedule
+  schedule: Programme[]
 }
 
-interface ChannelSchedule {
+export interface Programme {
   /**
-   * Channel SID
-   */
-  sid: string
-  events: Programme[]
-}
-
-interface Programme {
-  /**
-   * The start time of the programme measured in seconds since Unix epoch.
+   * The start time of the programme as a Unix timestamp (milliseconds since epoch).
    *
-   * Convert to JS date with `new Date(time * 1000)`.
-   *
-   * Original: `haschildren`
+   * Original: `st`. Original in seconds since epoch.
    */
   startTime: number
   /**

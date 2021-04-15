@@ -3,7 +3,7 @@ import channelList from './channelList.json'
 const ChannelNumbers = Object.keys(channelList)
 const AllChannels = Object.values(channelList) as Channel[]
 
-interface Channel {
+export interface Channel {
   channelNumber: string
   name: string
   sid: number

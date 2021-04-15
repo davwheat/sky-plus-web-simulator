@@ -1,7 +1,7 @@
 const Colors = {
   text: '#000',
 
-  main: '#0025c9',
+  main: '#002db6',
   mainLight: '#003399',
   mainText: '#fff',
   get mainHover() {
@@ -9,8 +9,8 @@ const Colors = {
   },
   mainTextHover: '#0000b3',
 
-  accent: '#051571',
-  accentText: '#8787ff',
+  accent: '#00137d',
+  accentText: '#758ae5',
   get accentHover() {
     return this.yellowDark
   },

@@ -8,6 +8,8 @@ const Colors = {
     return this.yellowMain
   },
   mainTextHover: '#0000b3',
+  mainFaded: '#2144C4',
+  mainFadedText: '#99AAEE',
 
   accent: '#00137d',
   accentText: '#758ae5',

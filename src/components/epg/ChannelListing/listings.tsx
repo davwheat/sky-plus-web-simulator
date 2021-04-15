@@ -16,6 +16,12 @@ const MINUTES_PER_PAGE = HOURS_PER_PAGE * 60
 const useStyles = makeStyles({
   root: {
     display: 'grid',
+
+    // Grid column span is used to give programmes the right duration.
+    // A span of `10` would equate to a width equal to 10 minutes.
+    //
+    // This is done by creating 90 columns of width `1fr`, so we have 90
+    // columns of equal width.
     gridTemplateColumns: `33% 4px repeat(${MINUTES_PER_PAGE}, minmax(0, 1fr))`,
     gridTemplateRows: `repeat(${CHANNELS_PER_PAGE + 1}, calc(1em + 8px))`,
     width: '85%',

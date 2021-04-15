@@ -99,8 +99,6 @@ const MainMenu: React.FC = () => {
         if (newTabIndex < 0) newTabIndex = TABS.length - 1
         else if (newTabIndex >= TABS.length) newTabIndex = 0
 
-        console.log(newTabIndex)
-
         setMainMenuState({ selectedTab: TABS[newTabIndex] })
       }
     }

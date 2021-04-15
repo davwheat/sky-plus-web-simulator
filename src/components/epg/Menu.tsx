@@ -113,8 +113,6 @@ const Menu: React.FC<MenuProps> = ({ onBack, listItems, noForcedUpperCase = fals
   const pages = useMemo(() => SplitMenuIntoPages(listItems), [listItems, SplitMenuIntoPages])
   const thisPage = pages[pageIndex]
 
-  console.log(pageIndex, thisPage)
-
   function HandleMenuNav(e: React.KeyboardEvent<HTMLOListElement>) {
     if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return
 

@@ -43,7 +43,5 @@ export function getChannelNumberFromNumberPlusN(channelNumber: string, n: number
   const startIndex = ChannelNumbers.indexOf(channelNumber)
   const result = ChannelNumbers[Math.min(Math.max(startIndex + n, 0), ChannelNumbers.length - 1)]
 
-  console.log(startIndex, n, result)
-
   return result
 }

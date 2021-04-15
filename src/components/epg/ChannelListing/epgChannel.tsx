@@ -17,6 +17,9 @@ interface Props {
 }
 
 const useStyles = makeStyles({
+  item: {
+    padding: 4,
+  },
   channelNumber: {
     width: '3ch',
     marginRight: 4,
@@ -27,7 +30,6 @@ const useStyles = makeStyles({
     textOverflow: '".."',
     color: '#fff',
     background: Colors.main,
-    padding: '4px 8px',
     lineHeight: 1,
   },
   programme: {
@@ -40,7 +42,6 @@ const useStyles = makeStyles({
     textOverflow: '".."',
     color: '#fff',
     background: Colors.main,
-    padding: '4px 8px',
     lineHeight: 1,
   },
   noListings: {
@@ -99,7 +100,7 @@ const EpgChannel: React.FC<Props> = ({ channel }) => {
 
   return (
     <>
-      <span className={classes.channelName}>
+      <span className={clsx(classes.channelName, classes.item)}>
         <span className={classes.channelNumber}>{channel.channelNumber}</span>
         {channel.name}
       </span>
@@ -108,7 +109,7 @@ const EpgChannel: React.FC<Props> = ({ channel }) => {
       <span />
 
       {!programmeListings && !eventsWeCareAbout && <span aria-hidden style={{ gridColumnEnd: 'span 90' }} />}
-      {programmeListings && eventsWeCareAbout && <Programmes className={classes.programme} programmes={eventsWeCareAbout} />}
+      {programmeListings && eventsWeCareAbout && <Programmes className={clsx(classes.programme, classes.item)} programmes={eventsWeCareAbout} />}
       {programmeListings && eventsWeCareAbout && eventsWeCareAbout.length === 0 && (
         <span className={clsx(classes.programme, classes.noListings)} style={{ gridColumnEnd: 'span 90' }}>
           ..no listings available

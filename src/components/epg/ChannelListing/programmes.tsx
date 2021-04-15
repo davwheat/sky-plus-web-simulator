@@ -1,6 +1,9 @@
+import { makeStyles } from '@material-ui/core'
+import clsx from 'clsx'
 import dayjs from 'dayjs'
 import React from 'react'
 import { useRecoilValue } from 'recoil'
+import InfoIcon from '../../../assets/icons/info.inline.svg'
 import { scheduleTimeState } from '../../../atoms/timeState'
 import { Programme } from '../../../data/getEpg'
 
@@ -9,7 +12,18 @@ interface Props {
   className: string
 }
 
+const useStyles = makeStyles({
+  info: {
+    height: '0.75em',
+    display: 'inline-block',
+  },
+  infoContainer: {},
+})
+
+const CUTOFF_FOR_INFO_ICON_IN_MINUTES = 25
+
 const Programmes: React.FC<Props> = ({ programmes, className }) => {
+  const classes = useStyles()
   const { scheduleStartTime } = useRecoilValue(scheduleTimeState)
 
   const programmeCount = programmes.length
@@ -30,8 +44,12 @@ const Programmes: React.FC<Props> = ({ programmes, className }) => {
         }
 
         return (
-          <span style={{ gridColumnEnd: `span ${durationMins}` }} className={className} key={`${programme.startTime}__${programme.eventId}`}>
-            {programme.title}
+          <span
+            style={{ gridColumnEnd: `span ${durationMins}` }}
+            className={clsx(className, durationMins < CUTOFF_FOR_INFO_ICON_IN_MINUTES && classes.infoContainer)}
+            key={`${programme.startTime}__${programme.eventId}`}
+          >
+            {durationMins < CUTOFF_FOR_INFO_ICON_IN_MINUTES ? <InfoIcon className={classes.info} /> : programme.title}
           </span>
         )
       })}

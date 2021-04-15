@@ -220,9 +220,44 @@ export default async function getProgrammeListingForSID(
 
   const jsonData = await (await fetch(`${EPG_API_URL}/${realDate}/${channelSid}`, { signal: abortController.signal })).json()
 
-  return jsonData
-}
+  const events = jsonData.schedule[0].events as Record<string, any>[]
 
-function pad(num: number): string {
-  return String(num).padStart(2, '0')
+  const response: EPGChannelListing = {
+    date: jsonData.date,
+    schedule: events.map(
+      (event): Programme => ({
+        startTime: event.st * 1000,
+        duration: event.d,
+        eventId: event.eid,
+        channelGenreId: event.cgid,
+        programmeUuid: event.programmeuuid,
+        seasonNumber: event.seasonnumber,
+        episodeNumber: event.episodenumber,
+        seasonUuid: event.seasonuuid,
+        seriesUuid: event.seriesuuid,
+        hasChildren: event.haschildren,
+        title: event.t,
+        synopsis: event.sy,
+        eg: event.eg,
+        esg: event.esg,
+        tso: event.tso,
+        rating: event.r,
+        audioTechnology: event.at,
+        hasSubtitles: event.s,
+        hasAudioDescription: event.ad,
+        isHd: event.hd,
+        isNew: event.new,
+        canSeriesLink: event.canl,
+        canBookRecording: event.canb,
+        hasAlternativeAudio: event.hasAlternativeAudio,
+        isRestartable: event.restartable,
+        slo: event.slo,
+        w: event.w,
+        ippv: event.ippv,
+        oppv: event.oppv,
+      }),
+    ),
+  }
+
+  return response
 }

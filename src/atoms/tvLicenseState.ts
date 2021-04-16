@@ -1,6 +1,6 @@
 import { atom, AtomEffect, DefaultValue } from 'recoil'
 
-interface TVLicenseState {
+export interface TVLicenseState {
   hasTvLicense: boolean
   hasOptedOutOfTvLicenseContent: boolean
   /**

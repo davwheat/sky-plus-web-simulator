@@ -91,8 +91,6 @@ const Channels: React.FC<Props> = ({ firstChannel }) => {
   const channelsOnPage = getNChannelsFromNumber(startingChannel, CHANNELS_PER_PAGE)
 
   function changePage(change: 1 | -1) {
-    let newStartingChannel = 0
-
     setStartingChannel(first => {
       const newStart = getChannelNumberFromNumberPlusN(first, change * CHANNELS_PER_PAGE)
 

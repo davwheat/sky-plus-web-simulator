@@ -6,14 +6,12 @@ import StateManager from '@components/StateManager'
 import TVLicenseMessage from '@components/TVLicenseMessage'
 import chooseMusic from '@data/chooseMusic'
 import Colors from '@data/Colors'
+import shouldShowTvLicenseMessage from '@helpers/shouldShowTvLicenseMessage'
 import { Button, IconButton, makeStyles } from '@material-ui/core'
 import SettingsIcon from 'mdi-react/SettingsIcon'
 import { SnackbarProvider, useSnackbar } from 'notistack'
 import React, { useEffect, useState } from 'react'
 import { RecoilRoot, useRecoilValue } from 'recoil'
-
-// Ask every 28 days
-const TIME_TO_REFRESH_TV_LICENSE_PROMPT = 1000 * 60 * 60 * 24 * 28
 
 interface Props {
   children?: React.ReactNode
@@ -65,11 +63,7 @@ const PageWrapper: React.FC<Props> = ({ children }) => {
   const classes = useLayoutStyles()
   const tvLicenseStateValue = useRecoilValue(tvLicenseState)
 
-  const shouldShowTvLicenseWarning =
-    // No TV license and has not opted out of streams
-    (!tvLicenseStateValue.hasTvLicense && !tvLicenseStateValue.hasOptedOutOfTvLicenseContent) ||
-    // or has been 28 days since last asked
-    Date.now() - tvLicenseStateValue.savedAt > TIME_TO_REFRESH_TV_LICENSE_PROMPT
+  const showTvLicenseWarning = shouldShowTvLicenseMessage(tvLicenseStateValue)
 
   return (
     <SnackbarProvider maxSnack={3}>
@@ -77,7 +71,7 @@ const PageWrapper: React.FC<Props> = ({ children }) => {
       <AudioWrapper />
       <SettingsArea />
       <main className={classes.main}>
-        <div className={classes.epg}>{!shouldShowTvLicenseWarning ? children : <TVLicenseMessage />}</div>
+        <div className={classes.epg}>{!showTvLicenseWarning ? children : <TVLicenseMessage />}</div>
         <ControlsBar />
         <Footer className={classes.footer} />
       </main>

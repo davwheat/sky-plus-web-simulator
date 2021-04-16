@@ -13,9 +13,9 @@ const ServiceUnavailablePage: React.FC<Props> = ({ location }) => {
     <InnerLayout>
       <FullScreenError
         errorCode={null}
-        backUpPrompt
-        backUpPromptTextAction="cancel"
-        onBackUp={() => navigate('/', { state: { selectedTab: 'INTERACTIVE' } })}
+        controlPrompt
+        controlPromptAction="cancel"
+        onControlPressed={() => navigate('/', { state: { selectedTab: 'INTERACTIVE' } })}
       >
         <br />
         {serviceName} is not available.

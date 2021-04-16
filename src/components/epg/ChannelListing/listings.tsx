@@ -1,3 +1,5 @@
+import ControlText from '@components/ControlText'
+import Colors from '@data/Colors'
 import { getChannelNumberFromNumberPlusN, getNChannelsFromNumber } from '@data/epg/AllChannels'
 import { makeStyles } from '@material-ui/core'
 import React, { useState } from 'react'
@@ -35,6 +37,25 @@ const useStyles = makeStyles({
     fontStretch: 'condensed',
     fontSize: 24,
   },
+  colorButtons: {
+    position: 'static',
+    width: '85%',
+    maxWidth: '85%',
+    margin: 'auto',
+    marginTop: 16,
+  },
+  controlPrompt: {
+    fontFamily: 'ZurichBT',
+    color: Colors.accent,
+    width: '85%',
+    maxWidth: '85%',
+    margin: 'auto',
+    fontSize: 24,
+    marginTop: 8,
+  },
+  controlText: {
+    fontSize: 20,
+  },
 })
 
 const Channels: React.FC<Props> = ({ firstChannel }) => {
@@ -66,7 +87,9 @@ const Channels: React.FC<Props> = ({ firstChannel }) => {
 
         {channelsOnPage && channelsOnPage.map(channel => <EpgChannel key={channel.sid} channel={channel} />)}
       </section>
+
       <ColorButtonsFooter
+        className={classes.colorButtons}
         buttonPressHandler={btn => {
           if (btn === 'red') {
             changePage(-1)
@@ -76,6 +99,10 @@ const Channels: React.FC<Props> = ({ firstChannel }) => {
         }}
         buttonsText={{ red: 'Page Up', green: 'Page Down', yellow: '+24 Hours', blue: '-24 Hours' }}
       />
+
+      <p className={classes.controlPrompt}>
+        Press <ControlText className={classes.controlText}>SELECT</ControlText> to view
+      </p>
     </>
   )
 }

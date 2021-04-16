@@ -3,7 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "description": "Sky Box Simulator",
-  "author": "David Wheatley",
+  "license": "MPL-2.0",
+  "author": {
+    "name": "David Wheatley",
+    "email": "hi@davwheat.dev",
+    "url": "https://davwheat.dev"
+  },
   "keywords": [
     "gatsby"
   ],

@@ -1,3 +1,4 @@
+import MenuMoreArrowSvg from '@assets/icons/list-arrow.svg'
 import ControlText from '@components/ControlText'
 import Colors from '@data/Colors'
 import { getChannelNumberFromNumberPlusN, getNChannelsFromNumber } from '@data/epg/AllChannels'
@@ -36,6 +37,31 @@ const useStyles = makeStyles({
     fontFamily: 'Zurich',
     fontStretch: 'condensed',
     fontSize: 24,
+
+    '&::after, &::before': {
+      content: '""',
+      display: 'block',
+      position: 'absolute',
+      height: 24,
+      width: 32,
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'contain',
+      backgroundImage: `url(${MenuMoreArrowSvg})`,
+      right: 0,
+      transformOrigin: 'center',
+    },
+
+    '&::after': {
+      bottom: 0,
+      transform: 'translateY(100%)',
+    },
+
+    '&::before': {
+      // Row height + row gap
+      top: 30 + 4,
+      transform: 'translateY(-100%) rotate(0.5turn)',
+    },
   },
   colorButtons: {
     position: 'static',

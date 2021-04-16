@@ -9,8 +9,13 @@ export interface TVLicenseState {
   savedAt: number | null
 }
 
+/**
+ * Returns `true` if we're in the server-side rendering process.
+ */
+const isSSR = (): boolean => typeof localStorage === 'undefined'
+
 const localStorageEffect = (key: string): AtomEffect<TVLicenseState> => ({ setSelf, onSet }) => {
-  const savedValue = localStorage ? localStorage.getItem(key) : null
+  const savedValue = isSSR() ? null : localStorage.getItem(key)
 
   if (savedValue !== null) {
     setSelf(JSON.parse(savedValue))
@@ -18,9 +23,9 @@ const localStorageEffect = (key: string): AtomEffect<TVLicenseState> => ({ setSe
 
   onSet(newValue => {
     if (newValue instanceof DefaultValue) {
-      localStorage && localStorage.removeItem(key)
+      !isSSR() && localStorage.removeItem(key)
     } else {
-      localStorage && localStorage.setItem(key, JSON.stringify(newValue))
+      !isSSR() && localStorage.setItem(key, JSON.stringify(newValue))
     }
   })
 }

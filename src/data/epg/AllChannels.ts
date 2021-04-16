@@ -36,7 +36,7 @@ export function getNChannelsFromNumber(channelNumber: string, n: number): Channe
 
   if (startIndex === -1) return null
 
-  return AllChannels.slice(startIndex, startIndex + n - 1) as Channel[]
+  return AllChannels.slice(startIndex, startIndex + n) as Channel[]
 }
 
 export function getChannelNumberFromNumberPlusN(channelNumber: string, n: number): string {

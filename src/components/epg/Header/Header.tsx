@@ -21,7 +21,7 @@ const useStyles = makeStyles({
     width: '85%',
     margin: 'auto',
     marginTop: 32,
-    marginBottom: 16,
+    marginBottom: 12,
   },
   logo: {
     marginTop: 6,

@@ -26,6 +26,7 @@ declare global {
 
   interface Window {
     __bgAudio: HTMLAudioElement
+    __isLastPageOnSameDomain: boolean
   }
 }
 

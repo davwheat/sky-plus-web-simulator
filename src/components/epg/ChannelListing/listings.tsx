@@ -1,3 +1,6 @@
+import MenuMoreArrowSvg from '@assets/icons/list-arrow.svg'
+import ControlText from '@components/ControlText'
+import Colors from '@data/Colors'
 import { getChannelNumberFromNumberPlusN, getNChannelsFromNumber } from '@data/epg/AllChannels'
 import { makeStyles } from '@material-ui/core'
 import React, { useState } from 'react'
@@ -15,6 +18,7 @@ const MINUTES_PER_PAGE = HOURS_PER_PAGE * 60
 
 const useStyles = makeStyles({
   root: {
+    position: 'relative',
     display: 'grid',
 
     // Grid column span is used to give programmes the right duration.
@@ -22,16 +26,61 @@ const useStyles = makeStyles({
     //
     // This is done by creating 90 columns of width `1fr`, so we have 90
     // columns of equal width.
-    gridTemplateColumns: `33% 4px repeat(${MINUTES_PER_PAGE}, minmax(0, 1fr))`,
-    gridTemplateRows: `repeat(${CHANNELS_PER_PAGE + 1}, calc(1em + 8px))`,
+    gridTemplateColumns: `33% 2px repeat(${MINUTES_PER_PAGE}, minmax(0, 1fr))`,
+    gridTemplateRows: `repeat(${CHANNELS_PER_PAGE + 1}, calc(1em + 6px))`,
     width: '85%',
     maxWidth: '85%',
     margin: 'auto',
     gap: 4,
-    overflow: 'hidden',
+    rowGap: 3,
+    overflow: 'visible',
     fontFamily: 'Zurich',
     fontStretch: 'condensed',
     fontSize: 24,
+
+    '&::after, &::before': {
+      content: '""',
+      display: 'block',
+      position: 'absolute',
+      height: 24,
+      width: 32,
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'contain',
+      backgroundImage: `url(${MenuMoreArrowSvg})`,
+      right: 0,
+      transformOrigin: 'center',
+    },
+
+    '&::after': {
+      bottom: 0,
+      transform: 'translateY(100%)',
+    },
+
+    '&::before': {
+      // Row height + row gap
+      top: 30 + 4,
+      transform: 'translateY(-100%) rotate(0.5turn)',
+    },
+  },
+  colorButtons: {
+    position: 'static',
+    width: '85%',
+    maxWidth: '85%',
+    margin: 'auto',
+    marginTop: 16,
+  },
+  controlPrompt: {
+    fontFamily: 'ZurichBT',
+    color: Colors.accent,
+    width: '85%',
+    maxWidth: '85%',
+    margin: 'auto',
+    fontSize: 24,
+    marginTop: 8,
+  },
+  controlText: {
+    fontSize: 20,
   },
 })
 
@@ -42,8 +91,6 @@ const Channels: React.FC<Props> = ({ firstChannel }) => {
   const channelsOnPage = getNChannelsFromNumber(startingChannel, CHANNELS_PER_PAGE)
 
   function changePage(change: 1 | -1) {
-    let newStartingChannel = 0
-
     setStartingChannel(first => {
       const newStart = getChannelNumberFromNumberPlusN(first, change * CHANNELS_PER_PAGE)
 
@@ -64,7 +111,9 @@ const Channels: React.FC<Props> = ({ firstChannel }) => {
 
         {channelsOnPage && channelsOnPage.map(channel => <EpgChannel key={channel.sid} channel={channel} />)}
       </section>
+
       <ColorButtonsFooter
+        className={classes.colorButtons}
         buttonPressHandler={btn => {
           if (btn === 'red') {
             changePage(-1)
@@ -72,8 +121,12 @@ const Channels: React.FC<Props> = ({ firstChannel }) => {
             changePage(+1)
           }
         }}
-        buttonsText={{ red: 'Page Up', green: 'Page Down', yellow: '+24 Hours', blue: '-24 Hours' }}
+        buttonsText={{ red: 'Page Up', green: 'Page Down', yellow: '+24 Hours', blue: '–24 Hours' }}
       />
+
+      <p className={classes.controlPrompt}>
+        Press <ControlText className={classes.controlText}>SELECT</ControlText> to view
+      </p>
     </>
   )
 }

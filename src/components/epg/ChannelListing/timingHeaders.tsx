@@ -8,7 +8,7 @@ import { useRecoilValue } from 'recoil'
 const useStyles = makeStyles({
   timingHeader: {
     color: Colors.accent,
-    lineHeight: 1.25,
+    lineHeight: 1.45,
 
     '&:first-child': { textAlign: 'right' },
     '&:not(:first-child)': {

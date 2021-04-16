@@ -84,14 +84,23 @@ export interface ErrorMessageProps {
    *
    * @default false
    */
-  backUpPrompt?: boolean
+  controlPrompt?: boolean
   /**
    * Custom Back Up prompt action text.
    *
    * Results in: `Press BACK UP to <text here>`
    */
-  backUpPromptTextAction?: string
-  onBackUp?: () => void
+  controlPromptAction?: string
+  onControlPressed?: () => void
+  /**
+   * Info to be used to choose a custom control to watch for.
+   *
+   * `text` is shown as part of the `controlPrompt`, and `control` is used for the event listener.
+   */
+  customControlData?: {
+    text: string
+    control: SkyControl
+  }
   /**
    * Use the wider variant of error message. This is used when the error message is shown within the EPG itself.
    */
@@ -115,25 +124,26 @@ const ErrorMessage: React.FC<ErrorMessageProps> = ({
   title = 'For your information',
   errorCode = ErrorCodes.NO_SATELLITE_SIGNAL,
   children = ErrorText[ErrorCodes.NO_SATELLITE_SIGNAL],
-  backUpPrompt = false,
-  backUpPromptTextAction = 'return',
-  onBackUp = () => {},
+  customControlData = { text: 'BACK UP', control: 'backUp' },
+  controlPrompt = false,
+  controlPromptAction = 'return',
+  onControlPressed = () => {},
   wider = false,
   horizontallyCentered = false,
 }) => {
   const classes = useStyles()
   const setControlsState = useSetRecoilState(controlsState)
 
-  if (backUpPrompt) {
+  if (controlPrompt) {
     setControlsState(controlsShownStateSetter('backUp', true))
   }
 
   useEffect(() => {
-    if (backUpPrompt) {
+    if (controlPrompt) {
       function backUpEventListener(e: SkyControlPressedEvent) {
-        if (e.detail.control === 'backUp') {
+        if (e.detail.control === customControlData.control) {
           e.stopImmediatePropagation()
-          onBackUp()
+          onControlPressed()
         }
       }
 
@@ -159,9 +169,9 @@ const ErrorMessage: React.FC<ErrorMessageProps> = ({
       </header>
       <article className={classes.messageBoxContent}>
         {children}
-        {backUpPrompt && (
+        {controlPrompt && (
           <footer className={classes.messageBoxFooter}>
-            Press <ControlText>BACK UP</ControlText> to {backUpPromptTextAction}
+            Press <ControlText>{customControlData.text}</ControlText> to {controlPromptAction}
           </footer>
         )}
       </article>

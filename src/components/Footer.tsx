@@ -1,4 +1,5 @@
 import React from 'react'
+import { version } from '../../package.json'
 
 interface FooterProps {
   className: string
@@ -7,7 +8,7 @@ interface FooterProps {
 const Footer: React.FC<FooterProps> = ({ className }) => {
   return (
     <footer className={className}>
-      Created by{' '}
+      Version {version} • Created by{' '}
       <a target="_blank" href="https://github.com/davwheat">
         David Wheatley
       </a>{' '}

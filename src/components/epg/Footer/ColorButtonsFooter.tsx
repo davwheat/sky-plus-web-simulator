@@ -3,6 +3,7 @@ import ColorButton from '@components/ColorButton'
 import Colors from '@data/Colors'
 import controlsShownStateSetter from '@helpers/controlsShownStateSetter'
 import { makeStyles } from '@material-ui/core'
+import clsx from 'clsx'
 import React, { useEffect } from 'react'
 import { useSetRecoilState } from 'recoil'
 
@@ -26,11 +27,12 @@ const useStyles = makeStyles({
 })
 
 interface Props {
+  className?: string
   buttonPressHandler: (colorButton: SkyColorButton) => void
   buttonsText: Record<SkyColorButton, string>
 }
 
-const ColorButtonsFooter: React.FC<Props> = ({ buttonPressHandler, buttonsText }) => {
+const ColorButtonsFooter: React.FC<Props> = ({ className, buttonPressHandler, buttonsText }) => {
   const classes = useStyles()
   const setControlsState = useSetRecoilState(controlsState)
 
@@ -66,7 +68,7 @@ const ColorButtonsFooter: React.FC<Props> = ({ buttonPressHandler, buttonsText }
   })
 
   return (
-    <footer className={classes.root}>
+    <footer className={clsx(classes.root, className)}>
       {buttonsText.red ? (
         <div className={classes.colorButton}>
           <ColorButton buttonColor="red" />

@@ -18,7 +18,7 @@ interface Props {
 
 const useStyles = makeStyles({
   item: {
-    padding: 4,
+    padding: '3px 4px',
   },
   channelNumber: {
     width: '3ch',

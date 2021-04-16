@@ -1,4 +1,4 @@
-import { tvLicenseState } from '@atoms/tvLicenseState'
+import { TVLicenseState, tvLicenseState } from '@atoms/tvLicenseState'
 import Colors from '@data/Colors'
 import InnerLayout from '@layouts/InnerLayout'
 import { makeStyles } from '@material-ui/core'
@@ -37,7 +37,11 @@ const useStyles = makeStyles({
   },
 })
 
-const TVLicenseMessage = () => {
+interface Props {
+  onSelectLicenseStatus?: (newState: TVLicenseState) => void
+}
+
+const TVLicenseMessage: React.FC<Props> = ({ onSelectLicenseStatus }) => {
   const classes = useStyles()
   const [disableButtons, setDisableButtons] = useState(false)
   const setTvLicenseState = useSetRecoilState(tvLicenseState)
@@ -46,11 +50,14 @@ const TVLicenseMessage = () => {
     setDisableButtons(true)
     const savedAt = Date.now()
 
-    setTvLicenseState({
+    const newState = {
       hasOptedOutOfTvLicenseContent: !hasLicense,
       hasTvLicense: hasLicense,
       savedAt,
-    })
+    }
+
+    setTvLicenseState(newState)
+    onSelectLicenseStatus(newState)
   }
 
   return (

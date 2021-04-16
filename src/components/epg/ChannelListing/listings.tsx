@@ -121,7 +121,7 @@ const Channels: React.FC<Props> = ({ firstChannel }) => {
             changePage(+1)
           }
         }}
-        buttonsText={{ red: 'Page Up', green: 'Page Down', yellow: '+24 Hours', blue: '-24 Hours' }}
+        buttonsText={{ red: 'Page Up', green: 'Page Down', yellow: '+24 Hours', blue: '–24 Hours' }}
       />
 
       <p className={classes.controlPrompt}>

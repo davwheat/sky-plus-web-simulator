@@ -26,7 +26,11 @@ const useHeaderStyles = makeStyles({
   },
 })
 
-const ProgrammeListingHeaderContent: React.FC = () => {
+interface Props {
+  heading: string
+}
+
+const TitleHeader: React.FC<Props> = ({ heading }) => {
   const { time } = useRecoilValue(timeState)
   const timeText = time.format('h:mma ddd D MMM')
 
@@ -35,9 +39,9 @@ const ProgrammeListingHeaderContent: React.FC = () => {
   return (
     <div className={classes.root}>
       <p className={classes.date}>{timeText}</p>
-      <h1 className={classes.title}>All channels</h1>
+      <h1 className={classes.title}>{heading}</h1>
     </div>
   )
 }
 
-export default ProgrammeListingHeaderContent
+export default TitleHeader

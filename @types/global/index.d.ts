@@ -27,6 +27,12 @@ declare global {
   interface Window {
     __bgAudio: HTMLAudioElement
     __isLastPageOnSameDomain: boolean
+    __loader: {
+      /**
+       * Preloads a page's data for fast navigation.
+       */
+      enqueue: (pagePath: string) => void
+    }
   }
 }
 

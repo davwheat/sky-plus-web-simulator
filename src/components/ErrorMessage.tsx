@@ -43,7 +43,7 @@ const useStyles = makeStyles({
     flexDirection: 'column',
     justifyContent: 'space-between',
     padding: 4,
-    paddingBottom: 0,
+    paddingBottom: 1,
     fontFamily: 'ZurichBT',
     fontWeight: 400,
     background: Colors.mainLight,
@@ -114,7 +114,7 @@ export interface ErrorMessageProps {
   /**
    * Classes to apply to the message box's root node.
    */
-  className?: string,
+  className?: string
 }
 
 /**

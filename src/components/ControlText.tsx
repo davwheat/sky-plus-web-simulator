@@ -5,7 +5,7 @@ import React from 'react'
 
 const useStyles = makeStyles({
   root: {
-    display: 'inline-block',
+    display: 'inline',
     border: '1px solid #fff',
     background: Colors.controlBg,
     color: '#000',

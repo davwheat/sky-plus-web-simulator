@@ -5,5 +5,7 @@
 <url> <loc>https://sky-epg.davwheat.dev/epg/channel-list/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sky-epg.davwheat.dev/interactive/coming-next/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sky-epg.davwheat.dev/interactive/service-unavailable/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sky-epg.davwheat.dev/services/telephone-numbers/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sky-epg.davwheat.dev/services/using-sky-plus/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sky-epg.davwheat.dev/interactive/services/directgov/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>

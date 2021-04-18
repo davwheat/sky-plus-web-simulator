@@ -56,8 +56,6 @@ function getEventsForNext90Minutes(startTime: dayjs.Dayjs, events: Programme[]):
     const diff2 = dayjs(event.startTime + event.duration * 1000).diff(startTime, 'minutes')
     const ongoing = dayjs(startTime).isBetween(event.startTime, event.startTime + event.duration * 1000, 'minutes', '()')
 
-    // console.log(diff, event.duration, diff2);
-
     return (diff >= 0 && diff < 90) || (diff2 > 0 && diff2 < 90) || ongoing
   })
 }
@@ -72,8 +70,6 @@ const EpgChannel: React.FC<Props> = ({ channel }) => {
     if (!programmeListings) {
       return null
     }
-
-    console.log('memo run')
 
     return getEventsForNext90Minutes(scheduleStartTime, programmeListings.schedule)
   }, [getEventsForNext90Minutes, scheduleStartTime, programmeListings])

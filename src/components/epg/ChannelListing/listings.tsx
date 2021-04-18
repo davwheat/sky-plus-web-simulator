@@ -32,11 +32,11 @@ const useStyles = makeStyles({
     maxWidth: '85%',
     margin: 'auto',
     gap: 4,
-    rowGap: 3,
     overflow: 'visible',
     fontFamily: 'Zurich',
     fontStretch: 'condensed',
     fontSize: 24,
+    marginTop: -4,
 
     '&::after, &::before': {
       content: '""',

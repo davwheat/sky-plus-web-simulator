@@ -43,7 +43,7 @@ const useStyles = makeStyles({
     flexDirection: 'column',
     justifyContent: 'space-between',
     padding: 4,
-    paddingBottom: 0,
+    paddingBottom: 1,
     fontFamily: 'ZurichBT',
     fontWeight: 400,
     background: Colors.mainLight,
@@ -111,6 +111,10 @@ export interface ErrorMessageProps {
    * (Applies `margin: auto`.)
    */
   horizontallyCentered?: boolean
+  /**
+   * Classes to apply to the message box's root node.
+   */
+  className?: string
 }
 
 /**
@@ -130,6 +134,7 @@ const ErrorMessage: React.FC<ErrorMessageProps> = ({
   onControlPressed = () => {},
   wider = false,
   horizontallyCentered = false,
+  className,
 }) => {
   const classes = useStyles()
   const setControlsState = useSetRecoilState(controlsState)
@@ -159,7 +164,7 @@ const ErrorMessage: React.FC<ErrorMessageProps> = ({
   return (
     <section
       role="alert"
-      className={clsx(classes.messageBox, wider && classes.messageBoxWider, horizontallyCentered && classes.messageBoxHorizCenter)}
+      className={clsx(classes.messageBox, wider && classes.messageBoxWider, horizontallyCentered && classes.messageBoxHorizCenter, className)}
     >
       <header className={classes.messageBoxHeader}>
         {title}

@@ -14,7 +14,6 @@ export default function controlsShownStateSetter(controlName: SkyControl | SkyCo
   if (Array.isArray(controlName)) {
     return controlsRaw => {
       let controls = { ...controlsRaw }
-      console.log('start', controls)
 
       controlName.forEach(control => {
         if (Object.keys(controls).includes(control)) {
@@ -24,14 +23,12 @@ export default function controlsShownStateSetter(controlName: SkyControl | SkyCo
         }
       })
 
-      console.log(controls)
       return controls
     }
   }
 
   return controlsRaw => {
     let controls = { ...controlsRaw }
-    console.log('start', controls)
 
     if (Object.keys(controls).includes(controlName)) {
       controls[controlName] = typeof isShown !== 'boolean' ? !controls[controlName] : isShown
@@ -39,7 +36,6 @@ export default function controlsShownStateSetter(controlName: SkyControl | SkyCo
       throw `Invalid control provided to \`controlsShownStateSetter\`: "${controlName}".`
     }
 
-    console.log(controls)
     return controls
   }
 }

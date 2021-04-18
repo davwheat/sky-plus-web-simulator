@@ -106,11 +106,15 @@ export const boxOfficeListItems: ListItem[] = [
 export const servicesListItems: ListItem[] = [
   {
     text: 'Using Sky+',
-    onClick: () => {},
+    onClick: () => {
+      navigate('/services/using-sky-plus')
+    },
   },
   {
     text: 'Telephone numbers',
-    onClick: () => {},
+    onClick: () => {
+      navigate('/services/telephone-numbers')
+    },
   },
   {
     text: 'Parental control',

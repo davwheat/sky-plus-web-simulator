@@ -112,7 +112,9 @@ export const servicesListItems: ListItem[] = [
   },
   {
     text: 'Telephone numbers',
-    onClick: () => {},
+    onClick: () => {
+      navigate('/services/telephone-numbers')
+    },
   },
   {
     text: 'Parental control',

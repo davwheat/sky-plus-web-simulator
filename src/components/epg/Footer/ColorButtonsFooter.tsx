@@ -29,7 +29,7 @@ const useStyles = makeStyles({
 interface Props {
   className?: string
   buttonPressHandler: (colorButton: SkyColorButton) => void
-  buttonsText: Record<SkyColorButton, string>
+  buttonsText: Partial<Record<SkyColorButton, string>>
 }
 
 const ColorButtonsFooter: React.FC<Props> = ({ className, buttonPressHandler, buttonsText }) => {

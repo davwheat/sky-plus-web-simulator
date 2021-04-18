@@ -209,7 +209,7 @@ export const TelephoneNumbers: TelephoneNumber[] = [
     number: '0844 928 5971',
   },
   {
-    name: 'Viewers\' Wives',
+    name: "Viewers' Wives",
     number: '08442 411770',
   },
   {

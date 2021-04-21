@@ -25,7 +25,6 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.11.3",
-    "@material-ui/styles": "^4.11.3",
     "clsx": "^1.1.1",
     "dayjs": "^1.10.4",
     "focus-trap-react": "^8.4.2",

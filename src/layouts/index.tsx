@@ -7,8 +7,9 @@ import StateManager from '@components/StateManager'
 import TVLicenseMessage from '@components/TVLicenseMessage'
 import chooseMusic from '@data/chooseMusic'
 import Colors from '@data/Colors'
+import muiTheme from '@data/muiTheme'
 import shouldShowTvLicenseMessage from '@helpers/shouldShowTvLicenseMessage'
-import { Button, IconButton, makeStyles } from '@material-ui/core'
+import { Button, CssBaseline, IconButton, makeStyles, ThemeProvider } from '@material-ui/core'
 import SettingsIcon from 'mdi-react/SettingsIcon'
 import { SnackbarProvider, useSnackbar } from 'notistack'
 import React, { useEffect, useState } from 'react'
@@ -76,16 +77,19 @@ const PageWrapper: React.FC<Props> = ({ children }) => {
   }
 
   return (
-    <SnackbarProvider maxSnack={3}>
-      <StateManager />
-      <AudioWrapper />
-      <SettingsArea />
-      <main className={classes.main}>
-        <div className={classes.epg}>{content}</div>
-        <ControlsBar />
-        <Footer className={classes.footer} />
-      </main>
-    </SnackbarProvider>
+    <ThemeProvider theme={muiTheme}>
+      <CssBaseline />
+      <SnackbarProvider maxSnack={3}>
+        <StateManager />
+        <AudioWrapper />
+        <SettingsArea />
+        <main className={classes.main}>
+          <div className={classes.epg}>{content}</div>
+          <ControlsBar />
+          <Footer className={classes.footer} />
+        </main>
+      </SnackbarProvider>
+    </ThemeProvider>
   )
 }
 

@@ -31,7 +31,12 @@ module.exports = {
     `gatsby-plugin-layout`,
     `gatsby-plugin-less`,
     `gatsby-plugin-react-head`,
-    `gatsby-plugin-material-ui`,
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        injectFirst: true,
+      },
+    },
     {
       resolve: 'gatsby-plugin-manifest',
       options: {

@@ -57,7 +57,7 @@ const TVLicenseMessage: React.FC<Props> = ({ onSelectLicenseStatus }) => {
     }
 
     setTvLicenseState(newState)
-    onSelectLicenseStatus(newState)
+    typeof onSelectLicenseStatus ==="function"&& onSelectLicenseStatus(newState)
   }
 
   return (

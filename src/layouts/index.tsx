@@ -1,6 +1,7 @@
 import { tvLicenseState } from '@atoms/tvLicenseState'
 import ControlsBar from '@components/ControlsBar'
 import Footer from '@components/Footer'
+import FullScreenError from '@components/FullScreenError'
 import Settings from '@components/Settings'
 import StateManager from '@components/StateManager'
 import TVLicenseMessage from '@components/TVLicenseMessage'
@@ -65,13 +66,22 @@ const PageWrapper: React.FC<Props> = ({ children }) => {
 
   const showTvLicenseWarning = shouldShowTvLicenseMessage(tvLicenseStateValue)
 
+  let content
+
+  if (showTvLicenseWarning) content = <TVLicenseMessage />
+  else content = children
+
+  if (typeof window === 'undefined') {
+    content = <FullScreenError errorCode={null}>Starting Sky+ box....</FullScreenError>
+  }
+
   return (
     <SnackbarProvider maxSnack={3}>
       <StateManager />
       <AudioWrapper />
       <SettingsArea />
       <main className={classes.main}>
-        <div className={classes.epg}>{!showTvLicenseWarning ? children : <TVLicenseMessage />}</div>
+        <div className={classes.epg}>{content}</div>
         <ControlsBar />
         <Footer className={classes.footer} />
       </main>

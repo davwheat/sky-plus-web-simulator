@@ -43,9 +43,8 @@ interface Props {
 }
 
 const TVLicenseMessage: React.FC<Props> = ({ onSelectLicenseStatus }) => {
-  const hasMounted = useHasMounted()
-
   const classes = useStyles()
+
   const [disableButtons, setDisableButtons] = useState(false)
   const setTvLicenseState = useSetRecoilState(tvLicenseState)
 
@@ -61,10 +60,6 @@ const TVLicenseMessage: React.FC<Props> = ({ onSelectLicenseStatus }) => {
 
     setTvLicenseState(newState)
     typeof onSelectLicenseStatus === 'function' && onSelectLicenseStatus(newState)
-  }
-
-  if (!hasMounted) {
-    return null
   }
 
   return (

@@ -217,15 +217,15 @@ const useItemStyles = makeStyles({
       display: 'inline-block',
     },
 
-    // '&:hover, &:focus-visible': {
-    //   background: Colors.mainHover,
-    //   color: Colors.mainTextHover,
+    '&:hover, &:focus-visible': {
+      background: Colors.mainHover,
+      color: Colors.mainTextHover,
 
-    //   '&::before': {
-    //     background: Colors.accentHover,
-    //     color: Colors.accentTextHover,
-    //   },
-    // },
+      '&::before': {
+        background: Colors.accentHover,
+        color: Colors.accentTextHover,
+      },
+    },
 
     '&:nth-child(10)::before': {
       content: '"0"',

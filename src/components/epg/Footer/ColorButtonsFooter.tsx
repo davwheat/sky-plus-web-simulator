@@ -18,8 +18,8 @@ const useStyles = makeStyles({
     letterSpacing: 0.2,
     color: Colors.accent,
     bottom: 48,
-    left: 56,
-    right: 28,
+    left: 42,
+    right: 8,
   },
   colorButton: {
     lineHeight: 1,

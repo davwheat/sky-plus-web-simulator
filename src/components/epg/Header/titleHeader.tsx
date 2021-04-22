@@ -11,8 +11,7 @@ const useHeaderStyles = makeStyles({
     color: Colors.accent,
     display: 'flex',
     flexDirection: 'column',
-    gap: 8,
-    marginTop: 20,
+    marginTop: 11,
   },
   date: {
     fontStretch: 'condensed',

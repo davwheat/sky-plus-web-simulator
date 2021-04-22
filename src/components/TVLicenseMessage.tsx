@@ -1,5 +1,6 @@
 import { TVLicenseState, tvLicenseState } from '@atoms/tvLicenseState'
 import Colors from '@data/Colors'
+import useHasMounted from '@helpers/useHasMounted'
 import InnerLayout from '@layouts/InnerLayout'
 import { makeStyles } from '@material-ui/core'
 import React, { useState } from 'react'
@@ -42,6 +43,8 @@ interface Props {
 }
 
 const TVLicenseMessage: React.FC<Props> = ({ onSelectLicenseStatus }) => {
+  const hasMounted = useHasMounted()
+
   const classes = useStyles()
   const [disableButtons, setDisableButtons] = useState(false)
   const setTvLicenseState = useSetRecoilState(tvLicenseState)
@@ -58,6 +61,10 @@ const TVLicenseMessage: React.FC<Props> = ({ onSelectLicenseStatus }) => {
 
     setTvLicenseState(newState)
     typeof onSelectLicenseStatus === 'function' && onSelectLicenseStatus(newState)
+  }
+
+  if (!hasMounted) {
+    return null
   }
 
   return (

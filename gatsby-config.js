@@ -16,7 +16,7 @@ module.exports = {
     // PRESERVE_WEBPACK_CACHE: true,
     // FAST_DEV: true,
     // PRESERVE_FILE_DOWNLOAD_CACHE: true,
-    // DEV_SSR: false,
+    DEV_SSR: true,
   },
   siteMetadata: {
     title: 'Sky+ EPG Simulator',

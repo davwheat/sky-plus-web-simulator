@@ -1,7 +1,6 @@
 import { tvLicenseState } from '@atoms/tvLicenseState'
 import ControlsBar from '@components/ControlsBar'
 import Footer from '@components/Footer'
-import FullScreenError from '@components/FullScreenError'
 import Settings from '@components/Settings'
 import StateManager from '@components/StateManager'
 import TVLicenseMessage from '@components/TVLicenseMessage'
@@ -9,7 +8,7 @@ import chooseMusic from '@data/chooseMusic'
 import Colors from '@data/Colors'
 import muiTheme from '@data/muiTheme'
 import shouldShowTvLicenseMessage from '@helpers/shouldShowTvLicenseMessage'
-import { Button, CssBaseline, IconButton, makeStyles, ThemeProvider } from '@material-ui/core'
+import { Button, CssBaseline, IconButton, makeStyles, NoSsr, ThemeProvider } from '@material-ui/core'
 import SettingsIcon from 'mdi-react/SettingsIcon'
 import { SnackbarProvider, useSnackbar } from 'notistack'
 import React, { useEffect, useState } from 'react'
@@ -67,14 +66,7 @@ const PageWrapper: React.FC<Props> = ({ children }) => {
 
   const showTvLicenseWarning = shouldShowTvLicenseMessage(tvLicenseStateValue)
 
-  let content
-
-  if (showTvLicenseWarning) content = <TVLicenseMessage />
-  else content = children
-
-  if (typeof window === 'undefined') {
-    content = <FullScreenError errorCode={null}>Starting Sky+ box....</FullScreenError>
-  }
+  let content = showTvLicenseWarning ? <TVLicenseMessage /> : children
 
   return (
     <ThemeProvider theme={muiTheme}>
@@ -84,9 +76,11 @@ const PageWrapper: React.FC<Props> = ({ children }) => {
         <AudioWrapper />
         <SettingsArea />
         <main className={classes.main}>
-          <div className={classes.epg}>{content}</div>
-          <ControlsBar />
-          <Footer className={classes.footer} />
+          <NoSsr>
+            <div className={classes.epg}>{content}</div>
+            <ControlsBar />
+            <Footer className={classes.footer} />
+          </NoSsr>
         </main>
       </SnackbarProvider>
     </ThemeProvider>

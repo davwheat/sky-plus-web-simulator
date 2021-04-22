@@ -90,7 +90,7 @@ const EpgChannel: React.FC<Props> = ({ channel }) => {
     return () => {
       abortController.abort()
     }
-  })
+  }, [programmeListings, getProgrammeListingForSID, channel])
 
   channel.channelNumber === '916' && programmeListings && console.log(programmeListings, eventsWeCareAbout, eventsWeCareAbout.length === 0)
 

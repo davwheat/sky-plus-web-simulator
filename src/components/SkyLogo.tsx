@@ -16,11 +16,11 @@ const useStyles = makeStyles({
     alignItems: 'center',
   },
   underText: {
-    marginTop: 4,
     fontFamily: 'SkyLogo',
     fontSize: 32,
     color: 'white',
     letterSpacing: 2,
+    lineHeight: 1,
   },
 })
 

@@ -1,6 +1,5 @@
 import { TVLicenseState, tvLicenseState } from '@atoms/tvLicenseState'
 import Colors from '@data/Colors'
-import useHasMounted from '@helpers/useHasMounted'
 import InnerLayout from '@layouts/InnerLayout'
 import { makeStyles } from '@material-ui/core'
 import React, { useState } from 'react'

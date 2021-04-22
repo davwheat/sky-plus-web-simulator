@@ -3,12 +3,12 @@ import ControlsBar from '@components/ControlsBar'
 import Footer from '@components/Footer'
 import Settings from '@components/Settings'
 import StateManager from '@components/StateManager'
-import TVLicenseMessage from '@components/TVLicenseMessage'
 import chooseMusic from '@data/chooseMusic'
 import Colors from '@data/Colors'
 import muiTheme from '@data/muiTheme'
 import shouldShowTvLicenseMessage from '@helpers/shouldShowTvLicenseMessage'
-import { Button, CssBaseline, IconButton, makeStyles, NoSsr, ThemeProvider } from '@material-ui/core'
+import { Button, CssBaseline, IconButton, makeStyles, ThemeProvider } from '@material-ui/core'
+import { navigate } from 'gatsby'
 import SettingsIcon from 'mdi-react/SettingsIcon'
 import { SnackbarProvider, useSnackbar } from 'notistack'
 import React, { useEffect, useState } from 'react'
@@ -61,13 +61,6 @@ const RecoilWrapper: React.FC<Props> = ({ children }) => (
 )
 
 const PageWrapper: React.FC<Props> = ({ children }) => {
-  const classes = useLayoutStyles()
-  const tvLicenseStateValue = useRecoilValue(tvLicenseState)
-
-  const showTvLicenseWarning = shouldShowTvLicenseMessage(tvLicenseStateValue)
-
-  let content = showTvLicenseWarning ? <TVLicenseMessage /> : children
-
   return (
     <ThemeProvider theme={muiTheme}>
       <CssBaseline />
@@ -75,15 +68,30 @@ const PageWrapper: React.FC<Props> = ({ children }) => {
         <StateManager />
         <AudioWrapper />
         <SettingsArea />
-        <main className={classes.main}>
-          <NoSsr>
-            <div className={classes.epg}>{content}</div>
-            <ControlsBar />
-            <Footer className={classes.footer} />
-          </NoSsr>
-        </main>
+        <ContentWrapper>{children}</ContentWrapper>
       </SnackbarProvider>
     </ThemeProvider>
+  )
+}
+
+const ContentWrapper: React.FC = ({ children }) => {
+  const classes = useLayoutStyles()
+
+  const tvLicenseStateValue = useRecoilValue(tvLicenseState)
+  const showTvLicenseWarning = shouldShowTvLicenseMessage(tvLicenseStateValue)
+
+  useEffect(() => {
+    if (showTvLicenseWarning) {
+      navigate('/tv-license-settings')
+    }
+  }, [showTvLicenseWarning])
+
+  return (
+    <main className={classes.main}>
+      <div className={classes.epg}>{children}</div>
+      <ControlsBar />
+      <Footer className={classes.footer} />
+    </main>
   )
 }
 

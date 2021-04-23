@@ -1,6 +1,7 @@
 import { controlsState } from '@atoms'
 import ChannelListing from '@components/epg/ChannelListing/index'
 import controlsShownStateSetter from '@helpers/controlsShownStateSetter'
+import isSSG from '@helpers/isSSG'
 import InnerLayout from '@layouts/InnerLayout'
 import type { WindowLocation } from '@reach/router'
 import { navigate, PageProps } from 'gatsby'
@@ -10,7 +11,7 @@ import { useSetRecoilState } from 'recoil'
 type Props = PageProps<object, object, WindowLocation<{ startFromChannelNumber?: string }>['state']>
 
 function getStartChannelFromWindow(): string | null {
-  if (typeof window !== 'undefined') {
+  if (!isSSG()) {
     try {
       return new URL(window.location.href).searchParams.get('start')
     } catch {

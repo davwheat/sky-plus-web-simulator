@@ -1,3 +1,4 @@
+import isSSG from '@helpers/isSSG'
 import { atom, AtomEffect, DefaultValue } from 'recoil'
 
 export interface TVLicenseState {
@@ -9,13 +10,8 @@ export interface TVLicenseState {
   savedAt: number | null
 }
 
-/**
- * Returns `true` if we're in the server-side rendering process.
- */
-const isSSR = (): boolean => typeof localStorage === 'undefined'
-
 const localStorageEffect = (key: string): AtomEffect<TVLicenseState> => ({ setSelf, onSet }) => {
-  const savedValue = isSSR() ? null : localStorage.getItem(key)
+  const savedValue = isSSG() ? null : localStorage.getItem(key)
 
   if (savedValue !== null) {
     setSelf(JSON.parse(savedValue))
@@ -23,9 +19,9 @@ const localStorageEffect = (key: string): AtomEffect<TVLicenseState> => ({ setSe
 
   onSet(newValue => {
     if (newValue instanceof DefaultValue) {
-      !isSSR() && localStorage.removeItem(key)
+      !isSSG() && localStorage.removeItem(key)
     } else {
-      !isSSR() && localStorage.setItem(key, JSON.stringify(newValue))
+      !isSSG() && localStorage.setItem(key, JSON.stringify(newValue))
     }
   })
 }

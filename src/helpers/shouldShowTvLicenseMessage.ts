@@ -1,10 +1,11 @@
 import type { TVLicenseState } from '@atoms/tvLicenseState'
+import isSSG from './isSSG'
 
 // Ask every 28 days
 const TIME_TO_REFRESH_TV_LICENSE_PROMPT = 1000 * 60 * 60 * 24 * 28
 
 export default function shouldShowTvLicenseMessage(tvLicenseStateValue: TVLicenseState): boolean {
-  if (typeof window === 'undefined') return false
+  if (isSSG()) return false
 
   return (
     // No TV license and has not opted out of streams

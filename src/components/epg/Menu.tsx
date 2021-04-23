@@ -199,7 +199,7 @@ const useItemStyles = makeStyles({
     color: Colors.mainText,
     counterIncrement: 'menu',
     letterSpacing: -0.15,
-    lineHeight: 32,
+    lineHeight: '32px',
 
     outline: 'none',
 

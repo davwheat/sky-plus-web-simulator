@@ -60,7 +60,6 @@ const TelephoneList: React.FC = () => {
   const listItems = TelephoneNumbers.slice(ITEMS_PER_PAGE * pageNumber, ITEMS_PER_PAGE * (pageNumber + 1))
 
   const classes = useListStyles()
-  console.log(PAGE_COUNT, pageNumber, listItems)
 
   function onColorButtonPress(colorButton: SkyColorButton) {
     if (colorButton === 'red') {

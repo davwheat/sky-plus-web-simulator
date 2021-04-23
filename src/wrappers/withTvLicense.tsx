@@ -13,13 +13,9 @@ export default function withTvLicense(wrappedComponent: React.ReactNode) {
 
   const shouldShowLicenseMessage = shouldShowTvLicenseMessage(tvLicenseStateValue)
 
-  console.log('tv-rendered')
-
   useEffect(() => {
     !hasMounted && setHasMounted(true)
   }, [])
-
-  console.log('PATH: ', !isSSG() && window.location.pathname)
 
   if (!hasMounted) {
     return wrappedComponent

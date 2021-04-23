@@ -92,8 +92,6 @@ const EpgChannel: React.FC<Props> = ({ channel }) => {
     }
   }, [programmeListings, getProgrammeListingForSID, channel])
 
-  channel.channelNumber === '916' && programmeListings && console.log(programmeListings, eventsWeCareAbout, eventsWeCareAbout.length === 0)
-
   return (
     <>
       <span className={clsx(classes.channelName, classes.item)}>

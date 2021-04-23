@@ -18,7 +18,8 @@
       "@helpers/*": ["src/helpers/*"],
       "@hooks/*": ["src/hooks/*"],
       "@layouts/*": ["src/layouts/*"],
-      "@assets/*": ["src/assets/*"]
+      "@assets/*": ["src/assets/*"],
+      "@wrappers/*": ["src/wrappers/*"]
     }
   },
   "exclude": ["node_modules", "build", "scripts", "acceptance-tests", "webpack", "jest", "src/setupTests.ts", ".cache", "public"]

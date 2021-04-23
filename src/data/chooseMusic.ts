@@ -19,7 +19,7 @@ const getMusic = (): [typeof MusicFiles[keyof typeof MusicFiles]['mp3' | 'ogg'],
   return [RandomItemFromArray(Object.values(MusicFiles))[SupportsOgg ? 'ogg' : 'mp3'], true]
 }
 
-export default () => {
+export default (): Promise<void> => {
   const [audioSrc, isRandom] = getMusic()
 
   const fullSourceUrl = new URL(audioSrc, document.baseURI).href

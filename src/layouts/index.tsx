@@ -1,4 +1,3 @@
-import { tvLicenseState } from '@atoms/tvLicenseState'
 import ControlsBar from '@components/ControlsBar'
 import Footer from '@components/Footer'
 import Settings from '@components/Settings'
@@ -6,13 +5,12 @@ import StateManager from '@components/StateManager'
 import chooseMusic from '@data/chooseMusic'
 import Colors from '@data/Colors'
 import muiTheme from '@data/muiTheme'
-import shouldShowTvLicenseMessage from '@helpers/shouldShowTvLicenseMessage'
 import { Button, CssBaseline, IconButton, makeStyles, ThemeProvider } from '@material-ui/core'
-import { navigate } from 'gatsby'
+import withTvLicense from '@wrappers/withTvLicense'
 import SettingsIcon from 'mdi-react/SettingsIcon'
 import { SnackbarProvider, useSnackbar } from 'notistack'
 import React, { useEffect, useState } from 'react'
-import { RecoilRoot, useRecoilValue } from 'recoil'
+import { RecoilRoot } from 'recoil'
 
 interface Props {
   children?: React.ReactNode
@@ -77,18 +75,9 @@ const PageWrapper: React.FC<Props> = ({ children }) => {
 const ContentWrapper: React.FC = ({ children }) => {
   const classes = useLayoutStyles()
 
-  const tvLicenseStateValue = useRecoilValue(tvLicenseState)
-  const showTvLicenseWarning = shouldShowTvLicenseMessage(tvLicenseStateValue)
-
-  useEffect(() => {
-    if (showTvLicenseWarning) {
-      navigate('/tv-license-settings')
-    }
-  }, [showTvLicenseWarning])
-
   return (
     <main className={classes.main}>
-      <div className={classes.epg}>{children}</div>
+      <div className={classes.epg}>{withTvLicense(children)}</div>
       <ControlsBar />
       <Footer className={classes.footer} />
     </main>

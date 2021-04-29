@@ -166,13 +166,13 @@ export interface Programme {
    */
   w: boolean
   /**
-   * Interactive (?) Pay Per View
+   * Impulse pay-per-view
    *
    * Original: `ippv`
    */
   ippv: boolean
   /**
-   * ???? Pay Per View
+   * Order-ahead pay-per-view
    *
    * Original: `oppv`
    */

@@ -35,7 +35,7 @@ const useStyles = makeStyles({
     fontSize: 24,
     width: '85%',
     maxWidth: '85%',
-    marginTop: 8,
+    marginTop: 4,
   },
 })
 

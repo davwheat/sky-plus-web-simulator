@@ -19,7 +19,7 @@ const useListStyles = makeStyles({
     fontFamily: 'ZurichBT',
     fontSize: 26,
     color: '#fff',
-    marginTop: 42,
+    marginTop: 36,
     listStyle: 'none',
 
     '&[data-more="true"]::after, &[data-less="true"]::before': {
@@ -51,7 +51,7 @@ const useListStyles = makeStyles({
     width: '85%',
     maxWidth: '85%',
     margin: 'auto',
-    marginTop: 16,
+    marginTop: 14,
   },
 })
 
@@ -103,6 +103,8 @@ interface ItemProps {
 
 const useItemStyles = makeStyles({
   root: {
+    lineHeight: 1,
+
     '& > a': {
       display: 'flex',
       cursor: 'pointer',

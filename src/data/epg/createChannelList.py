@@ -15,10 +15,11 @@ for service in services:
         exit()
 
     allChannels[service["c"]] = {
+        "sid": service["sid"],
         "channelNumber": service["c"],
         "name": service["t"],
-        "sid": service["sk"],
         "quality": service["sf"],
+        "genre": service["xsg"],
     }
 
 with open("channelList.json", mode="w", encoding="utf-8") as file:

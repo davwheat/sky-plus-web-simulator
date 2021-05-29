@@ -1,6 +1,6 @@
+import { Genres } from '@constants/Genres'
 import { navigate } from 'gatsby'
 import querystring from 'query-string'
-import { Genres } from '../../../constants/Genres'
 import { ListItem } from '../Menu'
 
 function navigateToEpg(startingNumber: number, genre?: Genres) {
@@ -9,7 +9,7 @@ function navigateToEpg(startingNumber: number, genre?: Genres) {
     genre,
   }
 
-  navigate(`/epg/channel-list?${querystring.stringify(query, { skipNull: true })}`)
+  navigate(`/epg/channel-list/?${querystring.stringify(query, { skipNull: true })}`)
 }
 
 export const tvGuideListItems: ListItem[] = [

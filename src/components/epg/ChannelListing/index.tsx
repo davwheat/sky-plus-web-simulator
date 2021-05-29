@@ -6,6 +6,10 @@ import Channels from './listings'
 
 interface Props {
   startingChannel: string
+  /**
+   * Optional number to filter by genre.
+   */
+  genreFilter?: number
 }
 
 const useStyles = makeStyles({
@@ -14,7 +18,7 @@ const useStyles = makeStyles({
   },
 })
 
-const ChannelListing: React.FC<Props> = ({ startingChannel }) => {
+const ChannelListing: React.FC<Props> = ({ startingChannel, genreFilter }) => {
   const classes = useStyles()
 
   return (
@@ -22,7 +26,7 @@ const ChannelListing: React.FC<Props> = ({ startingChannel }) => {
       <Header logoText="guide">
         <TitleHeader heading="All channels" />
       </Header>
-      <Channels firstChannel={startingChannel} />
+      <Channels firstChannel={startingChannel} genreFilter={genreFilter} />
     </div>
   )
 }

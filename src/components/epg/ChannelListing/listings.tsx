@@ -10,6 +10,10 @@ import TimingHeaders from './timingHeaders'
 
 interface Props {
   firstChannel: string
+  /**
+   * Optional number to filter by genre.
+   */
+  genreFilter?: number
 }
 
 const CHANNELS_PER_PAGE = 10
@@ -84,20 +88,34 @@ const useStyles = makeStyles({
   },
 })
 
-const Channels: React.FC<Props> = ({ firstChannel }) => {
+function updateBrowserUrl(startingChannel: string, genreFilter: number | null) {
+  const newURL = new URL(window.location.href)
+  newURL.search = '?start=' + startingChannel
+
+  if (genreFilter !== null) {
+    newURL.search = newURL.search + '&genre=' + genreFilter
+  }
+
+  window.history.replaceState({ path: newURL.href }, '', newURL.href)
+}
+
+// Music starts unmuted in firefox
+// Browser decides what to do based on what it thinks the user wants. Chrome will autostart if you have interacted with the page "enough" in the past... it's verryyyy weird
+const Channels: React.FC<Props> = ({ firstChannel, genreFilter }) => {
   const classes = useStyles()
   const [startingChannel, setStartingChannel] = useState(firstChannel)
 
   const channelsOnPage = getNChannelsFromNumber(startingChannel, CHANNELS_PER_PAGE)
+
+  console.log('firstChannel', firstChannel)
+  console.log('genre', genreFilter)
 
   function changePage(change: 1 | -1) {
     setStartingChannel(first => {
       const newStart = getChannelNumberFromNumberPlusN(first, change * CHANNELS_PER_PAGE)
 
       if (window.history.replaceState) {
-        const newURL = new URL(window.location.href)
-        newURL.search = '?start=' + newStart
-        window.history.replaceState({ path: newURL.href }, '', newURL.href)
+        updateBrowserUrl(newStart, genreFilter)
       }
 
       return newStart

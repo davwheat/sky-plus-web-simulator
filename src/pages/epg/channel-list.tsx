@@ -8,7 +8,7 @@ import { navigate, PageProps } from 'gatsby'
 import React, { useEffect } from 'react'
 import { useSetRecoilState } from 'recoil'
 
-type Props = PageProps<object, object, WindowLocation<{ startFromChannelNumber?: string }>['state']>
+type Props = PageProps<object, object, WindowLocation<{ startFromChannelNumber?: string; genre?: number }>['state']>
 
 function getStartChannelFromWindow(): string | null {
   if (!isSSG()) {
@@ -22,8 +22,21 @@ function getStartChannelFromWindow(): string | null {
   }
 }
 
+function getGenreFromWindow(): number | null {
+  if (!isSSG()) {
+    try {
+      return parseInt(new URL(window.location.href).searchParams.get('genre')) || null
+    } catch {
+      return null
+    }
+  } else {
+    return null
+  }
+}
+
 const ChannelListingPage: React.FC<Props> = ({ location }) => {
   const startFromChannelNumber = location?.state?.startFromChannelNumber || getStartChannelFromWindow() || '101'
+  const genreNumber: number | null = location?.state?.genre || getGenreFromWindow() || null
 
   const setControlsVisible = useSetRecoilState(controlsState)
   setControlsVisible(controlsShownStateSetter(['backUp'], true))
@@ -46,7 +59,7 @@ const ChannelListingPage: React.FC<Props> = ({ location }) => {
 
   return (
     <InnerLayout>
-      <ChannelListing startingChannel={startFromChannelNumber} />
+      <ChannelListing startingChannel={startFromChannelNumber} genreFilter={genreNumber} />
     </InnerLayout>
   )
 }

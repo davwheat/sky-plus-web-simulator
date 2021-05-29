@@ -1,7 +1,7 @@
 import SharingImageUrl from '@assets/images/sharing-image.jpg'
 import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
-import { Meta, Title } from 'react-head'
+import { Link, Meta, Title } from 'react-head'
 
 type MetaEntry = {
   name: string
@@ -50,6 +50,9 @@ const SEO: React.FC<Props> = ({ description, meta, title }) => {
       <Meta name="twitter:site" content="@davwheat" />
       <Meta name="twitter:image" content={SharingImageUrl} />
       <Meta name="twitter:image:alt" content="Screenshot of the Sky+ Web EPG." />
+
+      {/* Establish connection to Sky's EPG API */}
+      <Link rel="preconnect" href="https://awk.epgsky.com/" />
 
       {meta && meta.map((m, i) => <Meta key={`${m.name}--${i}`} name={m.name} content={m.content} />)}
     </>

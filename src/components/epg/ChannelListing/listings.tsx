@@ -1,10 +1,12 @@
 import MenuMoreArrowSvg from '@assets/icons/list-arrow.svg'
 import ControlText from '@components/ControlText'
 import ErrorMessage from '@components/ErrorMessage'
+import { Genres } from '@constants/Genres'
 import Colors from '@data/Colors'
 import { getChannelAtIndex, getChannelNumberFromNumberPlusN, getNChannelsFromNumber } from '@data/epg/AllChannels'
+import usePrevious from '@hooks/usePrevious'
 import { makeStyles, NoSsr } from '@material-ui/core'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import ColorButtonsFooter from '../Footer/ColorButtonsFooter'
 import EpgChannel from './epgChannel'
 import TimingHeaders from './timingHeaders'
@@ -14,7 +16,7 @@ interface Props {
   /**
    * Optional number to filter by genre.
    */
-  genreFilter?: number
+  genreFilter?: Genres
 }
 
 const CHANNELS_PER_PAGE = 10
@@ -92,6 +94,7 @@ const useStyles = makeStyles({
     gridRow: '2 / -1',
     justifySelf: 'center',
     alignSelf: 'center',
+    width: '100%',
   },
 })
 
@@ -110,7 +113,18 @@ const Channels: React.FC<Props> = ({ firstChannel, genreFilter }) => {
   const classes = useStyles()
   const [startingChannel, setStartingChannel] = useState(firstChannel)
 
-  const channelsOnPage = getNChannelsFromNumber(startingChannel, CHANNELS_PER_PAGE, genreFilter)
+  const prevSettings = usePrevious(`${startingChannel}__${genreFilter}`)
+  const [channelsOnPage, setChannelsOnPage] = useState([])
+
+  useEffect(() => {
+    if (prevSettings !== `${startingChannel}__${genreFilter}`) {
+      const data = getNChannelsFromNumber(startingChannel, CHANNELS_PER_PAGE, genreFilter)
+
+      console.log(data)
+
+      setChannelsOnPage(data)
+    }
+  })
 
   console.log('firstChannel', firstChannel)
   console.log('genre', genreFilter)
@@ -124,10 +138,10 @@ const Channels: React.FC<Props> = ({ firstChannel, genreFilter }) => {
       if (newStart === first) {
         if (change === 1) {
           // down a page
-          newStart = getChannelAtIndex(0, genreFilter).channelNumber
+          newStart = getChannelAtIndex(0, genreFilter)?.channelNumber || '101'
         } else {
           // up a page
-          newStart = getChannelAtIndex(-1, genreFilter).channelNumber
+          newStart = getChannelAtIndex(-1, genreFilter)?.channelNumber || '101'
         }
       }
 
@@ -139,6 +153,8 @@ const Channels: React.FC<Props> = ({ firstChannel, genreFilter }) => {
     })
   }
 
+  const noChannels = !channelsOnPage || channelsOnPage.length === 0
+
   return (
     <>
       <section className={classes.root}>
@@ -149,12 +165,10 @@ const Channels: React.FC<Props> = ({ firstChannel, genreFilter }) => {
             <EpgChannel key={channel.sid} channel={channel} />
           ))}
 
-          {!channelsOnPage && (
-            <ErrorMessage errorCode={null} className={classes.noChannelsErrorMsg}>
-              Oh no, an error occurred.
-              <span>
-                Click <ControlText>BACK UP</ControlText> and try that again.
-              </span>
+          {noChannels && (
+            <ErrorMessage errorCode={null} className={classes.noChannelsErrorMsg} controlPrompt controlPromptAction="cancel">
+              <br />
+              There are no services of this type available.
             </ErrorMessage>
           )}
         </NoSsr>
@@ -169,11 +183,15 @@ const Channels: React.FC<Props> = ({ firstChannel, genreFilter }) => {
             changePage(+1)
           }
         }}
-        buttonsText={{ red: 'Page Up', green: 'Page Down', yellow: '+24 Hours', blue: '–24 Hours' }}
+        buttonsText={noChannels ? {} : { red: 'Page Up', green: 'Page Down', yellow: '+24 Hours', blue: '–24 Hours' }}
       />
 
       <p className={classes.controlPrompt}>
-        Press <ControlText className={classes.controlText}>SELECT</ControlText> to view
+        {!noChannels && (
+          <>
+            Press <ControlText className={classes.controlText}>SELECT</ControlText> to view
+          </>
+        )}
       </p>
     </>
   )

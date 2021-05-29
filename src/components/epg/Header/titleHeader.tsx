@@ -1,6 +1,6 @@
 import { timeState } from '@atoms'
 import Colors from '@data/Colors'
-import { makeStyles } from '@material-ui/core'
+import { makeStyles, NoSsr } from '@material-ui/core'
 import React from 'react'
 import { useRecoilValue } from 'recoil'
 
@@ -36,10 +36,12 @@ const TitleHeader: React.FC<Props> = ({ heading }) => {
   const classes = useHeaderStyles()
 
   return (
-    <div className={classes.root}>
-      <p className={classes.date}>{timeText}</p>
-      <h1 className={classes.title}>{heading}</h1>
-    </div>
+    <NoSsr>
+      <div className={classes.root}>
+        <p className={classes.date}>{timeText}</p>
+        <h1 className={classes.title}>{heading}</h1>
+      </div>
+    </NoSsr>
   )
 }
 

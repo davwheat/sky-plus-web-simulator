@@ -92,5 +92,33 @@ export function getChannelNumberFromNumberPlusN(channelNumber: string, n: number
   const startIndex = channelNumbers.indexOf(channelNumber)
   const result = channelNumbers[Math.min(Math.max(startIndex + n, 0), channelNumbers.length - 1)]
 
+  console.log(result)
+
   return result
+}
+
+/**
+ * Supports negative indexes for back-to-front lookup.
+ *
+ * `index: -1` will return the LAST channel.
+ *
+ * @param genre Optional genre(s) to filter by
+ */
+export function getChannelAtIndex(index: number, genre?: Genres | Genres[]) {
+  const channelNumbers = getAllChannelNumbersArray(genre)
+
+  // If the index is too high, just take the last channel
+  if (index >= channelNumbers.length) {
+    index = channelNumbers.length - 1
+  }
+  // If the index is too low, just take the first channel
+  else if (index <= -channelNumbers.length) {
+    index = 0
+  }
+
+  if (index >= 0) {
+    return getChannelByChannelNumber(channelNumbers[index])
+  } else {
+    return getChannelByChannelNumber(channelNumbers[channelNumbers.length + index])
+  }
 }

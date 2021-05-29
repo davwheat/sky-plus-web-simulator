@@ -28,7 +28,7 @@ export const tvGuideListItems: ListItem[] = [
   {
     text: 'Lifestyle & Culture',
     onClick: () => {
-      navigateToEpg(101, Genres.Entertainment)
+      navigateToEpg(101, Genres.LifestyleAndCulture)
     },
   },
   {
@@ -94,7 +94,7 @@ export const tvGuideListItems: ListItem[] = [
   {
     text: 'Gaming & Dating',
     onClick: () => {
-      navigate('/epg/channel-list?start=101')
+      navigateToEpg(101, Genres.GamingAndDating)
     },
   },
   {

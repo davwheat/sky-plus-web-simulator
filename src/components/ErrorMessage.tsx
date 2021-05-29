@@ -70,7 +70,7 @@ export interface ErrorMessageProps {
   /**
    * Error message number
    *
-   * @default 29
+   * @default 28
    */
   errorCode?: number | null
   /**

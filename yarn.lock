@@ -14555,6 +14555,18 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"query-string@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "query-string@npm:7.0.0"
+  dependencies:
+    decode-uri-component: ^0.2.0
+    filter-obj: ^1.1.0
+    split-on-first: ^1.0.0
+    strict-uri-encode: ^2.0.0
+  checksum: 6e3c4376ff01f49bf2300b36e37291e2d3be8df4fe1839d048dd89d4166b92ecd67525c88ca66b61cbc5612ca29fa4e40002d25a74f59b99f7022045b9e7abd2
+  languageName: node
+  linkType: hard
+
 "querystring@npm:0.2.0":
   version: 0.2.0
   resolution: "querystring@npm:0.2.0"
@@ -15900,6 +15912,7 @@ resolve@^2.0.0-next.3:
     preact-render-to-string: ^5.1.19
     prettier: ^2.3.0
     prettier-plugin-organize-imports: ^2.1.0
+    query-string: ^7.0.0
     react: ^17.0.2
     react-dom: ^17.0.2
     react-head: ^3.4.0

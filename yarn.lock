@@ -2366,6 +2366,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-native-async-storage/async-storage@npm:^1.15.0":
+  version: 1.15.4
+  resolution: "@react-native-async-storage/async-storage@npm:1.15.4"
+  dependencies:
+    deep-assign: ^3.0.0
+  peerDependencies:
+    react-native: ^0.60.6 || ^0.61.5 || ^0.62.2 || ^0.63.2 || ^0.64.0 || 1000.0.0
+  checksum: b3e47049a3d17031fd2ebbe731377d7284f7975bce03044351b5d756b0a1e4a81cac252e27e199f56c784cbc2d0a7ba0f71d6fd9dc14f172cb76c3bad4d08bbf
+  languageName: node
+  linkType: hard
+
 "@sideway/address@npm:^4.1.0":
   version: 4.1.1
   resolution: "@sideway/address@npm:4.1.1"
@@ -5896,6 +5907,15 @@ __metadata:
     pify: ^2.3.0
     strip-dirs: ^2.0.0
   checksum: 8247a31c6db7178413715fdfb35a482f019c81dfcd6e8e623d9f0382c9889ce797ce0144de016b256ed03298907a620ce81387cca0e69067a933470081436cb8
+  languageName: node
+  linkType: hard
+
+"deep-assign@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "deep-assign@npm:3.0.0"
+  dependencies:
+    is-obj: ^1.0.0
+  checksum: 9041ccc72ae1980f014d4b745d6135d8f0e71d60ac433397550789c27e6b4d14bc0de2af69777e09f97e1d0da3007a8d78de36f7bf9df931c9968b68fc9546ab
   languageName: node
   linkType: hard
 
@@ -10334,6 +10354,13 @@ fsevents@~2.3.1:
   version: 7.0.0
   resolution: "is-number@npm:7.0.0"
   checksum: 456ac6f8e0f3111ed34668a624e45315201dff921e5ac181f8ec24923b99e9f32ca1a194912dc79d539c97d33dba17dc635202ff0b2cf98326f608323276d27a
+  languageName: node
+  linkType: hard
+
+"is-obj@npm:^1.0.0":
+  version: 1.0.1
+  resolution: "is-obj@npm:1.0.1"
+  checksum: 3ccf0efdea12951e0b9c784e2b00e77e87b2f8bd30b42a498548a8afcc11b3287342a2030c308e473e93a7a19c9ea7854c99a8832a476591c727df2a9c79796c
   languageName: node
   linkType: hard
 
@@ -14877,6 +14904,22 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"recoil-persistence@npm:^0.2.4":
+  version: 0.2.5
+  resolution: "recoil-persistence@npm:0.2.5"
+  dependencies:
+    "@react-native-async-storage/async-storage": ^1.15.0
+  peerDependencies:
+    react: ^16.0.0 || ^17.0.0
+    react-native: ^0.63.0 || ^0.64.0
+    recoil: ^0.2.0 || ^0.3.0
+  dependenciesMeta:
+    "@react-native-async-storage/async-storage":
+      optional: true
+  checksum: 858a3bb0b9608eb2a5fc6f7c8fad4ce36d6312b1249e9190dca57d0955d4e5dfce0123452495ac19fbea739c79a2bf01c0ee4aa0d63ab37ab078a67b48681dbd
+  languageName: node
+  linkType: hard
+
 "recoil@npm:^0.3.1":
   version: 0.3.1
   resolution: "recoil@npm:0.3.1"
@@ -15861,6 +15904,7 @@ resolve@^2.0.0-next.3:
     react-dom: ^17.0.2
     react-head: ^3.4.0
     recoil: ^0.3.1
+    recoil-persistence: ^0.2.4
     typescript: ^4.3.2
   languageName: unknown
   linkType: soft

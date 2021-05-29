@@ -31,7 +31,7 @@ interface Props {
 
 const TitleHeader: React.FC<Props> = ({ heading }) => {
   const { time } = useRecoilValue(timeState)
-  const timeText = time.format('h:mma ddd D MMM')
+  const timeText = time.format('h.mma ddd D MMM')
 
   const classes = useHeaderStyles()
 

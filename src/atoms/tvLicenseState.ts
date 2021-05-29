@@ -10,21 +10,23 @@ export interface TVLicenseState {
   savedAt: number | null
 }
 
-const localStorageEffect = (key: string): AtomEffect<TVLicenseState> => ({ setSelf, onSet }) => {
-  const savedValue = isSSG() ? null : localStorage.getItem(key)
+const localStorageEffect =
+  (key: string): AtomEffect<TVLicenseState> =>
+  ({ setSelf, onSet }) => {
+    const savedValue = isSSG() ? null : localStorage.getItem(key)
 
-  if (savedValue !== null) {
-    setSelf(JSON.parse(savedValue))
-  }
-
-  onSet(newValue => {
-    if (newValue instanceof DefaultValue) {
-      !isSSG() && localStorage.removeItem(key)
-    } else {
-      !isSSG() && localStorage.setItem(key, JSON.stringify(newValue))
+    if (savedValue !== null) {
+      setSelf(JSON.parse(savedValue))
     }
-  })
-}
+
+    onSet(newValue => {
+      if (newValue instanceof DefaultValue) {
+        !isSSG() && localStorage.removeItem(key)
+      } else {
+        !isSSG() && localStorage.setItem(key, JSON.stringify(newValue))
+      }
+    })
+  }
 
 export const tvLicenseState = atom<TVLicenseState>({
   key: 'tvLicense',

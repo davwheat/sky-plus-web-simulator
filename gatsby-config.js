@@ -13,10 +13,9 @@ const prodPlugins =
 
 module.exports = {
   flags: {
-    // PRESERVE_WEBPACK_CACHE: true,
-    // FAST_DEV: true,
-    // PRESERVE_FILE_DOWNLOAD_CACHE: true,
+    FAST_DEV: true,
     DEV_SSR: true,
+    // PARALLEL_SOURCING: true,
   },
   siteMetadata: {
     title: 'Sky+ EPG Simulator',

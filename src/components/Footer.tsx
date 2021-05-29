@@ -1,5 +1,7 @@
 import React from 'react'
-import { version } from '../../package.json'
+import PackageJson from '../../package.json'
+
+const { version } = PackageJson
 
 interface FooterProps {
   className: string

@@ -1,4 +1,4 @@
-import { Genres } from 'src/constants/Genres'
+import { Genres } from '@constants/Genres'
 import channelList from './channelList.json'
 
 export interface Channel {

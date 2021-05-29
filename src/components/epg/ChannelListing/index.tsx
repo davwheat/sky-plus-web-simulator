@@ -1,4 +1,5 @@
 import EpgBackgroundImage from '@assets/images/guide-bg.sized.png'
+import { GenreName, Genres } from '@constants/Genres'
 import { makeStyles } from '@material-ui/core'
 import React from 'react'
 import { Header, TitleHeader } from '../Header'
@@ -9,7 +10,7 @@ interface Props {
   /**
    * Optional number to filter by genre.
    */
-  genreFilter?: number
+  genreFilter?: Genres
 }
 
 const useStyles = makeStyles({
@@ -24,7 +25,7 @@ const ChannelListing: React.FC<Props> = ({ startingChannel, genreFilter }) => {
   return (
     <div className={classes.root}>
       <Header logoText="guide">
-        <TitleHeader heading="All channels" />
+        <TitleHeader heading={GenreName[genreFilter] || 'All channels'} />
       </Header>
       <Channels firstChannel={startingChannel} genreFilter={genreFilter} />
     </div>

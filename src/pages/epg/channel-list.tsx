@@ -1,5 +1,6 @@
 import { controlsState } from '@atoms'
 import ChannelListing from '@components/epg/ChannelListing/index'
+import { Genres } from '@constants/Genres'
 import controlsShownStateSetter from '@helpers/controlsShownStateSetter'
 import isSSG from '@helpers/isSSG'
 import InnerLayout from '@layouts/InnerLayout'
@@ -8,7 +9,7 @@ import { navigate, PageProps } from 'gatsby'
 import React, { useEffect } from 'react'
 import { useSetRecoilState } from 'recoil'
 
-type Props = PageProps<object, object, WindowLocation<{ startFromChannelNumber?: string; genre?: number }>['state']>
+type Props = PageProps<object, object, WindowLocation<{ startFromChannelNumber?: string; genre?: Genres }>['state']>
 
 function getStartChannelFromWindow(): string | null {
   if (!isSSG()) {

@@ -1,7 +1,5 @@
+import { Genres } from 'src/constants/Genres'
 import channelList from './channelList.json'
-
-const ChannelNumbers = Object.keys(channelList)
-const AllChannels = Object.values(channelList) as Channel[]
 
 export interface Channel {
   sid: string
@@ -12,50 +10,87 @@ export interface Channel {
    * `hd` - High
    * `au` - Audio only
    */
-  quality: 'sd' | 'hd' | 'au',
-  /**
-   * - `1` - Shopping
-   * - `2` - Kids
-   * - `3` - Entertainment
-   * - `5` - News
-   * - `6` - Movies
-   * - `7` - Sports
-   * - `11` - Documentaries
-   * - `12` - Music
-   * - `13` - Religion
-   * - `14` - International
-   * - `15` - Specialist
-   */
-  genre: number
+  quality: 'sd' | 'hd' | 'au'
+  genre: Genres
 }
 
-export function isValidChannelNumber(channelNumber: string) {
-  return ChannelNumbers.includes(channelNumber)
+/**
+ * @param genre Optional genre(s) to filter by
+ */
+export function isValidChannelNumber(channelNumber: string, genre?: Genres | Genres[]) {
+  return getAllChannelNumbersArray(genre).includes(channelNumber)
 }
 
-export function getAllChannels(): Record<string, Channel> {
-  return channelList as Record<string, Channel>
+/**
+ * @param genre Optional genre(s) to filter by
+ */
+export function getAllChannels(genre?: Genres | Genres[]): Record<string, Channel> {
+  const channels = channelList as Record<string, Channel>
+
+  if (genre !== undefined && genre !== null) {
+    const allKeys = Object.keys(channels)
+    let output: Record<string, Channel> = {}
+
+    if (Array.isArray(genre)) {
+      const outputChannelKeys = allKeys.filter(k => genre.includes(channels[k].genre))
+
+      outputChannelKeys.forEach(k => (output[k] = channels[k]))
+    } else {
+      const outputChannelKeys = allKeys.filter(k => channels[k].genre === genre)
+
+      outputChannelKeys.forEach(k => (output[k] = channels[k]))
+    }
+
+    return output
+  }
+
+  return channels
+}
+
+/**
+ * @param genre Optional genre(s) to filter by
+ */
+export function getAllChannelsArray(genre?: Genres | Genres[]): Channel[] {
+  return Object.values(getAllChannels(genre))
+}
+
+/**
+ * @param genre Optional genre(s) to filter by
+ */
+export function getAllChannelNumbersArray(genre?: Genres | Genres[]): string[] {
+  return Object.keys(getAllChannels(genre))
 }
 
 export function getChannelByChannelNumber(channelNumber: string): Channel | null {
   return channelList[channelNumber] || null
 }
 
-export function getChannelBySID(sid: string): Channel | null {
-  return AllChannels.find(channel => channel.sid === sid) || null
+/**
+ * @param genre Optional genre(s) to filter by
+ */
+export function getChannelBySID(sid: string, genre?: Genres | Genres[]): Channel | null {
+  return getAllChannelsArray(genre).find(channel => channel.sid === sid) || null
 }
 
-export function getNChannelsFromNumber(channelNumber: string, n: number): Channel[] | null {
-  const startIndex = ChannelNumbers.indexOf(channelNumber)
+/**
+ * @param genre Optional genre(s) to filter by
+ */
+export function getNChannelsFromNumber(channelNumber: string, n: number, genre?: Genres | Genres[]): Channel[] | null {
+  const startIndex = getAllChannelNumbersArray(genre).indexOf(channelNumber)
 
   if (startIndex === -1) return null
 
-  return AllChannels.slice(startIndex, startIndex + n) as Channel[]
+  return getAllChannelsArray(genre).slice(startIndex, startIndex + n) as Channel[]
 }
 
-export function getChannelNumberFromNumberPlusN(channelNumber: string, n: number): string {
-  const startIndex = ChannelNumbers.indexOf(channelNumber)
-  const result = ChannelNumbers[Math.min(Math.max(startIndex + n, 0), ChannelNumbers.length - 1)]
+/**
+ * @param genre Optional genre(s) to filter by
+ */
+export function getChannelNumberFromNumberPlusN(channelNumber: string, n: number, genre?: Genres | Genres[]): string {
+  const channelNumbers = getAllChannelNumbersArray(genre)
+
+  const startIndex = channelNumbers.indexOf(channelNumber)
+  const result = channelNumbers[Math.min(Math.max(startIndex + n, 0), channelNumbers.length - 1)]
 
   return result
 }

@@ -2,8 +2,8 @@ import { controlsState } from '@atoms'
 import ColorButton from '@components/ColorButton'
 import Colors from '@data/Colors'
 import controlsShownStateSetter from '@helpers/controlsShownStateSetter'
-import isSSR from '@helpers/isSSG'
-import { makeStyles, NoSsr } from '@material-ui/core'
+import useHasRendered from '@hooks/useHasRendered'
+import { makeStyles } from '@material-ui/core'
 import clsx from 'clsx'
 import React, { useEffect } from 'react'
 import { useSetRecoilState } from 'recoil'
@@ -36,6 +36,7 @@ interface Props {
 const ColorButtonsFooter: React.FC<Props> = ({ className, buttonPressHandler, buttonsText }) => {
   const classes = useStyles()
   const setControlsState = useSetRecoilState(controlsState)
+  const hasRendered = useHasRendered()
 
   const controlsToEnable: SkyColorButton[] = []
   const controlsToDisable: SkyColorButton[] = []
@@ -70,45 +71,46 @@ const ColorButtonsFooter: React.FC<Props> = ({ className, buttonPressHandler, bu
 
   return (
     <footer className={clsx(classes.root, className)}>
-      {isSSR() && (
+      {!hasRendered ? (
         <div className={classes.colorButton} style={{ visibility: 'hidden', opacity: 0 }} aria-hidden="true">
           <ColorButton buttonColor="red" />
         </div>
+      ) : (
+        <>
+          {buttonsText.red ? (
+            <div className={classes.colorButton}>
+              <ColorButton buttonColor="red" />
+              {buttonsText.red}
+            </div>
+          ) : (
+            <div />
+          )}
+          {buttonsText.green ? (
+            <div className={classes.colorButton}>
+              <ColorButton buttonColor="green" />
+              {buttonsText.green}
+            </div>
+          ) : (
+            <div />
+          )}
+          {buttonsText.yellow ? (
+            <div className={classes.colorButton}>
+              <ColorButton buttonColor="yellow" />
+              {buttonsText.yellow}
+            </div>
+          ) : (
+            <div />
+          )}
+          {buttonsText.blue ? (
+            <div className={classes.colorButton}>
+              <ColorButton buttonColor="blue" />
+              {buttonsText.blue}
+            </div>
+          ) : (
+            <div />
+          )}
+        </>
       )}
-      <NoSsr>
-        {buttonsText.red ? (
-          <div className={classes.colorButton}>
-            <ColorButton buttonColor="red" />
-            {buttonsText.red}
-          </div>
-        ) : (
-          <div />
-        )}
-        {buttonsText.green ? (
-          <div className={classes.colorButton}>
-            <ColorButton buttonColor="green" />
-            {buttonsText.green}
-          </div>
-        ) : (
-          <div />
-        )}
-        {buttonsText.yellow ? (
-          <div className={classes.colorButton}>
-            <ColorButton buttonColor="yellow" />
-            {buttonsText.yellow}
-          </div>
-        ) : (
-          <div />
-        )}
-        {buttonsText.blue ? (
-          <div className={classes.colorButton}>
-            <ColorButton buttonColor="blue" />
-            {buttonsText.blue}
-          </div>
-        ) : (
-          <div />
-        )}
-      </NoSsr>
     </footer>
   )
 }

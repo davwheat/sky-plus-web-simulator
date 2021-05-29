@@ -96,10 +96,10 @@ const DirectGov: React.FC = () => {
   }
 
   useEffect(() => {
-    addEventListener('skyControlPressed', goBack as EventListener)
+    document.addEventListener('skyControlPressed', goBack as EventListener)
 
     return () => {
-      removeEventListener('skyControlPressed', goBack as EventListener)
+      document.removeEventListener('skyControlPressed', goBack as EventListener)
     }
   })
 

@@ -102,10 +102,10 @@ const MainMenu: React.FC = () => {
       }
     }
 
-    addEventListener('skyControlPressed', watchForLRArrowPress)
+    document.addEventListener('skyControlPressed', watchForLRArrowPress)
 
     return () => {
-      removeEventListener('skyControlPressed', watchForLRArrowPress)
+      document.removeEventListener('skyControlPressed', watchForLRArrowPress)
       setControlsState(controlsShownStateSetter(['leftArrow', 'rightArrow'], false))
     }
   }, [setMainMenuState, currentTabIndex])

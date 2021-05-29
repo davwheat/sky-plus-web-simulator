@@ -69,11 +69,11 @@ const UsingSkyPlus: React.FC = () => {
 
   useEffect(() => {
     setControlsVisible(controlsShownStateSetter('backUp', true))
-    window.addEventListener('skyControlPressed', goBack)
+    document.addEventListener('skyControlPressed', goBack)
 
     return () => {
       setControlsVisible(controlsShownStateSetter('backUp', false))
-      window.removeEventListener('skyControlPressed', goBack)
+      document.removeEventListener('skyControlPressed', goBack)
     }
   })
 

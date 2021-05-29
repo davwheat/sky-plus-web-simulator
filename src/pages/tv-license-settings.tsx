@@ -21,7 +21,7 @@ const TVLicenseSettings = () => {
   }
 
   useEffect(() => {
-    window.addEventListener('skyControlPressed', controlPressed)
+    document.addEventListener('skyControlPressed', controlPressed)
 
     return () => window.removeEventListener('skyControlPressed', controlPressed)
   })

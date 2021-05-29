@@ -39,7 +39,6 @@ const ChannelListingPage: React.FC<Props> = ({ location }) => {
   const genreNumber: number | null = location?.state?.genre || getGenreFromWindow() || null
 
   const setControlsVisible = useSetRecoilState(controlsState)
-  setControlsVisible(controlsShownStateSetter(['backUp'], true))
 
   function goBack(e: SkyControlPressedEvent) {
     const control = e.detail.control
@@ -50,10 +49,12 @@ const ChannelListingPage: React.FC<Props> = ({ location }) => {
   }
 
   useEffect(() => {
-    addEventListener('skyControlPressed', goBack as EventListener)
+    document.addEventListener('skyControlPressed', goBack as EventListener)
+    setControlsVisible(controlsShownStateSetter(['backUp'], true))
 
     return () => {
-      removeEventListener('skyControlPressed', goBack as EventListener)
+      document.removeEventListener('skyControlPressed', goBack as EventListener)
+      setControlsVisible(controlsShownStateSetter(['backUp'], false))
     }
   })
 

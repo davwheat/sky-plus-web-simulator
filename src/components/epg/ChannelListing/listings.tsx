@@ -1,8 +1,9 @@
 import MenuMoreArrowSvg from '@assets/icons/list-arrow.svg'
 import ControlText from '@components/ControlText'
+import ErrorMessage from '@components/ErrorMessage'
 import Colors from '@data/Colors'
-import { getChannelNumberFromNumberPlusN, getNChannelsFromNumber } from '@data/epg/AllChannels'
-import { makeStyles } from '@material-ui/core'
+import { getChannelAtIndex, getChannelNumberFromNumberPlusN, getNChannelsFromNumber } from '@data/epg/AllChannels'
+import { makeStyles, NoSsr } from '@material-ui/core'
 import React, { useState } from 'react'
 import ColorButtonsFooter from '../Footer/ColorButtonsFooter'
 import EpgChannel from './epgChannel'
@@ -86,6 +87,12 @@ const useStyles = makeStyles({
   controlText: {
     fontSize: 20,
   },
+  noChannelsErrorMsg: {
+    gridColumn: '1 / -1',
+    gridRow: '2 / -1',
+    justifySelf: 'center',
+    alignSelf: 'center',
+  },
 })
 
 function updateBrowserUrl(startingChannel: string, genreFilter: number | null) {
@@ -99,20 +106,30 @@ function updateBrowserUrl(startingChannel: string, genreFilter: number | null) {
   window.history.replaceState({ path: newURL.href }, '', newURL.href)
 }
 
-// Music starts unmuted in firefox
-// Browser decides what to do based on what it thinks the user wants. Chrome will autostart if you have interacted with the page "enough" in the past... it's verryyyy weird
 const Channels: React.FC<Props> = ({ firstChannel, genreFilter }) => {
   const classes = useStyles()
   const [startingChannel, setStartingChannel] = useState(firstChannel)
 
-  const channelsOnPage = getNChannelsFromNumber(startingChannel, CHANNELS_PER_PAGE)
+  const channelsOnPage = getNChannelsFromNumber(startingChannel, CHANNELS_PER_PAGE, genreFilter)
 
   console.log('firstChannel', firstChannel)
   console.log('genre', genreFilter)
 
   function changePage(change: 1 | -1) {
     setStartingChannel(first => {
-      const newStart = getChannelNumberFromNumberPlusN(first, change * CHANNELS_PER_PAGE)
+      let newStart = getChannelNumberFromNumberPlusN(first, change * CHANNELS_PER_PAGE)
+
+      // If the start channel matches the current, we're at the end of the list, so
+      // let's wrap to the other side.
+      if (newStart === first) {
+        if (change === 1) {
+          // down a page
+          newStart = getChannelAtIndex(0, genreFilter).channelNumber
+        } else {
+          // up a page
+          newStart = getChannelAtIndex(-1, genreFilter).channelNumber
+        }
+      }
 
       if (window.history.replaceState) {
         updateBrowserUrl(newStart, genreFilter)
@@ -127,7 +144,21 @@ const Channels: React.FC<Props> = ({ firstChannel, genreFilter }) => {
       <section className={classes.root}>
         <TimingHeaders />
 
-        {channelsOnPage && channelsOnPage.map(channel => <EpgChannel key={channel.sid} channel={channel} />)}
+        <NoSsr>
+          {channelsOnPage?.map(channel => (
+            <EpgChannel key={channel.sid} channel={channel} />
+          ))}
+
+          {!channelsOnPage && (
+            <ErrorMessage errorCode={null} className={classes.noChannelsErrorMsg}>
+              Oh no, an error occurred.
+              <br />
+              <span>
+                Click <ControlText>BACK UP</ControlText> and try that again.
+              </span>
+            </ErrorMessage>
+          )}
+        </NoSsr>
       </section>
 
       <ColorButtonsFooter

@@ -13,6 +13,7 @@ const useStyles = makeStyles({
     fontFamily: 'ZurichBT',
     fontWeight: 'bold',
     fontSize: 18,
+    verticalAlign: 1,
   },
 })
 

@@ -152,7 +152,6 @@ const Channels: React.FC<Props> = ({ firstChannel, genreFilter }) => {
           {!channelsOnPage && (
             <ErrorMessage errorCode={null} className={classes.noChannelsErrorMsg}>
               Oh no, an error occurred.
-              <br />
               <span>
                 Click <ControlText>BACK UP</ControlText> and try that again.
               </span>

@@ -2,6 +2,7 @@ import { controlsState } from '@atoms'
 import ColorButton from '@components/ColorButton'
 import Colors from '@data/Colors'
 import controlsShownStateSetter from '@helpers/controlsShownStateSetter'
+import isSSR from '@helpers/isSSG'
 import { makeStyles, NoSsr } from '@material-ui/core'
 import clsx from 'clsx'
 import React, { useEffect } from 'react'
@@ -68,8 +69,13 @@ const ColorButtonsFooter: React.FC<Props> = ({ className, buttonPressHandler, bu
   })
 
   return (
-    <NoSsr>
-      <footer className={clsx(classes.root, className)}>
+    <footer className={clsx(classes.root, className)}>
+      {isSSR() && (
+        <div className={classes.colorButton} style={{ visibility: 'hidden', opacity: 0 }} aria-hidden="true">
+          <ColorButton buttonColor="red" />
+        </div>
+      )}
+      <NoSsr>
         {buttonsText.red ? (
           <div className={classes.colorButton}>
             <ColorButton buttonColor="red" />
@@ -102,8 +108,8 @@ const ColorButtonsFooter: React.FC<Props> = ({ className, buttonPressHandler, bu
         ) : (
           <div />
         )}
-      </footer>
-    </NoSsr>
+      </NoSsr>
+    </footer>
   )
 }
 

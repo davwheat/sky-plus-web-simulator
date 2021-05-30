@@ -1,6 +1,7 @@
 import MenuMoreArrowSvg from '@assets/icons/list-arrow.svg'
 import ControlText from '@components/ControlText'
 import ErrorMessage from '@components/ErrorMessage'
+import RecordButton from '@components/RecordButton'
 import { Genres } from '@constants/Genres'
 import Colors from '@data/Colors'
 import { getChannelAtIndex, getChannelNumberFromNumberPlusN, getFirstChannelNumber, getNChannelsFromNumber } from '@data/epg/AllChannels'
@@ -186,7 +187,7 @@ const Channels: React.FC<Props> = ({ firstChannel, genreFilter }) => {
       <p className={classes.controlPrompt}>
         {!noChannels && (
           <>
-            Press <ControlText className={classes.controlText}>SELECT</ControlText> to view
+            Press <ControlText className={classes.controlText}>SELECT</ControlText> to view or <RecordButton /> to record
           </>
         )}
       </p>

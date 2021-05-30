@@ -120,14 +120,9 @@ const Channels: React.FC<Props> = ({ firstChannel, genreFilter }) => {
     if (prevSettings !== `${startingChannel}__${genreFilter}`) {
       const data = getNChannelsFromNumber(startingChannel, CHANNELS_PER_PAGE, genreFilter)
 
-      console.log(data)
-
       setChannelsOnPage(data)
     }
   })
-
-  console.log('firstChannel', firstChannel)
-  console.log('genre', genreFilter)
 
   function changePage(change: 1 | -1) {
     setStartingChannel(first => {

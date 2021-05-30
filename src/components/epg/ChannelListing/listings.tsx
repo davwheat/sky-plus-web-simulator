@@ -126,7 +126,7 @@ const Channels: React.FC<Props> = ({ firstChannel, genreFilter }) => {
 
   function changePage(change: 1 | -1) {
     setStartingChannel(first => {
-      let newStart = getChannelNumberFromNumberPlusN(first, change * CHANNELS_PER_PAGE)
+      let newStart = getChannelNumberFromNumberPlusN(first, change * CHANNELS_PER_PAGE, genreFilter)
 
       // If the start channel matches the current, we're at the end of the list, so
       // let's wrap to the other side.

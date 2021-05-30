@@ -3,7 +3,7 @@ import ControlText from '@components/ControlText'
 import ErrorMessage from '@components/ErrorMessage'
 import { Genres } from '@constants/Genres'
 import Colors from '@data/Colors'
-import { getChannelAtIndex, getChannelNumberFromNumberPlusN, getNChannelsFromNumber } from '@data/epg/AllChannels'
+import { getChannelAtIndex, getChannelNumberFromNumberPlusN, getFirstChannelNumber, getNChannelsFromNumber } from '@data/epg/AllChannels'
 import usePrevious from '@hooks/usePrevious'
 import { makeStyles, NoSsr } from '@material-ui/core'
 import React, { useEffect, useState } from 'react'
@@ -133,10 +133,10 @@ const Channels: React.FC<Props> = ({ firstChannel, genreFilter }) => {
       if (newStart === first) {
         if (change === 1) {
           // down a page
-          newStart = getChannelAtIndex(0, genreFilter)?.channelNumber || '101'
+          newStart = getChannelAtIndex(0, genreFilter)?.channelNumber || getFirstChannelNumber(genreFilter) || '101'
         } else {
           // up a page
-          newStart = getChannelAtIndex(-1, genreFilter)?.channelNumber || '101'
+          newStart = getChannelAtIndex(-1, genreFilter)?.channelNumber || getFirstChannelNumber(genreFilter) || '101'
         }
       }
 

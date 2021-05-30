@@ -6,6 +6,7 @@ import Colors from '@data/Colors'
 import { getChannelAtIndex, getChannelNumberFromNumberPlusN, getFirstChannelNumber, getNChannelsFromNumber } from '@data/epg/AllChannels'
 import usePrevious from '@hooks/usePrevious'
 import { makeStyles, NoSsr } from '@material-ui/core'
+import clsx from 'clsx'
 import React, { useEffect, useState } from 'react'
 import ColorButtonsFooter from '../Footer/ColorButtonsFooter'
 import EpgChannel from './epgChannel'
@@ -44,7 +45,8 @@ const useStyles = makeStyles({
     fontStretch: 'condensed',
     fontSize: 24,
     marginTop: -4,
-
+  },
+  rootWithListArrows: {
     '&::after, &::before': {
       content: '""',
       display: 'block',
@@ -152,7 +154,7 @@ const Channels: React.FC<Props> = ({ firstChannel, genreFilter }) => {
 
   return (
     <>
-      <section className={classes.root}>
+      <section className={clsx(classes.root, !noChannels && classes.rootWithListArrows)}>
         <TimingHeaders />
 
         <NoSsr>

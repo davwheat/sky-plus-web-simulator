@@ -61,6 +61,19 @@ export function getAllChannelNumbersArray(genre?: Genres | Genres[]): string[] {
   return Object.keys(getAllChannels(genre))
 }
 
+/**
+ * @param genre Optional genre(s) to filter by
+ */
+export function getFirstChannelNumber(genre?: Genres | Genres[]): string | null {
+  const array = getAllChannelsArray(genre)
+
+  if (array?.length) {
+    return array[0].channelNumber
+  } else {
+    return null
+  }
+}
+
 export function getChannelByChannelNumber(channelNumber: string): Channel | null {
   return channelList[channelNumber] || null
 }

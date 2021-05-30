@@ -1,13 +1,18 @@
 import { Genres } from '@constants/Genres'
+import { getFirstChannelNumber } from '@data/epg/AllChannels'
 import { navigate } from 'gatsby'
 import querystring from 'query-string'
 import { ListItem } from '../Menu'
 
-function navigateToEpg(startingNumber: number, genre?: Genres) {
+function navigateToEpg(genre?: Genres) {
+  const startingNumber = getFirstChannelNumber(genre)
+
   const query = {
     start: startingNumber,
     genre,
   }
+
+  getFirstChannelNumber(genre)
 
   navigate(`/epg/channel-list/?${querystring.stringify(query, { skipNull: true })}`)
 }
@@ -16,97 +21,97 @@ export const tvGuideListItems: ListItem[] = [
   {
     text: 'All Channels',
     onClick: () => {
-      navigateToEpg(101)
+      navigateToEpg()
     },
   },
   {
     text: 'Entertainment',
     onClick: () => {
-      navigateToEpg(101, Genres.Entertainment)
+      navigateToEpg(Genres.Entertainment)
     },
   },
   {
     text: 'Lifestyle & Culture',
     onClick: () => {
-      navigateToEpg(101, Genres.LifestyleAndCulture)
+      navigateToEpg(Genres.LifestyleAndCulture)
     },
   },
   {
     text: 'Movies',
     onClick: () => {
-      navigateToEpg(101, Genres.Movies)
+      navigateToEpg(Genres.Movies)
     },
   },
   {
     text: 'Sports',
     onClick: () => {
-      navigateToEpg(101, Genres.Sports)
+      navigateToEpg(Genres.Sports)
     },
   },
   {
     text: 'News',
     onClick: () => {
-      navigateToEpg(101, Genres.News)
+      navigateToEpg(Genres.News)
     },
   },
   {
     text: 'Documentaries',
     onClick: () => {
-      navigateToEpg(101, Genres.Documentaries)
+      navigateToEpg(Genres.Documentaries)
     },
   },
   {
     text: 'Kids',
     onClick: () => {
-      navigateToEpg(101, Genres.Kids)
+      navigateToEpg(Genres.Kids)
     },
   },
   {
     text: 'Music',
     onClick: () => {
-      navigateToEpg(101, Genres.Music)
+      navigateToEpg(Genres.Music)
     },
   },
   {
     text: 'Radio',
     onClick: () => {
-      navigateToEpg(101, Genres.Radio)
+      navigateToEpg(Genres.Radio)
     },
   },
   {
     text: 'Shopping',
     onClick: () => {
-      navigateToEpg(101, Genres.Shopping)
+      navigateToEpg(Genres.Shopping)
     },
   },
   {
     text: 'Religion',
     onClick: () => {
-      navigateToEpg(101, Genres.Religion)
+      navigateToEpg(Genres.Religion)
     },
   },
   {
     text: 'International',
     onClick: () => {
-      navigateToEpg(101, Genres.International)
+      navigateToEpg(Genres.International)
     },
   },
   {
     text: 'Gaming & Dating',
     onClick: () => {
-      navigateToEpg(101, Genres.GamingAndDating)
+      navigateToEpg(Genres.GamingAndDating)
     },
   },
   {
     text: 'Specialist',
     onClick: () => {
-      navigateToEpg(101, Genres.Specialist)
+      navigateToEpg(Genres.Specialist)
     },
   },
   {
     text: 'Adult',
     onClick: () => {
-      navigateToEpg(101, Genres.Adult)
+      navigateToEpg(Genres.Adult)
     },
   },
 ]

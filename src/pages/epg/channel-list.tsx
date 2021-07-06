@@ -50,11 +50,11 @@ const ChannelListingPage: React.FC<Props> = ({ location }) => {
   }
 
   useEffect(() => {
-    document.addEventListener('skyControlPressed', goBack as EventListener)
+    document.addEventListener('skyControlPressed', goBack)
     setControlsVisible(controlsShownStateSetter(['backUp'], true))
 
     return () => {
-      document.removeEventListener('skyControlPressed', goBack as EventListener)
+      document.removeEventListener('skyControlPressed', goBack)
       setControlsVisible(controlsShownStateSetter(['backUp'], false))
     }
   })

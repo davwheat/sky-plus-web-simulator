@@ -6,7 +6,7 @@ import { makeStyles } from '@material-ui/core'
 import clsx from 'clsx'
 import React, { useEffect } from 'react'
 import { useSetRecoilState } from 'recoil'
-import ControlText from './ControlText'
+import ControlText from './ControlVisualisers/ControlText'
 
 const useStyles = makeStyles({
   messageBox: {
@@ -152,10 +152,10 @@ const ErrorMessage: React.FC<ErrorMessageProps> = ({
         }
       }
 
-      document.addEventListener('skyControlPressed', backUpEventListener as EventListener)
+      document.addEventListener('skyControlPressed', backUpEventListener)
 
       return () => {
-        document.removeEventListener('skyControlPressed', backUpEventListener as EventListener)
+        document.removeEventListener('skyControlPressed', backUpEventListener)
         setControlsState(controlsShownStateSetter('backUp', false))
       }
     }

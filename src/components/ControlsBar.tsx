@@ -4,8 +4,8 @@ import { makeStyles } from '@material-ui/core'
 import clsx from 'clsx'
 import React from 'react'
 import { useRecoilValue } from 'recoil'
-import ColorButton from './ColorButton'
-import ControlText from './ControlText'
+import ColorButton from './ControlVisualisers/ColorButton'
+import ControlText from './ControlVisualisers/ControlText'
 
 interface ControlItemProps {
   children: React.ReactNode
@@ -40,6 +40,12 @@ const useStyles = makeStyles({
   },
   rightArrow: {
     transform: 'rotate(180deg)',
+  },
+  upArrow: {
+    transform: 'rotate(90deg)',
+  },
+  downArrow: {
+    transform: 'rotate(-90deg)',
   },
   noRightMargin: {
     marginRight: 0,
@@ -101,6 +107,12 @@ const ControlsBar: React.FC = () => {
       </ControlItem>
 
       {/* Arrow buttons */}
+      <ControlItem tooltip="Up arrow" controlName="upArrow">
+        <LeftRightArrowIcon className={clsx(classes.arrowIcon, classes.upArrow)} />
+      </ControlItem>
+      <ControlItem tooltip="Down arrow" controlName="downArrow">
+        <LeftRightArrowIcon className={clsx(classes.arrowIcon, classes.downArrow)} />
+      </ControlItem>
       <ControlItem tooltip="Left arrow" controlName="leftArrow">
         <LeftRightArrowIcon className={classes.arrowIcon} />
       </ControlItem>

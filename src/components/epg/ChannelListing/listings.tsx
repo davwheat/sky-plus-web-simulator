@@ -1,5 +1,5 @@
 import MenuMoreArrowSvg from '@assets/icons/list-arrow.svg'
-import ControlText from '@components/ControlText'
+import ControlText from '@components/ControlVisualisers/ControlText'
 import ErrorMessage from '@components/ErrorMessage'
 import RecordButton from '@components/RecordButton'
 import { Genres } from '@constants/Genres'

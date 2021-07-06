@@ -1,6 +1,6 @@
 import EpgBackgroundImage from '@assets/images/guide-bg.sized.png'
 import { controlsState } from '@atoms/controlsState'
-import ControlText from '@components/ControlText'
+import ControlText from '@components/ControlVisualisers/ControlText'
 import { Header, TitleHeader } from '@components/epg/Header'
 import ErrorMessage from '@components/ErrorMessage'
 import Colors from '@data/Colors'

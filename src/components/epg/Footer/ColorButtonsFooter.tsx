@@ -1,5 +1,5 @@
 import { controlsState } from '@atoms'
-import ColorButton from '@components/ColorButton'
+import ColorButton from '@components/ControlVisualisers/ColorButton'
 import Colors from '@data/Colors'
 import controlsShownStateSetter from '@helpers/controlsShownStateSetter'
 import useHasRendered from '@hooks/useHasRendered'
@@ -59,10 +59,10 @@ const ColorButtonsFooter: React.FC<Props> = ({ className, buttonPressHandler, bu
     setControlsState(controlsShownStateSetter(controlsToEnable, true))
     setControlsState(controlsShownStateSetter(controlsToDisable, false))
 
-    document.addEventListener('skyControlPressed', buttonPressEventListener as EventListener)
+    document.addEventListener('skyControlPressed', buttonPressEventListener)
 
     return () => {
-      document.removeEventListener('skyControlPressed', buttonPressEventListener as EventListener)
+      document.removeEventListener('skyControlPressed', buttonPressEventListener)
 
       // Remove the coloured buttons from the available controls when this unmounts
       setControlsState(controlsShownStateSetter(['red', 'green', 'yellow', 'blue'], false))

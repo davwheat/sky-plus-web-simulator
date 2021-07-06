@@ -2,6 +2,7 @@ import MenuMoreArrowSvg from '@assets/icons/list-arrow.svg'
 import { controlsState } from '@atoms'
 import Colors from '@data/Colors'
 import controlsShownStateSetter from '@helpers/controlsShownStateSetter'
+import { splitMenuIntoPages } from '@helpers/splitMenuIntoPages'
 import { makeStyles } from '@material-ui/core'
 import clsx from 'clsx'
 import React, { useEffect, useMemo, useRef, useState } from 'react'
@@ -64,30 +65,6 @@ export interface MenuProps {
   noForcedUpperCase?: boolean
 }
 
-function SplitMenuIntoPages(items: ListItem[]): ListItem[][] {
-  // One page! Easy exit!
-  if (items.length <= 10) return [items]
-
-  let itemsRemaining = [...items]
-  let pages = []
-
-  while (itemsRemaining.length > 0) {
-    let page
-
-    // If remaining items fit on one page, put them all on that page
-    if (itemsRemaining.length <= 10) {
-      page = itemsRemaining
-      itemsRemaining = []
-    }
-    // Otherwise, take next 9 and add 'More...' to bottom
-    else page = itemsRemaining.splice(0, 9)
-
-    pages.push(page)
-  }
-
-  return pages
-}
-
 /**
  * Display an Sky-esque, auto-paginated, auto-numbered, keyboard-accessible, fully managed menu!
  *
@@ -110,7 +87,7 @@ const Menu: React.FC<MenuProps> = ({ onBack, listItems, noForcedUpperCase = fals
   }
 
   // Get list of pages. Memoised for speeeeeed!
-  const pages = useMemo(() => SplitMenuIntoPages(listItems), [listItems, SplitMenuIntoPages])
+  const pages = useMemo(() => splitMenuIntoPages(listItems), [listItems, splitMenuIntoPages])
   const thisPage = pages[pageIndex]
 
   function HandleMenuNav(e: React.KeyboardEvent<HTMLOListElement>) {
@@ -160,10 +137,10 @@ const Menu: React.FC<MenuProps> = ({ onBack, listItems, noForcedUpperCase = fals
       }
     }
 
-    document.addEventListener('skyControlPressed', goToFirstPage as EventListener)
+    document.addEventListener('skyControlPressed', goToFirstPage)
 
     return () => {
-      document.removeEventListener('skyControlPressed', goToFirstPage as EventListener)
+      document.removeEventListener('skyControlPressed', goToFirstPage)
     }
   }, [pageIndex, listRef])
 

@@ -39,7 +39,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: 'src/assets/images/sky-logo-transparent.png',
+        icon: 'src/assets/images/sky-logo-square.png',
       },
     },
     {

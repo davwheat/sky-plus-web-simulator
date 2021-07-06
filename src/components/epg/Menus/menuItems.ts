@@ -170,7 +170,9 @@ export const servicesListItems: ListItem[] = [
   },
   {
     text: 'Sky+ Setup',
-    onClick: () => {},
+    onClick: () => {
+      navigate('/services/sky-plus-setup')
+    },
   },
   {
     text: 'Anytime Setup',

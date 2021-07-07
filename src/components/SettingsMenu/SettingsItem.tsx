@@ -13,7 +13,7 @@ const useStyles = makeStyles({
   },
   label: {
     flexBasis: '65%',
-    
+
     paddingLeft: 6,
     paddingRight: 6,
     height: 32,

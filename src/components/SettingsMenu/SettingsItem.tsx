@@ -39,13 +39,13 @@ const useStyles = makeStyles({
   },
 })
 
-export default function SettingsItem<T>({ label, options, settingsKey, settingsAtom, selected = false }: ISettingsItemProps<T>) {
+export default function SettingsItem<T>({ label, options, selected = false, onChange, selectedValue }: ISettingsItemProps<T>) {
   const classes = useStyles()
 
   return (
     <li data-selected={selected} className={classes.root} tabIndex={0}>
       <span className={classes.label}>{label}</span>
-      <SettingsItemOptions selected={selected} options={options} settingsKey={settingsKey} settingsAtom={settingsAtom} />
+      <SettingsItemOptions onChange={onChange} selected={selected} options={options} selectedValue={selectedValue} />
     </li>
   )
 }

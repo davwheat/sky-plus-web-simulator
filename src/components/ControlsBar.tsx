@@ -6,6 +6,7 @@ import React from 'react'
 import { useRecoilValue } from 'recoil'
 import ColorButton from './ControlVisualisers/ColorButton'
 import ControlText from './ControlVisualisers/ControlText'
+import SelectButton from './ControlVisualisers/SelectButton'
 
 interface ControlItemProps {
   children: React.ReactNode
@@ -88,6 +89,9 @@ const ControlsBar: React.FC = () => {
 
   return (
     <footer className={classes.root}>
+      <ControlItem tooltip="Select" controlName="select">
+        <SelectButton />
+      </ControlItem>
       <ControlItem controlName="backUp">
         <ControlText>BACK UP</ControlText>
       </ControlItem>

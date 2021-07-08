@@ -1,9 +1,8 @@
 import MenuMoreArrowSvg from '@assets/icons/list-arrow.svg'
 import Colors from '@data/Colors'
-import { makeStyles } from '@material-ui/core'
+import { makeStyles, NoSsr } from '@material-ui/core'
 import clsx from 'clsx'
-import React, { useCallback, useEffect } from 'react'
-import { useRecoilState } from 'recoil'
+import React, { useEffect } from 'react'
 import type { ISettingsItemOptionsProps } from './SettingsTypes'
 
 const useStyles = makeStyles({
@@ -71,48 +70,33 @@ const useStyles = makeStyles({
   },
 })
 
-export default function SettingsItemOptions<T>({ options, settingsKey, settingsAtom, selected }: ISettingsItemOptionsProps<T>) {
+export default function SettingsItemOptions<T>({ options, selected, onChange, selectedValue }: ISettingsItemOptionsProps<T>) {
   const classes = useStyles()
 
-  const [settings, setSettings] = useRecoilState(settingsAtom)
-
-  const currentSelectedValue: T = settings[settingsKey]
+  console.log(selectedValue)
 
   const uniqueValues = new Set(options.map(v => v.value))
   if (uniqueValues.size !== options.length) throw 'Options array has multiple items with the same value.'
 
-  /**
-   * Accepts the new value of this setting and sets it in the Recoil atom while
-   * preserving the values of other settings.
-   */
-  const setSetting = useCallback(
-    (newValue: T) => {
-      setSettings(prev => {
-        const newObj = { ...prev }
-
-        newObj[settingsKey] = newValue
-
-        return newObj
-      })
-    },
-    [settingsKey],
-  )
-
   function changeSelectedOption(direction: 'left' | 'right') {
     if (direction === 'left') {
-      const selectedIndex = options.findIndex(o => o.value === currentSelectedValue)
+      const selectedIndex = options.findIndex(o => o.value === selectedValue)
 
       let newIndex = selectedIndex - 1
       if (newIndex === -1) newIndex = options.length - 1
 
-      setSetting(options[newIndex].value)
+      console.log(options[newIndex])
+
+      onChange(options[newIndex].value)
     } else if (direction === 'right') {
-      const selectedIndex = options.findIndex(o => o.value === currentSelectedValue)
+      const selectedIndex = options.findIndex(o => o.value === selectedValue)
 
       let newIndex = selectedIndex + 1
       if (newIndex === options.length) newIndex = 0
 
-      setSetting(options[newIndex].value)
+      console.log(options[newIndex])
+
+      onChange(options[newIndex].value)
     }
   }
 
@@ -146,13 +130,15 @@ export default function SettingsItemOptions<T>({ options, settingsKey, settingsA
 
   return (
     <ul className={classes.root}>
-      {options.map(option => {
-        return (
-          <li key={`${option.label}___${option.value}`} className={clsx({ [classes.hidden]: option.value !== currentSelectedValue })}>
-            {option.label}
-          </li>
-        )
-      })}
+      <NoSsr>
+        {options.map(option => {
+          return (
+            <li key={`${option.label}___${option.value}`} className={clsx({ [classes.hidden]: option.value !== selectedValue })}>
+              {option.label}
+            </li>
+          )
+        })}
+      </NoSsr>
     </ul>
   )
 }

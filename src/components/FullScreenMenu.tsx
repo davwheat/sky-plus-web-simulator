@@ -56,6 +56,8 @@ export interface MenuProps<T> {
   listItem: (props: Omit<T, 'key'>) => JSX.Element
   moreListItem: ({ onClick, selected }: { onClick: () => void; selected: boolean }) => JSX.Element
   className?: string
+  footerItem?: (props: any) => JSX.Element
+  onSelectionChange?: (i: number, length: number, footerShown: boolean) => void
 }
 
 /**
@@ -64,7 +66,15 @@ export interface MenuProps<T> {
  * Provide with a list of menu items, a menu item component, and an `onBack` handler and the rest
  * will be handled for you.
  */
-const Menu = <T extends { key: string }>({ className, onBack, data, listItem: ListItem, moreListItem: MoreListItem }: MenuProps<T>) => {
+const Menu = <T extends { key: string }>({
+  className,
+  onBack,
+  data,
+  listItem: ListItem,
+  moreListItem: MoreListItem,
+  footerItem: FooterItem,
+  onSelectionChange,
+}: MenuProps<T>) => {
   const classes = useStyles()
   const listRef = useRef<HTMLOListElement>(null)
   // Ensures that the Back Up button state is correctly set when the first page is loaded.
@@ -77,6 +87,9 @@ const Menu = <T extends { key: string }>({ className, onBack, data, listItem: Li
   // Get list of pages. Memoised for speeeeeed!
   const pages = useMemo(() => splitMenuIntoPages(data), [data])
   const thisPage = pages[pageIndex]
+
+  const pageLength = FooterItem ? thisPage.length + 1 : thisPage.length
+  console.log('L', pageLength)
 
   function handleKeyboardNavigation(this: Document, e: KeyboardEvent) {
     if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return
@@ -99,17 +112,33 @@ const Menu = <T extends { key: string }>({ className, onBack, data, listItem: Li
   }
 
   function navigateMenuItems(direction: 'up' | 'down') {
+    const pageLength = FooterItem ? thisPage.length + 1 : thisPage.length
+    let newIndex = -1
+
     if (direction === 'up') {
       setSelectedItem(i => {
-        if (i !== 0) return i - 1
-        else return thisPage.length - 1
+        if (i !== 0) newIndex = i - 1
+        else newIndex = pageLength - 1
+
+        return newIndex
       })
     } else if (direction === 'down') {
       setSelectedItem(i => {
-        if (i !== thisPage.length - 1) return i + 1
-        else return 0
+        if (i !== pageLength - 1) newIndex = i + 1
+        else newIndex = 0
+
+        return newIndex
       })
     }
+
+    console.log('NI', newIndex)
+
+    typeof onSelectionChange === 'function' && onSelectionChange(newIndex, pageLength, !!FooterItem)
+  }
+
+  if (selectedItem < 0 || selectedItem >= pageLength) {
+    setSelectedItem(0)
+    onSelectionChange(0, pageLength, !!FooterItem)
   }
 
   function handleBackUp(e: SkyControlPressedEvent) {
@@ -117,6 +146,8 @@ const Menu = <T extends { key: string }>({ className, onBack, data, listItem: Li
       if (pageIndex > 0) {
         e.stopImmediatePropagation()
         setPageIndex(0)
+        setSelectedItem(0)
+        onSelectionChange(0, pageLength, !!FooterItem)
       } else if (pageIndex === 0 && onBack) {
         e.stopImmediatePropagation()
         onBack(e)
@@ -146,7 +177,7 @@ const Menu = <T extends { key: string }>({ className, onBack, data, listItem: Li
 
       setControlsState(controlsShownStateSetter(['upArrow', 'downArrow', 'backUp'], false))
     }
-  }, [pageIndex, listRef])
+  }, [pageIndex, listRef, FooterItem, pageLength])
 
   return (
     <ol
@@ -164,6 +195,7 @@ const Menu = <T extends { key: string }>({ className, onBack, data, listItem: Li
       {pages.length - 1 !== pageIndex && (
         <MoreListItem selected={selectedItem === thisPage.length - 1} onClick={() => setPageIndex(p => p + 1)} />
       )}
+      {FooterItem && <FooterItem selected={selectedItem === pageLength - 1} />}
     </ol>
   )
 }

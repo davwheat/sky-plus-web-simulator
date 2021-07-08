@@ -28,6 +28,7 @@
     "@material-ui/styles": "^4.11.4",
     "clsx": "^1.1.1",
     "dayjs": "^1.10.6",
+    "deep-equal": "^2.0.5",
     "focus-trap-react": "^8.7.0",
     "gatsby": "^3.8.1",
     "gatsby-plugin-image": "^1.8.0",

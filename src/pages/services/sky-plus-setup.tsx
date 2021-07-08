@@ -2,6 +2,7 @@ import EpgBackgroundImage from '@assets/images/guide-bg.sized.png'
 import { controlsState } from '@atoms/controlsState'
 import { skyPlusSetupAtom } from '@atoms/skyPlusSetupAtom'
 import ControlArrows from '@components/ControlVisualisers/ControlArrows'
+import ControlText from '@components/ControlVisualisers/ControlText'
 import ColorButtonsFooter from '@components/epg/Footer/ColorButtonsFooter'
 import { Header, TitleHeader } from '@components/epg/Header'
 import SettingsMenu from '@components/SettingsMenu/SettingsMenu'
@@ -10,7 +11,7 @@ import controlsShownStateSetter from '@helpers/controlsShownStateSetter'
 import InnerLayout from '@layouts/InnerLayout'
 import { makeStyles } from '@material-ui/core'
 import { navigate } from 'gatsby'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useResetRecoilState, useSetRecoilState } from 'recoil'
 
 const useStyles = makeStyles({
@@ -68,6 +69,8 @@ export default function SkyPlusSetupPage() {
     }
   })
 
+  const [footerType, setFooterType] = useState<'changeSettings' | 'saveSettings'>('changeSettings')
+
   return (
     <InnerLayout>
       <div className={classes.root}>
@@ -77,6 +80,16 @@ export default function SkyPlusSetupPage() {
 
         <SettingsMenu
           className={classes.settings}
+          settingsAtom={skyPlusSetupAtom}
+          onSelectionChange={(i, length, footerItemShown) => {
+            console.log('OSC', i, length, footerItemShown)
+
+            if (footerItemShown && i === length - 1) {
+              footerType !== 'saveSettings' && setFooterType('saveSettings')
+            } else {
+              footerType !== 'changeSettings' && setFooterType('changeSettings')
+            }
+          }}
           settings={[
             {
               key: 'diskSpaceMgmt',
@@ -87,7 +100,6 @@ export default function SkyPlusSetupPage() {
                 { label: 'WARNING', value: 'warning' },
                 { label: 'MANUAL', value: 'manual' },
               ],
-              settingsAtom: skyPlusSetupAtom,
             },
             {
               key: 'instantRewind',
@@ -100,7 +112,6 @@ export default function SkyPlusSetupPage() {
                 { label: '30 MINS', value: 30 },
                 { label: '60 MINS', value: 60 },
               ],
-              settingsAtom: skyPlusSetupAtom,
             },
             {
               key: 'addToStartRec',
@@ -114,7 +125,6 @@ export default function SkyPlusSetupPage() {
                 { label: '5 MINS', value: 5 },
                 { label: '10 MINS', value: 10 },
               ],
-              settingsAtom: skyPlusSetupAtom,
             },
             {
               key: 'addToEndRec',
@@ -128,7 +138,6 @@ export default function SkyPlusSetupPage() {
                 { label: '5 MINS', value: 5 },
                 { label: '10 MINS', value: 10 },
               ],
-              settingsAtom: skyPlusSetupAtom,
             },
             {
               key: 'frontPanelIndicator',
@@ -139,9 +148,9 @@ export default function SkyPlusSetupPage() {
                 { label: 'DEMO', value: 'demo' },
                 { label: 'OFF', value: 'off' },
               ],
-              settingsAtom: skyPlusSetupAtom,
             },
           ]}
+          onSave={() => navigate('/', { state: { selectedTab: 'SERVICES' } })}
         />
 
         <nav className={classes.footer}>
@@ -150,9 +159,16 @@ export default function SkyPlusSetupPage() {
             buttonPressHandler={handleColorButtonPressed}
             buttonsText={{ red: 'Reset all settings' }}
           />
-          <p className={classes.controlPrompt}>
-            Use <ControlArrows variant="horizontal" /> to change setting
-          </p>
+
+          {footerType === 'changeSettings' ? (
+            <p className={classes.controlPrompt}>
+              Use <ControlArrows variant="horizontal" /> to change setting
+            </p>
+          ) : (
+            <p className={classes.controlPrompt}>
+              Press <ControlText>SELECT</ControlText> to save or <ControlText>BACK UP</ControlText> to cancel
+            </p>
+          )}
         </nav>
       </div>
     </InnerLayout>

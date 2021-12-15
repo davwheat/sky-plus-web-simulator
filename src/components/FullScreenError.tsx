@@ -49,7 +49,7 @@ const useStyles = makeStyles({
 /**
  * Displays a full-screen Sky error message using the props provided.
  */
-const FullScreenError: React.FC<ErrorMessageProps> = ({ ...props }) => {
+const FullScreenError = ({ ...props }: ErrorMessageProps) => {
   const classes = useStyles()
 
   return (

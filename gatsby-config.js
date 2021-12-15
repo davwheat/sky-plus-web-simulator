@@ -12,11 +12,7 @@ const prodPlugins =
     : []
 
 module.exports = {
-  flags: {
-    FAST_DEV: true,
-    DEV_SSR: true,
-    // PARALLEL_SOURCING: true,
-  },
+  flags: {},
   siteMetadata: {
     title: 'Sky+ EPG Simulator',
     description: 'A web simulation of the old Sky+ electronic programme guide (EPG).',

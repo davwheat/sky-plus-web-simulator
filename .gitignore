@@ -4,12 +4,12 @@ public
 .vscode
 
 # Yarn v2
+.pnp.*
 .yarn/*
 !.yarn/patches
-!.yarn/releases
 !.yarn/plugins
+!.yarn/releases
 !.yarn/sdks
 !.yarn/versions
-.pnp.*
 
 reference images/

@@ -15,11 +15,7 @@ with open(in_file, mode="r", encoding="utf-8") as file:
 
     blank_channel = {
         "name": "Unknown",
-        "logo": None,
         "streamUrl": None,
-        "userAgent": None,
-        "languages": [],
-        "streamsTo": [],
     }
 
     channel = copy.deepcopy(blank_channel)
@@ -32,24 +28,24 @@ with open(in_file, mode="r", encoding="utf-8") as file:
             # Channel info line
 
             # Set name
-            names = re.findall(r'tvg-name="(.*?)"', line)
+            names = re.findall(r'#EXTINF:-1,(.*)', line)
             if len(names) > 0:
                 channel["name"] = names[0]
 
-            # Set logo
-            logos = re.findall(r'tvg-logo="(.*?)"', line)
-            if len(names) > 0:
-                channel["logo"] = logos[0]
+            # # Set logo
+            # logos = re.findall(r'tvg-logo="(.*?)"', line)
+            # if len(names) > 0:
+            #     channel["logo"] = logos[0]
 
-            # Set languages
-            languages = re.findall(r'tvg-language="(.*?)"', line)
-            if len(languages) > 0:
-                channel["languages"] = languages[0].split(";")
+            # # Set languages
+            # languages = re.findall(r'tvg-language="(.*?)"', line)
+            # if len(languages) > 0:
+            #     channel["languages"] = languages[0].split(";")
 
-            # Set countries
-            countries = re.findall(r'tvg-country="(.*?)"', line)
-            if len(languages) > 0:
-                channel["streamsTo"] = countries[0].split(";")
+            # # Set countries
+            # countries = re.findall(r'tvg-country="(.*?)"', line)
+            # if len(languages) > 0:
+            #     channel["streamsTo"] = countries[0].split(";")
 
         if line.startswith("#EXTVLCOPT"):
             # Extra VLC options

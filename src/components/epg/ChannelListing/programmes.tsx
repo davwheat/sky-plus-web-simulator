@@ -43,11 +43,14 @@ const Programmes: React.FC<Props> = ({ programmes, className }) => {
           durationMins = 90 - totalTime
         }
 
+        const isActiveProgramme = dayjs().isBetween(programme.startTime, programme.startTime + programme.duration * 1000)
+
         return (
           <span
             style={{ gridColumnEnd: `span ${durationMins}` }}
             className={clsx(className, durationMins < CUTOFF_FOR_INFO_ICON_IN_MINUTES && classes.infoContainer)}
             key={`${programme.startTime}__${programme.eventId}`}
+            data-active-programme={isActiveProgramme}
           >
             {durationMins < CUTOFF_FOR_INFO_ICON_IN_MINUTES ? <InfoIcon className={classes.info} /> : programme.title}
           </span>

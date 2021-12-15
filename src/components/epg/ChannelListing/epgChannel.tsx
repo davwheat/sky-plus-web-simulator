@@ -1,11 +1,13 @@
 import { scheduleTimeState } from '@atoms'
 import Colors from '@data/Colors'
 import { Channel } from '@data/epg/AllChannels'
+import streamData from '@data/epg/streams/Streams'
 import getProgrammeListingForSID, { EPGChannelListing, Programme } from '@data/getEpg'
 import { makeStyles } from '@material-ui/core'
 import clsx from 'clsx'
 import dayjs from 'dayjs'
 import dayJsIsBetween from 'dayjs/plugin/isBetween'
+import { navigate } from 'gatsby'
 import React, { useEffect, useMemo, useState } from 'react'
 import { useRecoilValue } from 'recoil'
 import Programmes from './programmes'
@@ -31,6 +33,19 @@ const useStyles = makeStyles({
     color: '#fff',
     background: Colors.main,
     lineHeight: 1,
+    cursor: 'not-allowed',
+
+    '&[data-has-stream]': {
+      cursor: 'pointer',
+    },
+
+    '&:hover, &:focus': {
+      // Highlight channel's active programme
+      '&, & ~ $programme[data-active-programme=true]:not(& ~ $programme[data-active-programme=true] ~ $programme[data-active-programme=true])': {
+        background: Colors.yellowMain,
+        color: Colors.main,
+      },
+    },
   },
   programme: {
     '&': {
@@ -92,9 +107,17 @@ const EpgChannel: React.FC<Props> = ({ channel }) => {
     }
   }, [programmeListings, getProgrammeListingForSID, channel])
 
+  const streamDetails = streamData.find(stream => stream.name === channel.name)
+
+  function browseToStream() {
+    if (!streamDetails) return
+
+    navigate(`/watch-channel/${channel.channelNumber}`)
+  }
+
   return (
     <>
-      <span className={clsx(classes.channelName, classes.item)}>
+      <span data-has-stream={!!streamDetails} role="button" className={clsx(classes.channelName, classes.item)} onClick={browseToStream}>
         <span className={classes.channelNumber}>{channel.channelNumber}</span>
         {channel.name}
       </span>
@@ -104,7 +127,7 @@ const EpgChannel: React.FC<Props> = ({ channel }) => {
 
       {!programmeListings && !eventsWeCareAbout && <span aria-hidden style={{ gridColumnEnd: 'span 90' }} />}
       {programmeListings && eventsWeCareAbout && <Programmes className={clsx(classes.programme, classes.item)} programmes={eventsWeCareAbout} />}
-      {programmeListings && eventsWeCareAbout && eventsWeCareAbout.length === 0 && (
+      {programmeListings && !eventsWeCareAbout?.length && (
         <span className={clsx(classes.programme, classes.noListings, classes.item)} style={{ gridColumnEnd: 'span 90' }}>
           ..no listings available
         </span>

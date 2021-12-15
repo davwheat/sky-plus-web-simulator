@@ -7,7 +7,7 @@ on:
   pull_request:
 
 env:
-  NODE_VERSION: "14.x"
+  NODE_VERSION: "16.x"
 
 jobs:
   install:
@@ -22,6 +22,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ env.NODE_VERSION }}
+          cache: 'yarn'
 
       - name: Use npm v7
         run: npm i -g npm@7

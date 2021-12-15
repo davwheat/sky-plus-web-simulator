@@ -91,9 +91,9 @@ const AudioWrapper: React.FC = () => {
     const playPromise = chooseMusic()
 
     if (playPromise) {
-      playPromise.catch((e) => {
-        console.warn(e);
-        
+      playPromise.catch(e => {
+        console.warn(e)
+
         console.warn("Background music won't auto-start")
 
         enqueueSnackbar('Music is muted', {

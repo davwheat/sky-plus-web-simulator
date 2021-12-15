@@ -1,3 +1,4 @@
+const allStreams = require('./src/data/epg/streams/uk-m3u-streams.json')
 const path = require('path')
 
 exports.onCreateWebpackConfig = ({ actions }) => {
@@ -23,5 +24,38 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         '@constants': path.resolve(__dirname, 'src/constants'),
       },
     },
+  })
+}
+
+const channelList = require('./src/data/epg/channelList.json')
+
+function getAllChannels() {
+  return Object.values(channelList)
+}
+
+exports.createPages = ({ actions }) => {
+  const { createPage } = actions
+
+  const channels = getAllChannels()
+
+  const channelsWithStreams = channels.reduce((channels, channel) => {
+    const streamData = allStreams.find(stream => stream.name === channel.name)
+
+    if (streamData) {
+      channels.push({
+        channel,
+        streamData,
+      })
+    }
+
+    return channels
+  }, [])
+
+  channelsWithStreams.forEach(({ channel, streamData }) => {
+    createPage({
+      path: `/watch-channel/${channel.channelNumber}`,
+      component: path.resolve(`./src/components/Watch/WatchChannelPage.tsx`),
+      context: { channel, streamData },
+    })
   })
 }

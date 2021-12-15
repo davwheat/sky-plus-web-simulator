@@ -12,8 +12,7 @@ const prodPlugins =
     : []
 
 module.exports = {
-  flags: {
-  },
+  flags: {},
   siteMetadata: {
     title: 'Sky+ EPG Simulator',
     description: 'A web simulation of the old Sky+ electronic programme guide (EPG).',

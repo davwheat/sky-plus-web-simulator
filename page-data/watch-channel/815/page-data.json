@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-components-watch-watch-channel-page-tsx",
+    "path": "/watch-channel/815",
+    "result": {"pageContext":{"channel":{"sid":"2086","channelNumber":"815","name":"BBC Four HD","quality":"HD","genre":3},"streamData":{"name":"BBC Four HD","streamUrl":"https://vs-hls-pushb-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:bbc_four_hd/t=3840/v=pv14/b=5070016/main.m3u8"}}},
+    "staticQueryHashes": ["63159454"]}

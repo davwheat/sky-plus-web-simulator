@@ -11,7 +11,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
   return (
     <footer className={className}>
       Version {version} • Created by{' '}
-      <a target="_blank" rel="noopener" href="https://github.com/davwheat">
+      <a target="_blank" rel="noopener" href="https://davwheat.dev">
         David Wheatley
       </a>{' '}
       •{' '}

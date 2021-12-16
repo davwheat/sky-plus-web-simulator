@@ -99,6 +99,7 @@ const AudioWrapper: React.FC = () => {
         enqueueSnackbar('Music is muted', {
           variant: 'warning',
           persist: true,
+          key: 'MUSIC_MUTED',
           action: key => (
             <Button
               onClick={() => {

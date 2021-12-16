@@ -1,4 +1,7 @@
+import hls from 'hls.js'
 import './src/styles/main.less'
+
+window.Hls = hls
 
 window.__bgAudio = new Audio()
 window.__bgAudio.loop = true

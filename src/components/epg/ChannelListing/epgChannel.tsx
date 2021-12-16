@@ -35,13 +35,13 @@ const useStyles = makeStyles({
     lineHeight: 1,
     cursor: 'not-allowed',
 
-    '&[data-has-stream]': {
+    '&[data-has-stream=true]': {
       cursor: 'pointer',
     },
 
     '&:hover, &:focus': {
       // Highlight channel's active programme
-      '&, & ~ $programme[data-active-programme=true]:not(& ~ $programme[data-active-programme=true] ~ $programme[data-active-programme=true])': {
+      '&, & ~ $programme[data-active-programme=true]:not(& ~ $programme[data-active-programme=true] ~ $programme[data-active-programme=true]):not($channelName:hover + span + [data-nolistings=true] ~ $programme[data-active-programme=true])': {
         background: Colors.yellowMain,
         color: Colors.main,
       },
@@ -128,7 +128,7 @@ const EpgChannel: React.FC<Props> = ({ channel }) => {
       {!programmeListings && !eventsWeCareAbout && <span aria-hidden style={{ gridColumnEnd: 'span 90' }} />}
       {programmeListings && eventsWeCareAbout && <Programmes className={clsx(classes.programme, classes.item)} programmes={eventsWeCareAbout} />}
       {programmeListings && !eventsWeCareAbout?.length && (
-        <span className={clsx(classes.programme, classes.noListings, classes.item)} style={{ gridColumnEnd: 'span 90' }}>
+        <span data-nolistings className={clsx(classes.programme, classes.noListings, classes.item)} style={{ gridColumnEnd: 'span 90' }}>
           ..no listings available
         </span>
       )}

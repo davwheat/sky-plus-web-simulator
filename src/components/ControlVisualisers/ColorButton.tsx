@@ -22,7 +22,7 @@ interface ColorButtonProps {
   className?: string
 }
 
-const ColorButton: React.FC<ColorButtonProps> = ({ buttonColor, className }) => {
+const ColorButton = ({ buttonColor, className }: ColorButtonProps) => {
   const classes = useStyles()
 
   return (

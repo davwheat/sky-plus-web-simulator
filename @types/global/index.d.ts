@@ -1,3 +1,5 @@
+import type Hls from 'hls.js'
+
 declare global {
   export type MainMenuTab = 'GUIDE' | 'BOX OFFICE' | 'SERVICES' | 'INTERACTIVE'
 
@@ -33,6 +35,8 @@ declare global {
        */
       enqueue: (pagePath: string) => void
     }
+
+    Hls: typeof Hls
   }
 }
 

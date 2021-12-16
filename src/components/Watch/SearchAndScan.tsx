@@ -3,8 +3,10 @@ import ColorButton from '@components/ControlVisualisers/ColorButton'
 import ControlArrows from '@components/ControlVisualisers/ControlArrows'
 import Colors from '@data/Colors'
 import type { Channel } from '@data/epg/AllChannels'
+import getProgrammeListingForSID, { Programme } from '@data/getEpg'
 import { makeStyles } from '@material-ui/core'
-import React from 'react'
+import dayjs from 'dayjs'
+import React, { useEffect, useState } from 'react'
 import { useRecoilValue } from 'recoil'
 
 interface Props {
@@ -37,12 +39,12 @@ const useStyles = makeStyles({
   },
   main: {
     padding: '4px 0',
-    paddingLeft: 24,
+    paddingLeft: 48,
     background: Colors.mainFaded,
     fontSize: 22,
     height: '2.75em',
     display: 'grid',
-    gridTemplateColumns: '20fr 80fr',
+    gridTemplateColumns: '18fr 82fr',
     gridTemplateRows: '1fr 1fr',
     fontFamily: 'ZurichBT',
     gap: 6,
@@ -84,11 +86,41 @@ const useStyles = makeStyles({
   later: {
     color: Colors.mainFadedText,
   },
+  noInfo: {
+    color: Colors.yellowText,
+    gridColumn: '1 / span 2',
+  },
 })
 
 export default function SearchAndScan({ channel }: Props) {
   const classes = useStyles()
   const { time } = useRecoilValue(timeState)
+  const [programmeInfo, setProgrammeInfo] = useState<null | false | Programme[]>(null)
+
+  useEffect(() => {
+    const abortController = new AbortController()
+
+    getProgrammeListingForSID(channel.sid, { abortController }).then(listing => {
+      const currentProgrammeIndex = listing.schedule.findIndex(
+        programme =>
+          (programme.startTime <= time.toDate().getTime() && programme.startTime + programme.duration * 1000 >= time.toDate().getTime()),
+      )
+
+      console.log(currentProgrammeIndex);
+      
+
+      if (currentProgrammeIndex === -1) {
+        setProgrammeInfo(false)
+      } else {
+        setProgrammeInfo([listing.schedule[currentProgrammeIndex], listing.schedule?.[currentProgrammeIndex + 1]].filter(Boolean))
+      }
+    })
+  })
+
+  const noInfoMessage = <span className={classes.noInfo}>Further schedule information is not available</span>
+
+  console.log(programmeInfo);
+  
 
   return (
     <aside className={classes.root}>
@@ -98,10 +130,19 @@ export default function SearchAndScan({ channel }: Props) {
         <span className={classes.headerTime}>{time.format('H.mma ddd D MMM')}</span>
       </div>
       <div className={classes.main}>
-        <span className={classes.now}>NOW</span>
-        <span className={classes.now}>This is mega poggers</span>
-        <span className={classes.later}>xx.xxam</span>
-        <span className={classes.later}>Fun time!</span>
+        {programmeInfo?.[0] && (
+          <>
+            <span className={classes.now}>NOW</span>
+            <span className={classes.now}>{(programmeInfo[0] as Programme).title}</span>
+          </>
+        )}
+        {programmeInfo?.[1] ? (
+          <>
+            <span className={classes.now}>{dayjs(programmeInfo[1].startTime).format('h.mma')}</span>
+            <span className={classes.now}>{(programmeInfo[1] as Programme).title}</span>
+          </>
+        ) : noInfoMessage}
+        {programmeInfo === false && noInfoMessage}
       </div>
       <div className={classes.footer}>
         <div className={classes.footerSection}>

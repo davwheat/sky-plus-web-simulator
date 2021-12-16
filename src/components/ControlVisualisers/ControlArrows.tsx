@@ -43,7 +43,7 @@ const useStyles = makeStyles({
         marginLeft: '-0.25em',
       },
       '&:last-child': {
-        transform: 'rotate(-90deg) translateX(-0.035em)',
+        transform: 'rotate(-90deg)',
         marginLeft: '-0.45em',
         marginRight: '-0.25em',
       },

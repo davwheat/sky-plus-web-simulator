@@ -1,7 +1,7 @@
 import dayjs from 'dayjs'
 
 export function formatTimingHeader(dayjsObj: dayjs.Dayjs) {
-  return dayjsObj.format('h:mma')
+  return dayjsObj.format('h.mma')
 }
 
 /**

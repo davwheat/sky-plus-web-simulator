@@ -42,9 +42,10 @@ const WatchChannelPage: React.FC<Props> = ({ pageContext: { channel, streamData 
     }
   }
 
+  setControlsVisible(controlsShownStateSetter(['backUp'], true))
+
   useEffect(() => {
     document.addEventListener('skyControlPressed', goBack)
-    setControlsVisible(controlsShownStateSetter(['backUp'], true))
     window.__bgAudio.pause()
 
     let hls: Hls

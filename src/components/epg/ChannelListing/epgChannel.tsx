@@ -41,10 +41,11 @@ const useStyles = makeStyles({
 
     '&:hover, &:focus': {
       // Highlight channel's active programme
-      '&, & ~ $programme[data-active-programme=true]:not(& ~ $programme[data-active-programme=true] ~ $programme[data-active-programme=true]):not($channelName:hover + span + [data-nolistings=true] ~ $programme[data-active-programme=true])': {
-        background: Colors.yellowMain,
-        color: Colors.main,
-      },
+      '&, & ~ $programme[data-active-programme=true]:not(& ~ $programme[data-active-programme=true] ~ $programme[data-active-programme=true]):not($channelName:hover + span + [data-nolistings=true] ~ $programme[data-active-programme=true])':
+        {
+          background: Colors.yellowMain,
+          color: Colors.main,
+        },
     },
   },
   programme: {

@@ -82,8 +82,8 @@ const useStyles = makeStyles({
     color: '#fff',
   },
   later: {
-    color: Colors.mainFadedText
-  }
+    color: Colors.mainFadedText,
+  },
 })
 
 export default function SearchAndScan({ channel }: Props) {

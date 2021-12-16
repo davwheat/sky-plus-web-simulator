@@ -100,8 +100,8 @@ export default function SearchAndScan({ channel }: Props) {
       <div className={classes.main}>
         <span className={classes.now}>NOW</span>
         <span className={classes.now}>This is mega poggers</span>
-        <span className={classes.later}>69.69am</span>
-        <span className={classes.later}>Cock time!</span>
+        <span className={classes.later}>xx.xxam</span>
+        <span className={classes.later}>Fun time!</span>
       </div>
       <div className={classes.footer}>
         <div className={classes.footerSection}>

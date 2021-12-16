@@ -100,27 +100,31 @@ export default function SearchAndScan({ channel }: Props) {
   useEffect(() => {
     const abortController = new AbortController()
 
-    getProgrammeListingForSID(channel.sid, { abortController }).then(listing => {
-      const currentProgrammeIndex = listing.schedule.findIndex(
-        programme =>
-          (programme.startTime <= time.toDate().getTime() && programme.startTime + programme.duration * 1000 >= time.toDate().getTime()),
-      )
+    if (programmeInfo === null) {
+      getProgrammeListingForSID(channel.sid, { abortController })
+        .then(listing => {
+          const currentProgrammeIndex = listing.schedule.findIndex(
+            programme =>
+              programme.startTime <= time.toDate().getTime() && programme.startTime + programme.duration * 1000 >= time.toDate().getTime(),
+          )
 
-      console.log(currentProgrammeIndex);
-      
+          console.log(currentProgrammeIndex)
 
-      if (currentProgrammeIndex === -1) {
-        setProgrammeInfo(false)
-      } else {
-        setProgrammeInfo([listing.schedule[currentProgrammeIndex], listing.schedule?.[currentProgrammeIndex + 1]].filter(Boolean))
-      }
-    })
+          if (currentProgrammeIndex === -1) {
+            setProgrammeInfo(false)
+          } else {
+            setProgrammeInfo([listing.schedule[currentProgrammeIndex], listing.schedule?.[currentProgrammeIndex + 1]].filter(Boolean))
+          }
+        })
+        .catch()
+    }
+
+    return () => {
+      abortController.abort()
+    }
   })
 
   const noInfoMessage = <span className={classes.noInfo}>Further schedule information is not available</span>
-
-  console.log(programmeInfo);
-  
 
   return (
     <aside className={classes.root}>
@@ -141,7 +145,9 @@ export default function SearchAndScan({ channel }: Props) {
             <span className={classes.now}>{dayjs(programmeInfo[1].startTime).format('h.mma')}</span>
             <span className={classes.now}>{(programmeInfo[1] as Programme).title}</span>
           </>
-        ) : noInfoMessage}
+        ) : (
+          noInfoMessage
+        )}
         {programmeInfo === false && noInfoMessage}
       </div>
       <div className={classes.footer}>

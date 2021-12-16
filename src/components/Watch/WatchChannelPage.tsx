@@ -1,4 +1,4 @@
-import { controlsState } from '@atoms'
+import { controlsState, tvLicenseState } from '@atoms'
 import FullScreenError from '@components/FullScreenError'
 import type { Channel } from '@data/epg/AllChannels'
 import type { Stream } from '@data/epg/streams/Streams'
@@ -9,7 +9,7 @@ import { navigate, PageProps } from 'gatsby'
 import type Hls from 'hls.js'
 import { useSnackbar } from 'notistack'
 import React, { useEffect, useRef, useState } from 'react'
-import { useSetRecoilState } from 'recoil'
+import { useRecoilValue, useSetRecoilState } from 'recoil'
 import SearchAndScan from './SearchAndScan'
 
 type Props = PageProps<object, { channel: Channel; streamData: Stream }>
@@ -27,6 +27,7 @@ const useStyles = makeStyles({
 const WatchChannelPage: React.FC<Props> = ({ pageContext: { channel, streamData } }) => {
   const classes = useStyles()
   const setControlsVisible = useSetRecoilState(controlsState)
+  const tvLicenseStateValue = useRecoilValue(tvLicenseState)
   const [pageState, setPageState] = useState({
     error: false,
   })
@@ -48,34 +49,36 @@ const WatchChannelPage: React.FC<Props> = ({ pageContext: { channel, streamData 
 
     let hls: Hls
 
-    if (videoRef.current) {
-      if (!window.Hls.isSupported() && !pageState.error) {
-        setPageState(s => ({ ...s, error: true }))
-      }
+    if (tvLicenseStateValue.hasTvLicense) {
+      if (videoRef.current) {
+        if (!window.Hls.isSupported() && !pageState.error) {
+          setPageState(s => ({ ...s, error: true }))
+        }
 
-      hls = new window.Hls({ debug: true })
-      hls.loadSource(streamData.streamUrl)
-      hls.attachMedia(videoRef.current)
+        hls = new window.Hls()
+        hls.loadSource(streamData.streamUrl)
+        hls.attachMedia(videoRef.current)
 
-      hls.on(window.Hls.Events.MEDIA_ATTACHED, () => {
-        videoRef.current.play().catch(() => {
-          enqueueSnackbar('TV stream is paused', {
-            variant: 'warning',
-            persist: true,
-            key: 'STREAM_PAUSED',
-            action: key => (
-              <Button
-                onClick={() => {
-                  videoRef.current.play()
-                  closeSnackbar(key)
-                }}
-              >
-                Resume stream
-              </Button>
-            ),
+        hls.on(window.Hls.Events.MEDIA_ATTACHED, () => {
+          videoRef.current.play().catch(() => {
+            enqueueSnackbar('TV stream is paused', {
+              variant: 'warning',
+              persist: true,
+              key: 'STREAM_PAUSED',
+              action: key => (
+                <Button
+                  onClick={() => {
+                    videoRef.current.play()
+                    closeSnackbar(key)
+                  }}
+                >
+                  Resume stream
+                </Button>
+              ),
+            })
           })
         })
-      })
+      }
     }
 
     return () => {
@@ -94,13 +97,20 @@ const WatchChannelPage: React.FC<Props> = ({ pageContext: { channel, streamData 
   return (
     <InnerLayout>
       <div className={classes.root}>
-        {!pageState.error && <video ref={videoRef} className={classes.video} />}
-        {pageState.error && (
+        {tvLicenseStateValue.hasTvLicense && !pageState.error && <video ref={videoRef} className={classes.video} />}
+        {tvLicenseStateValue.hasTvLicense && pageState.error && (
           <FullScreenError errorCode={30}>
             <br />
             There is a technical fault with this channel
             <br />
             Please try again later
+          </FullScreenError>
+        )}
+
+        {tvLicenseStateValue.hasOptedOutOfTvLicenseContent && (
+          <FullScreenError errorCode={null} controlPrompt controlPromptAction="return">
+            <br />
+            This content is only available to TV Licensees
           </FullScreenError>
         )}
 

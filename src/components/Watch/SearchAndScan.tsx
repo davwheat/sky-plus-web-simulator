@@ -142,8 +142,8 @@ export default function SearchAndScan({ channel }: Props) {
         )}
         {programmeInfo?.[1] ? (
           <>
-            <span className={classes.now}>{dayjs(programmeInfo[1].startTime).format('h.mma')}</span>
-            <span className={classes.now}>{(programmeInfo[1] as Programme).title}</span>
+            <span className={classes.later}>{dayjs(programmeInfo[1].startTime).format('h.mma')}</span>
+            <span className={classes.later}>{(programmeInfo[1] as Programme).title}</span>
           </>
         ) : (
           noInfoMessage

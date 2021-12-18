@@ -108,8 +108,6 @@ export default function SearchAndScan({ channel }: Props) {
               programme.startTime <= time.toDate().getTime() && programme.startTime + programme.duration * 1000 >= time.toDate().getTime(),
           )
 
-          console.log(currentProgrammeIndex)
-
           if (currentProgrammeIndex === -1) {
             setProgrammeInfo(false)
           } else {

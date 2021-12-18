@@ -49,6 +49,14 @@ const useStyles = makeStyles({
     fontFamily: 'ZurichBT',
     gap: 6,
     lineHeight: 1,
+    '& > *': {
+      '&': {
+        textOverflow: 'ellipsis',
+      },
+      'text-overflow': '".."',
+      whiteSpace: 'nowrap',
+      overflow: 'hidden',
+    },
   },
   footer: {
     color: Colors.main,

@@ -60,8 +60,20 @@ const WatchChannelPage: React.FC<Props> = ({ pageContext: { channel, streamData 
         hls.loadSource(streamData.streamUrl)
         hls.attachMedia(videoRef.current)
 
+        hls.on(window.Hls.Events.ERROR, (_, e) => {
+          console.warn(e)
+
+          switch (e.type) {
+            case 'networkError':
+              setPageState(s => ({ ...s, error: true }))
+              break
+          }
+        })
+
         hls.on(window.Hls.Events.MEDIA_ATTACHED, () => {
-          videoRef.current.play().catch(() => {
+          videoRef.current.play().catch(e => {
+            console.warn(e)
+
             enqueueSnackbar('TV stream is paused', {
               variant: 'warning',
               persist: true,

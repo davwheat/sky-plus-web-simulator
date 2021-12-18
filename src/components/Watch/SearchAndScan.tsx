@@ -114,7 +114,11 @@ export default function SearchAndScan({ channel }: Props) {
             setProgrammeInfo([listing.schedule[currentProgrammeIndex], listing.schedule?.[currentProgrammeIndex + 1]].filter(Boolean))
           }
         })
-        .catch()
+        .catch(e => {
+          if (e.name === 'AbortError') return
+
+          console.error(e)
+        })
     }
 
     return () => {

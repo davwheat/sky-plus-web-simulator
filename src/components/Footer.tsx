@@ -2,8 +2,6 @@ import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
 import PackageJson from '../../package.json'
 
-const { version } = PackageJson
-
 interface FooterProps {
   className: string
 }

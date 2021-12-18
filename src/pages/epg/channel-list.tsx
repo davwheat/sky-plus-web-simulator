@@ -7,7 +7,7 @@ import InnerLayout from '@layouts/InnerLayout'
 import type { WindowLocation } from '@reach/router'
 import { navigate, PageProps } from 'gatsby'
 import React, { useEffect } from 'react'
-import { useSetRecoilState } from 'recoil'
+import { useRecoilState, useSetRecoilState } from 'recoil'
 
 type Props = PageProps<object, object, WindowLocation<{ startFromChannelNumber?: string; genre?: Genres }>['state']>
 
@@ -39,7 +39,7 @@ const ChannelListingPage: React.FC<Props> = ({ location }) => {
   const startFromChannelNumber = location?.state?.startFromChannelNumber || getStartChannelFromWindow() || '101'
   const genreNumber: number | null = location?.state?.genre || getGenreFromWindow() || null
 
-  const setControlsVisible = useSetRecoilState(controlsState)
+  const [controlsVisible, setControlsVisible] = useRecoilState(controlsState)
 
   function goBack(e: SkyControlPressedEvent) {
     const control = e.detail.control
@@ -56,7 +56,7 @@ const ChannelListingPage: React.FC<Props> = ({ location }) => {
 
     return () => {
       document.removeEventListener('skyControlPressed', goBack)
-      setControlsVisible(controlsShownStateSetter(['backUp'], false))
+      controlsVisible.backUp && setControlsVisible(controlsShownStateSetter(['backUp'], false))
     }
   })
 

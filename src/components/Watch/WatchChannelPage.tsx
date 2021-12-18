@@ -9,7 +9,7 @@ import { navigate, PageProps } from 'gatsby'
 import type Hls from 'hls.js'
 import { useSnackbar } from 'notistack'
 import React, { useEffect, useRef, useState } from 'react'
-import { useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil'
+import { useRecoilState, useRecoilValue } from 'recoil'
 import SearchAndScan from './SearchAndScan'
 
 type Props = PageProps<object, { channel: Channel; streamData: Stream }>

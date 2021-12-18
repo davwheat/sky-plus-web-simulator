@@ -10,31 +10,19 @@
  * @param isShown (optional) Whether it/they should be shown or not
  * @returns Recoil setState handler function to set the visibility of this control
  */
-export default function controlsShownStateSetter(controlName: SkyControl | SkyControl[], isShown?: boolean) {
-  if (Array.isArray(controlName)) {
-    return controlsRaw => {
-      let controls = { ...controlsRaw }
-
-      controlName.forEach(control => {
-        if (Object.keys(controls).includes(control)) {
-          controls[control] = typeof isShown !== 'boolean' ? !controls[control] : isShown
-        } else {
-          throw `Invalid control provided to \`controlsShownStateSetter\`: "${control}".`
-        }
-      })
-
-      return controls
-    }
-  }
+export default function controlsShownStateSetter(controls: SkyControl | SkyControl[], isShown?: boolean) {
+  const controlName = Array.isArray(controls) ? controls : [controls]
 
   return controlsRaw => {
     let controls = { ...controlsRaw }
 
-    if (Object.keys(controls).includes(controlName)) {
-      controls[controlName] = typeof isShown !== 'boolean' ? !controls[controlName] : isShown
-    } else {
-      throw `Invalid control provided to \`controlsShownStateSetter\`: "${controlName}".`
-    }
+    controlName.forEach(control => {
+      if (Object.keys(controls).includes(control)) {
+        controls[control] = typeof isShown !== 'boolean' ? !controls[control] : isShown
+      } else {
+        throw `Invalid control provided to \`controlsShownStateSetter\`: "${control}".`
+      }
+    })
 
     return controls
   }

@@ -2,14 +2,14 @@ import ControlsBar from '@components/ControlsBar'
 import Footer from '@components/Footer'
 import Settings from '@components/Settings'
 import StateManager from '@components/StateManager'
-import chooseMusic from '@data/chooseMusic'
+import withPlayMusic from '@data/chooseMusic'
 import Colors from '@data/Colors'
 import muiTheme from '@data/muiTheme'
-import { Button, CssBaseline, IconButton, makeStyles, ThemeProvider } from '@material-ui/core'
+import { CssBaseline, IconButton, makeStyles, ThemeProvider } from '@material-ui/core'
 import withTvLicense from '@wrappers/withTvLicense'
 import SettingsIcon from 'mdi-react/SettingsIcon'
 import { SnackbarProvider, useSnackbar } from 'notistack'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { RecoilRoot } from 'recoil'
 
 interface Props {
@@ -87,36 +87,7 @@ const ContentWrapper: React.FC = ({ children }) => {
 const AudioWrapper: React.FC = () => {
   const { enqueueSnackbar, closeSnackbar } = useSnackbar()
 
-  useEffect(() => {
-    const playPromise = chooseMusic()
-
-    if (playPromise) {
-      playPromise.catch(e => {
-        console.warn(e)
-        console.warn("Background music won't auto-start")
-
-        enqueueSnackbar('Music is muted', {
-          variant: 'warning',
-          persist: true,
-          key: 'MUSIC_MUTED',
-          action: key => (
-            <Button
-              onClick={() => {
-                window.__bgAudio.play()
-                closeSnackbar(key)
-              }}
-            >
-              Unmute music
-            </Button>
-          ),
-        })
-      })
-    }
-
-    return () => {
-      closeSnackbar('MUSIC_MUTED')
-    }
-  })
+  withPlayMusic()
 
   return null
 }

@@ -1,3 +1,7 @@
+import React from 'react'
+import { Button } from '@material-ui/core'
+import { useSnackbar } from 'notistack'
+import { useEffect } from 'react'
 import MusicFiles from './musicFiles'
 
 export const MusicKeys = Object.keys(MusicFiles).sort((a, b) => ('' + a).localeCompare(b))
@@ -19,7 +23,7 @@ function getMusic(): [typeof MusicFiles[keyof typeof MusicFiles]['mp3' | 'ogg'],
   return [RandomItemFromArray(Object.values(MusicFiles))[SupportsOgg ? 'ogg' : 'mp3'], true]
 }
 
-export default function chooseMusic(): Promise<void> {
+function chooseMusic(): Promise<void> {
   const [audioSrc, isRandom] = getMusic()
 
   if (isRandom && (!window.__bgAudio.paused || window.__bgAudio.currentTime)) {
@@ -40,4 +44,35 @@ export default function chooseMusic(): Promise<void> {
       resolve()
     })
   }
+}
+
+export default async function withPlayMusic() {
+  const { enqueueSnackbar, closeSnackbar } = useSnackbar()
+
+  useEffect(() => {
+    chooseMusic().catch(e => {
+      console.warn(e)
+      console.warn("Background music won't auto-start")
+
+      enqueueSnackbar('Music is muted', {
+        variant: 'warning',
+        persist: true,
+        key: 'MUSIC_MUTED',
+        action: key => (
+          <Button
+            onClick={() => {
+              window.__bgAudio.play()
+              closeSnackbar(key)
+            }}
+          >
+            Unmute music
+          </Button>
+        ),
+      })
+    })
+
+    return () => {
+      closeSnackbar('MUSIC_MUTED')
+    }
+  })
 }

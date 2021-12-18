@@ -7,7 +7,7 @@ import InnerLayout from '@layouts/InnerLayout'
 import type { WindowLocation } from '@reach/router'
 import { navigate, PageProps } from 'gatsby'
 import React, { useEffect } from 'react'
-import { useRecoilState, useSetRecoilState } from 'recoil'
+import { useRecoilState } from 'recoil'
 
 type Props = PageProps<object, object, WindowLocation<{ startFromChannelNumber?: string; genre?: Genres }>['state']>
 

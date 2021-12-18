@@ -1,12 +1,12 @@
 import MenuMoreArrowSvg from '@assets/icons/list-arrow.svg'
-import { controlsState } from '@atoms'
+import { controlsState as controlsStateAtom } from '@atoms'
 import Colors from '@data/Colors'
 import controlsShownStateSetter from '@helpers/controlsShownStateSetter'
 import { splitMenuIntoPages } from '@helpers/splitMenuIntoPages'
 import { makeStyles } from '@material-ui/core'
 import clsx from 'clsx'
 import React, { useEffect, useMemo, useRef, useState } from 'react'
-import { useSetRecoilState } from 'recoil'
+import { useRecoilState } from 'recoil'
 
 const useStyles = makeStyles({
   root: {
@@ -78,12 +78,14 @@ const Menu: React.FC<MenuProps> = ({ onBack, listItems, noForcedUpperCase = fals
   // Ensures that the Back Up button state is correctly set when the first page is loaded.
   const lastPageIndex = useRef(-1)
 
-  const setControlsState = useSetRecoilState(controlsState)
+  const [controlsState, setControlsState] = useRecoilState(controlsStateAtom)
   const [pageIndex, setPageIndex] = useState(0)
 
   if (lastPageIndex.current !== pageIndex) {
     lastPageIndex.current = pageIndex
-    setControlsState(controlsShownStateSetter('backUp', !!(onBack || pageIndex > 0)))
+
+    const shouldBackShow = !!(onBack || pageIndex > 0)
+    controlsState.backUp !== shouldBackShow && setControlsState(controlsShownStateSetter('backUp', shouldBackShow))
   }
 
   // Get list of pages. Memoised for speeeeeed!

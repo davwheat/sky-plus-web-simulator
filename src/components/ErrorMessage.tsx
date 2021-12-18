@@ -5,7 +5,7 @@ import controlsShownStateSetter from '@helpers/controlsShownStateSetter'
 import { makeStyles } from '@material-ui/core'
 import clsx from 'clsx'
 import React, { useEffect } from 'react'
-import { useRecoilState, useSetRecoilState } from 'recoil'
+import { useRecoilState } from 'recoil'
 import ControlText from './ControlVisualisers/ControlText'
 
 const useStyles = makeStyles({

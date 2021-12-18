@@ -56,6 +56,7 @@ module.exports = {
         },
       },
     },
+    `gatsby-source-local-git`,
     ...prodPlugins,
   ],
 }

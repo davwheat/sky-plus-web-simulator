@@ -5,7 +5,5 @@
   "trailingComma": "all",
   "endOfLine": "lf",
   "arrowParens": "avoid",
-  "semi": false,
-  "pluginSearchDirs": ["./node_modules"],
-  "plugins": ["prettier-plugin-organize-imports"]
+  "semi": false
 }

@@ -1,4 +1,4 @@
-import { controlsState } from '@atoms'
+import { controlsState as controlsStateAtom } from '@atoms'
 import ColorButton from '@components/ControlVisualisers/ColorButton'
 import Colors from '@data/Colors'
 import controlsShownStateSetter from '@helpers/controlsShownStateSetter'
@@ -6,7 +6,7 @@ import useHasRendered from '@hooks/useHasRendered'
 import { makeStyles } from '@material-ui/core'
 import clsx from 'clsx'
 import React, { useEffect } from 'react'
-import { useSetRecoilState } from 'recoil'
+import { useRecoilState } from 'recoil'
 
 const useStyles = makeStyles({
   root: {
@@ -35,7 +35,7 @@ interface Props {
 
 const ColorButtonsFooter: React.FC<Props> = ({ className, buttonPressHandler, buttonsText }) => {
   const classes = useStyles()
-  const setControlsState = useSetRecoilState(controlsState)
+  const [controlsState, setControlsState] = useRecoilState(controlsStateAtom)
   const hasRendered = useHasRendered()
 
   const controlsToEnable: SkyColorButton[] = []
@@ -54,10 +54,14 @@ const ColorButtonsFooter: React.FC<Props> = ({ className, buttonPressHandler, bu
     }
   }
 
+  function setControlsVisible() {
+    if (controlsToEnable.some(control => !controlsState[control])) setControlsState(controlsShownStateSetter(controlsToEnable, true))
+    if (controlsToDisable.some(control => controlsState[control])) setControlsState(controlsShownStateSetter(controlsToDisable, false))
+  }
+
   // Detect when the coloured buttons are pressed
   useEffect(() => {
-    setControlsState(controlsShownStateSetter(controlsToEnable, true))
-    setControlsState(controlsShownStateSetter(controlsToDisable, false))
+    setControlsVisible()
 
     document.addEventListener('skyControlPressed', buttonPressEventListener)
 
@@ -65,9 +69,10 @@ const ColorButtonsFooter: React.FC<Props> = ({ className, buttonPressHandler, bu
       document.removeEventListener('skyControlPressed', buttonPressEventListener)
 
       // Remove the coloured buttons from the available controls when this unmounts
-      setControlsState(controlsShownStateSetter(['red', 'green', 'yellow', 'blue'], false))
+      const buttons: (keyof ControlVisibility)[] = ['red', 'green', 'yellow', 'blue']
+      if (buttons.some(control => controlsState[control])) setControlsState(controlsShownStateSetter(buttons, false))
     }
-  })
+  }, [buttonPressEventListener])
 
   return (
     <footer className={clsx(classes.root, className)}>

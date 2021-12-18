@@ -41,24 +41,23 @@ const ChannelListingPage: React.FC<Props> = ({ location }) => {
 
   const [controlsVisible, setControlsVisible] = useRecoilState(controlsState)
 
-  function goBack(e: SkyControlPressedEvent) {
-    const control = e.detail.control
-
-    if (['backUp'].includes(control)) {
-      navigate('/', { state: { selectedTab: 'GUIDE' } })
-    }
-  }
-
-  setControlsVisible(controlsShownStateSetter('backUp', true))
-
   useEffect(() => {
+    function goBack(e: SkyControlPressedEvent) {
+      const control = e.detail.control
+
+      if (['backUp'].includes(control)) {
+        navigate('/', { state: { selectedTab: 'GUIDE' } })
+      }
+    }
+
+    !controlsVisible.backUp && setControlsVisible(controlsShownStateSetter('backUp', true))
     document.addEventListener('skyControlPressed', goBack)
 
     return () => {
       document.removeEventListener('skyControlPressed', goBack)
       controlsVisible.backUp && setControlsVisible(controlsShownStateSetter(['backUp'], false))
     }
-  })
+  }, [true])
 
   return (
     <InnerLayout>

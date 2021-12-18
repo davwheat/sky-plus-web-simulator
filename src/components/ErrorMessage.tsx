@@ -1,11 +1,11 @@
-import { controlsState } from '@atoms'
+import { controlsState as controlsStateAtom } from '@atoms'
 import Colors from '@data/Colors'
 import ErrorCodes, { ErrorText } from '@data/ErrorCodes'
 import controlsShownStateSetter from '@helpers/controlsShownStateSetter'
 import { makeStyles } from '@material-ui/core'
 import clsx from 'clsx'
 import React, { useEffect } from 'react'
-import { useSetRecoilState } from 'recoil'
+import { useRecoilState, useSetRecoilState } from 'recoil'
 import ControlText from './ControlVisualisers/ControlText'
 
 const useStyles = makeStyles({
@@ -137,9 +137,10 @@ const ErrorMessage: React.FC<ErrorMessageProps> = ({
   className,
 }) => {
   const classes = useStyles()
-  const setControlsState = useSetRecoilState(controlsState)
+  const [controlsState, setControlsState] = useRecoilState(controlsStateAtom)
+  const wasBackupShown = controlsState.backUp
 
-  if (controlPrompt) {
+  if (controlPrompt && !controlsState.backUp) {
     setControlsState(controlsShownStateSetter('backUp', true))
   }
 
@@ -156,7 +157,7 @@ const ErrorMessage: React.FC<ErrorMessageProps> = ({
 
       return () => {
         document.removeEventListener('skyControlPressed', backUpEventListener)
-        setControlsState(controlsShownStateSetter('backUp', false))
+        !wasBackupShown && setControlsState(controlsShownStateSetter('backUp', false))
       }
     }
   })

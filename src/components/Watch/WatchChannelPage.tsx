@@ -9,7 +9,7 @@ import { navigate, PageProps } from 'gatsby'
 import type Hls from 'hls.js'
 import { useSnackbar } from 'notistack'
 import React, { useEffect, useRef, useState } from 'react'
-import { useRecoilValue, useSetRecoilState } from 'recoil'
+import { useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil'
 import SearchAndScan from './SearchAndScan'
 
 type Props = PageProps<object, { channel: Channel; streamData: Stream }>
@@ -26,7 +26,7 @@ const useStyles = makeStyles({
 
 const WatchChannelPage: React.FC<Props> = ({ pageContext: { channel, streamData } }) => {
   const classes = useStyles()
-  const setControlsVisible = useSetRecoilState(controlsState)
+  const [controlsVisible, setControlsVisible] = useRecoilState(controlsState)
   const tvLicenseStateValue = useRecoilValue(tvLicenseState)
   const [pageState, setPageState] = useState({
     error: false,
@@ -42,7 +42,7 @@ const WatchChannelPage: React.FC<Props> = ({ pageContext: { channel, streamData 
     }
   }
 
-  setControlsVisible(controlsShownStateSetter(['backUp'], true))
+  if (!controlsVisible.backUp) setControlsVisible(controlsShownStateSetter(['backUp'], true))
 
   useEffect(() => {
     document.addEventListener('skyControlPressed', goBack)
@@ -71,7 +71,7 @@ const WatchChannelPage: React.FC<Props> = ({ pageContext: { channel, streamData 
         })
 
         hls.on(window.Hls.Events.MEDIA_ATTACHED, () => {
-          videoRef.current.play().catch(e => {
+          videoRef.current.play().catch((e: Error) => {
             console.warn(e)
 
             enqueueSnackbar('TV stream is paused', {
@@ -96,8 +96,7 @@ const WatchChannelPage: React.FC<Props> = ({ pageContext: { channel, streamData 
 
     return () => {
       document.removeEventListener('skyControlPressed', goBack)
-      setControlsVisible(controlsShownStateSetter(['backUp'], false))
-      window.__bgAudio.play()
+      if (controlsVisible.backUp) setControlsVisible(controlsShownStateSetter(['backUp'], false))
 
       if (hls) {
         hls.destroy()

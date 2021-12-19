@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-components-watch-watch-channel-page-tsx",
     "path": "/watch-channel/101",
     "result": {"pageContext":{"channel":{"sid":"2002","channelNumber":"101","name":"BBC One Lon","quality":"SD","genre":3},"streamData":{"name":"BBC One Lon","streamUrl":"https://vs-hls-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:bbc_one_london/mobile_wifi_main_sd_abr_v2.m3u8"}}},
-    "staticQueryHashes": ["63159454"]}
+    "staticQueryHashes": ["3040125546","63159454"]}

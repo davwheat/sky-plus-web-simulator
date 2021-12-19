@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-components-watch-watch-channel-page-tsx",
     "path": "/watch-channel/608",
     "result": {"pageContext":{"channel":{"sid":"2019","channelNumber":"608","name":"CBeebies","quality":"SD","genre":2},"streamData":{"name":"CBeebies","streamUrl":"http://vs-hls-pushb-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:cbeebies_hd/mobile_wifi_main_sd_abr_v2_akamai_hls_live_http.m3u8"}}},
-    "staticQueryHashes": ["63159454"]}
+    "staticQueryHashes": ["3040125546","63159454"]}

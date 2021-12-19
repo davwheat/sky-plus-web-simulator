@@ -73,8 +73,12 @@ const useStyles = makeStyles({
 function getEventsForNext90Minutes(startTime: dayjs.Dayjs, events: Programme[]): Programme[] {
   return events.filter(event => {
     const diff = dayjs(event.startTime).tz('Europe/London').diff(startTime, 'minutes')
-    const diff2 = dayjs(event.startTime + event.duration * 1000).tz('Europe/London').diff(startTime, 'minutes')
-    const ongoing = dayjs(startTime).tz('Europe/London').isBetween(event.startTime, event.startTime + event.duration * 1000, 'minutes', '()')
+    const diff2 = dayjs(event.startTime + event.duration * 1000)
+      .tz('Europe/London')
+      .diff(startTime, 'minutes')
+    const ongoing = dayjs(startTime)
+      .tz('Europe/London')
+      .isBetween(event.startTime, event.startTime + event.duration * 1000, 'minutes', '()')
 
     return (diff >= 0 && diff < 90) || (diff2 > 0 && diff2 < 90) || ongoing
   })

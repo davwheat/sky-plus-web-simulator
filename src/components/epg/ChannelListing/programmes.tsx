@@ -48,7 +48,9 @@ const Programmes: React.FC<Props> = ({ programmes, className }) => {
           durationMins = 90 - totalTime
         }
 
-        const isActiveProgramme = dayjs().tz('Europe/London').isBetween(programme.startTime, programme.startTime + programme.duration * 1000)
+        const isActiveProgramme = dayjs()
+          .tz('Europe/London')
+          .isBetween(programme.startTime, programme.startTime + programme.duration * 1000)
 
         return (
           <span

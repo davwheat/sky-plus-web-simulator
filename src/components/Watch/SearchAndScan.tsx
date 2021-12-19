@@ -141,7 +141,7 @@ export default function SearchAndScan({ channel }: Props) {
       <div className={classes.header}>
         <span style={{ width: `${channel.channelNumber.length + 0.5}ch` }}>{channel.channelNumber}</span>
         <span>{channel.name}</span>
-        <span className={classes.headerTime}>{time.format('H.mma ddd D MMM')}</span>
+        <span className={classes.headerTime}>{time.format('h.mma ddd D MMM')}</span>
       </div>
       <div className={classes.main}>
         {programmeInfo?.[0] && (

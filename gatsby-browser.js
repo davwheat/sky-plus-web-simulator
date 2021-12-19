@@ -1,4 +1,4 @@
-import hls from 'hls.js'
+import hls from 'hls.js/dist/hls.light.min.js';
 import './src/styles/main.less'
 
 window.Hls = hls

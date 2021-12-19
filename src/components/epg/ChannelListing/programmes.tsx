@@ -32,7 +32,7 @@ const Programmes: React.FC<Props> = ({ programmes, className }) => {
   return (
     <>
       {programmes.map((programme, i) => {
-        let durationPassed = -dayjs(programme.startTime).diff(scheduleStartTime, 'minutes')
+        let durationPassed = -dayjs(programme.startTime).tz('Europe/London').diff(scheduleStartTime, 'minutes')
 
         let durationMins = Math.round(programme.duration / 60) - (durationPassed > 0 ? durationPassed : 0)
 
@@ -43,7 +43,7 @@ const Programmes: React.FC<Props> = ({ programmes, className }) => {
           durationMins = 90 - totalTime
         }
 
-        const isActiveProgramme = dayjs().isBetween(programme.startTime, programme.startTime + programme.duration * 1000)
+        const isActiveProgramme = dayjs().tz('Europe/London').isBetween(programme.startTime, programme.startTime + programme.duration * 1000)
 
         return (
           <span

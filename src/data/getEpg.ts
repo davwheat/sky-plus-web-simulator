@@ -213,9 +213,9 @@ export default async function getProgrammeListingForSID(
   let realDate: string
 
   if (!date) {
-    realDate = dayjs().format('YYYYMMDD')
+    realDate = dayjs().tz('Europe/London').format('YYYYMMDD')
   } else {
-    realDate = dayjs(date).format('YYYYMMDD')
+    realDate = dayjs(date).tz('Europe/London').format('YYYYMMDD')
   }
 
   const jsonData = await (await fetch(`${EPG_API_URL}/${realDate}/${channelSid}`, { signal: abortController.signal })).json()

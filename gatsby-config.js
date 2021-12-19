@@ -11,6 +11,8 @@ const prodPlugins =
       ]
     : []
 
+if (process.env.ANALYZE) prodPlugins.push(`gatsby-plugin-webpack-bundle-analyser-v2`)
+
 module.exports = {
   flags: {},
   siteMetadata: {

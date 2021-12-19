@@ -6,6 +6,11 @@ import clsx from 'clsx'
 import dayjs from 'dayjs'
 import React from 'react'
 import { useRecoilValue } from 'recoil'
+import dayjsUtc from 'dayjs/plugin/utc'
+import dayjsTz from 'dayjs/plugin/timezone'
+
+dayjs.extend(dayjsUtc)
+dayjs.extend(dayjsTz)
 
 interface Props {
   programmes: Programme[]

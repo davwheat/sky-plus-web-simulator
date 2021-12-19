@@ -56,7 +56,7 @@ const WatchChannelPage: React.FC<Props> = ({ pageContext: { channel, streamData 
           setPageState(s => ({ ...s, error: true }))
         }
 
-        hls = new window.Hls()
+        hls = new window.Hls({ debug: true })
         hls.loadSource(streamData.streamUrl)
         hls.attachMedia(videoRef.current)
 

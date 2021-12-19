@@ -11,7 +11,11 @@ import { navigate } from 'gatsby'
 import React, { useEffect, useMemo, useState } from 'react'
 import { useRecoilValue } from 'recoil'
 import Programmes from './programmes'
+import dayjsUtc from 'dayjs/plugin/utc'
+import dayjsTz from 'dayjs/plugin/timezone'
 
+dayjs.extend(dayjsUtc)
+dayjs.extend(dayjsTz)
 dayjs.extend(dayJsIsBetween)
 
 interface Props {

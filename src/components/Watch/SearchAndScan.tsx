@@ -8,6 +8,11 @@ import { makeStyles } from '@material-ui/core'
 import dayjs from 'dayjs'
 import React, { useEffect, useState } from 'react'
 import { useRecoilValue } from 'recoil'
+import dayjsUtc from 'dayjs/plugin/utc'
+import dayjsTz from 'dayjs/plugin/timezone'
+
+dayjs.extend(dayjsUtc)
+dayjs.extend(dayjsTz)
 
 interface Props {
   channel: Channel

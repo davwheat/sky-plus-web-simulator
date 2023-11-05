@@ -1,7 +1,7 @@
 {
   "services": [
     {
-      "sid": "2002",
+      "sid": "3000",
       "c": "101",
       "t": "BBC One Lon",
       "sg": 3,
@@ -56,9 +56,9 @@
       "avail": ["BROADCAST", "OTT"]
     },
     {
-      "sid": "4061",
+      "sid": "1280",
       "c": "106",
-      "t": "Sky One HD",
+      "t": "Sky Showcase HD",
       "sg": 3,
       "xsg": 3,
       "sf": "HD",
@@ -89,9 +89,9 @@
       "avail": ["BROADCAST", "OTT"]
     },
     {
-      "sid": "3810",
+      "sid": "3825",
       "c": "109",
-      "t": "W HD",
+      "t": "Alibi HD",
       "sg": 3,
       "xsg": 3,
       "sf": "HD",
@@ -133,8 +133,19 @@
       "avail": ["BROADCAST", "OTT"]
     },
     {
-      "sid": "1143",
+      "sid": "4061",
       "c": "113",
+      "t": "Sky Max HD",
+      "sg": 3,
+      "xsg": 3,
+      "sf": "HD",
+      "adult": false,
+      "local": false,
+      "avail": ["BROADCAST", "OTT"]
+    },
+    {
+      "sid": "1143",
+      "c": "114",
       "t": "Sky Comedy HD",
       "sg": 3,
       "xsg": 3,
@@ -144,26 +155,15 @@
       "avail": ["BROADCAST", "OTT"]
     },
     {
-      "sid": "1136",
-      "c": "114",
-      "t": "SkyDocmntrsHD",
-      "sg": 3,
-      "xsg": 11,
-      "sf": "HD",
-      "adult": false,
-      "local": false,
-      "avail": ["BROADCAST", "OTT"]
-    },
-    {
-      "sid": "2076",
+      "sid": "2022",
       "c": "115",
-      "t": "BBC One HD",
+      "t": "BBC Three",
       "sg": 3,
       "xsg": 3,
       "sf": "HD",
       "adult": false,
       "local": false,
-      "avail": ["BROADCAST"]
+      "avail": ["BROADCAST", "OTT"]
     },
     {
       "sid": "2018",
@@ -221,9 +221,9 @@
       "avail": ["BROADCAST", "OTT"]
     },
     {
-      "sid": "1212",
+      "sid": "1136",
       "c": "121",
-      "t": "Sky Crime HD",
+      "t": "Sky Documentaries HD",
       "sg": 3,
       "xsg": 11,
       "sf": "HD",
@@ -232,9 +232,9 @@
       "avail": ["BROADCAST", "OTT"]
     },
     {
-      "sid": "4063",
+      "sid": "1212",
       "c": "122",
-      "t": "Sky Arts HD",
+      "t": "Sky Crime HD",
       "sg": 3,
       "xsg": 3,
       "sf": "HD",
@@ -254,9 +254,9 @@
       "avail": ["BROADCAST", "OTT"]
     },
     {
-      "sid": "4023",
+      "sid": "1165",
       "c": "124",
-      "t": "FOX HD",
+      "t": "Sky Nature HD",
       "sg": 3,
       "xsg": 3,
       "sf": "HD",
@@ -320,9 +320,9 @@
       "avail": ["BROADCAST", "OTT"]
     },
     {
-      "sid": "1165",
+      "sid": "4063",
       "c": "130",
-      "t": "Sky Nature HD",
+      "t": "Sky Arts HD",
       "sg": 3,
       "xsg": 11,
       "sf": "HD",
@@ -342,9 +342,9 @@
       "avail": ["BROADCAST", "OTT"]
     },
     {
-      "sid": "3825",
+      "sid": "3810",
       "c": "132",
-      "t": "alibi HD",
+      "t": "W HD",
       "sg": 3,
       "xsg": 3,
       "sf": "HD",
@@ -409,8 +409,19 @@
     },
     {
       "sid": "1758",
+      "c": "138",
+      "t": "E4 Extra",
+      "sg": 3,
+      "xsg": 3,
+      "sf": "SD",
+      "adult": false,
+      "local": false,
+      "avail": ["BROADCAST"]
+    },
+    {
+      "sid": "4074",
       "c": "139",
-      "t": "4Music",
+      "t": "Sky Sci-Fi HD",
       "sg": 3,
       "xsg": 3,
       "sf": "SD",
@@ -474,9 +485,9 @@
       "avail": ["BROADCAST"]
     },
     {
-      "sid": "1833",
+      "sid": "2202",
       "c": "145",
-      "t": "Sky Replay",
+      "t": "Challenge",
       "sg": 3,
       "xsg": 3,
       "sf": "SD",
@@ -498,7 +509,7 @@
     {
       "sid": "3617",
       "c": "147",
-      "t": "CBS Drama",
+      "t": "Reality Xtra",
       "sg": 3,
       "xsg": 3,
       "sf": "SD",
@@ -509,7 +520,7 @@
     {
       "sid": "4610",
       "c": "148",
-      "t": "CBS Justice",
+      "t": "Legend",
       "sg": 3,
       "xsg": 3,
       "sf": "SD",
@@ -531,7 +542,7 @@
     {
       "sid": "1036",
       "c": "150",
-      "t": "Paramount",
+      "t": "5Action",
       "sg": 3,
       "xsg": 3,
       "sf": "SD",
@@ -540,9 +551,9 @@
       "avail": ["BROADCAST"]
     },
     {
-      "sid": "4028",
+      "sid": "1831",
       "c": "151",
-      "t": "E! HD",
+      "t": "Sky Mix HD",
       "sg": 3,
       "xsg": 3,
       "sf": "HD",
@@ -551,9 +562,9 @@
       "avail": ["BROADCAST", "OTT"]
     },
     {
-      "sid": "4074",
+      "sid": "1835",
       "c": "152",
-      "t": "SYFY HD",
+      "t": "Sky Replay",
       "sg": 3,
       "xsg": 3,
       "sf": "HD",
@@ -628,23 +639,12 @@
       "avail": ["BROADCAST", "OTT"]
     },
     {
-      "sid": "1832",
+      "sid": "4028",
       "c": "159",
-      "t": "Pick",
+      "t": "E!",
       "sg": 3,
       "xsg": 3,
-      "sf": "SD",
-      "adult": false,
-      "local": false,
-      "avail": ["BROADCAST", "OTT"]
-    },
-    {
-      "sid": "2202",
-      "c": "160",
-      "t": "Challenge",
-      "sg": 3,
-      "xsg": 3,
-      "sf": "SD",
+      "sf": "HD",
       "adult": false,
       "local": false,
       "avail": ["BROADCAST", "OTT"]
@@ -740,7 +740,7 @@
     {
       "sid": "1872",
       "c": "170",
-      "t": "Together",
+      "t": "Together TV",
       "sg": 5,
       "xsg": 11,
       "sf": "SD",
@@ -749,9 +749,9 @@
       "avail": ["BROADCAST"]
     },
     {
-      "sid": "1089",
+      "sid": "1017",
       "c": "171",
-      "t": "Smithsonian",
+      "t": "That's TV",
       "sg": 3,
       "xsg": 11,
       "sf": "SD",
@@ -782,17 +782,6 @@
       "avail": ["BROADCAST"]
     },
     {
-      "sid": "1133",
-      "c": "175",
-      "t": "Live 360",
-      "sg": 3,
-      "xsg": 3,
-      "sf": "SD",
-      "adult": false,
-      "local": false,
-      "avail": ["BROADCAST"]
-    },
-    {
       "sid": "2407",
       "c": "177",
       "t": "Disc.History",
@@ -815,19 +804,19 @@
       "avail": ["BROADCAST"]
     },
     {
-      "sid": "5415",
-      "c": "181",
-      "t": "Forces TV",
+      "sid": "1086",
+      "c": "180",
+      "t": "Earthx TV",
       "sg": 3,
       "xsg": 3,
-      "sf": "SD",
+      "sf": "HD",
       "adult": false,
       "local": false,
-      "avail": ["BROADCAST"]
+      "avail": ["BROADCAST", "OTT"]
     },
     {
       "sid": "3687",
-      "c": "182",
+      "c": "181",
       "t": "Channel 7",
       "sg": 3,
       "xsg": 3,
@@ -837,19 +826,8 @@
       "avail": ["BROADCAST"]
     },
     {
-      "sid": "1102",
-      "c": "184",
-      "t": "Hi-Impact TV",
-      "sg": 3,
-      "xsg": 3,
-      "sf": "SD",
-      "adult": false,
-      "local": false,
-      "avail": ["BROADCAST"]
-    },
-    {
       "sid": "1226",
-      "c": "185",
+      "c": "182",
       "t": "Travelxp",
       "sg": 3,
       "xsg": 3,
@@ -859,9 +837,31 @@
       "avail": ["BROADCAST"]
     },
     {
-      "sid": "1058",
+      "sid": "3206",
       "c": "186",
-      "t": "YANGA!",
+      "t": "Ayozat TV",
+      "sg": 3,
+      "xsg": 3,
+      "sf": "SD",
+      "adult": false,
+      "local": false,
+      "avail": ["BROADCAST"]
+    },
+    {
+      "sid": "1138",
+      "c": "187",
+      "t": "BBC Scotland",
+      "sg": 3,
+      "xsg": 3,
+      "sf": "SD",
+      "adult": false,
+      "local": false,
+      "avail": ["BROADCAST"]
+    },
+    {
+      "sid": "1311",
+      "c": "188",
+      "t": "That's Christmas",
       "sg": 3,
       "xsg": 3,
       "sf": "SD",
@@ -873,39 +873,6 @@
       "sid": "3731",
       "c": "190",
       "t": "NTD",
-      "sg": 3,
-      "xsg": 3,
-      "sf": "SD",
-      "adult": false,
-      "local": false,
-      "avail": ["BROADCAST"]
-    },
-    {
-      "sid": "3206",
-      "c": "191",
-      "t": "Showcase",
-      "sg": 3,
-      "xsg": 3,
-      "sf": "SD",
-      "adult": false,
-      "local": false,
-      "avail": ["BROADCAST"]
-    },
-    {
-      "sid": "3108",
-      "c": "193",
-      "t": "Vox Africa",
-      "sg": 3,
-      "xsg": 3,
-      "sf": "SD",
-      "adult": false,
-      "local": false,
-      "avail": ["BROADCAST"]
-    },
-    {
-      "sid": "1137",
-      "c": "194",
-      "t": "BBC Scotland",
       "sg": 3,
       "xsg": 3,
       "sf": "SD",
@@ -946,7 +913,7 @@
       "local": false,
       "avail": ["BROADCAST"]
     },
-    { "sid": "1403", "c": "206", "t": "Sky One+1", "sg": 3, "xsg": 3, "sf": "SD", "adult": false, "local": false, "avail": ["BROADCAST"] },
+    { "sid": "1403", "c": "206", "t": "Sky Showcase+1", "sg": 3, "xsg": 3, "sf": "SD", "adult": false, "local": false, "avail": ["BROADCAST"] },
     { "sid": "2205", "c": "207", "t": "Sky Witness+1", "sg": 3, "xsg": 3, "sf": "SD", "adult": false, "local": false, "avail": ["BROADCAST"] },
     { "sid": "1413", "c": "208", "t": "Sky Atlantic+1", "sg": 3, "xsg": 3, "sf": "SD", "adult": false, "local": false, "avail": ["BROADCAST"] },
     { "sid": "2616", "c": "209", "t": "W+1", "sg": 3, "xsg": 3, "sf": "SD", "adult": false, "local": false, "avail": ["BROADCAST"] },

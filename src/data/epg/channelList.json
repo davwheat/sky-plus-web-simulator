@@ -1,16 +1,16 @@
 {
   "101": {
-    "sid": "2002",
+    "sid": "3000",
     "channelNumber": "101",
-    "name": "BBC One Lon",
-    "quality": "SD",
+    "name": "BBC One Lon HD",
+    "quality": "HD",
     "genre": 3
   },
   "102": {
-    "sid": "2006",
+    "sid": "2075",
     "channelNumber": "102",
-    "name": "BBC Two",
-    "quality": "SD",
+    "name": "BBC Two HD",
+    "quality": "HD",
     "genre": 3
   },
   "103": {
@@ -35,9 +35,9 @@
     "genre": 3
   },
   "106": {
-    "sid": "4061",
+    "sid": "1275",
     "channelNumber": "106",
-    "name": "Sky One HD",
+    "name": "SkyShowcaseHD",
     "quality": "HD",
     "genre": 3
   },
@@ -56,9 +56,9 @@
     "genre": 3
   },
   "109": {
-    "sid": "3810",
+    "sid": "3825",
     "channelNumber": "109",
-    "name": "W HD",
+    "name": "alibi HD",
     "quality": "HD",
     "genre": 3
   },
@@ -84,31 +84,31 @@
     "genre": 3
   },
   "113": {
-    "sid": "1143",
+    "sid": "4061",
     "channelNumber": "113",
-    "name": "Sky Comedy HD",
+    "name": "Sky Max HD",
     "quality": "HD",
     "genre": 3
   },
   "114": {
-    "sid": "1136",
+    "sid": "1143",
     "channelNumber": "114",
-    "name": "SkyDocmntrsHD",
+    "name": "Sky Comedy HD",
     "quality": "HD",
-    "genre": 11
+    "genre": 3
   },
   "115": {
-    "sid": "2076",
+    "sid": "2080",
     "channelNumber": "115",
-    "name": "BBC One HD",
+    "name": "BBC Three HD",
     "quality": "HD",
     "genre": 3
   },
   "116": {
-    "sid": "2018",
+    "sid": "2086",
     "channelNumber": "116",
-    "name": "BBC Four",
-    "quality": "SD",
+    "name": "BBC Four HD",
+    "quality": "HD",
     "genre": 3
   },
   "117": {
@@ -119,10 +119,10 @@
     "genre": 3
   },
   "118": {
-    "sid": "6532",
+    "sid": "6240",
     "channelNumber": "118",
-    "name": "ITV2 HD",
-    "quality": "HD",
+    "name": "ITV2",
+    "quality": "SD",
     "genre": 3
   },
   "119": {
@@ -140,18 +140,18 @@
     "genre": 3
   },
   "121": {
-    "sid": "1212",
+    "sid": "1136",
     "channelNumber": "121",
-    "name": "Sky Crime HD",
+    "name": "SkyDocmntrsHD",
     "quality": "HD",
     "genre": 11
   },
   "122": {
-    "sid": "4063",
+    "sid": "1212",
     "channelNumber": "122",
-    "name": "Sky Arts HD",
+    "name": "Sky Crime HD",
     "quality": "HD",
-    "genre": 3
+    "genre": 11
   },
   "123": {
     "sid": "4086",
@@ -161,11 +161,11 @@
     "genre": 11
   },
   "124": {
-    "sid": "4023",
+    "sid": "1165",
     "channelNumber": "124",
-    "name": "FOX HD",
+    "name": "Sky Nature HD",
     "quality": "HD",
-    "genre": 3
+    "genre": 11
   },
   "125": {
     "sid": "4003",
@@ -203,23 +203,23 @@
     "genre": 11
   },
   "130": {
-    "sid": "1165",
+    "sid": "4063",
     "channelNumber": "130",
-    "name": "Sky Nature HD",
+    "name": "Sky Arts HD",
     "quality": "HD",
-    "genre": 11
+    "genre": 3
   },
   "131": {
-    "sid": "6508",
+    "sid": "3026",
     "channelNumber": "131",
-    "name": "ITVBe",
-    "quality": "SD",
+    "name": "ITV Be HD",
+    "quality": "HD",
     "genre": 3
   },
   "132": {
-    "sid": "3825",
+    "sid": "3810",
     "channelNumber": "132",
-    "name": "alibi HD",
+    "name": "W HD",
     "quality": "HD",
     "genre": 3
   },
@@ -258,11 +258,18 @@
     "quality": "SD",
     "genre": 3
   },
-  "139": {
+  "138": {
     "sid": "1758",
-    "channelNumber": "139",
-    "name": "4Music",
+    "channelNumber": "138",
+    "name": "E4 Extra",
     "quality": "SD",
+    "genre": 3
+  },
+  "139": {
+    "sid": "4074",
+    "channelNumber": "139",
+    "name": "Sky Sci-Fi HD",
+    "quality": "HD",
     "genre": 3
   },
   "140": {
@@ -301,30 +308,30 @@
     "genre": 3
   },
   "145": {
-    "sid": "1833",
+    "sid": "2202",
     "channelNumber": "145",
-    "name": "Sky Replay",
+    "name": "Challenge",
     "quality": "SD",
     "genre": 3
   },
   "146": {
     "sid": "3352",
     "channelNumber": "146",
-    "name": "CBS Reality",
+    "name": "TRUE CRIME",
     "quality": "SD",
     "genre": 3
   },
   "147": {
     "sid": "3617",
     "channelNumber": "147",
-    "name": "CBS Drama",
+    "name": "TRUE CRIME X",
     "quality": "SD",
     "genre": 3
   },
   "148": {
     "sid": "4610",
     "channelNumber": "148",
-    "name": "CBS Justice",
+    "name": "LEGEND",
     "quality": "SD",
     "genre": 3
   },
@@ -338,22 +345,22 @@
   "150": {
     "sid": "1036",
     "channelNumber": "150",
-    "name": "Paramount",
+    "name": "5ACTION",
     "quality": "SD",
     "genre": 3
   },
   "151": {
-    "sid": "4028",
+    "sid": "1831",
     "channelNumber": "151",
-    "name": "E! HD",
+    "name": "Sky Mix HD",
     "quality": "HD",
     "genre": 3
   },
   "152": {
-    "sid": "4074",
+    "sid": "1833",
     "channelNumber": "152",
-    "name": "SYFY HD",
-    "quality": "HD",
+    "name": "Sky Replay",
+    "quality": "SD",
     "genre": 3
   },
   "153": {
@@ -371,10 +378,10 @@
     "genre": 11
   },
   "155": {
-    "sid": "2305",
+    "sid": "1139",
     "channelNumber": "155",
-    "name": "YESTERDAY",
-    "quality": "SD",
+    "name": "YESTERDAY HD",
+    "quality": "HD",
     "genre": 11
   },
   "156": {
@@ -399,16 +406,9 @@
     "genre": 3
   },
   "159": {
-    "sid": "1832",
+    "sid": "3618",
     "channelNumber": "159",
-    "name": "Pick",
-    "quality": "SD",
-    "genre": 3
-  },
-  "160": {
-    "sid": "2202",
-    "channelNumber": "160",
-    "name": "Challenge",
+    "name": "DMAX",
     "quality": "SD",
     "genre": 3
   },
@@ -462,10 +462,10 @@
     "genre": 11
   },
   "169": {
-    "sid": "2012",
+    "sid": "3021",
     "channelNumber": "169",
-    "name": "BBC ALBA",
-    "quality": "SD",
+    "name": "BBC ALBA HD",
+    "quality": "HD",
     "genre": 3
   },
   "170": {
@@ -476,16 +476,9 @@
     "genre": 11
   },
   "171": {
-    "sid": "1089",
+    "sid": "1017",
     "channelNumber": "171",
-    "name": "Smithsonian",
-    "quality": "SD",
-    "genre": 11
-  },
-  "172": {
-    "sid": "3618",
-    "channelNumber": "172",
-    "name": "DMAX",
+    "name": "That's TV",
     "quality": "SD",
     "genre": 3
   },
@@ -495,13 +488,6 @@
     "name": "PBS America",
     "quality": "SD",
     "genre": 11
-  },
-  "175": {
-    "sid": "1133",
-    "channelNumber": "175",
-    "name": "Live 360",
-    "quality": "SD",
-    "genre": 3
   },
   "177": {
     "sid": "2407",
@@ -517,66 +503,59 @@
     "quality": "SD",
     "genre": 3
   },
-  "181": {
-    "sid": "5415",
-    "channelNumber": "181",
-    "name": "Forces TV",
-    "quality": "SD",
+  "180": {
+    "sid": "1086",
+    "channelNumber": "180",
+    "name": "EarthxTV HD",
+    "quality": "HD",
     "genre": 3
   },
-  "182": {
+  "181": {
     "sid": "3687",
-    "channelNumber": "182",
+    "channelNumber": "181",
     "name": "Channel 7",
     "quality": "SD",
     "genre": 3
   },
-  "184": {
-    "sid": "1102",
-    "channelNumber": "184",
-    "name": "Hi-Impact TV",
-    "quality": "SD",
-    "genre": 3
-  },
-  "185": {
+  "182": {
     "sid": "1226",
-    "channelNumber": "185",
+    "channelNumber": "182",
     "name": "Travelxp",
     "quality": "SD",
     "genre": 3
   },
   "186": {
-    "sid": "1058",
+    "sid": "3206",
     "channelNumber": "186",
-    "name": "YANGA!",
+    "name": "Ayozat TV",
     "quality": "SD",
     "genre": 3
+  },
+  "187": {
+    "sid": "1138",
+    "channelNumber": "187",
+    "name": "BBCScotlandHD",
+    "quality": "HD",
+    "genre": 3
+  },
+  "188": {
+    "sid": "1311",
+    "channelNumber": "188",
+    "name": "That's TV 2",
+    "quality": "SD",
+    "genre": 3
+  },
+  "189": {
+    "sid": "1234",
+    "channelNumber": "189",
+    "name": "GREAT! real",
+    "quality": "SD",
+    "genre": 11
   },
   "190": {
     "sid": "3731",
     "channelNumber": "190",
     "name": "NTD",
-    "quality": "SD",
-    "genre": 3
-  },
-  "191": {
-    "sid": "3206",
-    "channelNumber": "191",
-    "name": "Showcase",
-    "quality": "SD",
-    "genre": 3
-  },
-  "193": {
-    "sid": "3108",
-    "channelNumber": "193",
-    "name": "Vox Africa",
-    "quality": "SD",
-    "genre": 3
-  },
-  "194": {
-    "sid": "1137",
-    "channelNumber": "194",
-    "name": "BBC Scotland",
     "quality": "SD",
     "genre": 3
   },
@@ -602,9 +581,9 @@
     "genre": 3
   },
   "206": {
-    "sid": "1403",
+    "sid": "1277",
     "channelNumber": "206",
-    "name": "Sky One+1",
+    "name": "SkyShowcase+1",
     "quality": "SD",
     "genre": 3
   },
@@ -623,9 +602,9 @@
     "genre": 3
   },
   "209": {
-    "sid": "2616",
+    "sid": "2630",
     "channelNumber": "209",
-    "name": "W+1",
+    "name": "alibi+1",
     "quality": "SD",
     "genre": 3
   },
@@ -671,9 +650,9 @@
     "quality": "SD",
     "genre": 3
   },
-  "221": {
+  "222": {
     "sid": "4330",
-    "channelNumber": "221",
+    "channelNumber": "222",
     "name": "Sky Crime+1",
     "quality": "SD",
     "genre": 11
@@ -684,13 +663,6 @@
     "name": "Sky History+1",
     "quality": "SD",
     "genre": 11
-  },
-  "224": {
-    "sid": "1791",
-    "channelNumber": "224",
-    "name": "FOX+1",
-    "quality": "SD",
-    "genre": 3
   },
   "225": {
     "sid": "2404",
@@ -714,9 +686,9 @@
     "genre": 11
   },
   "232": {
-    "sid": "2630",
+    "sid": "2616",
     "channelNumber": "232",
-    "name": "alibi+1",
+    "name": "W+1",
     "quality": "SD",
     "genre": 3
   },
@@ -772,7 +744,7 @@
   "246": {
     "sid": "3602",
     "channelNumber": "246",
-    "name": "CBS Reality+1",
+    "name": "TRUE CRIME+1",
     "quality": "SD",
     "genre": 3
   },
@@ -780,13 +752,6 @@
     "sid": "4547",
     "channelNumber": "249",
     "name": "Quest Red+1",
-    "quality": "SD",
-    "genre": 3
-  },
-  "252": {
-    "sid": "2513",
-    "channelNumber": "252",
-    "name": "SYFY+1",
     "quality": "SD",
     "genre": 3
   },
@@ -826,9 +791,9 @@
     "genre": 3
   },
   "259": {
-    "sid": "1836",
+    "sid": "1865",
     "channelNumber": "259",
-    "name": "Pick+1",
+    "name": "DMAX+1",
     "quality": "SD",
     "genre": 3
   },
@@ -860,17 +825,17 @@
     "quality": "SD",
     "genre": 11
   },
-  "272": {
-    "sid": "1865",
-    "channelNumber": "272",
-    "name": "DMAX+1",
-    "quality": "SD",
-    "genre": 3
-  },
   "277": {
     "sid": "3760",
     "channelNumber": "277",
     "name": "Disc.History+1",
+    "quality": "SD",
+    "genre": 11
+  },
+  "289": {
+    "sid": "1288",
+    "channelNumber": "289",
+    "name": "GREAT! real+1",
     "quality": "SD",
     "genre": 11
   },
@@ -884,21 +849,21 @@
   "302": {
     "sid": "4020",
     "channelNumber": "302",
-    "name": "SkyMusicalsHD",
+    "name": "Martial Arts HD",
     "quality": "HD",
     "genre": 6
   },
   "303": {
     "sid": "4033",
     "channelNumber": "303",
-    "name": "Sky Hits HD",
+    "name": "SkyMegaHitsHD",
     "quality": "HD",
     "genre": 6
   },
   "304": {
     "sid": "1815",
     "channelNumber": "304",
-    "name": "Sky Greats",
+    "name": "True Stories",
     "quality": "SD",
     "genre": 6
   },
@@ -924,30 +889,30 @@
     "genre": 6
   },
   "308": {
-    "sid": "1002",
+    "sid": "4019",
     "channelNumber": "308",
-    "name": "Sky Comedy Cinema",
-    "quality": "SD",
+    "name": "Sky Comedy HD",
+    "quality": "HD",
     "genre": 6
   },
   "309": {
-    "sid": "1818",
+    "sid": "4062",
     "channelNumber": "309",
-    "name": "Sky Thriller",
-    "quality": "SD",
+    "name": "Sky Thriller HD",
+    "quality": "HD",
     "genre": 6
   },
   "310": {
-    "sid": "1816",
+    "sid": "4016",
     "channelNumber": "310",
-    "name": "Sky Drama",
-    "quality": "SD",
+    "name": "Sky Drama HD",
+    "quality": "HD",
     "genre": 6
   },
   "311": {
     "sid": "4017",
     "channelNumber": "311",
-    "name": "Sky ScFi/HorHD",
+    "name": "Sky SciFi/HorHD",
     "quality": "HD",
     "genre": 6
   },
@@ -972,45 +937,31 @@
     "quality": "SD",
     "genre": 6
   },
-  "315": {
-    "sid": "5605",
-    "channelNumber": "315",
-    "name": "TCM Movies",
-    "quality": "SD",
-    "genre": 6
-  },
-  "316": {
-    "sid": "5275",
-    "channelNumber": "316",
-    "name": "TCM Movies+1",
-    "quality": "SD",
-    "genre": 6
-  },
   "317": {
     "sid": "3605",
     "channelNumber": "317",
-    "name": "horror channel",
+    "name": "LEGEND XTRA",
     "quality": "SD",
     "genre": 6
   },
   "318": {
     "sid": "4502",
     "channelNumber": "318",
-    "name": "horror ch+1",
+    "name": "LEGEND XTRA+1",
     "quality": "SD",
     "genre": 6
   },
   "319": {
     "sid": "3643",
     "channelNumber": "319",
-    "name": "GREAT! classic",
+    "name": "GREAT! romance",
     "quality": "SD",
     "genre": 6
   },
   "320": {
     "sid": "3751",
     "channelNumber": "320",
-    "name": "GREAT! class+1",
+    "name": "G! romance+1",
     "quality": "SD",
     "genre": 6
   },
@@ -1063,13 +1014,6 @@
     "quality": "SD",
     "genre": 6
   },
-  "329": {
-    "sid": "3542",
-    "channelNumber": "329",
-    "name": "ROK",
-    "quality": "SD",
-    "genre": 6
-  },
   "350": {
     "sid": "2512",
     "channelNumber": "350",
@@ -1087,21 +1031,21 @@
   "352": {
     "sid": "2508",
     "channelNumber": "352",
-    "name": "MTV BASE",
+    "name": "MTV 90s",
     "quality": "SD",
     "genre": 12
   },
   "353": {
     "sid": "2509",
     "channelNumber": "353",
-    "name": "MTV CLASSIC",
+    "name": "MTV 80s",
     "quality": "SD",
     "genre": 12
   },
   "354": {
     "sid": "1350",
     "channelNumber": "354",
-    "name": "Box Hits",
+    "name": "4Music",
     "quality": "SD",
     "genre": 12
   },
@@ -1133,17 +1077,10 @@
     "quality": "SD",
     "genre": 12
   },
-  "359": {
-    "sid": "3505",
-    "channelNumber": "359",
-    "name": "Trace Hits",
-    "quality": "SD",
-    "genre": 12
-  },
   "360": {
-    "sid": "3935",
+    "sid": "1224",
     "channelNumber": "360",
-    "name": "Trace Vault",
+    "name": "ChartShowRetro",
     "quality": "SD",
     "genre": 12
   },
@@ -1164,7 +1101,7 @@
   "363": {
     "sid": "3682",
     "channelNumber": "363",
-    "name": "NOW 90s",
+    "name": "NOW ROCK",
     "quality": "SD",
     "genre": 12
   },
@@ -1176,9 +1113,23 @@
     "genre": 12
   },
   "365": {
-    "sid": "4933",
+    "sid": "1134",
     "channelNumber": "365",
-    "name": "Spotlight TV",
+    "name": "That's 60s",
+    "quality": "SD",
+    "genre": 12
+  },
+  "366": {
+    "sid": "1305",
+    "channelNumber": "366",
+    "name": "That's 80s",
+    "quality": "SD",
+    "genre": 12
+  },
+  "367": {
+    "sid": "1222",
+    "channelNumber": "367",
+    "name": "That's 90s",
     "quality": "SD",
     "genre": 12
   },
@@ -1213,7 +1164,7 @@
   "405": {
     "sid": "1322",
     "channelNumber": "405",
-    "name": "SkySp Golf ",
+    "name": "SkySp Golf",
     "quality": "SD",
     "genre": 7
   },
@@ -1225,16 +1176,16 @@
     "genre": 7
   },
   "407": {
-    "sid": "1333",
+    "sid": "1284",
     "channelNumber": "407",
-    "name": "SkySp Action",
-    "quality": "SD",
+    "name": "SkySp Tennis HD",
+    "quality": "HD",
     "genre": 7
   },
   "408": {
-    "sid": "3839",
+    "sid": "1333",
     "channelNumber": "408",
-    "name": "SkySp Arena",
+    "name": "SkySp Action",
     "quality": "SD",
     "genre": 7
   },
@@ -1246,38 +1197,38 @@
     "genre": 7
   },
   "410": {
-    "sid": "4004",
+    "sid": "3661",
     "channelNumber": "410",
+    "name": "TNT Sports 1",
+    "quality": "SD",
+    "genre": 7
+  },
+  "411": {
+    "sid": "3663",
+    "channelNumber": "411",
+    "name": "TNT Sports 2",
+    "quality": "SD",
+    "genre": 7
+  },
+  "412": {
+    "sid": "3839",
+    "channelNumber": "412",
+    "name": "SkySp Arena",
+    "quality": "SD",
+    "genre": 7
+  },
+  "413": {
+    "sid": "4004",
+    "channelNumber": "413",
     "name": "Eurosport 1 HD",
     "quality": "HD",
     "genre": 7
   },
-  "411": {
+  "414": {
     "sid": "4009",
-    "channelNumber": "411",
+    "channelNumber": "414",
     "name": "Eurosport 2 HD",
     "quality": "HD",
-    "genre": 7
-  },
-  "412": {
-    "sid": "5153",
-    "channelNumber": "412",
-    "name": "Premier 1 HD",
-    "quality": "HD",
-    "genre": 7
-  },
-  "413": {
-    "sid": "3661",
-    "channelNumber": "413",
-    "name": "BT Sport 1",
-    "quality": "SD",
-    "genre": 7
-  },
-  "414": {
-    "sid": "3663",
-    "channelNumber": "414",
-    "name": "BT Sport 2",
-    "quality": "SD",
     "genre": 7
   },
   "415": {
@@ -1297,7 +1248,7 @@
   "417": {
     "sid": "5032",
     "channelNumber": "417",
-    "name": "BT Sport 3",
+    "name": "TNT Sports 3",
     "quality": "SD",
     "genre": 7
   },
@@ -1308,73 +1259,52 @@
     "quality": "HD",
     "genre": 7
   },
-  "422": {
-    "sid": "1150",
-    "channelNumber": "422",
-    "name": "FreeSports HD",
+  "419": {
+    "sid": "1289",
+    "channelNumber": "419",
+    "name": "Premier 1 HD",
     "quality": "HD",
     "genre": 7
   },
-  "423": {
-    "sid": "3141",
-    "channelNumber": "423",
-    "name": "BT Sport//ESPN",
-    "quality": "SD",
-    "genre": 7
-  },
-  "425": {
-    "sid": "3845",
-    "channelNumber": "425",
-    "name": "LFCTV HD",
-    "quality": "HD",
-    "genre": 7
-  },
-  "426": {
-    "sid": "3636",
-    "channelNumber": "426",
-    "name": "Racing TV",
-    "quality": "SD",
-    "genre": 7
-  },
-  "427": {
-    "sid": "3417",
-    "channelNumber": "427",
-    "name": "BoxNation",
-    "quality": "SD",
-    "genre": 7
-  },
-  "429": {
-    "sid": "1634",
-    "channelNumber": "429",
+  "420": {
+    "sid": "1290",
+    "channelNumber": "420",
     "name": "Premier 2 HD",
     "quality": "HD",
     "genre": 7
   },
-  "433": {
-    "sid": "1830",
-    "channelNumber": "433",
-    "name": "GINXeSportsTV",
+  "421": {
+    "sid": "3141",
+    "channelNumber": "421",
+    "name": "TNT Sports 4",
     "quality": "SD",
     "genre": 7
   },
-  "435": {
-    "sid": "1015",
-    "channelNumber": "435",
-    "name": "LaLigaTV HD",
+  "423": {
+    "sid": "3845",
+    "channelNumber": "423",
+    "name": "LFCTV HD",
     "quality": "HD",
     "genre": 7
   },
-  "437": {
-    "sid": "1223",
-    "channelNumber": "437",
-    "name": "SportyStuff HD",
+  "424": {
+    "sid": "3636",
+    "channelNumber": "424",
+    "name": "Racing TV",
+    "quality": "SD",
+    "genre": 7
+  },
+  "429": {
+    "sid": "1359",
+    "channelNumber": "429",
+    "name": "DAZN 1 HD",
     "quality": "HD",
     "genre": 7
   },
   "490": {
-    "sid": "6014",
+    "sid": "1210",
     "channelNumber": "490",
-    "name": "BTSptBoxOffHD",
+    "name": "TNTSBoxOffHD",
     "quality": "HD",
     "genre": 7
   },
@@ -1385,17 +1315,17 @@
     "quality": "SD",
     "genre": 7
   },
-  "492": {
-    "sid": "1035",
-    "channelNumber": "492",
-    "name": "SkySpBoxOffHD",
+  "494": {
+    "sid": "1099",
+    "channelNumber": "494",
+    "name": "TNTSBoxOff2HD",
     "quality": "HD",
     "genre": 7
   },
-  "494": {
-    "sid": "1218",
-    "channelNumber": "494",
-    "name": "BTSBoxOff2HD",
+  "495": {
+    "sid": "1361",
+    "channelNumber": "495",
+    "name": "DAZN PPV HD",
     "quality": "HD",
     "genre": 7
   },
@@ -1414,31 +1344,31 @@
     "genre": 5
   },
   "503": {
-    "sid": "2011",
+    "sid": "2085",
     "channelNumber": "503",
-    "name": "BBC NEWS",
-    "quality": "SD",
+    "name": "BBC NEWS HD",
+    "quality": "HD",
     "genre": 5
   },
   "504": {
-    "sid": "2072",
+    "sid": "3020",
     "channelNumber": "504",
-    "name": "BBC Parliament",
-    "quality": "SD",
+    "name": "BBC Parl HD",
+    "quality": "HD",
     "genre": 5
   },
   "505": {
-    "sid": "3611",
+    "sid": "1088",
     "channelNumber": "505",
-    "name": "CNBC",
-    "quality": "SD",
+    "name": "CNBC HD",
+    "quality": "HD",
     "genre": 5
   },
   "506": {
-    "sid": "5602",
+    "sid": "1019",
     "channelNumber": "506",
-    "name": "CNN",
-    "quality": "SD",
+    "name": "CNN HD",
+    "quality": "HD",
     "genre": 5
   },
   "507": {
@@ -1455,74 +1385,88 @@
     "quality": "SD",
     "genre": 5
   },
-  "510": {
+  "509": {
     "sid": "1821",
-    "channelNumber": "510",
+    "channelNumber": "509",
     "name": "NDTV 24x7",
     "quality": "SD",
     "genre": 5
   },
-  "511": {
-    "sid": "3213",
-    "channelNumber": "511",
-    "name": "RT",
-    "quality": "SD",
-    "genre": 5
-  },
-  "512": {
+  "510": {
     "sid": "1121",
-    "channelNumber": "512",
+    "channelNumber": "510",
     "name": "FRANCE 24 HD",
     "quality": "HD",
     "genre": 5
   },
+  "511": {
+    "sid": "1023",
+    "channelNumber": "511",
+    "name": "Al Jazeera HD",
+    "quality": "HD",
+    "genre": 5
+  },
+  "512": {
+    "sid": "1196",
+    "channelNumber": "512",
+    "name": "GB News HD",
+    "quality": "HD",
+    "genre": 5
+  },
   "513": {
-    "sid": "3107",
-    "channelNumber": "513",
-    "name": "Al Jazeera Eng",
-    "quality": "SD",
-    "genre": 5
-  },
-  "515": {
-    "sid": "5882",
-    "channelNumber": "515",
-    "name": "TVC News",
-    "quality": "SD",
-    "genre": 5
-  },
-  "516": {
     "sid": "5071",
-    "channelNumber": "516",
+    "channelNumber": "513",
     "name": "TRT World",
     "quality": "SD",
     "genre": 5
   },
-  "518": {
+  "515": {
     "sid": "5520",
-    "channelNumber": "518",
+    "channelNumber": "515",
     "name": "Channels 24",
     "quality": "SD",
     "genre": 5
   },
-  "519": {
+  "516": {
     "sid": "5040",
-    "channelNumber": "519",
+    "channelNumber": "516",
     "name": "Arise News",
     "quality": "SD",
     "genre": 5
   },
-  "522": {
+  "518": {
     "sid": "1066",
-    "channelNumber": "522",
+    "channelNumber": "518",
     "name": "Arirang TV HD",
     "quality": "HD",
     "genre": 5
   },
-  "523": {
+  "519": {
     "sid": "1084",
-    "channelNumber": "523",
+    "channelNumber": "519",
     "name": "WION HD",
     "quality": "HD",
+    "genre": 5
+  },
+  "520": {
+    "sid": "5882",
+    "channelNumber": "520",
+    "name": "TVC News",
+    "quality": "SD",
+    "genre": 5
+  },
+  "522": {
+    "sid": "1078",
+    "channelNumber": "522",
+    "name": "TalkTV HD",
+    "quality": "HD",
+    "genre": 5
+  },
+  "523": {
+    "sid": "1057",
+    "channelNumber": "523",
+    "name": "India Today",
+    "quality": "SD",
     "genre": 5
   },
   "580": {
@@ -1567,6 +1511,13 @@
     "quality": "HD",
     "genre": 13
   },
+  "586": {
+    "sid": "3117",
+    "channelNumber": "586",
+    "name": "EWTN Catholic",
+    "quality": "SD",
+    "genre": 13
+  },
   "587": {
     "sid": "3205",
     "channelNumber": "587",
@@ -1575,23 +1526,30 @@
     "genre": 13
   },
   "588": {
-    "sid": "3117",
-    "channelNumber": "588",
-    "name": "EWTN Catholic",
-    "quality": "SD",
-    "genre": 13
-  },
-  "589": {
     "sid": "4404",
-    "channelNumber": "589",
+    "channelNumber": "588",
     "name": "Faith World TV",
     "quality": "SD",
     "genre": 13
   },
-  "590": {
+  "589": {
     "sid": "3776",
-    "channelNumber": "590",
+    "channelNumber": "589",
     "name": "KICC TV",
+    "quality": "SD",
+    "genre": 13
+  },
+  "590": {
+    "sid": "5354",
+    "channelNumber": "590",
+    "name": "Faith UK",
+    "quality": "SD",
+    "genre": 13
+  },
+  "592": {
+    "sid": "1191",
+    "channelNumber": "592",
+    "name": "Dunamis TV",
     "quality": "SD",
     "genre": 13
   },
@@ -1603,38 +1561,10 @@
     "genre": 13
   },
   "594": {
-    "sid": "5354",
+    "sid": "1131",
     "channelNumber": "594",
-    "name": "Faith UK",
-    "quality": "SD",
-    "genre": 13
-  },
-  "595": {
-    "sid": "1004",
-    "channelNumber": "595",
-    "name": "Hillsong",
-    "quality": "SD",
-    "genre": 13
-  },
-  "596": {
-    "sid": "1188",
-    "channelNumber": "596",
-    "name": "Good News TV",
-    "quality": "SD",
-    "genre": 13
-  },
-  "597": {
-    "sid": "1191",
-    "channelNumber": "597",
-    "name": "Dunamis TV",
-    "quality": "SD",
-    "genre": 13
-  },
-  "598": {
-    "sid": "1206",
-    "channelNumber": "598",
-    "name": "Celebration TV",
-    "quality": "SD",
+    "name": "New Media HD",
+    "quality": "HD",
     "genre": 13
   },
   "601": {
@@ -1668,7 +1598,7 @@
   "605": {
     "sid": "1849",
     "channelNumber": "605",
-    "name": "Nicktoons",
+    "name": "NickSpongeBob",
     "quality": "SD",
     "genre": 2
   },
@@ -1680,24 +1610,24 @@
     "genre": 2
   },
   "607": {
-    "sid": "2020",
+    "sid": "2078",
     "channelNumber": "607",
-    "name": "CBBC",
-    "quality": "SD",
+    "name": "CBBC HD",
+    "quality": "HD",
     "genre": 2
   },
   "608": {
-    "sid": "2019",
+    "sid": "2088",
     "channelNumber": "608",
-    "name": "CBeebies",
-    "quality": "SD",
+    "name": "CBeebies HD",
+    "quality": "HD",
     "genre": 2
   },
   "609": {
-    "sid": "3645",
+    "sid": "1147",
     "channelNumber": "609",
-    "name": "BabyTV",
-    "quality": "SD",
+    "name": "Sky Kids HD",
+    "quality": "HD",
     "genre": 2
   },
   "610": {
@@ -1714,17 +1644,10 @@
     "quality": "SD",
     "genre": 2
   },
-  "612": {
-    "sid": "6273",
-    "channelNumber": "612",
-    "name": "CITV",
-    "quality": "SD",
-    "genre": 2
-  },
   "613": {
     "sid": "4340",
     "channelNumber": "613",
-    "name": "Nick Jr. Peppa",
+    "name": "Nick Jr. Too",
     "quality": "SD",
     "genre": 2
   },
@@ -1736,9 +1659,9 @@
     "genre": 2
   },
   "615": {
-    "sid": "3780",
+    "sid": "4262",
     "channelNumber": "615",
-    "name": "Tiny Pop",
+    "name": "POP Max",
     "quality": "SD",
     "genre": 2
   },
@@ -1750,9 +1673,9 @@
     "genre": 2
   },
   "618": {
-    "sid": "4261",
+    "sid": "4263",
     "channelNumber": "618",
-    "name": "Tiny Pop+1",
+    "name": "POP Max+1",
     "quality": "SD",
     "genre": 2
   },
@@ -1763,24 +1686,17 @@
     "quality": "SD",
     "genre": 2
   },
-  "620": {
-    "sid": "4262",
-    "channelNumber": "620",
-    "name": "POP Max",
-    "quality": "SD",
-    "genre": 2
-  },
-  "621": {
-    "sid": "4263",
-    "channelNumber": "621",
-    "name": "POP Max+1",
-    "quality": "SD",
-    "genre": 2
-  },
   "622": {
     "sid": "5089",
     "channelNumber": "622",
     "name": "Nick Jr+1",
+    "quality": "SD",
+    "genre": 2
+  },
+  "626": {
+    "sid": "3645",
+    "channelNumber": "626",
+    "name": "BabyTV",
     "quality": "SD",
     "genre": 2
   },
@@ -1805,20 +1721,6 @@
     "quality": "SD",
     "genre": 2
   },
-  "643": {
-    "sid": "2078",
-    "channelNumber": "643",
-    "name": "CBBC HD",
-    "quality": "HD",
-    "genre": 2
-  },
-  "644": {
-    "sid": "2088",
-    "channelNumber": "644",
-    "name": "CBeebies HD",
-    "quality": "HD",
-    "genre": 2
-  },
   "645": {
     "sid": "1857",
     "channelNumber": "645",
@@ -1827,16 +1729,16 @@
     "genre": 2
   },
   "660": {
-    "sid": "5907",
+    "sid": "1076",
     "channelNumber": "660",
-    "name": "QVC",
-    "quality": "SD",
+    "name": "QVC HD",
+    "quality": "HD",
     "genre": 1
   },
   "661": {
-    "sid": "5761",
+    "sid": "1163",
     "channelNumber": "661",
-    "name": "JML Direct",
+    "name": "53205",
     "quality": "SD",
     "genre": 1
   },
@@ -1855,9 +1757,9 @@
     "genre": 1
   },
   "664": {
-    "sid": "1244",
+    "sid": "1118",
     "channelNumber": "664",
-    "name": "Ideal World HD",
+    "name": "QVC Style HD",
     "quality": "HD",
     "genre": 1
   },
@@ -1885,7 +1787,7 @@
   "668": {
     "sid": "5212",
     "channelNumber": "668",
-    "name": "High Street TV 3",
+    "name": "Ideal World",
     "quality": "SD",
     "genre": 1
   },
@@ -1897,44 +1799,44 @@
     "genre": 1
   },
   "670": {
-    "sid": "1129",
+    "sid": "1169",
     "channelNumber": "670",
-    "name": "Gemporia Craft",
-    "quality": "SD",
+    "name": "HobbyMakerHD",
+    "quality": "HD",
     "genre": 1
   },
   "671": {
-    "sid": "5740",
+    "sid": "3359",
     "channelNumber": "671",
-    "name": "Ideal Extra",
+    "name": "QVC Extra",
     "quality": "SD",
     "genre": 1
   },
   "672": {
     "sid": "3404",
     "channelNumber": "672",
-    "name": "High Street TV 4",
+    "name": "High Street TV 3",
     "quality": "SD",
     "genre": 1
   },
   "673": {
-    "sid": "3357",
+    "sid": "1245",
     "channelNumber": "673",
-    "name": "The Craft Store",
-    "quality": "SD",
+    "name": "Create&CraftHD",
+    "quality": "HD",
     "genre": 1
   },
   "674": {
     "sid": "3354",
     "channelNumber": "674",
-    "name": "ShoppingQuartr",
+    "name": "JewelleryMaker",
     "quality": "SD",
     "genre": 1
   },
   "675": {
     "sid": "1130",
     "channelNumber": "675",
-    "name": "High Street TV 5",
+    "name": "High Street TV 4",
     "quality": "SD",
     "genre": 1
   },
@@ -1945,51 +1847,16 @@
     "quality": "SD",
     "genre": 1
   },
-  "677": {
-    "sid": "4410",
-    "channelNumber": "677",
-    "name": "QVC Style",
-    "quality": "SD",
-    "genre": 1
-  },
-  "679": {
-    "sid": "3805",
-    "channelNumber": "679",
-    "name": "Thane",
-    "quality": "SD",
-    "genre": 1
-  },
   "680": {
-    "sid": "3415",
+    "sid": "3357",
     "channelNumber": "680",
-    "name": "Psychic Today",
-    "quality": "SD",
-    "genre": 1
-  },
-  "682": {
-    "sid": "3359",
-    "channelNumber": "682",
-    "name": "QVC Extra",
-    "quality": "SD",
-    "genre": 1
-  },
-  "683": {
-    "sid": "1245",
-    "channelNumber": "683",
-    "name": "Create&CraftHD",
-    "quality": "HD",
-    "genre": 1
-  },
-  "684": {
-    "sid": "3012",
-    "channelNumber": "684",
     "name": "Craft Extra",
     "quality": "SD",
     "genre": 1
   },
-  "688": {
+  "681": {
     "sid": "1018",
-    "channelNumber": "688",
+    "channelNumber": "681",
     "name": "Cruise1st.tv",
     "quality": "SD",
     "genre": 1
@@ -2037,16 +1904,16 @@
     "genre": 14
   },
   "707": {
-    "sid": "2608",
+    "sid": "1016",
     "channelNumber": "707",
-    "name": "Zee Cinema",
-    "quality": "SD",
+    "name": "Zee TV HD",
+    "quality": "HD",
     "genre": 14
   },
   "709": {
-    "sid": "2607",
+    "sid": "2608",
     "channelNumber": "709",
-    "name": "Zee TV",
+    "name": "Zee Cinema",
     "quality": "SD",
     "genre": 14
   },
@@ -2067,7 +1934,7 @@
   "712": {
     "sid": "1227",
     "channelNumber": "712",
-    "name": "Foodxp",
+    "name": "Dangal",
     "quality": "SD",
     "genre": 14
   },
@@ -2090,13 +1957,6 @@
     "channelNumber": "715",
     "name": "SONY MAX HD",
     "quality": "HD",
-    "genre": 14
-  },
-  "716": {
-    "sid": "3720",
-    "channelNumber": "716",
-    "name": "Venus TV",
-    "quality": "SD",
     "genre": 14
   },
   "717": {
@@ -2135,23 +1995,16 @@
     "genre": 14
   },
   "731": {
-    "sid": "3201",
+    "sid": "3202",
     "channelNumber": "731",
-    "name": "mta-muslim tv",
-    "quality": "SD",
+    "name": "MTA1 World HD",
+    "quality": "HD",
     "genre": 14
   },
   "732": {
     "sid": "1069",
     "channelNumber": "732",
     "name": "HUM Masala",
-    "quality": "SD",
-    "genre": 14
-  },
-  "733": {
-    "sid": "4549",
-    "channelNumber": "733",
-    "name": "Hidayat TV",
     "quality": "SD",
     "genre": 14
   },
@@ -2232,13 +2085,6 @@
     "quality": "SD",
     "genre": 14
   },
-  "748": {
-    "sid": "3722",
-    "channelNumber": "748",
-    "name": "Samaa",
-    "quality": "SD",
-    "genre": 14
-  },
   "749": {
     "sid": "4408",
     "channelNumber": "749",
@@ -2274,13 +2120,6 @@
     "quality": "SD",
     "genre": 14
   },
-  "756": {
-    "sid": "5359",
-    "channelNumber": "756",
-    "name": "Channel 44",
-    "quality": "SD",
-    "genre": 14
-  },
   "757": {
     "sid": "3111",
     "channelNumber": "757",
@@ -2296,9 +2135,23 @@
     "genre": 14
   },
   "759": {
-    "sid": "1104",
+    "sid": "1145",
     "channelNumber": "759",
-    "name": "A1TV",
+    "name": "Samaa TV",
+    "quality": "SD",
+    "genre": 14
+  },
+  "760": {
+    "sid": "3720",
+    "channelNumber": "760",
+    "name": "Siraj TV",
+    "quality": "SD",
+    "genre": 14
+  },
+  "761": {
+    "sid": "1009",
+    "channelNumber": "761",
+    "name": "QTV Religious",
     "quality": "SD",
     "genre": 14
   },
@@ -2337,13 +2190,6 @@
     "quality": "SD",
     "genre": 14
   },
-  "771": {
-    "sid": "1056",
-    "channelNumber": "771",
-    "name": "KTV",
-    "quality": "SD",
-    "genre": 14
-  },
   "772": {
     "sid": "3753",
     "channelNumber": "772",
@@ -2354,7 +2200,21 @@
   "773": {
     "sid": "1260",
     "channelNumber": "773",
-    "name": "Pitaara ",
+    "name": "Pitaara",
+    "quality": "SD",
+    "genre": 14
+  },
+  "774": {
+    "sid": "3421",
+    "channelNumber": "774",
+    "name": "PoliticsPunjab",
+    "quality": "SD",
+    "genre": 14
+  },
+  "775": {
+    "sid": "1011",
+    "channelNumber": "775",
+    "name": "PBC",
     "quality": "SD",
     "genre": 14
   },
@@ -2368,7 +2228,7 @@
   "778": {
     "sid": "3914",
     "channelNumber": "778",
-    "name": "IQRA BANGLA",
+    "name": "IQRA Bangla",
     "quality": "SD",
     "genre": 14
   },
@@ -2407,10 +2267,10 @@
     "quality": "SD",
     "genre": 14
   },
-  "787": {
-    "sid": "3701",
-    "channelNumber": "787",
-    "name": "Ahlulbayt TV",
+  "784": {
+    "sid": "1104",
+    "channelNumber": "784",
+    "name": "Islam Bangla",
     "quality": "SD",
     "genre": 14
   },
@@ -2422,30 +2282,23 @@
     "genre": 14
   },
   "791": {
-    "sid": "3258",
+    "sid": "1140",
     "channelNumber": "791",
-    "name": "PCNE Chinese",
+    "name": "PCNE Chinese HD",
+    "quality": "HD",
+    "genre": 14
+  },
+  "794": {
+    "sid": "1090",
+    "channelNumber": "794",
+    "name": "ColorsGujarati",
     "quality": "SD",
     "genre": 14
-  },
-  "793": {
-    "sid": "1114",
-    "channelNumber": "793",
-    "name": "Iran Int'l HD",
-    "quality": "HD",
-    "genre": 14
-  },
-  "802": {
-    "sid": "2075",
-    "channelNumber": "802",
-    "name": "BBC Two HD",
-    "quality": "HD",
-    "genre": 3
   },
   "803": {
     "sid": "6504",
     "channelNumber": "803",
-    "name": "ITV HD",
+    "name": "ITV1 HD",
     "quality": "HD",
     "genre": 3
   },
@@ -2464,9 +2317,9 @@
     "genre": 3
   },
   "806": {
-    "sid": "1402",
+    "sid": "1276",
     "channelNumber": "806",
-    "name": "Sky One",
+    "name": "Sky Showcase",
     "quality": "SD",
     "genre": 3
   },
@@ -2485,9 +2338,9 @@
     "genre": 3
   },
   "809": {
-    "sid": "2617",
+    "sid": "2303",
     "channelNumber": "809",
-    "name": "W",
+    "name": "alibi",
     "quality": "SD",
     "genre": 3
   },
@@ -2513,494 +2366,389 @@
     "genre": 3
   },
   "813": {
-    "sid": "1177",
+    "sid": "1402",
     "channelNumber": "813",
-    "name": "Sky Comedy",
+    "name": "Sky Max",
     "quality": "SD",
     "genre": 3
   },
   "814": {
-    "sid": "1127",
+    "sid": "1177",
     "channelNumber": "814",
+    "name": "Sky Comedy",
+    "quality": "SD",
+    "genre": 3
+  },
+  "816": {
+    "sid": "6532",
+    "channelNumber": "816",
+    "name": "ITV2 HD",
+    "quality": "HD",
+    "genre": 3
+  },
+  "819": {
+    "sid": "1127",
+    "channelNumber": "819",
     "name": "SkyDocumntrs",
     "quality": "SD",
     "genre": 11
   },
-  "815": {
-    "sid": "2086",
-    "channelNumber": "815",
-    "name": "BBC Four HD",
-    "quality": "HD",
-    "genre": 3
-  },
-  "816": {
-    "sid": "6240",
-    "channelNumber": "816",
-    "name": "ITV2",
-    "quality": "SD",
-    "genre": 3
-  },
-  "817": {
-    "sid": "6260",
-    "channelNumber": "817",
-    "name": "ITV3",
-    "quality": "SD",
-    "genre": 3
-  },
-  "818": {
-    "sid": "6272",
-    "channelNumber": "818",
-    "name": "ITV4",
-    "quality": "SD",
-    "genre": 3
-  },
-  "819": {
+  "820": {
     "sid": "2207",
-    "channelNumber": "819",
+    "channelNumber": "820",
     "name": "Sky Crime",
     "quality": "SD",
     "genre": 11
   },
-  "820": {
-    "sid": "1752",
-    "channelNumber": "820",
-    "name": "Sky Arts",
-    "quality": "SD",
-    "genre": 3
-  },
   "821": {
-    "sid": "1305",
-    "channelNumber": "821",
-    "name": "FOX",
-    "quality": "SD",
-    "genre": 3
-  },
-  "822": {
-    "sid": "2401",
-    "channelNumber": "822",
-    "name": "Discovery",
-    "quality": "SD",
-    "genre": 11
-  },
-  "823": {
-    "sid": "2501",
-    "channelNumber": "823",
-    "name": "MTV",
-    "quality": "SD",
-    "genre": 3
-  },
-  "824": {
-    "sid": "1806",
-    "channelNumber": "824",
-    "name": "Nat Geo",
-    "quality": "SD",
-    "genre": 11
-  },
-  "825": {
     "sid": "1875",
-    "channelNumber": "825",
+    "channelNumber": "821",
     "name": "Sky History",
     "quality": "SD",
     "genre": 11
   },
-  "826": {
-    "sid": "2303",
-    "channelNumber": "826",
-    "name": "alibi",
-    "quality": "SD",
-    "genre": 3
-  },
-  "827": {
-    "sid": "5450",
-    "channelNumber": "827",
-    "name": "TLC",
-    "quality": "SD",
-    "genre": 3
-  },
-  "828": {
-    "sid": "2296",
-    "channelNumber": "828",
-    "name": "S4C HD",
-    "quality": "HD",
-    "genre": 3
-  },
-  "829": {
-    "sid": "1628",
-    "channelNumber": "829",
-    "name": "E4",
-    "quality": "SD",
-    "genre": 3
-  },
-  "830": {
-    "sid": "3340",
-    "channelNumber": "830",
-    "name": "More4",
-    "quality": "SD",
-    "genre": 3
-  },
-  "831": {
-    "sid": "1128",
-    "channelNumber": "831",
-    "name": "QUEST HD",
-    "quality": "HD",
-    "genre": 3
-  },
-  "834": {
-    "sid": "1360",
-    "channelNumber": "834",
-    "name": "E!",
-    "quality": "SD",
-    "genre": 3
-  },
-  "835": {
-    "sid": "1448",
-    "channelNumber": "835",
-    "name": "Crime+Inv",
-    "quality": "SD",
-    "genre": 11
-  },
-  "839": {
-    "sid": "1847",
-    "channelNumber": "839",
-    "name": "Nat Geo Wild",
-    "quality": "SD",
-    "genre": 11
-  },
-  "842": {
-    "sid": "4021",
-    "channelNumber": "842",
-    "name": "SkyPremiereHD",
-    "quality": "HD",
-    "genre": 6
-  },
-  "845": {
-    "sid": "4015",
-    "channelNumber": "845",
-    "name": "Sky Greats HD",
-    "quality": "HD",
-    "genre": 6
-  },
-  "846": {
-    "sid": "4018",
-    "channelNumber": "846",
-    "name": "Sky Family HD",
-    "quality": "HD",
-    "genre": 6
-  },
-  "847": {
-    "sid": "4014",
-    "channelNumber": "847",
-    "name": "Sky Action HD",
-    "quality": "HD",
-    "genre": 6
-  },
-  "848": {
-    "sid": "4019",
-    "channelNumber": "848",
-    "name": "Sky Comedy HD",
-    "quality": "HD",
-    "genre": 6
-  },
-  "849": {
-    "sid": "4062",
-    "channelNumber": "849",
-    "name": "Sky Thriller HD",
-    "quality": "HD",
-    "genre": 6
-  },
-  "850": {
-    "sid": "4016",
-    "channelNumber": "850",
-    "name": "Sky Drama HD",
-    "quality": "HD",
-    "genre": 6
-  },
-  "853": {
-    "sid": "1627",
-    "channelNumber": "853",
-    "name": "Film4",
-    "quality": "SD",
-    "genre": 6
-  },
-  "855": {
-    "sid": "4002",
-    "channelNumber": "855",
-    "name": "SkySpMainEvHD",
-    "quality": "HD",
-    "genre": 7
-  },
-  "856": {
-    "sid": "4010",
-    "channelNumber": "856",
-    "name": "SkySp PL HD",
-    "quality": "HD",
-    "genre": 7
-  },
-  "857": {
-    "sid": "3939",
-    "channelNumber": "857",
-    "name": "SkySp F'ball HD",
-    "quality": "HD",
-    "genre": 7
-  },
-  "858": {
-    "sid": "4081",
-    "channelNumber": "858",
-    "name": "SkySpCricketHD",
-    "quality": "HD",
-    "genre": 7
-  },
-  "859": {
-    "sid": "4026",
-    "channelNumber": "859",
-    "name": "SkySp Golf HD",
-    "quality": "HD",
-    "genre": 7
-  },
-  "860": {
-    "sid": "3835",
-    "channelNumber": "860",
-    "name": "SkySp F1 HD",
-    "quality": "HD",
-    "genre": 7
-  },
-  "861": {
-    "sid": "4022",
-    "channelNumber": "861",
-    "name": "SkySp ActionHD",
-    "quality": "HD",
-    "genre": 7
-  },
-  "862": {
-    "sid": "3940",
-    "channelNumber": "862",
-    "name": "SkySp ArenaHD",
-    "quality": "HD",
-    "genre": 7
-  },
-  "863": {
-    "sid": "1314",
-    "channelNumber": "863",
-    "name": "SkySp News",
-    "quality": "SD",
-    "genre": 7
-  },
-  "864": {
-    "sid": "1726",
-    "channelNumber": "864",
-    "name": "Eurosport 1",
-    "quality": "SD",
-    "genre": 7
-  },
-  "865": {
-    "sid": "1841",
-    "channelNumber": "865",
-    "name": "Eurosport 2",
-    "quality": "SD",
-    "genre": 7
-  },
-  "867": {
-    "sid": "3625",
-    "channelNumber": "867",
-    "name": "BT Sport 1 HD",
-    "quality": "HD",
-    "genre": 7
-  },
-  "868": {
-    "sid": "3627",
-    "channelNumber": "868",
-    "name": "BT Sport 2 HD",
-    "quality": "HD",
-    "genre": 7
-  },
-  "869": {
-    "sid": "3629",
-    "channelNumber": "869",
-    "name": "BT Sport 3 HD",
-    "quality": "HD",
-    "genre": 7
-  },
-  "870": {
-    "sid": "1834",
-    "channelNumber": "870",
-    "name": "MUTV",
-    "quality": "SD",
-    "genre": 7
-  },
-  "872": {
-    "sid": "4040",
-    "channelNumber": "872",
-    "name": "BTSpt//ESPNHD",
-    "quality": "HD",
-    "genre": 7
-  },
-  "874": {
-    "sid": "5272",
-    "channelNumber": "874",
-    "name": "Racing TV HD",
-    "quality": "HD",
-    "genre": 7
-  },
-  "875": {
-    "sid": "1404",
-    "channelNumber": "875",
-    "name": "Sky News",
-    "quality": "SD",
-    "genre": 5
-  },
-  "876": {
-    "sid": "1138",
-    "channelNumber": "876",
-    "name": "BBCScotlandHD",
-    "quality": "HD",
-    "genre": 3
-  },
-  "877": {
-    "sid": "2085",
-    "channelNumber": "877",
-    "name": "BBC NEWS HD",
-    "quality": "HD",
-    "genre": 5
-  },
-  "878": {
-    "sid": "1019",
-    "channelNumber": "878",
-    "name": "CNN HD",
-    "quality": "HD",
-    "genre": 5
-  },
-  "879": {
-    "sid": "5314",
-    "channelNumber": "879",
-    "name": "RT HD",
-    "quality": "HD",
-    "genre": 5
-  },
-  "880": {
-    "sid": "1023",
-    "channelNumber": "880",
-    "name": "Al Jazeera HD",
-    "quality": "HD",
-    "genre": 5
-  },
-  "881": {
-    "sid": "5237",
-    "channelNumber": "881",
-    "name": "TRT World HD",
-    "quality": "HD",
-    "genre": 5
-  },
-  "882": {
-    "sid": "2601",
-    "channelNumber": "882",
-    "name": "SONY TV",
-    "quality": "SD",
-    "genre": 14
-  },
-  "883": {
-    "sid": "1771",
-    "channelNumber": "883",
-    "name": "Utsav Plus",
-    "quality": "SD",
-    "genre": 14
-  },
-  "884": {
-    "sid": "3714",
-    "channelNumber": "884",
-    "name": "COLORS",
-    "quality": "SD",
-    "genre": 14
-  },
-  "886": {
-    "sid": "2603",
-    "channelNumber": "886",
-    "name": "SONY MAX",
-    "quality": "SD",
-    "genre": 14
-  },
-  "887": {
-    "sid": "3613",
-    "channelNumber": "887",
-    "name": "Utsav GOLD",
-    "quality": "SD",
-    "genre": 14
-  },
-  "888": {
-    "sid": "4032",
-    "channelNumber": "888",
-    "name": "SkySp Racing HD",
-    "quality": "HD",
-    "genre": 7
-  },
-  "889": {
-    "sid": "5135",
-    "channelNumber": "889",
-    "name": "Smithsonian HD",
-    "quality": "HD",
-    "genre": 11
-  },
-  "890": {
-    "sid": "1088",
-    "channelNumber": "890",
-    "name": "CNBC HD",
-    "quality": "HD",
-    "genre": 5
-  },
-  "891": {
-    "sid": "1811",
-    "channelNumber": "891",
-    "name": "Sky Musicals",
-    "quality": "SD",
-    "genre": 6
-  },
-  "892": {
-    "sid": "2505",
-    "channelNumber": "892",
-    "name": "SYFY",
-    "quality": "SD",
-    "genre": 3
-  },
-  "893": {
+  "822": {
     "sid": "1194",
-    "channelNumber": "893",
+    "channelNumber": "822",
     "name": "Sky Nature",
     "quality": "SD",
     "genre": 11
   },
-  "894": {
+  "823": {
+    "sid": "2401",
+    "channelNumber": "823",
+    "name": "Discovery",
+    "quality": "SD",
+    "genre": 11
+  },
+  "824": {
+    "sid": "2501",
+    "channelNumber": "824",
+    "name": "MTV",
+    "quality": "SD",
+    "genre": 3
+  },
+  "825": {
+    "sid": "1806",
+    "channelNumber": "825",
+    "name": "Nat Geo",
+    "quality": "SD",
+    "genre": 11
+  },
+  "826": {
+    "sid": "1752",
+    "channelNumber": "826",
+    "name": "Sky Arts",
+    "quality": "SD",
+    "genre": 3
+  },
+  "827": {
+    "sid": "2617",
+    "channelNumber": "827",
+    "name": "W",
+    "quality": "SD",
+    "genre": 3
+  },
+  "828": {
+    "sid": "5450",
+    "channelNumber": "828",
+    "name": "TLC",
+    "quality": "SD",
+    "genre": 3
+  },
+  "829": {
+    "sid": "2296",
+    "channelNumber": "829",
+    "name": "S4C HD",
+    "quality": "HD",
+    "genre": 3
+  },
+  "830": {
+    "sid": "1628",
+    "channelNumber": "830",
+    "name": "E4",
+    "quality": "SD",
+    "genre": 3
+  },
+  "831": {
+    "sid": "3340",
+    "channelNumber": "831",
+    "name": "More4",
+    "quality": "SD",
+    "genre": 3
+  },
+  "834": {
+    "sid": "1128",
+    "channelNumber": "834",
+    "name": "QUEST HD",
+    "quality": "HD",
+    "genre": 3
+  },
+  "836": {
+    "sid": "2505",
+    "channelNumber": "836",
+    "name": "Sky Sci-Fi",
+    "quality": "SD",
+    "genre": 3
+  },
+  "837": {
+    "sid": "1448",
+    "channelNumber": "837",
+    "name": "Crime+Inv",
+    "quality": "SD",
+    "genre": 11
+  },
+  "840": {
     "sid": "1879",
-    "channelNumber": "894",
+    "channelNumber": "840",
     "name": "Sky History2",
     "quality": "SD",
     "genre": 11
   },
-  "895": {
+  "841": {
+    "sid": "1847",
+    "channelNumber": "841",
+    "name": "Nat Geo Wild",
+    "quality": "SD",
+    "genre": 11
+  },
+  "846": {
+    "sid": "2305",
+    "channelNumber": "846",
+    "name": "YESTERDAY",
+    "quality": "SD",
+    "genre": 11
+  },
+  "848": {
+    "sid": "4021",
+    "channelNumber": "848",
+    "name": "SkyPremiereHD",
+    "quality": "HD",
+    "genre": 6
+  },
+  "849": {
+    "sid": "4015",
+    "channelNumber": "849",
+    "name": "TrueStoriesHD",
+    "quality": "HD",
+    "genre": 6
+  },
+  "850": {
+    "sid": "4018",
+    "channelNumber": "850",
+    "name": "Sky Family HD",
+    "quality": "HD",
+    "genre": 6
+  },
+  "851": {
+    "sid": "4014",
+    "channelNumber": "851",
+    "name": "Sky Action HD",
+    "quality": "HD",
+    "genre": 6
+  },
+  "855": {
+    "sid": "1627",
+    "channelNumber": "855",
+    "name": "Film4",
+    "quality": "SD",
+    "genre": 6
+  },
+  "859": {
+    "sid": "4002",
+    "channelNumber": "859",
+    "name": "SkySpMainEvHD",
+    "quality": "HD",
+    "genre": 7
+  },
+  "860": {
+    "sid": "4010",
+    "channelNumber": "860",
+    "name": "SkySp PL HD",
+    "quality": "HD",
+    "genre": 7
+  },
+  "861": {
+    "sid": "3939",
+    "channelNumber": "861",
+    "name": "SkySp F'ball HD",
+    "quality": "HD",
+    "genre": 7
+  },
+  "862": {
+    "sid": "4081",
+    "channelNumber": "862",
+    "name": "SkySpCricket HD",
+    "quality": "HD",
+    "genre": 7
+  },
+  "863": {
+    "sid": "4026",
+    "channelNumber": "863",
+    "name": "SkySp Golf HD",
+    "quality": "HD",
+    "genre": 7
+  },
+  "864": {
+    "sid": "3835",
+    "channelNumber": "864",
+    "name": "SkySp F1 HD",
+    "quality": "HD",
+    "genre": 7
+  },
+  "865": {
+    "sid": "4022",
+    "channelNumber": "865",
+    "name": "SkySp ActionHD",
+    "quality": "HD",
+    "genre": 7
+  },
+  "866": {
+    "sid": "1314",
+    "channelNumber": "866",
+    "name": "SkySp News",
+    "quality": "SD",
+    "genre": 7
+  },
+  "867": {
+    "sid": "3940",
+    "channelNumber": "867",
+    "name": "SkySp ArenaHD",
+    "quality": "HD",
+    "genre": 7
+  },
+  "868": {
+    "sid": "3625",
+    "channelNumber": "868",
+    "name": "TNTSports1 HD",
+    "quality": "HD",
+    "genre": 7
+  },
+  "869": {
+    "sid": "3627",
+    "channelNumber": "869",
+    "name": "TNTSports2 HD",
+    "quality": "HD",
+    "genre": 7
+  },
+  "870": {
+    "sid": "1726",
+    "channelNumber": "870",
+    "name": "Eurosport 1",
+    "quality": "SD",
+    "genre": 7
+  },
+  "871": {
+    "sid": "1841",
+    "channelNumber": "871",
+    "name": "Eurosport 2",
+    "quality": "SD",
+    "genre": 7
+  },
+  "872": {
+    "sid": "4032",
+    "channelNumber": "872",
+    "name": "SkySp Racing HD",
+    "quality": "HD",
+    "genre": 7
+  },
+  "873": {
     "sid": "4091",
-    "channelNumber": "895",
+    "channelNumber": "873",
     "name": "SkySp Mix",
     "quality": "SD",
     "genre": 7
   },
-  "896": {
+  "874": {
+    "sid": "3629",
+    "channelNumber": "874",
+    "name": "TNTSports3 HD",
+    "quality": "HD",
+    "genre": 7
+  },
+  "875": {
+    "sid": "1834",
+    "channelNumber": "875",
+    "name": "MUTV",
+    "quality": "SD",
+    "genre": 7
+  },
+  "876": {
+    "sid": "4040",
+    "channelNumber": "876",
+    "name": "TNTSports4 HD",
+    "quality": "HD",
+    "genre": 7
+  },
+  "877": {
+    "sid": "5272",
+    "channelNumber": "877",
+    "name": "Racing TV HD",
+    "quality": "HD",
+    "genre": 7
+  },
+  "881": {
+    "sid": "1404",
+    "channelNumber": "881",
+    "name": "Sky News",
+    "quality": "SD",
+    "genre": 5
+  },
+  "886": {
+    "sid": "5237",
+    "channelNumber": "886",
+    "name": "TRT World HD",
+    "quality": "HD",
+    "genre": 5
+  },
+  "890": {
     "sid": "1113",
-    "channelNumber": "896",
+    "channelNumber": "890",
     "name": "TJC HD",
     "quality": "HD",
     "genre": 1
   },
-  "897": {
-    "sid": "1814",
-    "channelNumber": "897",
-    "name": "Sky Hits",
+  "892": {
+    "sid": "2601",
+    "channelNumber": "892",
+    "name": "SONY TV",
     "quality": "SD",
-    "genre": 6
+    "genre": 14
+  },
+  "893": {
+    "sid": "1771",
+    "channelNumber": "893",
+    "name": "Utsav Plus",
+    "quality": "SD",
+    "genre": 14
+  },
+  "894": {
+    "sid": "3714",
+    "channelNumber": "894",
+    "name": "COLORS",
+    "quality": "SD",
+    "genre": 14
+  },
+  "895": {
+    "sid": "2603",
+    "channelNumber": "895",
+    "name": "SONY MAX",
+    "quality": "SD",
+    "genre": 14
+  },
+  "896": {
+    "sid": "3613",
+    "channelNumber": "896",
+    "name": "Utsav Gold",
+    "quality": "SD",
+    "genre": 14
   },
   "898": {
-    "sid": "1807",
+    "sid": "2607",
     "channelNumber": "898",
-    "name": "Sky ScFi/Horror",
+    "name": "Zee TV",
     "quality": "SD",
-    "genre": 6
+    "genre": 14
   },
   "899": {
     "sid": "1819",
@@ -3037,66 +2785,38 @@
     "quality": "SD",
     "genre": 9
   },
-  "906": {
+  "904": {
     "sid": "3400",
-    "channelNumber": "906",
+    "channelNumber": "904",
     "name": "Babenation",
     "quality": "SD",
     "genre": 9
   },
-  "908": {
+  "905": {
     "sid": "4538",
-    "channelNumber": "908",
+    "channelNumber": "905",
     "name": "Get Lucky TV",
     "quality": "SD",
     "genre": 9
   },
-  "910": {
-    "sid": "1030",
-    "channelNumber": "910",
-    "name": "XXXpublicpikups",
-    "quality": "SD",
-    "genre": 9
-  },
-  "914": {
-    "sid": "3421",
-    "channelNumber": "914",
-    "name": "Xpanded TV2",
-    "quality": "SD",
-    "genre": 9
-  },
-  "915": {
+  "907": {
     "sid": "1031",
-    "channelNumber": "915",
+    "channelNumber": "907",
     "name": "TVX 40+",
     "quality": "SD",
     "genre": 9
   },
-  "916": {
+  "908": {
     "sid": "1029",
-    "channelNumber": "916",
+    "channelNumber": "908",
     "name": "XXX Girl Girl",
     "quality": "SD",
     "genre": 9
   },
-  "917": {
+  "909": {
     "sid": "1028",
-    "channelNumber": "917",
-    "name": "XXX College",
-    "quality": "SD",
-    "genre": 9
-  },
-  "918": {
-    "sid": "1754",
-    "channelNumber": "918",
-    "name": "XXX Mums",
-    "quality": "SD",
-    "genre": 9
-  },
-  "924": {
-    "sid": "3530",
-    "channelNumber": "924",
-    "name": "Studio 66 3",
+    "channelNumber": "909",
+    "name": "Climax",
     "quality": "SD",
     "genre": 9
   },
@@ -3107,172 +2827,130 @@
     "quality": "SD",
     "genre": 0
   },
-  "951": {
-    "sid": "2004",
-    "channelNumber": "951",
-    "name": "BBC One Scot",
-    "quality": "SD",
-    "genre": 3
-  },
   "952": {
-    "sid": "2003",
+    "sid": "3009",
     "channelNumber": "952",
-    "name": "BBC One Wales",
-    "quality": "SD",
+    "name": "BBC One NE HD",
+    "quality": "HD",
     "genre": 3
   },
   "953": {
-    "sid": "2005",
+    "sid": "3007",
     "channelNumber": "953",
-    "name": "BBC One NI",
-    "quality": "SD",
+    "name": "BBC One NW HD",
+    "quality": "HD",
+    "genre": 3
+  },
+  "954": {
+    "sid": "3017",
+    "channelNumber": "954",
+    "name": "BBC One Yks HD",
+    "quality": "HD",
     "genre": 3
   },
   "955": {
-    "sid": "2155",
+    "sid": "3004",
     "channelNumber": "955",
-    "name": "BBC One NE&C",
-    "quality": "SD",
+    "name": "BBC One Y&L HD",
+    "quality": "HD",
     "genre": 3
   },
   "956": {
-    "sid": "2104",
+    "sid": "3003",
     "channelNumber": "956",
-    "name": "BBC One Yorks",
-    "quality": "SD",
+    "name": "BBC One WM HD",
+    "quality": "HD",
     "genre": 3
   },
   "957": {
-    "sid": "2103",
+    "sid": "3005",
     "channelNumber": "957",
-    "name": "BBC One Yk&Li",
-    "quality": "SD",
+    "name": "BBC One EMidHD",
+    "quality": "HD",
     "genre": 3
   },
   "958": {
-    "sid": "2102",
+    "sid": "3006",
     "channelNumber": "958",
-    "name": "BBC One N West",
-    "quality": "SD",
+    "name": "BBC One EastHD",
+    "quality": "HD",
     "genre": 3
   },
   "959": {
-    "sid": "2101",
+    "sid": "3008",
     "channelNumber": "959",
-    "name": "BBC One W Mid",
-    "quality": "SD",
+    "name": "BBC One SE HD",
+    "quality": "HD",
     "genre": 3
   },
   "960": {
-    "sid": "2105",
+    "sid": "3001",
     "channelNumber": "960",
-    "name": "BBC One E Mid",
-    "quality": "SD",
+    "name": "BBC One Wst HD",
+    "quality": "HD",
     "genre": 3
   },
   "961": {
-    "sid": "2106",
+    "sid": "3011",
     "channelNumber": "961",
-    "name": "BBC One East E",
-    "quality": "SD",
+    "name": "BBC One Sth HD",
+    "quality": "HD",
     "genre": 3
   },
   "962": {
-    "sid": "2073",
+    "sid": "3014",
     "channelNumber": "962",
-    "name": "BBC One East W",
-    "quality": "SD",
+    "name": "BBC One SW HD",
+    "quality": "HD",
     "genre": 3
   },
   "963": {
-    "sid": "2152",
+    "sid": "3018",
     "channelNumber": "963",
-    "name": "BBC One S East",
-    "quality": "SD",
+    "name": "BBC One CI HD",
+    "quality": "HD",
     "genre": 3
   },
   "964": {
-    "sid": "2153",
-    "channelNumber": "964",
-    "name": "BBC One South",
-    "quality": "SD",
-    "genre": 3
-  },
-  "965": {
-    "sid": "2156",
-    "channelNumber": "965",
-    "name": "BBC One Oxford",
-    "quality": "SD",
-    "genre": 3
-  },
-  "966": {
-    "sid": "2151",
-    "channelNumber": "966",
-    "name": "BBC One West",
-    "quality": "SD",
-    "genre": 3
-  },
-  "967": {
-    "sid": "2154",
-    "channelNumber": "967",
-    "name": "BBC One S West",
-    "quality": "SD",
-    "genre": 3
-  },
-  "968": {
-    "sid": "2074",
-    "channelNumber": "968",
-    "name": "BBC One CI",
-    "quality": "SD",
-    "genre": 3
-  },
-  "971": {
-    "sid": "2015",
-    "channelNumber": "971",
-    "name": "BBC Two Wales",
-    "quality": "SD",
-    "genre": 3
-  },
-  "972": {
-    "sid": "2017",
-    "channelNumber": "972",
-    "name": "BBC Two NI",
-    "quality": "SD",
-    "genre": 3
-  },
-  "977": {
     "sid": "2082",
-    "channelNumber": "977",
+    "channelNumber": "964",
     "name": "BBC One ScotHD",
     "quality": "HD",
     "genre": 3
   },
-  "978": {
+  "965": {
     "sid": "2083",
-    "channelNumber": "978",
+    "channelNumber": "965",
     "name": "BBC One Wal HD",
     "quality": "HD",
     "genre": 3
   },
-  "979": {
+  "966": {
     "sid": "2081",
-    "channelNumber": "979",
+    "channelNumber": "966",
     "name": "BBC One NI HD",
     "quality": "HD",
     "genre": 3
   },
-  "980": {
+  "968": {
     "sid": "3015",
-    "channelNumber": "980",
+    "channelNumber": "968",
     "name": "BBC Two Wal HD",
     "quality": "HD",
     "genre": 3
   },
-  "981": {
-    "sid": "2051",
-    "channelNumber": "981",
-    "name": "BBC RB 1",
-    "quality": "SD",
+  "969": {
+    "sid": "3019",
+    "channelNumber": "969",
+    "name": "BBC Two NI HD",
+    "quality": "HD",
+    "genre": 3
+  },
+  "970": {
+    "sid": "2053",
+    "channelNumber": "970",
+    "name": "BBC RB 1 HD",
+    "quality": "HD",
     "genre": 3
   },
   "996": {
@@ -3287,7 +2965,7 @@
     "channelNumber": "998",
     "name": "Sky Intro",
     "quality": "HD",
-    "genre": 0
+    "genre": 15
   },
   "999": {
     "sid": "1810",
@@ -3300,48 +2978,6 @@
     "sid": "8040",
     "channelNumber": "2049",
     "name": "My Sky",
-    "quality": "SD",
-    "genre": 0
-  },
-  "4901": {
-    "sid": "8025",
-    "channelNumber": "4901",
-    "name": "Browse Shop",
-    "quality": "SD",
-    "genre": 5
-  },
-  "4902": {
-    "sid": "8346",
-    "channelNumber": "4902",
-    "name": "Reset your PIN",
-    "quality": "SD",
-    "genre": 0
-  },
-  "4903": {
-    "sid": "8266",
-    "channelNumber": "4903",
-    "name": "My Account",
-    "quality": "SD",
-    "genre": 0
-  },
-  "4904": {
-    "sid": "8459",
-    "channelNumber": "4904",
-    "name": "Get Sky Products",
-    "quality": "SD",
-    "genre": 0
-  },
-  "4905": {
-    "sid": "8331",
-    "channelNumber": "4905",
-    "name": "Help and Support",
-    "quality": "SD",
-    "genre": 0
-  },
-  "4906": {
-    "sid": "8301",
-    "channelNumber": "4906",
-    "name": "Program Your Remote",
     "quality": "SD",
     "genre": 0
   },
@@ -3387,13 +3023,6 @@
     "quality": "RA",
     "genre": 4
   },
-  "0107": {
-    "sid": "2901",
-    "channelNumber": "0107",
-    "name": "Absolute",
-    "quality": "RA",
-    "genre": 4
-  },
   "0108": {
     "sid": "2902",
     "channelNumber": "0108",
@@ -3405,13 +3034,6 @@
     "sid": "2908",
     "channelNumber": "0109",
     "name": "Capital",
-    "quality": "RA",
-    "genre": 4
-  },
-  "0110": {
-    "sid": "3475",
-    "channelNumber": "0110",
-    "name": "Planet Rock",
     "quality": "RA",
     "genre": 4
   },
@@ -3446,14 +3068,14 @@
   "0115": {
     "sid": "2122",
     "channelNumber": "0115",
-    "name": "BBC WS",
+    "name": "BBC World Sv",
     "quality": "RA",
     "genre": 4
   },
   "0116": {
     "sid": "2117",
     "channelNumber": "0116",
-    "name": "BBC R Scot.",
+    "name": "BBC R Scot",
     "quality": "RA",
     "genre": 4
   },
@@ -3474,14 +3096,14 @@
   "0119": {
     "sid": "2120",
     "channelNumber": "0119",
-    "name": "BBC Asian",
+    "name": "BBC Asian Net",
     "quality": "RA",
     "genre": 4
   },
   "0120": {
     "sid": "2127",
     "channelNumber": "0120",
-    "name": "BBC 6 Music",
+    "name": "BBC R6 Music",
     "quality": "RA",
     "genre": 4
   },
@@ -3499,73 +3121,129 @@
     "quality": "RA",
     "genre": 4
   },
-  "0124": {
+  "0123": {
     "sid": "2926",
-    "channelNumber": "0124",
+    "channelNumber": "0123",
     "name": "LBC",
     "quality": "RA",
     "genre": 4
   },
-  "0128": {
+  "0124": {
     "sid": "2917",
-    "channelNumber": "0128",
+    "channelNumber": "0124",
     "name": "Smooth",
     "quality": "RA",
     "genre": 4
   },
-  "0130": {
+  "0125": {
     "sid": "3363",
-    "channelNumber": "0130",
+    "channelNumber": "0125",
     "name": "Panjab Radio",
     "quality": "RA",
     "genre": 4
   },
-  "0131": {
+  "0126": {
     "sid": "2128",
-    "channelNumber": "0131",
-    "name": "BBC R4 Ex",
+    "channelNumber": "0126",
+    "name": "BBC R4 Extra",
     "quality": "RA",
     "genre": 4
   },
-  "0137": {
+  "0127": {
     "sid": "2126",
-    "channelNumber": "0137",
+    "channelNumber": "0127",
     "name": "BBC R1X",
     "quality": "RA",
     "genre": 4
   },
-  "0138": {
+  "0128": {
     "sid": "4155",
-    "channelNumber": "0138",
+    "channelNumber": "0128",
     "name": "TWR",
     "quality": "RA",
     "genre": 4
   },
-  "0139": {
+  "0129": {
     "sid": "2129",
-    "channelNumber": "0139",
-    "name": "BBC R n Gael",
+    "channelNumber": "0129",
+    "name": "BBC RnG\u00e0id",
     "quality": "RA",
     "genre": 4
   },
-  "0143": {
+  "0130": {
     "sid": "2115",
-    "channelNumber": "0143",
+    "channelNumber": "0130",
     "name": "BBC R4 LW",
     "quality": "RA",
     "genre": 4
   },
-  "0144": {
+  "0131": {
     "sid": "2034",
-    "channelNumber": "0144",
+    "channelNumber": "0131",
     "name": "BBC R5SX",
     "quality": "RA",
     "genre": 4
   },
-  "0146": {
+  "0132": {
     "sid": "2920",
-    "channelNumber": "0146",
+    "channelNumber": "0132",
     "name": "Heart Dance",
+    "quality": "RA",
+    "genre": 4
+  },
+  "0133": {
+    "sid": "3368",
+    "channelNumber": "0133",
+    "name": "Sukh Sagar",
+    "quality": "RA",
+    "genre": 4
+  },
+  "0134": {
+    "sid": "3383",
+    "channelNumber": "0134",
+    "name": "Khushkhabri",
+    "quality": "RA",
+    "genre": 4
+  },
+  "0135": {
+    "sid": "2130",
+    "channelNumber": "0135",
+    "name": "BBC R London",
+    "quality": "RA",
+    "genre": 4
+  },
+  "0136": {
+    "sid": "2123",
+    "channelNumber": "0136",
+    "name": "BBC R Cymru",
+    "quality": "RA",
+    "genre": 4
+  },
+  "0137": {
+    "sid": "1261",
+    "channelNumber": "0137",
+    "name": "RT\u00c9 Radio 1",
+    "quality": "RA",
+    "genre": 4
+  },
+  "0138": {
+    "sid": "1262",
+    "channelNumber": "0138",
+    "name": "RT\u00c9 2FM",
+    "quality": "RA",
+    "genre": 4
+  },
+  "0139": {
+    "sid": "1264",
+    "channelNumber": "0139",
+    "name": "RT\u00c9 Lyric fm",
+    "quality": "RA",
+    "genre": 4
+  },
+  "0140": {
+    "sid": "1263",
+    "channelNumber": "0140",
+    "name": "RT\u00c9 R na G",
     "quality": "RA",
     "genre": 4
   },
@@ -3576,172 +3254,81 @@
     "quality": "RA",
     "genre": 4
   },
-  "0150": {
-    "sid": "3368",
-    "channelNumber": "0150",
-    "name": "Sukh Sagar",
-    "quality": "RA",
-    "genre": 4
-  },
-  "0151": {
-    "sid": "3383",
-    "channelNumber": "0151",
-    "name": "Khushkhabri",
-    "quality": "RA",
-    "genre": 4
-  },
-  "0152": {
-    "sid": "2130",
-    "channelNumber": "0152",
-    "name": "BBC RLondon",
-    "quality": "RA",
-    "genre": 4
-  },
-  "0154": {
-    "sid": "2123",
-    "channelNumber": "0154",
-    "name": "BBC R Cymru",
-    "quality": "RA",
-    "genre": 4
-  },
-  "0160": {
-    "sid": "1261",
-    "channelNumber": "0160",
-    "name": "RT\u00c9 Radio 1",
-    "quality": "RA",
-    "genre": 4
-  },
-  "0164": {
-    "sid": "1262",
-    "channelNumber": "0164",
-    "name": "RT\u00c9 2FM",
-    "quality": "RA",
-    "genre": 4
-  },
-  "0165": {
-    "sid": "1264",
-    "channelNumber": "0165",
-    "name": "RT\u00c9 Lyric fm",
-    "quality": "RA",
-    "genre": 4
-  },
-  "0166": {
-    "sid": "1263",
-    "channelNumber": "0166",
-    "name": "RT\u00c9 R na G",
-    "quality": "RA",
-    "genre": 4
-  },
-  "0169": {
-    "sid": "4152",
-    "channelNumber": "0169",
-    "name": "Desi Radio",
-    "quality": "RA",
-    "genre": 4
-  },
-  "0178": {
-    "sid": "3656",
-    "channelNumber": "0178",
-    "name": "Kiss",
-    "quality": "RA",
-    "genre": 4
-  },
-  "0180": {
-    "sid": "3660",
-    "channelNumber": "0180",
-    "name": "Magic",
-    "quality": "RA",
-    "genre": 4
-  },
-  "0188": {
-    "sid": "5562",
-    "channelNumber": "0188",
-    "name": "Hits Radio",
-    "quality": "RA",
-    "genre": 4
-  },
-  "0200": {
-    "sid": "4373",
-    "channelNumber": "0200",
-    "name": "Absolute 80s",
-    "quality": "RA",
-    "genre": 4
-  },
-  "0201": {
-    "sid": "4372",
-    "channelNumber": "0201",
-    "name": "Absolute 90s",
-    "quality": "RA",
-    "genre": 4
-  },
-  "0202": {
-    "sid": "4376",
-    "channelNumber": "0202",
-    "name": "Jazz FM",
-    "quality": "RA",
-    "genre": 4
-  },
-  "0203": {
-    "sid": "4371",
-    "channelNumber": "0203",
-    "name": "Classic Rock",
-    "quality": "RA",
-    "genre": 4
-  },
-  "0210": {
-    "sid": "3616",
-    "channelNumber": "0210",
-    "name": "Newstalk",
-    "quality": "RA",
-    "genre": 4
-  },
-  "0211": {
+  "0149": {
     "sid": "3371",
-    "channelNumber": "0211",
+    "channelNumber": "0149",
     "name": "BFBS Radio",
     "quality": "RA",
     "genre": 4
   },
-  "0215": {
+  "0150": {
     "sid": "1148",
-    "channelNumber": "0215",
+    "channelNumber": "0150",
     "name": "Virgin Radio",
     "quality": "RA",
     "genre": 4
   },
-  "0216": {
-    "sid": "1101",
-    "channelNumber": "0216",
-    "name": "Scala Radio",
-    "quality": "RA",
-    "genre": 4
-  },
-  "0217": {
+  "0152": {
     "sid": "1083",
-    "channelNumber": "0217",
+    "channelNumber": "0152",
     "name": "Heart 90s",
     "quality": "RA",
     "genre": 4
   },
-  "0219": {
+  "0153": {
     "sid": "2021",
-    "channelNumber": "0219",
+    "channelNumber": "0153",
     "name": "BBC R Cymru 2",
     "quality": "RA",
     "genre": 4
   },
-  "0220": {
+  "0154": {
     "sid": "2124",
-    "channelNumber": "0220",
+    "channelNumber": "0154",
     "name": "BBC R Foyle",
     "quality": "RA",
     "genre": 4
   },
-  "0221": {
+  "0155": {
     "sid": "1205",
-    "channelNumber": "0221",
+    "channelNumber": "0155",
     "name": "LBC News",
     "quality": "RA",
     "genre": 4
+  },
+  "4902": {
+    "sid": "8346",
+    "channelNumber": "4902",
+    "name": "Reset your PIN",
+    "quality": "SD",
+    "genre": 0
+  },
+  "4903": {
+    "sid": "8266",
+    "channelNumber": "4903",
+    "name": "My Account",
+    "quality": "SD",
+    "genre": 0
+  },
+  "4904": {
+    "sid": "8459",
+    "channelNumber": "4904",
+    "name": "Get Sky Products",
+    "quality": "SD",
+    "genre": 0
+  },
+  "4905": {
+    "sid": "8331",
+    "channelNumber": "4905",
+    "name": "Help and Support",
+    "quality": "SD",
+    "genre": 0
+  },
+  "4906": {
+    "sid": "8301",
+    "channelNumber": "4906",
+    "name": "Program Your Remote",
+    "quality": "SD",
+    "genre": 0
   }
 }

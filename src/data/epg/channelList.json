@@ -16,7 +16,7 @@
   "103": {
     "sid": "6000",
     "channelNumber": "103",
-    "name": "ITV",
+    "name": "ITV1",
     "quality": "SD",
     "genre": 3
   },
@@ -583,7 +583,7 @@
   "203": {
     "sid": "6155",
     "channelNumber": "203",
-    "name": "ITV+1",
+    "name": "ITV1+1",
     "quality": "SD",
     "genre": 3
   },

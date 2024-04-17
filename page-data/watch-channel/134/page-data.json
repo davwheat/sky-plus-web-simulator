@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-components-watch-watch-channel-page-tsx",
     "path": "/watch-channel/134",
-    "result": {"pageContext":{"channel":{"sid":"5701","channelNumber":"134","name":"S4C","quality":"SD","genre":3},"streamData":{"name":"S4C","streamUrl":"http://vs-hls-pushb-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:s4cpbs/mobile_wifi_main_sd_abr_v2_akamai_hls_live_http.m3u8"}}},
+    "result": {"pageContext":{"channel":{"sid":"5701","channelNumber":"134","name":"S4C","quality":"SD","genre":3},"streamData":{"name":"S4C","streamUrl":"http://vs-hls-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:s4cpbs/pc_hd_abr_v2.m3u8"}}},
     "staticQueryHashes": ["3040125546","63159454"]}

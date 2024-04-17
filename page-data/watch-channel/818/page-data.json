@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-components-watch-watch-channel-page-tsx",
+    "path": "/watch-channel/818",
+    "result": {"pageContext":{"channel":{"sid":"6272","channelNumber":"818","name":"ITV4","quality":"SD","genre":3},"streamData":{"name":"ITV4","streamUrl":"http://92.114.85.77:8000/play/a05z"}}},
+    "staticQueryHashes": ["3040125546","63159454"]}

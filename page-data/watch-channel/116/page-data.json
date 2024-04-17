@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-components-watch-watch-channel-page-tsx",
-    "path": "/watch-channel/116",
-    "result": {"pageContext":{"channel":{"sid":"2018","channelNumber":"116","name":"BBC Four","quality":"SD","genre":3},"streamData":{"name":"BBC Four","streamUrl":"http://vs-hls-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_four_hd/pc_hd_abr_v2.m3u8"}}},
-    "staticQueryHashes": ["3040125546","63159454"]}

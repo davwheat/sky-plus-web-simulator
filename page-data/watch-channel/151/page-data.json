@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-components-watch-watch-channel-page-tsx",
+    "path": "/watch-channel/151",
+    "result": {"pageContext":{"channel":{"sid":"1831","channelNumber":"151","name":"Sky Mix HD","quality":"HD","genre":3},"streamData":{"name":"Sky Mix HD","streamUrl":"http://92.114.85.80:8000/play/a051"}}},
+    "staticQueryHashes": ["3040125546","63159454"]}

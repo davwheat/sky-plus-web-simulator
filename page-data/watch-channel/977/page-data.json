@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-components-watch-watch-channel-page-tsx",
-    "path": "/watch-channel/977",
-    "result": {"pageContext":{"channel":{"sid":"2082","channelNumber":"977","name":"BBC One ScotHD","quality":"HD","genre":3},"streamData":{"name":"BBC One ScotHD","streamUrl":"https://vs-hls-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_one_scotland_hd/t=3840/v=pv14/b=5070016/main.m3u8"}}},
-    "staticQueryHashes": ["3040125546","63159454"]}

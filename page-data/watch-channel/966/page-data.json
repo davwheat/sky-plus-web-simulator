@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-components-watch-watch-channel-page-tsx",
     "path": "/watch-channel/966",
-    "result": {"pageContext":{"channel":{"sid":"2151","channelNumber":"966","name":"BBC One West","quality":"SD","genre":3},"streamData":{"name":"BBC One West","streamUrl":"http://vs-hls-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_one_west/pc_hd_abr_v2.m3u8"}}},
+    "result": {"pageContext":{"channel":{"sid":"2081","channelNumber":"966","name":"BBC One NI HD","quality":"HD","genre":3},"streamData":{"name":"BBC One NI HD","streamUrl":"https://vs-hls-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_one_northern_ireland_hd/t=3840/v=pv14/b=5070016/main.m3u8"}}},
     "staticQueryHashes": ["3040125546","63159454"]}

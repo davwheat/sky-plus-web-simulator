@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-components-watch-watch-channel-page-tsx",
+    "path": "/watch-channel/969",
+    "result": {"pageContext":{"channel":{"sid":"3019","channelNumber":"969","name":"BBC Two NI HD","quality":"HD","genre":3},"streamData":{"name":"BBC Two NI HD","streamUrl":"https://vs-hls-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_two_northern_ireland_hd/t=3840/v=pv14/b=5070016/main.m3u8"}}},
+    "staticQueryHashes": ["3040125546","63159454"]}

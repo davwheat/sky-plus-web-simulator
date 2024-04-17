@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-components-watch-watch-channel-page-tsx",
-    "path": "/watch-channel/960",
-    "result": {"pageContext":{"channel":{"sid":"2105","channelNumber":"960","name":"BBC One E Mid","quality":"SD","genre":3},"streamData":{"name":"BBC One E Mid","streamUrl":"http://vs-hls-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_one_east_midlands/pc_hd_abr_v2.m3u8"}}},
-    "staticQueryHashes": ["3040125546","63159454"]}

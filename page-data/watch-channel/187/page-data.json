@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-components-watch-watch-channel-page-tsx",
+    "path": "/watch-channel/187",
+    "result": {"pageContext":{"channel":{"sid":"1138","channelNumber":"187","name":"BBCScotlandHD","quality":"HD","genre":3},"streamData":{"name":"BBCScotlandHD","streamUrl":"http://vs-hls-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_scotland_hd/pc_hd_abr_v2.m3u8"}}},
+    "staticQueryHashes": ["3040125546","63159454"]}

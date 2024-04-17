@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-components-watch-watch-channel-page-tsx",
-    "path": "/watch-channel/816",
-    "result": {"pageContext":{"channel":{"sid":"6240","channelNumber":"816","name":"ITV2","quality":"SD","genre":3},"streamData":{"name":"ITV2","streamUrl":"http://92.114.85.77:8000/play/a041"}}},
-    "staticQueryHashes": ["3040125546","63159454"]}

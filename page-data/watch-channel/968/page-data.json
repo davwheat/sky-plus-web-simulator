@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-components-watch-watch-channel-page-tsx",
-    "path": "/watch-channel/968",
-    "result": {"pageContext":{"channel":{"sid":"2074","channelNumber":"968","name":"BBC One CI","quality":"SD","genre":3},"streamData":{"name":"BBC One CI","streamUrl":"http://vs-hls-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_one_channel_islands/pc_hd_abr_v2.m3u8"}}},
-    "staticQueryHashes": ["3040125546","63159454"]}

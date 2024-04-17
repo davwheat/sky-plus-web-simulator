@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-components-watch-watch-channel-page-tsx",
-    "path": "/watch-channel/961",
-    "result": {"pageContext":{"channel":{"sid":"2106","channelNumber":"961","name":"BBC One East E","quality":"SD","genre":3},"streamData":{"name":"BBC One East E","streamUrl":"http://vs-hls-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_one_east/pc_hd_abr_v2.m3u8"}}},
-    "staticQueryHashes": ["3040125546","63159454"]}
